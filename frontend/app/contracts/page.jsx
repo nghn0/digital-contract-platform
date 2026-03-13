@@ -113,7 +113,7 @@ export default function ContractsPage() {
         contract.file_url
       );
 
-      await fetch("${API_BASE_URL}/store-signature", {
+      await fetch(`${API_BASE_URL}/store-signature`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
