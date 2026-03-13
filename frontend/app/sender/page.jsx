@@ -14,7 +14,7 @@ export default function SenderDashboard() {
 
   const fetchContracts = async () => {
     const res = await fetch(
-      `http://localhost:5001/contracts/sent/${SENDER_ID}`,
+      `https://digital-contract-platform.onrender.com/contracts/sent/${SENDER_ID}`,
     );
     const data = await res.json();
     setContracts(data);
@@ -26,7 +26,7 @@ export default function SenderDashboard() {
       const { signature, wallet } = await signWithMetaMask(contract.file_url);
 
       // store signature A
-      await fetch("http://localhost:5001/store-signature", {
+      await fetch("https://digital-contract-platform.onrender.com/store-signature", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -40,7 +40,7 @@ export default function SenderDashboard() {
 
       // finalize on chain
       await fetch(
-        `http://localhost:5001/contracts/${contract.contract_id}/finalize`,
+        `https://digital-contract-platform.onrender.com/contracts/${contract.contract_id}/finalize`,
         { method: "POST" },
       );
 

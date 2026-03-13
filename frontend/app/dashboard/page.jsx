@@ -34,7 +34,7 @@ export default function Dashboard() {
 
   const fetchRecent = async (userId) => {
     try {
-      const res = await fetch(`http://127.0.0.1:5001/contracts/all/${userId}`);
+      const res = await fetch(`https://digital-contract-platform.onrender.com/contracts/all/${userId}`);
       const data = await res.json();
 
       // 🔥 newest first

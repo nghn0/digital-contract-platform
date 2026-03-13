@@ -55,7 +55,7 @@ export default function UploadPage() {
         formData.append("contract_id", contractIdFromQuery);
       }
 
-      const res = await fetch("http://127.0.0.1:5001/upload-contract", {
+      const res = await fetch("https://digital-contract-platform.onrender.com/upload-contract", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${session.access_token}`,

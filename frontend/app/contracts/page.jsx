@@ -42,11 +42,21 @@ export default function ContractsPage() {
   const fetchContracts = async (userId) => {
     try {
       const res = await fetch(
-        `http://127.0.0.1:5001/contracts/all/${userId}`
+        `https://digital-contract-platform.onrender.com/contracts/all/${userId}`
       );
       const data = await res.json();
       setContracts(data);
     } catch (err) {
+      // If local server fails, try the deployed server as fallback
+      try {
+        const res = await fetch(
+          `https://digital-contract-platform.onrender.com/contracts/all/${userId}`
+        );
+        const data = await res.json();
+        setContracts(data);
+      } catch (fallbackErr) {
+        console.error("Both local and remote fetch failed:", fallbackErr);
+      }
       console.error(err);
     }
   };
@@ -57,7 +67,7 @@ export default function ContractsPage() {
     try {
       setLoadingId(contractId);
 
-      await fetch(`http://127.0.0.1:5001/contracts/${contractId}/status`, {
+      await fetch(`https://digital-contract-platform.onrender.com/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: "PENDING_SIGNATURE_B" }),
@@ -77,7 +87,7 @@ export default function ContractsPage() {
     try {
       setLoadingId(contractId);
 
-      await fetch(`http://127.0.0.1:5001/contracts/${contractId}/status`, {
+      await fetch(`https://digital-contract-platform.onrender.com/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: "REJECTED" }),
@@ -101,7 +111,7 @@ export default function ContractsPage() {
         contract.file_url
       );
 
-      await fetch("http://127.0.0.1:5001/store-signature", {
+      await fetch("https://digital-contract-platform.onrender.com/store-signature", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -133,7 +143,7 @@ export default function ContractsPage() {
         contract.file_url
       );
 
-      await fetch("http://127.0.0.1:5001/store-signature", {
+      await fetch("https://digital-contract-platform.onrender.com/store-signature", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -148,7 +158,7 @@ export default function ContractsPage() {
       });
 
       await fetch(
-        `http://127.0.0.1:5001/contracts/${contract.contract_id}/finalize`,
+        `https://digital-contract-platform.onrender.com/contracts/${contract.contract_id}/finalize`,
         { method: "POST" }
       );
 

@@ -16,7 +16,7 @@ export default function ReceiverDashboard() {
   const fetchContracts = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5001/contracts/received/${RECEIVER_ID}`,
+        `https://digital-contract-platform.onrender.com/contracts/received/${RECEIVER_ID}`,
       );
       const data = await res.json();
       setContracts(data);
@@ -29,7 +29,7 @@ export default function ReceiverDashboard() {
 
   const updateStatus = async (contractId, newStatus) => {
     try {
-      await fetch(`http://localhost:5001/contracts/${contractId}/status`, {
+      await fetch(`https://digital-contract-platform.onrender.com/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export default function ReceiverDashboard() {
       const { signature, wallet } = await signWithMetaMask(contract.file_url);
 
       // 💾 store signature B
-      await fetch("http://localhost:5001/store-signature", {
+      await fetch("https://digital-contract-platform.onrender.com/store-signature", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

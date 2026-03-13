@@ -8,7 +8,7 @@ export const linkContractsAfterLogin = async () => {
 
     if (!session) return;
 
-    await fetch("http://127.0.0.1:5001/link-receiver", {
+    await fetch("https://digital-contract-platform.onrender.com/link-receiver", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${session.access_token}`,
