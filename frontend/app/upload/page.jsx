@@ -1,14 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function UploadPage() {
+/* ================= MAIN CONTENT ================= */
+
+function UploadContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  // 🔥 NEW — read from URL
   const emailFromQuery = searchParams.get("email");
   const contractIdFromQuery = searchParams.get("contractId");
 
@@ -50,18 +51,20 @@ export default function UploadPage() {
       formData.append("file", file);
       formData.append("receiver_email", receiverEmail);
 
-      // 🔥 CRITICAL — send contractId when reupload
       if (contractIdFromQuery) {
         formData.append("contract_id", contractIdFromQuery);
       }
 
-      const res = await fetch("https://digital-contract-platform.onrender.com/upload-contract", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${session.access_token}`,
-        },
-        body: formData,
-      });
+      const res = await fetch(
+        "https://digital-contract-platform.onrender.com/upload-contract",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${session.access_token}`,
+          },
+          body: formData,
+        }
+      );
 
       const text = await res.text();
 
@@ -72,7 +75,6 @@ export default function UploadPage() {
       setMessage("✅ Contract sent successfully!");
       setFile(null);
 
-      // 🔥 AUTO REDIRECT AFTER 1 SEC
       setTimeout(() => {
         router.push("/dashboard");
       }, 1000);
@@ -118,7 +120,11 @@ export default function UploadPage() {
           disabled={loading}
           className="w-full bg-[#8B5DFF] hover:bg-[#6A42C2] text-white py-3 rounded-xl font-semibold transition"
         >
-          {loading ? "Sending..." : contractIdFromQuery ? "Reupload" : "Send Contract"}
+          {loading
+            ? "Sending..."
+            : contractIdFromQuery
+            ? "Reupload"
+            : "Send Contract"}
         </button>
 
         {/* MESSAGE */}
@@ -129,5 +135,15 @@ export default function UploadPage() {
         )}
       </div>
     </div>
+  );
+}
+
+/* ================= PAGE WRAPPER ================= */
+
+export default function UploadPage() {
+  return (
+    <Suspense fallback={<div className="p-10 text-center">Loading...</div>}>
+      <UploadContent />
+    </Suspense>
   );
 }
