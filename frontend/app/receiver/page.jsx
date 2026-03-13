@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { signWithMetaMask } from "@/utils/signContract";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export default function ReceiverDashboard() {
   const [contracts, setContracts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,7 +18,7 @@ export default function ReceiverDashboard() {
   const fetchContracts = async () => {
     try {
       const res = await fetch(
-        `https://digital-contract-platform.onrender.com/contracts/received/${RECEIVER_ID}`,
+        `${API_BASE_URL}/contracts/received/${RECEIVER_ID}`,
       );
       const data = await res.json();
       setContracts(data);
@@ -29,7 +31,7 @@ export default function ReceiverDashboard() {
 
   const updateStatus = async (contractId, newStatus) => {
     try {
-      await fetch(`https://digital-contract-platform.onrender.com/contracts/${contractId}/status`, {
+      await fetch(`${API_BASE_URL}/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +51,7 @@ export default function ReceiverDashboard() {
       const { signature, wallet } = await signWithMetaMask(contract.file_url);
 
       // 💾 store signature B
-      await fetch("https://digital-contract-platform.onrender.com/store-signature", {
+      await fetch("${API_BASE_URL}/store-signature", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

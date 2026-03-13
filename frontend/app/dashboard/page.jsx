@@ -5,6 +5,8 @@ import { getCurrentUser, signOutUser } from "@/lib/auth";
 import { signWithMetaMask } from "@/utils/signContract";
 import { useRouter } from "next/navigation";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export default function Dashboard() {
   const router = useRouter();
   const [user, setUser] = useState(null);
@@ -34,7 +36,7 @@ export default function Dashboard() {
 
   const fetchRecent = async (userId) => {
     try {
-      const res = await fetch(`https://digital-contract-platform.onrender.com/contracts/all/${userId}`);
+      const res = await fetch(`${API_BASE_URL}/contracts/all/${userId}`);
       const data = await res.json();
 
       // 🔥 newest first

@@ -1,5 +1,7 @@
 import { supabase } from "@/lib/supabaseClient";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export const linkContractsAfterLogin = async () => {
   try {
     const {
@@ -8,7 +10,7 @@ export const linkContractsAfterLogin = async () => {
 
     if (!session) return;
 
-    await fetch("https://digital-contract-platform.onrender.com/link-receiver", {
+    await fetch(`${API_BASE_URL}/link-receiver`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${session.access_token}`,

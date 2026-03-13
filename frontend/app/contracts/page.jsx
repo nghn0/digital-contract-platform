@@ -5,6 +5,8 @@ import { getCurrentUser } from "@/lib/auth";
 import { useRouter } from "next/navigation";
 import { signWithMetaMask } from "@/utils/signContract";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export default function ContractsPage() {
   const router = useRouter();
   const [contracts, setContracts] = useState([]);
@@ -42,7 +44,7 @@ export default function ContractsPage() {
   const fetchContracts = async (userId) => {
     try {
       const res = await fetch(
-        `https://digital-contract-platform.onrender.com/contracts/all/${userId}`
+        `${API_BASE_URL}/contracts/all/${userId}`
       );
       const data = await res.json();
       setContracts(data);
@@ -50,7 +52,7 @@ export default function ContractsPage() {
       // If local server fails, try the deployed server as fallback
       try {
         const res = await fetch(
-          `https://digital-contract-platform.onrender.com/contracts/all/${userId}`
+          `${API_BASE_URL}/contracts/all/${userId}`
         );
         const data = await res.json();
         setContracts(data);
@@ -67,7 +69,7 @@ export default function ContractsPage() {
     try {
       setLoadingId(contractId);
 
-      await fetch(`https://digital-contract-platform.onrender.com/contracts/${contractId}/status`, {
+      await fetch(`${API_BASE_URL}/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: "PENDING_SIGNATURE_B" }),
@@ -87,7 +89,7 @@ export default function ContractsPage() {
     try {
       setLoadingId(contractId);
 
-      await fetch(`https://digital-contract-platform.onrender.com/contracts/${contractId}/status`, {
+      await fetch(`${API_BASE_URL}/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: "REJECTED" }),
@@ -111,7 +113,7 @@ export default function ContractsPage() {
         contract.file_url
       );
 
-      await fetch("https://digital-contract-platform.onrender.com/store-signature", {
+      await fetch("${API_BASE_URL}/store-signature", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -143,7 +145,7 @@ export default function ContractsPage() {
         contract.file_url
       );
 
-      await fetch("https://digital-contract-platform.onrender.com/store-signature", {
+      await fetch("${API_BASE_URL}/store-signature", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -158,7 +160,7 @@ export default function ContractsPage() {
       });
 
       await fetch(
-        `https://digital-contract-platform.onrender.com/contracts/${contract.contract_id}/finalize`,
+        `${API_BASE_URL}/contracts/${contract.contract_id}/finalize`,
         { method: "POST" }
       );
 

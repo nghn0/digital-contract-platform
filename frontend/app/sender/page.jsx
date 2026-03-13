@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { signWithMetaMask } from "@/utils/signContract";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export default function SenderDashboard() {
   const [contracts, setContracts] = useState([]);
 
@@ -14,7 +16,7 @@ export default function SenderDashboard() {
 
   const fetchContracts = async () => {
     const res = await fetch(
-      `https://digital-contract-platform.onrender.com/contracts/sent/${SENDER_ID}`,
+      `${API_BASE_URL}/contracts/sent/${SENDER_ID}`,
     );
     const data = await res.json();
     setContracts(data);
@@ -26,7 +28,7 @@ export default function SenderDashboard() {
       const { signature, wallet } = await signWithMetaMask(contract.file_url);
 
       // store signature A
-      await fetch("https://digital-contract-platform.onrender.com/store-signature", {
+      await fetch("${API_BASE_URL}/store-signature", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -40,7 +42,7 @@ export default function SenderDashboard() {
 
       // finalize on chain
       await fetch(
-        `https://digital-contract-platform.onrender.com/contracts/${contract.contract_id}/finalize`,
+        `${API_BASE_URL}/contracts/${contract.contract_id}/finalize`,
         { method: "POST" },
       );
 

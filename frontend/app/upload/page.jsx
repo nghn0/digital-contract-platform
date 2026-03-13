@@ -6,6 +6,8 @@ import { Suspense, useState, useEffect } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { useSearchParams, useRouter } from "next/navigation";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 /* ================= MAIN CONTENT ================= */
 
 function UploadContent() {
@@ -58,7 +60,7 @@ function UploadContent() {
       }
 
       const res = await fetch(
-        "https://digital-contract-platform.onrender.com/upload-contract",
+        `${API_BASE_URL}/upload-contract`,
         {
           method: "POST",
           headers: {
