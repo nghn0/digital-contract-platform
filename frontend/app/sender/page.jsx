@@ -28,7 +28,7 @@ export default function SenderDashboard() {
       const { signature, wallet } = await signWithMetaMask(contract.file_url);
 
       // store signature A
-      await fetch("${API_BASE_URL}/store-signature", {
+      await fetch(`${API_BASE_URL}/store-signature`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
