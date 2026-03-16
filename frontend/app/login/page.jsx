@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { linkContractsAfterLogin } from "@/lib/linkContracts";
 import { ShieldCheck, Mail, Lock, ArrowRight } from "lucide-react";
 
+
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
