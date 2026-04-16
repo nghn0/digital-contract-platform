@@ -6,6 +6,29 @@ const cors = require("cors");
 const crypto = require("crypto");
 const { createClient } = require("@supabase/supabase-js");
 const { ethers } = require("ethers");
+const modelClient = require("./services/modelClient");
+
+/* ================= RETRY HELPER ================= */
+
+const retryRequest = async (fn, retries = 3, delay = 1000) => {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      const isNetworkError = 
+        err.message.includes("ECONNRESET") || 
+        err.message.includes("fetch failed") || 
+        err.message.includes("Timeout") ||
+        err.message.includes("ConnectTimeoutError");
+
+      if (i === retries - 1 || !isNetworkError) throw err;
+      
+      console.warn(`⚠️ Request failed (Attempt ${i + 1}/${retries}): ${err.message}. Retrying in ${delay}ms...`);
+      await new Promise(r => setTimeout(r, delay));
+      delay *= 2; // Exponential backoff
+    }
+  }
+};
 
 const app = express();
 app.use(express.json());
@@ -57,6 +80,43 @@ const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE,
 );
+
+/* ================= HASH VERIFICATION HELPER ================= */
+
+const verifyContractHash = async (contractId) => {
+  console.log(`🔍 Verifying integrity for contract: ${contractId}`);
+
+  // 1. Get contract record
+  const { data: contract, error: dbError } = await retryRequest(() => 
+    supabase
+      .from("contracts")
+      .select("file_url, contract_hash")
+      .eq("contract_id", contractId)
+      .single()
+  );
+
+  if (dbError || !contract) throw new Error("Contract record not found");
+
+  // 2. Download file into memory (RAM)
+  const res = await fetch(contract.file_url);
+  if (!res.ok) throw new Error("Could not fetch file from storage for verification");
+  const buffer = await res.arrayBuffer();
+
+  // 3. Recompute SHA-256 hash
+  const currentHash = "0x" + crypto
+    .createHash("sha256")
+    .update(Buffer.from(buffer))
+    .digest("hex");
+
+  // 4. Detailed comparison
+  if (currentHash !== contract.contract_hash) {
+    console.error(`💥 HASH MISMATCH detected! DB: ${contract.contract_hash} vs FILE: ${currentHash}`);
+    throw new Error("Contract integrity check failed: The document has been modified since upload.");
+  }
+
+  console.log("✅ Integrity verified. Hash matches database.");
+  return true;
+};
 
 /* ================= FILE UPLOAD ================= */
 
@@ -111,11 +171,13 @@ app.post(
 
       const fileName = `${Date.now()}-${safeName}`;
 
-      const { error: storageError } = await supabase.storage
-        .from("contracts")
-        .upload(fileName, file.buffer, {
-          contentType: file.mimetype,
-        });
+      const { error: storageError } = await retryRequest(() => 
+        supabase.storage
+          .from("contracts")
+          .upload(fileName, file.buffer, {
+            contentType: file.mimetype,
+          })
+      );
 
       if (storageError) throw storageError;
 
@@ -228,7 +290,7 @@ app.post(
       res.json(contract);
     } catch (err) {
       console.error("❌ Upload error:", err);
-      res.status(500).send("Upload failed");
+      res.status(500).json({ error: "Upload failed", details: err.message });
     }
   },
 );
@@ -251,6 +313,9 @@ app.post("/store-signature", async (req, res) => {
       .select("*")
       .eq("contract_id", contract_id)
       .maybeSingle();
+
+    // 🛡️ INTEGRITY CHECK: Verify hash before storing signature
+    await retryRequest(() => verifyContractHash(contract_id));
 
     /* ================= RECEIVER SIGNS (B) ================= */
 
@@ -278,7 +343,7 @@ app.post("/store-signature", async (req, res) => {
       // update contract status
       await supabase
         .from("contracts")
-        .update({ status: "PENDING_SIGNATURE_A" })
+        .update({ status: "AWAITING_SENDER_SIGNATURE" })
         .eq("contract_id", contract_id);
     }
 
@@ -310,7 +375,7 @@ app.post("/store-signature", async (req, res) => {
     res.json({ success: true });
   } catch (err) {
     console.error("❌ Signature store error:", err);
-    res.status(500).send("Signature store failed");
+    res.status(500).json({ error: "Signature store failed", details: err.message });
   }
 });
 
@@ -344,7 +409,7 @@ app.post("/store-onchain", async (req, res) => {
     res.json({ txHash: tx.hash });
   } catch (err) {
     console.error("❌ Blockchain error:", err);
-    res.status(500).send("Blockchain failed");
+    res.status(500).json({ error: "Blockchain failed", details: err.message });
   }
 });
 
@@ -365,7 +430,7 @@ app.get("/contracts/received/:userId", async (req, res) => {
     res.json(data);
   } catch (err) {
     console.error("❌ Fetch received contracts error:", err);
-    res.status(500).send("Failed to fetch contracts");
+    res.status(500).json({ error: "Failed to fetch contracts", details: err.message });
   }
 });
 
@@ -396,7 +461,7 @@ app.patch("/contracts/:id/status", async (req, res) => {
     res.json(data);
   } catch (err) {
     console.error("❌ Status update error:", err);
-    res.status(500).send("Failed to update status");
+    res.status(500).json({ error: "Failed to update status", details: err.message });
   }
 });
 
@@ -426,7 +491,9 @@ app.post("/contracts/:id/finalize", async (req, res) => {
       });
     }
 
-    // 3️⃣ recompute hash from file
+    // 3️⃣ recompute hash from file (and verify against DB)
+    await verifyContractHash(id);
+
     const fileRes = await fetch(contract.file_url);
     const buffer = await fileRes.arrayBuffer();
 
@@ -458,19 +525,35 @@ app.post("/contracts/:id/finalize", async (req, res) => {
     await tx.wait();
 
     // 5️⃣ update status
-    await supabase
-      .from("contracts")
-      .update({
-        status: "ON_BLOCKCHAIN",
-        blockchain_tx_hash: tx.hash,
-        contract_hash: "0x" + contractHash,
-      })
-      .eq("contract_id", id);
+    await retryRequest(() => 
+      supabase
+        .from("contracts")
+        .update({
+          status: "ON_BLOCKCHAIN",
+          blockchain_tx_hash: tx.hash,
+          contract_hash: "0x" + contractHash,
+        })
+        .eq("contract_id", id)
+    );
+
+    // 🔥 SECURITY PROTOCOL: DELETE FILE FROM STORAGE AFTER ON-CHAIN FINALIZATION
+    if (contract.file_url) {
+      console.log(`🗑️ Deleting file from bucket for privacy after blockchain finalization: ${contract.file_url}`);
+      try {
+        const oldPath = contract.file_url.split("/contracts/")[1];
+        if (oldPath) {
+          const { error: deletionError } = await supabase.storage.from("contracts").remove([oldPath]);
+          if (deletionError) console.error("Failed to delete from storage:", deletionError);
+        }
+      } catch (deletionErr) {
+        console.error("Error during storage deletion:", deletionErr);
+      }
+    }
 
     res.json({ txHash: tx.hash });
   } catch (err) {
     console.error("❌ Finalize error:", err);
-    res.status(500).send("Finalize failed");
+    res.status(500).json({ error: "Finalize failed", details: err.message });
   }
 });
 
@@ -480,18 +563,20 @@ app.get("/contracts/sent/:userId", async (req, res) => {
   try {
     const { userId } = req.params;
 
-    const { data, error } = await supabase
-      .from("contracts")
-      .select("*")
-      .eq("sender_id", userId)
-      .order("created_at", { ascending: false });
+    const { data, error } = await retryRequest(() => 
+      supabase
+        .from("contracts")
+        .select("*")
+        .eq("sender_id", userId)
+        .order("created_at", { ascending: false })
+    );
 
     if (error) throw error;
 
     res.json(data);
   } catch (err) {
     console.error("❌ Fetch sent contracts error:", err);
-    res.status(500).send("Failed to fetch sent contracts");
+    res.status(500).json({ error: "Failed to fetch sent contracts", details: err.message });
   }
 });
 
@@ -501,18 +586,154 @@ app.get("/contracts/all/:userId", async (req, res) => {
   try {
     const { userId } = req.params;
 
-    const { data, error } = await supabase
-      .from("contracts")
-      .select("*")
-      .or(`sender_id.eq.${userId},receiver_id.eq.${userId}`)
-      .order("created_at", { ascending: false });
+    const { data, error } = await retryRequest(() => 
+      supabase
+        .from("contracts")
+        .select("*")
+        .or(`sender_id.eq.${userId},receiver_id.eq.${userId}`)
+        .order("created_at", { ascending: false })
+    );
 
     if (error) throw error;
 
     res.json(data);
   } catch (err) {
     console.error("❌ Fetch all contracts error:", err);
-    res.status(500).send("Failed to fetch contracts");
+    res.status(500).json({ error: "Failed to fetch contracts", details: err.message });
+  }
+});
+
+/* ================= GET SINGLE CONTRACT ================= */
+
+app.get("/contract/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const { data: contract, error } = await retryRequest(() => 
+      supabase
+        .from("contracts")
+        .select("*")
+        .eq("contract_id", id)
+        .single()
+    );
+
+    if (error) throw error;
+    res.json(contract);
+  } catch (err) {
+    console.error("❌ Fetch contract error:", err);
+    res.status(500).json({ error: "Failed to fetch contract", details: err.message });
+  }
+});
+
+/* ================= ANALYZE CONTRACT ================= */
+
+app.post("/contract/:id/analyze", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // 1. Fetch contract
+    const { data: contract, error } = await retryRequest(() => 
+      supabase
+        .from("contracts")
+        .select("file_url")
+        .eq("contract_id", id)
+        .single()
+    );
+
+    if (error || !contract || !contract.file_url) {
+      throw new Error("Contract not found or no file attached");
+    }
+
+    // 2. Download file to buffer
+    const fileRes = await fetch(contract.file_url);
+    if (!fileRes.ok) throw new Error("Could not fetch file from storage");
+    const buffer = Buffer.from(await fileRes.arrayBuffer());
+
+    // Extract extension or assume pdf (or whatever was saved)
+    let extension = ".pdf";
+    if (contract.file_url.endsWith(".docx")) extension = ".docx";
+    else if (contract.file_url.endsWith(".txt")) extension = ".txt";
+
+    // 3. Send to Python gRPC server
+    const analysisResponse = await modelClient.analyzeDocument(buffer, extension);
+
+    // 4. Return structured response directly to frontend (no JSON.parse necessary)
+    res.json(analysisResponse);
+  } catch (err) {
+    console.error("❌ Analyze error:", err);
+    res.status(500).json({ error: "Analysis failed", details: err.message });
+  }
+});
+
+/* ================= EPHEMERAL INTELLIGENCE ANALYSIS ================= */
+
+app.post("/analyze-ephemeral", authenticateUser, upload.single("file"), async (req, res) => {
+  try {
+    console.log("📥 Ephemeral analysis request received (Not storing in DB)");
+    const file = req.file;
+    if (!file) {
+      return res.status(400).json({ error: "Missing document file" });
+    }
+
+    let extension = "pdf";
+    if (file.originalname.endsWith(".docx")) extension = "docx";
+    else if (file.originalname.endsWith(".txt")) extension = "txt";
+
+    const analysisResponse = await modelClient.analyzeDocument(file.buffer, extension);
+    res.json(analysisResponse);
+  } catch (err) {
+    console.error("❌ Ephemeral analyze error:", err);
+    res.status(500).json({ error: "Analysis failed", details: err.message });
+  }
+});
+
+/* ================= LEGAL VERIFIER ================= */
+
+app.post("/verify-contract", authenticateUser, upload.single("file"), async (req, res) => {
+  try {
+    console.log("🔍 Legal Verifier request received");
+    const file = req.file;
+    const { txHash } = req.body;
+
+    if (!file || !txHash) {
+      return res.status(400).json({ error: "Missing file or transaction hash" });
+    }
+
+    // Hash the uploaded file
+    const contractHash = "0x" + crypto.createHash("sha256").update(file.buffer).digest("hex");
+
+    // Look up contracts table by blockchain_tx_hash
+    const { data: contract, error } = await supabase
+      .from("contracts")
+      .select("contract_hash, status")
+      .eq("blockchain_tx_hash", txHash)
+      .single();
+
+    if (error || !contract) {
+      return res.json({ 
+        success: false, 
+        message: "Transaction hash not found in registry or unlinked.",
+        isTampered: false 
+      });
+    }
+
+    if (contract.contract_hash === contractHash) {
+      return res.json({ 
+        success: true, 
+        message: "Document matches the cryptographically signed ledger. Authentic.",
+        isTampered: false 
+      });
+    } else {
+      return res.json({ 
+        success: false, 
+        message: "CRITICAL: Hash mismatch! This document has been tampered with or modified.",
+        isTampered: true 
+      });
+    }
+
+  } catch (err) {
+    console.error("❌ Verify error:", err);
+    res.status(500).json({ error: "Verification failed", details: err.message });
   }
 });
 
@@ -524,19 +745,23 @@ app.post("/link-receiver", authenticateUser, async (req, res) => {
     const email = req.user.email;
 
     // ✅ link contracts
-    await supabase
-      .from("contracts")
-      .update({ receiver_id: userId })
-      .eq("receiver_email", email)
-      .is("receiver_id", null);
+    await retryRequest(() => 
+      supabase
+        .from("contracts")
+        .update({ receiver_id: userId })
+        .eq("receiver_email", email)
+        .is("receiver_id", null)
+    );
 
     // ✅ DELETE invite (CRITICAL FIX)
-    await supabase.from("email_invites").delete().eq("email", email);
+    await retryRequest(() => 
+      supabase.from("email_invites").delete().eq("email", email)
+    );
 
     res.json({ success: true });
   } catch (err) {
     console.error("❌ Link receiver error:", err);
-    res.status(500).send("Link failed");
+    res.status(500).json({ error: "Link failed", details: err.message });
   }
 });
 

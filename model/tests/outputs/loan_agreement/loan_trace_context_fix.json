@@ -1,0 +1,3547 @@
+{
+  "total_events": 278,
+  "events_by_type": {
+    "validation": 3,
+    "extraction": 8,
+    "warning": 1,
+    "llm_call": 19,
+    "llm_response": 19,
+    "kb_query": 72,
+    "retrieval_mode": 72,
+    "kb_result": 72,
+    "batch_dispatch": 12
+  },
+  "events_by_stage": {
+    "Stage 0": 1,
+    "Stage 1": 2,
+    "Stage 2": 2,
+    "Stage 3": 16,
+    "KB Initialization": 1,
+    "Extraction": 38,
+    "KB Retrieval": 216,
+    "Stage 4": 2
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-04-12T22:37:28.742358",
+      "stage": "Stage 0",
+      "event_type": "validation",
+      "description": "Input validation",
+      "details": {
+        "file": "LOAN AGREEMENT.pdf",
+        "provider": "gemini",
+        "model": "models/gemini-3.1-flash-lite-preview"
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:28.742797",
+      "stage": "Stage 1",
+      "event_type": "extraction",
+      "description": "Extracting raw document text",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-12T22:37:29.493487",
+      "stage": "Stage 1",
+      "event_type": "extraction",
+      "description": "Text extracted: 14960 characters",
+      "details": {
+        "character_count": 14960,
+        "preview": "FIRST AMENDMENT TO\nSENIOR REVOLVER LOAN AGREEMENT\nTHIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT,\ndated effective as of March 27, 2019 (the \"First Amendment\"), is entered into by and\namong EMP"
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:29.494250",
+      "stage": "Stage 2",
+      "event_type": "extraction",
+      "description": "Splitting document into clauses",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-12T22:37:29.495080",
+      "stage": "Stage 2",
+      "event_type": "extraction",
+      "description": "Clauses segmented: 23 sections found",
+      "details": {
+        "clause_count": 23,
+        "sample_clauses": [
+          {
+            "heading": "FIRST AMENDMENT TO\nSENIOR REVOLVER LOAN AGREEMENT",
+            "length": 1877
+          },
+          {
+            "heading": "1. Definitions. Capitalized terms used herein and not otherw",
+            "length": 863
+          },
+          {
+            "heading": "2. Revolver Commitment. The Revolver Commitment is hereby in",
+            "length": 799
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:29.495975",
+      "stage": "Stage 3",
+      "event_type": "extraction",
+      "description": "Running grounded two-pass extraction",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-12T22:37:29.500561",
+      "stage": "KB Initialization",
+      "event_type": "warning",
+      "description": "ChromaDB collections are empty - using JSON fallback retrieval. Run scripts/build_chroma_kb.py to populate.",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-12T22:37:29.501111",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nAnalyze the following legal document and extract document metadata and party information.\n\nCONTRACT TEXT:\nFIRST AMENDMENT TO\nSENIOR REVOLVER LOAN AGREEMENT\nTHIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT,\ndated effective as of March 27, 2019 (the \"First Amendment\"), is entered into by and\nam",
+        "total_message_length": 17239
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.453763",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 1803,
+        "response_preview": "{\n  \"metadata\": {\n    \"document_type\": \"Loan\",\n    \"document_subtype\": \"Amendment\",\n    \"title\": \"FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT\",\n    \"effective_date\": \"2019-03-27\",\n    \"execution_date\": null,\n    \"expiration_date\": \"2021-03-27\",\n    \"auto_renewal\": null,\n    \"renewal_notice_per",
+        "parsed_json_keys": [
+          "metadata",
+          "parties"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.456857",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "THIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT,\ndated effective as of March 27, 2019 (the \"First Amendment\"), is entered into by and\namong EMPIRE LOUISIANA LLC, a Delaware limited liability co",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.457754",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.458044",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref",
+          "Loan fee clause: Specifies origination fees, commitment fees, amendment fees, and fee calculation basis.\n[Metadata] clause_type: Loan / Amendment Fees"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.458333",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "FIRST AMENDMENT TO\nSENIOR REVOLVER LOAN AGREEMENT THIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT,\ndated effective as of March 27, 2019 (the \"First Amendment\"), is entered into by and\namong EMP",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.459036",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.459354",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am",
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.459858",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "FIRST AMENDMENT TO\nSENIOR REVOLVER LOAN AGREEMENT THIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT,\ndated effective as of March 27, 2019 (the \"First Amendment\"), is entered into by and\namong EMP",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.461224",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.461901",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "HIGH red flag language \u2014 Auto-renewal trap with short notice window: These phrases indicate dangerous auto-renewal terms: 'shall automatically renew f"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.462269",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "shall have the meaning given in the Existing Loan Agreement. In addition, the following\nterms are added to Article I of the Existing Loan Agreement or amended to read as\nfollows:\n\"Guaranty Agreement\" ",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.462971",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.463324",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref",
+          "Guaranty agreement clause: Captures guarantor obligations, guarantee scope, waivers, and continuing nature of guaranty.\n[Metadata] clause_type: Guaran"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.463747",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "1. Definitions. Capitalized terms used herein and not otherwise defined shall have the meaning given in the Existing Loan Agreement. In addition, the following\nterms are added to Article I of the Exis",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.464191",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.464392",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.465138",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "1. Definitions. Capitalized terms used herein and not otherwise defined shall have the meaning given in the Existing Loan Agreement. In addition, the following\nterms are added to Article I of the Exis",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.466300",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.466598",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "MEDIUM red flag language \u2014 Perpetual or indefinite obligations: These phrases create obligations that never end: 'in perpetuity', 'perpetually', 'inde"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.467090",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 0,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.467290",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 12789
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.471507",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "renewed to the Revolver Final Maturity Date, subject to the Revolver Commitment\nAmount, the Collateral Borrowing Base limitations and QCR described below. All of the\nIndebtedness created pursuant ther",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.472474",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.472713",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref",
+          "Loan fee clause: Specifies origination fees, commitment fees, amendment fees, and fee calculation basis.\n[Metadata] clause_type: Loan / Amendment Fees"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.473092",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "2. Revolver Commitment. The Revolver Commitment is hereby increased and renewed to the Revolver Final Maturity Date, subject to the Revolver Commitment\nAmount, the Collateral Borrowing Base limitation",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.473526",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.473923",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am",
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.474308",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "2. Revolver Commitment. The Revolver Commitment is hereby increased and renewed to the Revolver Final Maturity Date, subject to the Revolver Commitment\nAmount, the Collateral Borrowing Base limitation",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.475377",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.476008",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "MEDIUM red flag language \u2014 Perpetual or indefinite obligations: These phrases create obligations that never end: 'in perpetuity', 'perpetually', 'inde"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.476329",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "Borrower shall pay to Bank a fully earned and non-refundable loan origination fee equal to $76,900.00 (one\nhundred basis points (1.00%) on the $7,690,000.00 increase in the\nRevolver Commitment Amount)",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.477011",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.477460",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Loan fee clause: Specifies origination fees, commitment fees, amendment fees, and fee calculation basis.\n[Metadata] clause_type: Loan / Amendment Fees",
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.477958",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "2.4 Loan Origination Fee. Borrower shall pay to Bank a fully earned and non-refundable loan origination fee equal to $76,900.00 (one\nhundred basis points (1.00%) on the $7,690,000.00 increase in the\nR",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.478333",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.478839",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.479361",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "2.4 Loan Origination Fee. Borrower shall pay to Bank a fully earned and non-refundable loan origination fee equal to $76,900.00 (one\nhundred basis points (1.00%) on the $7,690,000.00 increase in the\nR",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.480186",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.480417",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unlimited liability indicators: The following phrases in a contract signal that one party faces unlimited financial expos",
+          "HIGH red flag language \u2014 Auto-renewal trap with short notice window: These phrases indicate dangerous auto-renewal terms: 'shall automatically renew f"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.480763",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 2,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.481017",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 11047
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.481760",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "All fees payable under Sections 2.4, 2.5, 2.6, 2.10 and 2.14 shall be paid on the dates due, in immediately available\nfunds, US Dollars, to Bank and shall be fully earned and non-refundable\nunder any ",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.483690",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.484085",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Event of default clause in lending: Defines triggers such as payment default, covenant breach, insolvency, cross-default, and acceleration rights.\n[Me",
+          "Quarterly commitment reduction clause: Requires scheduled reductions of revolving commitment or principal over defined quarterly dates.\n[Metadata] cla"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.485316",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "2.12 Payment of Fees. All fees payable under Sections 2.4, 2.5, 2.6, 2.10 and 2.14 shall be paid on the dates due, in immediately available\nfunds, US Dollars, to Bank and shall be fully earned and non",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.485717",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.485912",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.486177",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "2.12 Payment of Fees. All fees payable under Sections 2.4, 2.5, 2.6, 2.10 and 2.14 shall be paid on the dates due, in immediately available\nfunds, US Dollars, to Bank and shall be fully earned and non",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.487021",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.487772",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH red flag language \u2014 Overbroad non-compete: These phrases indicate a non-compete that is likely too broad to be fair or enforceable: 'engage in an",
+          "CRITICAL red flag language \u2014 Unlimited liability indicators: The following phrases in a contract signal that one party faces unlimited financial expos"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.488103",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "On the last day of each calendar quarter, commencing June 30, 2019, the Revolver Commitment\nAmount shall automatically be reduced by $150,000.00 per quarter (the\n\"QCR\"), and Borrower shall make any pr",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.488698",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.488967",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Quarterly commitment reduction clause: Requires scheduled reductions of revolving commitment or principal over defined quarterly dates.\n[Metadata] cla",
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.489218",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "2.13 Quarterly Commitment Reduction (QCR). On the last day of each calendar quarter, commencing June 30, 2019, the Revolver Commitment\nAmount shall automatically be reduced by $150,000.00 per quarter ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.489566",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.489917",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Mandatory quarterly principal or commitment reductions can stress liquidity and increase refinancing pressure.\n[Metadata] risk_type: Liqu",
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.490264",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "2.13 Quarterly Commitment Reduction (QCR). On the last day of each calendar quarter, commencing June 30, 2019, the Revolver Commitment\nAmount shall automatically be reduced by $150,000.00 per quarter ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.491131",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.491355",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH red flag language \u2014 Broad IP assignment including pre-existing work: These phrases indicate all IP transfers including what the party already own",
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.491665",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 4,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.491884",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "For each amendment or other change to this Agreement that is required (in the sole discretion of the Bank) as a\nresult of a change in terms or conditions requested by Borrower,\nBorrower shall pay Bank",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.492378",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.492600",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Loan fee clause: Specifies origination fees, commitment fees, amendment fees, and fee calculation basis.\n[Metadata] clause_type: Loan / Amendment Fees",
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.492873",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "2.14 Loan Amendment Fee. For each amendment or other change to this Agreement that is required (in the sole discretion of the Bank) as a\nresult of a change in terms or conditions requested by Borrower",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.493246",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.493426",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.493744",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "2.14 Loan Amendment Fee. For each amendment or other change to this Agreement that is required (in the sole discretion of the Bank) as a\nresult of a change in terms or conditions requested by Borrower",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.495448",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.495751",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "HIGH red flag language \u2014 One-sided termination without notice: These phrases indicate that only one party can exit freely: 'may terminate this agreeme"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.496090",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "6.6(b) of the Existing Loan Agreement are hereby modified to provide that the\nGuarantor will furnish such Financial Statements and Reports pursuant to the terms of\nthe Guaranty Agreement.",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.496546",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.497556",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Guaranty agreement clause: Captures guarantor obligations, guarantee scope, waivers, and continuing nature of guaranty.\n[Metadata] clause_type: Guaran",
+          "Release of claims clause in banking context: Borrower releases lender from known and unknown claims related to loan documents and relationship.\n[Metad"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.501391",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "7. Financial Statements and Reports. Section 6.6(a) and the first sentence of 6.6(b) of the Existing Loan Agreement are hereby modified to provide that the\nGuarantor will furnish such Financial Statem",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.502537",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.503649",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.505339",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "7. Financial Statements and Reports. Section 6.6(a) and the first sentence of 6.6(b) of the Existing Loan Agreement are hereby modified to provide that the\nGuarantor will furnish such Financial Statem",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.507064",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.508131",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH red flag language \u2014 Auto-renewal trap with short notice window: These phrases indicate dangerous auto-renewal terms: 'shall automatically renew f",
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.509113",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 6,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.510326",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "Existing Loan Agreement in its entirety:\n(c) Net Lease Operating Reports. No later than sixty (60) days after the\nend of each calendar quarter, reports regarding leases in the same form\nas they are re",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.511732",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.512373",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Quarterly commitment reduction clause: Requires scheduled reductions of revolving commitment or principal over defined quarterly dates.\n[Metadata] cla",
+          "Release of claims clause in banking context: Borrower releases lender from known and unknown claims related to loan documents and relationship.\n[Metad"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.512837",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "8. Net Lease Operating Reports. The following replaces Section 6.6(c) of the Existing Loan Agreement in its entirety:\n(c) Net Lease Operating Reports. No later than sixty (60) days after the\nend of ea",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.513804",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.514457",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.514809",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "8. Net Lease Operating Reports. The following replaces Section 6.6(c) of the Existing Loan Agreement in its entirety:\n(c) Net Lease Operating Reports. No later than sixty (60) days after the\nend of ea",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.515863",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.516238",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "MEDIUM red flag language \u2014 Perpetual or indefinite obligations: These phrases create obligations that never end: 'in perpetuity', 'perpetually', 'inde"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.516701",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "Interest Coverage\nRatio) of the Existing Loan Agreement shall be measured for Borrower on a combined\nbasis using consolidated financial statements provided by the Guarantor.",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.517193",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.517718",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Financial covenant clause: Imposes leverage, fixed-charge coverage, liquidity, interest coverage, and reporting ratio thresholds.\n[Metadata] clause_ty",
+          "Quarterly commitment reduction clause: Requires scheduled reductions of revolving commitment or principal over defined quarterly dates.\n[Metadata] cla"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.518178",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "Section 28 (Minimum Leverage Ratio) and Section 29 (Minimum Interest Coverage\nRatio) of the Existing Loan Agreement shall be measured for Borrower on a combined\nbasis using consolidated financial stat",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.519276",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.519936",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "LOW to MEDIUM risk: Jury trial waivers are common in commercial lending but should be highlighted for litigation strategy impact.\n[Metadata] risk_type"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.520816",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "Section 28 (Minimum Leverage Ratio) and Section 29 (Minimum Interest Coverage\nRatio) of the Existing Loan Agreement shall be measured for Borrower on a combined\nbasis using consolidated financial stat",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.522899",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.523530",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH red flag language \u2014 Auto-renewal trap with short notice window: These phrases indicate dangerous auto-renewal terms: 'shall automatically renew f",
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.524520",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 8,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.524727",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "The term \"Collateral\" as that term is defined in Article III of the Existing Loan Agreement shall incorporate and include, without limitation, all\nreal and personal property lien interests granted by ",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.525285",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.525675",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Collateral and security interest clause: Grants or reaffirms liens, mortgages, pledges, and security interests securing lender obligations.\n[Metadata]",
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.525954",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "10. Collateral/Mortgages. The term \"Collateral\" as that term is defined in Article III of the Existing Loan Agreement shall incorporate and include, without limitation, all\nreal and personal property ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.526435",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.526752",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.527033",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "10. Collateral/Mortgages. The term \"Collateral\" as that term is defined in Article III of the Existing Loan Agreement shall incorporate and include, without limitation, all\nreal and personal property ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.529677",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.531410",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH red flag language \u2014 Broad IP assignment including pre-existing work: These phrases indicate all IP transfers including what the party already own",
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.531917",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "mortgagee, are parties to a certain Mortgage, Assignment of As-Extracted Collateral,\nSecurity Agreement and Fixture Filing dated as of September 20, 2018, as corrected by\ninstrument dated November 7, ",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.532485",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.532852",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Collateral and security interest clause: Grants or reaffirms liens, mortgages, pledges, and security interests securing lender obligations.\n[Metadata]",
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.533222",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "11. Amended Louisiana Mortgage. EL, as mortgagor, and CrossFirst, as mortgagee, are parties to a certain Mortgage, Assignment of As-Extracted Collateral,\nSecurity Agreement and Fixture Filing dated as",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.534100",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.534522",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.535893",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "11. Amended Louisiana Mortgage. EL, as mortgagor, and CrossFirst, as mortgagee, are parties to a certain Mortgage, Assignment of As-Extracted Collateral,\nSecurity Agreement and Fixture Filing dated as",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.539583",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.540530",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "HIGH red flag language \u2014 Broad IP assignment including pre-existing work: These phrases indicate all IP transfers including what the party already own"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.541888",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 10,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.542732",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "be executed and delivered, to the Bank, each of the following as express conditions\nprecedent to the effectiveness of the amendments and modifications contemplated by\nthis First Amendment:\n( This Firs",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.544299",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.544964",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Conditions precedent clause for amendment effectiveness: Lists documents, approvals, fees, and certifications required before amendment takes effect.\n",
+          "Event of default clause in lending: Defines triggers such as payment default, covenant breach, insolvency, cross-default, and acceleration rights.\n[Me"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.545438",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "12. Conditions Precedent. The Borrower shall execute and deliver, or cause to be executed and delivered, to the Bank, each of the following as express conditions\nprecedent to the effectiveness of the ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.546126",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.546771",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Conditions subsequent with immediate default trigger may create accelerated default exposure without cure period.\n[Metadata] risk_type: Imm",
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.547816",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "12. Conditions Precedent. The Borrower shall execute and deliver, or cause to be executed and delivered, to the Bank, each of the following as express conditions\nprecedent to the effectiveness of the ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.553093",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.553843",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "HIGH red flag language \u2014 One-sided termination without notice: These phrases indicate that only one party can exit freely: 'may terminate this agreeme"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.554741",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "days of receipt of an invoice therefor) reimburse the Bank for its reasonable legal fees\nand all filing and recording fees and other costs and expenses reasonably incurred in\nconnection with the negot",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.555502",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.555986",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Conditions precedent clause for amendment effectiveness: Lists documents, approvals, fees, and certifications required before amendment takes effect.\n",
+          "Event of default clause in lending: Defines triggers such as payment default, covenant breach, insolvency, cross-default, and acceleration rights.\n[Me"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.556987",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "13. Fees and Expenses. Borrower shall promptly (in any event within ten (10) days of receipt of an invoice therefor) reimburse the Bank for its reasonable legal fees\nand all filing and recording fees ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.558196",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.559063",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.559762",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "13. Fees and Expenses. Borrower shall promptly (in any event within ten (10) days of receipt of an invoice therefor) reimburse the Bank for its reasonable legal fees\nand all filing and recording fees ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.561315",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.561995",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unlimited liability indicators: The following phrases in a contract signal that one party faces unlimited financial expos",
+          "HIGH red flag language \u2014 Confession of judgment or advance consent to adverse orders: These phrases allow one party to obtain a court judgment against"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.562769",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 12,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.563132",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "The remaining terms, provisions and conditions set forth in the Existing Loan Agreement shall remain in full force and effect as long as any\nIndebtedness of the Borrower is owing to the Bank and/or th",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.564516",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.565395",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref",
+          "Loan fee clause: Specifies origination fees, commitment fees, amendment fees, and fee calculation basis.\n[Metadata] clause_type: Loan / Amendment Fees"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.566938",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "14. Ratification. The remaining terms, provisions and conditions set forth in the Existing Loan Agreement shall remain in full force and effect as long as any\nIndebtedness of the Borrower is owing to ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.569135",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.570615",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.572098",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "14. Ratification. The remaining terms, provisions and conditions set forth in the Existing Loan Agreement shall remain in full force and effect as long as any\nIndebtedness of the Borrower is owing to ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.574263",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.575611",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "HIGH red flag language \u2014 Broad IP assignment including pre-existing work: These phrases indicate all IP transfers including what the party already own"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.577091",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "the terms of this First Amendment shall control and govern, and the agreements shall be interpreted so as to\ncarry out and give full effect to the intent of this First Amendment. Each Borrower and\nthe",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.579163",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.580138",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Collateral and security interest clause: Grants or reaffirms liens, mortgages, pledges, and security interests securing lender obligations.\n[Metadata]",
+          "Release of claims clause in banking context: Borrower releases lender from known and unknown claims related to loan documents and relationship.\n[Metad"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.581154",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "4\nAmendment and the terms of the Existing Loan Agreement,... the terms of this First Amendment shall control and govern, and the agreements shall be interpreted so as to\ncarry out and give full effect",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.582958",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.583855",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.585144",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "4\nAmendment and the terms of the Existing Loan Agreement,... the terms of this First Amendment shall control and govern, and the agreements shall be interpreted so as to\ncarry out and give full effect",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.589571",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.590050",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "MEDIUM red flag language \u2014 Assignment without consent: These phrases allow transfer of contract obligations without permission: 'may assign this Agree"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.590544",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 14,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.591236",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "CONSENT TO THE JURISDICTION OF ANY OF THE LOCAL, STATE, AND FEDERAL\nCOURTS LOCATED WITHIN TULSA COUNTY, OKLAHOMA AND WAIVES ANY\nOBJECTION WHICH THE BORROWER MAY HAVE BASED ON IMPROPER VENUE\nOR FORUM N",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.592265",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.593015",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Release of claims clause in banking context: Borrower releases lender from known and unknown claims related to loan documents and relationship.\n[Metad",
+          "Event of default clause in lending: Defines triggers such as payment default, covenant breach, insolvency, cross-default, and acceleration rights.\n[Me"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.594040",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "15. SUBMISSION TO JURISDICTION. BORROWER AND THE BANK HEREBY CONSENT TO THE JURISDICTION OF ANY OF THE LOCAL, STATE, AND FEDERAL\nCOURTS LOCATED WITHIN TULSA COUNTY, OKLAHOMA AND WAIVES ANY\nOBJECTION W",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.594856",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.595822",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J",
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.597110",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "15. SUBMISSION TO JURISDICTION. BORROWER AND THE BANK HEREBY CONSENT TO THE JURISDICTION OF ANY OF THE LOCAL, STATE, AND FEDERAL\nCOURTS LOCATED WITHIN TULSA COUNTY, OKLAHOMA AND WAIVES ANY\nOBJECTION W",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.598964",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.599473",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH red flag language \u2014 Confession of judgment or advance consent to adverse orders: These phrases allow one party to obtain a court judgment against",
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.599897",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "EXPRESSLY WAIVES ANY RIGHT TO A TRIAL BY JURY IN ANY ACTION OR\nPROCEEDING TO ENFORCE OR DEFEND ANY RIGHTS UNDER THE LOAN\nAGREEMENT (INCLUDING THIS FIRST AMENDMENT), THE SECURITY\nINSTRUMENTS OR UNDER A",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.600932",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.601452",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Release of claims clause in banking context: Borrower releases lender from known and unknown claims related to loan documents and relationship.\n[Metad",
+          "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often ref"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.601765",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "16. WAIVER OF JURY TRIAL. BORROWER FULLY, VOLUNTARILY AND EXPRESSLY WAIVES ANY RIGHT TO A TRIAL BY JURY IN ANY ACTION OR\nPROCEEDING TO ENFORCE OR DEFEND ANY RIGHTS UNDER THE LOAN\nAGREEMENT (INCLUDING ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.602166",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.602744",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "LOW to MEDIUM risk: Jury trial waivers are common in commercial lending but should be highlighted for litigation strategy impact.\n[Metadata] risk_type",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.603623",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "16. WAIVER OF JURY TRIAL. BORROWER FULLY, VOLUNTARILY AND EXPRESSLY WAIVES ANY RIGHT TO A TRIAL BY JURY IN ANY ACTION OR\nPROCEEDING TO ENFORCE OR DEFEND ANY RIGHTS UNDER THE LOAN\nAGREEMENT (INCLUDING ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.606219",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.606550",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH red flag language \u2014 Broad IP assignment including pre-existing work: These phrases indicate all IP transfers including what the party already own",
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.607321",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 16,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.607753",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "be deemed to have been made or incurred under the Laws of the State of Oklahoma\nand shall be construed and enforced in accordance with and governed by the Laws of\nOklahoma.",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.609109",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.609724",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Quarterly commitment reduction clause: Requires scheduled reductions of revolving commitment or principal over defined quarterly dates.\n[Metadata] cla",
+          "Event of default clause in lending: Defines triggers such as payment default, covenant breach, insolvency, cross-default, and acceleration rights.\n[Me"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.610137",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "17. Governing Law. The Loan Agreement (including the First Amendment) shall be deemed to have been made or incurred under the Laws of the State of Oklahoma\nand shall be construed and enforced in accor",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.610501",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.610717",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J",
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.611282",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "17. Governing Law. The Loan Agreement (including the First Amendment) shall be deemed to have been made or incurred under the Laws of the State of Oklahoma\nand shall be construed and enforced in accor",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.613303",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.614141",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "HIGH red flag language \u2014 Broad IP assignment including pre-existing work: These phrases indicate all IP transfers including what the party already own"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.614549",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "hereby waives and releases Bank from any and all claims and defenses, known or\nunknown, as of the effective date of this First Amendment, with respect to the Loan\nAgreement (including this First Amend",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.615152",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.615814",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Release of claims clause in banking context: Borrower releases lender from known and unknown claims related to loan documents and relationship.\n[Metad",
+          "Conditions precedent clause for amendment effectiveness: Lists documents, approvals, fees, and certifications required before amendment takes effect.\n"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.616619",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "18. Release. In consideration of the amendments contained herein, Borrower hereby waives and releases Bank from any and all claims and defenses, known or\nunknown, as of the effective date of this Firs",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.618005",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.618886",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.619758",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "18. Release. In consideration of the amendments contained herein, Borrower hereby waives and releases Bank from any and all claims and defenses, known or\nunknown, as of the effective date of this Firs",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.622611",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.623143",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH red flag language \u2014 Waiver of important legal rights: These phrases indicate a party is giving up fundamental legal protections: 'hereby waives a",
+          "HIGH red flag language \u2014 Broad IP assignment including pre-existing work: These phrases indicate all IP transfers including what the party already own"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.623466",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 18,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.623974",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "counterparts, each of which, when so executed, shall constitute an original copy.\nTransmission by facsimile or electronic transmission (e.g., pdf format) of an executed\ncounterpart of this First Amend",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.625032",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.625314",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Conditions precedent clause for amendment effectiveness: Lists documents, approvals, fees, and certifications required before amendment takes effect.\n",
+          "Event of default clause in lending: Defines triggers such as payment default, covenant breach, insolvency, cross-default, and acceleration rights.\n[Me"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.625591",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "19. Counterparts. This First Amendment may be executed in multiple counterparts, each of which, when so executed, shall constitute an original copy.\nTransmission by facsimile or electronic transmissio",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.626215",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.626769",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J",
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.627008",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "19. Counterparts. This First Amendment may be executed in multiple counterparts, each of which, when so executed, shall constitute an original copy.\nTransmission by facsimile or electronic transmissio",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.629501",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.631214",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "MEDIUM red flag language \u2014 Assignment without consent: These phrases allow transfer of contract obligations without permission: 'may assign this Agree"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.631989",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "First Amendment and ratifies and affirms its obligations under, and acknowledges,\nrenews and extends its continued liability under, each Loan Document to which it is a\nparty, and agrees that each Loan",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.633651",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.634376",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Collateral and security interest clause: Grants or reaffirms liens, mortgages, pledges, and security interests securing lender obligations.\n[Metadata]",
+          "Loan fee clause: Specifies origination fees, commitment fees, amendment fees, and fee calculation basis.\n[Metadata] clause_type: Loan / Amendment Fees"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.635503",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "20. Reaffirmation of Indebtedness. Borrower acknowledges the terms of this First Amendment and ratifies and affirms its obligations under, and acknowledges,\nrenews and extends its continued liability ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.636726",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.637598",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.\n[Metadata] risk_type: Am",
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.639986",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "20. Reaffirmation of Indebtedness. Borrower acknowledges the terms of this First Amendment and ratifies and affirms its obligations under, and acknowledges,\nrenews and extends its continued liability ",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.643534",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.644269",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "HIGH red flag language \u2014 Confession of judgment or advance consent to adverse orders: These phrases allow one party to obtain a court judgment against"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.644983",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 20,
+        "batch_size": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.645306",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_clause_types_financial",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "query": "to be duly executed and delivered in Tulsa, Oklahoma, in multiple counterparts effective\nas of the day and year first above written.\nEMPIRE LOUISIANA LLC, a Delaware\nlimited liability company\nBy: /s/ ",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.646438",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.647007",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_clause_types_financial - 3 documents",
+      "details": {
+        "collection": "kb_clause_types_financial",
+        "num_results": 3,
+        "result_preview": [
+          "Release of claims clause in banking context: Borrower releases lender from known and unknown claims related to loan documents and relationship.\n[Metad",
+          "Event of default clause in lending: Defines triggers such as payment default, covenant breach, insolvency, cross-default, and acceleration rights.\n[Me"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.648054",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_risk_rules_financial",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "query": "5\nIN WITNESS WHEREOF, the parties hereto have caused this First Amendment to be duly executed and delivered in Tulsa, Oklahoma, in multiple counterparts effective\nas of the day and year first above wr",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.649445",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.649909",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_risk_rules_financial - 4 documents",
+      "details": {
+        "collection": "kb_risk_rules_financial",
+        "num_results": 4,
+        "result_preview": [
+          "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.\n[Metadata] r",
+          "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.\n[Metadata] risk_type: Out-of-State J"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.650138",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_red_flags",
+      "details": {
+        "collection": "kb_red_flags",
+        "query": "5\nIN WITNESS WHEREOF, the parties hereto have caused this First Amendment to be duly executed and delivered in Tulsa, Oklahoma, in multiple counterparts effective\nas of the day and year first above wr",
+        "n_results": 4
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.653292",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_red_flags",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.653712",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_red_flags - 4 documents",
+      "details": {
+        "collection": "kb_red_flags",
+        "num_results": 4,
+        "result_preview": [
+          "CRITICAL red flag language \u2014 Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 're",
+          "HIGH red flag language \u2014 Auto-renewal trap with short notice window: These phrases indicate dangerous auto-renewal terms: 'shall automatically renew f"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:33.654402",
+      "stage": "Stage 3",
+      "event_type": "batch_dispatch",
+      "description": "Dispatching pass-2 clause batch",
+      "details": {
+        "batch_start": 22,
+        "batch_size": 1
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:39.035859",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3107,
+        "response_preview": "[\n  {\n    \"clause_id\": \"3\",\n    \"section_number\": \"2\",\n    \"heading\": \"2. Revolver Commitment.\",\n    \"text\": \"2. Revolver Commitment. The Revolver Commitment is hereby increased and renewed to the Revolver Final Maturity Date, subject to the Revolver Commitment Amount, the Collateral Borrowing Base ",
+        "parsed_json_keys": [
+          "clause_id",
+          "section_number",
+          "heading",
+          "text",
+          "plain_english",
+          "type",
+          "category",
+          "risk_level",
+          "risk_score",
+          "risk_justification",
+          "affected_party",
+          "obligations",
+          "rights",
+          "deadlines",
+          "is_unilateral",
+          "is_mutual",
+          "is_standard",
+          "is_ambiguous",
+          "ambiguity_reason",
+          "tags",
+          "cross_references"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:39.037098",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 10789
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:39.151954",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3235,
+        "response_preview": "[\n  {\n    \"clause_id\": \"1\",\n    \"section_number\": null,\n    \"heading\": \"FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT\",\n    \"text\": \"THIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT, dated effective as of March 27, 2019 (the \\\"First Amendment\\\"), is entered into by and among EMPIRE LOUISIA",
+        "parsed_json_keys": [
+          "<list>",
+          "items=2"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:39.156991",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 10545
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:44.809632",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 2950,
+        "response_preview": "[\n  {\n    \"clause_id\": \"5\",\n    \"section_number\": \"2.12\",\n    \"heading\": \"2.12 Payment of Fees.\",\n    \"text\": \"All fees payable under Sections 2.4, 2.5, 2.6, 2.10 and 2.14 shall be paid on the dates due, in immediately available funds, US Dollars, to Bank and shall be fully earned and non-refundable",
+        "parsed_json_keys": [
+          "clause_id",
+          "section_number",
+          "heading",
+          "text",
+          "plain_english",
+          "type",
+          "category",
+          "risk_level",
+          "risk_score",
+          "risk_justification",
+          "affected_party",
+          "obligations",
+          "rights",
+          "deadlines",
+          "is_unilateral",
+          "is_mutual",
+          "is_standard",
+          "is_ambiguous",
+          "ambiguity_reason",
+          "tags",
+          "cross_references"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:44.810539",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 10544
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:44.811802",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3082,
+        "response_preview": "[\n  {\n    \"clause_id\": \"7\",\n    \"section_number\": \"2.14\",\n    \"heading\": \"2.14 Loan Amendment Fee.\",\n    \"text\": \"For each amendment or other change to this Agreement that is required (in the sole discretion of the Bank) as a result of a change in terms or conditions requested by Borrower, Borrower ",
+        "parsed_json_keys": [
+          "<list>",
+          "items=2"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:44.812312",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 12187
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:50.904510",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 2799,
+        "response_preview": "[\n  {\n    \"clause_id\": \"9\",\n    \"section_number\": \"6.6(c)\",\n    \"heading\": \"8. Net Lease Operating Reports.\",\n    \"text\": \"8. Net Lease Operating Reports. The following replaces Section 6.6(c) of the Existing Loan Agreement in its entirety: (c) Net Lease Operating Reports. No later than sixty (60) d",
+        "parsed_json_keys": [
+          "<list>",
+          "items=2"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:50.908229",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 11750
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:52.474322",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3778,
+        "response_preview": "[\n  {\n    \"clause_id\": \"11\",\n    \"section_number\": \"10\",\n    \"heading\": \"10. Collateral/Mortgages.\",\n    \"text\": \"The term \\\"Collateral\\\" as that term is defined in Article III of the Existing Loan Agreement shall incorporate and include, without limitation, all real and personal property lien inter",
+        "parsed_json_keys": [
+          "clause_id",
+          "section_number",
+          "heading",
+          "text",
+          "plain_english",
+          "type",
+          "category",
+          "risk_level",
+          "risk_score",
+          "risk_justification",
+          "affected_party",
+          "obligations",
+          "rights",
+          "deadlines",
+          "is_unilateral",
+          "is_mutual",
+          "is_standard",
+          "is_ambiguous",
+          "ambiguity_reason",
+          "tags",
+          "cross_references"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:52.475756",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 11859
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:57.501471",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3683,
+        "response_preview": "[\n  {\n    \"clause_id\": \"13\",\n    \"section_number\": \"12\",\n    \"heading\": \"12. Conditions Precedent.\",\n    \"text\": \"12. Conditions Precedent. The Borrower shall execute and deliver, or cause to be executed and delivered, to the Bank, each of the following as express conditions precedent to the effecti",
+        "parsed_json_keys": [
+          "clause_id",
+          "section_number",
+          "heading",
+          "text",
+          "plain_english",
+          "type",
+          "category",
+          "risk_level",
+          "risk_score",
+          "risk_justification",
+          "affected_party",
+          "obligations",
+          "rights",
+          "deadlines",
+          "is_unilateral",
+          "is_mutual",
+          "is_standard",
+          "is_ambiguous",
+          "ambiguity_reason",
+          "tags",
+          "cross_references"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:57.503187",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 10728
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:58.489426",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3894,
+        "response_preview": "[\n  {\n    \"clause_id\": \"15\",\n    \"section_number\": \"14\",\n    \"heading\": \"14. Ratification.\",\n    \"text\": \"The remaining terms, provisions and conditions set forth in the Existing Loan Agreement shall remain in full force and effect as long as any Indebtedness of the Borrower is owing to the Bank and",
+        "parsed_json_keys": [
+          "clause_id",
+          "section_number",
+          "heading",
+          "text",
+          "plain_english",
+          "type",
+          "category",
+          "risk_level",
+          "risk_score",
+          "risk_justification",
+          "affected_party",
+          "obligations",
+          "rights",
+          "deadlines",
+          "is_unilateral",
+          "is_mutual",
+          "is_standard",
+          "is_ambiguous",
+          "ambiguity_reason",
+          "tags",
+          "cross_references"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:37:58.491429",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 10494
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:02.952363",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3108,
+        "response_preview": "[\n  {\n    \"clause_id\": \"17\",\n    \"section_number\": \"15\",\n    \"heading\": \"15. SUBMISSION TO JURISDICTION. BORROWER AND THE BANK HEREBY\",\n    \"text\": \"CONSENT TO THE JURISDICTION OF ANY OF THE LOCAL, STATE, AND FEDERAL COURTS LOCATED WITHIN TULSA COUNTY, OKLAHOMA AND WAIVES ANY OBJECTION WHICH THE BOR",
+        "parsed_json_keys": [
+          "<list>",
+          "items=2"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:02.952842",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 10848
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:05.277104",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 2418,
+        "response_preview": "[\n  {\n    \"clause_id\": \"19\",\n    \"section_number\": \"17\",\n    \"heading\": \"17. Governing Law.\",\n    \"text\": \"17. Governing Law. The Loan Agreement (including the First Amendment) shall be deemed to have been made or incurred under the Laws of the State of Oklahoma and shall be construed and enforced i",
+        "parsed_json_keys": [
+          "<list>",
+          "items=2"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:05.277910",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 500,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nYou are analyzing a legal contract. Extract EVERY clause listed below.\n\nDOCUMENT PROFILE: {\"document_type\": \"Loan\", \"document_subtype\": \"Amendment\", \"parent_agreement_ref\": \"Senior Revolver Loan Agreement dated as of September 20, 2018\", \"amendment_number\": \"1\", \"jurisdiction\": \"Oklahoma\", \"governi",
+        "total_message_length": 7008
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:09.317479",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 1450,
+        "response_preview": "[\n  {\n    \"clause_id\": \"23\",\n    \"section_number\": \"5\",\n    \"heading\": \"5\",\n    \"text\": \"IN WITNESS WHEREOF, the parties hereto have caused this First Amendment to be duly executed and delivered in Tulsa, Oklahoma, in multiple counterparts effective as of the day and year first above written. EMPIRE",
+        "parsed_json_keys": [
+          "<list>",
+          "items=1"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:09.319882",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 2910,
+        "response_preview": "[\n  {\n    \"clause_id\": \"21\",\n    \"section_number\": \"19\",\n    \"heading\": \"19. Counterparts.\",\n    \"text\": \"19. Counterparts. This First Amendment may be executed in multiple counterparts, each of which, when so executed, shall constitute an original copy. Transmission by facsimile or electronic trans",
+        "parsed_json_keys": [
+          "<list>",
+          "items=2"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:09.321873",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1400,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nAnalyze the full contract text and extract all obligations, rights, and timeline events.\n\nCONTRACT TEXT:\nFIRST AMENDMENT TO\nSENIOR REVOLVER LOAN AGREEMENT\nTHIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT,\ndated effective as of March 27, 2019 (the \"First Amendment\"), is entered into by and\namo",
+        "total_message_length": 28899
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:15.092984",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3168,
+        "response_preview": "{\n  \"obligations\": [\n    {\n      \"party\": \"Borrower\",\n      \"action\": \"Pay to Bank a fully earned and non-refundable loan origination fee equal to $76,900.00\",\n      \"clause_id\": \"4\",\n      \"deadline\": \"concurrent with the closing of the First Amendment\",\n      \"consequence_of_breach\": \"null\",\n     ",
+        "parsed_json_keys": [
+          "party",
+          "action",
+          "clause_id",
+          "deadline",
+          "consequence_of_breach",
+          "is_recurring"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:15.094193",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1200,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nExtract financial, commercial, and lending terms from this contract and return ONLY valid JSON.\n\nCONTRACT TEXT:\nFIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT\nTHIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT, dated effective as of March 27, 2019 (the \"First Amendment\"), is entered into by ",
+        "total_message_length": 14625
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.616364",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 770,
+        "response_preview": "{\n  \"financial_terms\": {\n    \"payment_terms\": {\n      \"currency\": \"US Dollars\",\n      \"total_contract_value\": \"20,000,000.00\",\n      \"payment_schedule\": \"periodic\",\n      \"amount_per_period\": \"150,000.00\",\n      \"due_days\": 10,\n      \"payment_method\": \"immediately available funds\",\n      \"advance_pa",
+        "parsed_json_keys": [
+          "financial_terms"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.619416",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_document_templates",
+      "details": {
+        "collection": "kb_document_templates",
+        "query": "Loan agreement required clauses",
+        "n_results": 2
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.620586",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_document_templates",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.621265",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_document_templates - 2 documents",
+      "details": {
+        "collection": "kb_document_templates",
+        "num_results": 2,
+        "result_preview": [
+          "Partnership Agreement expected clauses: A complete partnership agreement must contain: (1) Partnership Name and Purpose, (2) Capital Contributions \u2014 e",
+          "Loan Agreement expected clauses: A complete loan agreement must contain: (1) Loan Amount \u2014 principal, (2) Interest Rate \u2014 fixed or variable, (3) Repay"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.622016",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_negotiation",
+      "details": {
+        "collection": "kb_negotiation",
+        "query": "Amendment  negotiation strategy counter-proposal",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.622919",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_negotiation",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.623379",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_negotiation - 3 documents",
+      "details": {
+        "collection": "kb_negotiation",
+        "num_results": 3,
+        "result_preview": [
+          "Negotiation strategy for unlimited liability: When a contract lacks a liability cap or has unlimited liability, the standard negotiation position is t",
+          "Negotiation strategy for one-sided termination for convenience: When only one party has the right to terminate for convenience, the standard position "
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.623897",
+      "stage": "KB Retrieval",
+      "event_type": "kb_query",
+      "description": "Querying KB collection: kb_compliance",
+      "details": {
+        "collection": "kb_compliance",
+        "query": "Oklahoma compliance FIRST AMENDMENT TO\nSENIOR REVOLVER LOAN AGREEMENT\nTHIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT,\ndated effective as of March 27, 2019 (the \"First Amendment\"), is entered i",
+        "n_results": 3
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.624559",
+      "stage": "KB Retrieval",
+      "event_type": "retrieval_mode",
+      "description": "KB retrieval mode: json_fallback",
+      "details": {
+        "collection": "kb_compliance",
+        "mode": "json_fallback",
+        "chroma_count": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.625241",
+      "stage": "KB Retrieval",
+      "event_type": "kb_result",
+      "description": "KB result: kb_compliance - 3 documents",
+      "details": {
+        "collection": "kb_compliance",
+        "num_results": 3,
+        "result_preview": [
+          "HIPAA Compliance for Healthcare Contracts (Health Insurance Portability and Accountability Act): Any contract involving Protected Health Information (",
+          "GDPR Compliance for Contracts (EU General Data Protection Regulation): Any contract where a party processes personal data of EU residents must include"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:16.642499",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1400,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nGenerate risks JSON only.\nReturn EXACT object with key \"risks\" containing a non-empty array of RiskItem-compatible objects.\n\nDOCUMENT INTELLIGENCE INPUT\ndocument_type: Loan\njurisdiction: Oklahoma\ndocument_profile: {\"detected_type\": \"Loan\", \"subtype\": \"Amendment\", \"confidence\": 0.9500000000000001, \"",
+        "total_message_length": 21224
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:22.695755",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 1541,
+        "response_preview": "{\n  \"risks\": [\n    {\n      \"clause_id\": \"11\",\n      \"risk_type\": \"Collateral/Security\",\n      \"risk_level\": \"HIGH\",\n      \"risk_score\": 75,\n      \"description\": \"Expansion of collateral to include all real and personal property lien interests granted by END, increasing the scope of assets subject to",
+        "parsed_json_keys": [
+          "risks"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:22.697811",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1400,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nGenerate missing clauses and dependencies JSON only.\nReturn EXACT object with keys \"missing_clauses\" and \"clause_dependencies\".\n\nDOCUMENT INTELLIGENCE INPUT\ndocument_type: Loan\njurisdiction: Oklahoma\ndocument_profile: {\"detected_type\": \"Loan\", \"subtype\": \"Amendment\", \"confidence\": 0.950000000000000",
+        "total_message_length": 21228
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:37.276499",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 1067,
+        "response_preview": "{\n  \"missing_clauses\": [\n    \"Prepayment Rights\",\n    \"Cross-Default Provisions\",\n    \"Financial Covenants\",\n    \"Force Majeure\",\n    \"Assignment Restrictions\",\n    \"Events of Default\",\n    \"Remedies upon Default\"\n  ],\n  \"clause_dependencies\": [\n    {\n      \"clause\": \"1. Definitions\",\n      \"depends",
+        "parsed_json_keys": [
+          "missing_clauses",
+          "clause_dependencies"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:37.277496",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 1400,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nGenerate negotiation and compliance JSON only.\nReturn EXACT object with keys \"negotiation_points\" and \"compliance_flags\".\n\nDOCUMENT INTELLIGENCE INPUT\ndocument_type: Loan\njurisdiction: Oklahoma\ndocument_profile: {\"detected_type\": \"Loan\", \"subtype\": \"Amendment\", \"confidence\": 0.9500000000000001, \"re",
+        "total_message_length": 21222
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:43.613688",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 2066,
+        "response_preview": "{\n  \"negotiation_points\": [\n    {\n      \"clause_id\": \"7\",\n      \"issue\": \"Broad and discretionary amendment fee\",\n      \"recommendation\": \"Define specific triggers for amendment fees and cap the fee amount to avoid open-ended financial liability based on the Bank's sole discretion.\"\n    },\n    {\n   ",
+        "parsed_json_keys": [
+          "negotiation_points",
+          "compliance_flags"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:43.614600",
+      "stage": "Extraction",
+      "event_type": "llm_call",
+      "description": "Calling LLM: models/gemini-3.1-flash-lite-preview",
+      "details": {
+        "model": "models/gemini-3.1-flash-lite-preview",
+        "temperature": 0.1,
+        "max_tokens": 2000,
+        "system_prompt_preview": "You are an expert legal contract analyst with 20 years of experience \nin corporate law, risk assessment, and contract negotiation. Your role is to extract \nstructured information from legal documents ",
+        "user_message_preview": "\nGenerate summary JSON only.\nReturn EXACT object with key \"summary\" and full DocumentSummary fields.\n\nDOCUMENT INTELLIGENCE INPUT\ndocument_type: Loan\njurisdiction: Oklahoma\ndocument_profile: {\"detected_type\": \"Loan\", \"subtype\": \"Amendment\", \"confidence\": 0.9500000000000001, \"reasoning\": [\"Detected t",
+        "total_message_length": 21672
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:50.659204",
+      "stage": "Extraction",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 3405,
+        "response_preview": "{\n  \"summary\": {\n    \"executive_summary\": \"This First Amendment to the Senior Revolver Loan Agreement, effective March 27, 2019, modifies the existing credit facility between Empire Louisiana LLC, Empire North Dakota LLC, and CrossFirst Bank. The amendment increases the Revolver Commitment, establis",
+        "parsed_json_keys": [
+          "summary"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:50.665117",
+      "stage": "Stage 3",
+      "event_type": "extraction",
+      "description": "Extracted clauses: 23 items",
+      "details": {
+        "entity_type": "clauses",
+        "count": 23,
+        "sample": null
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:50.665667",
+      "stage": "Stage 3",
+      "event_type": "extraction",
+      "description": "Extracted risks: 5 items",
+      "details": {
+        "entity_type": "risks",
+        "count": 5,
+        "sample": null
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:50.666296",
+      "stage": "Stage 3",
+      "event_type": "extraction",
+      "description": "Extracted obligations: 23 items",
+      "details": {
+        "entity_type": "obligations",
+        "count": 23,
+        "sample": null
+      }
+    },
+    {
+      "timestamp": "2026-04-12T22:38:50.666590",
+      "stage": "Stage 4",
+      "event_type": "validation",
+      "description": "Strict validation and schema normalization",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-12T22:38:50.668309",
+      "stage": "Stage 4",
+      "event_type": "validation",
+      "description": "Validation complete",
+      "details": {
+        "enriched_keys": [
+          "document_id",
+          "filename",
+          "analyzed_at",
+          "metadata",
+          "document_profile",
+          "parties",
+          "financial_terms",
+          "linked_documents",
+          "clauses",
+          "risks",
+          "obligations",
+          "rights",
+          "timelines",
+          "clause_dependencies",
+          "missing_clauses",
+          "negotiation_points",
+          "compliance_flags",
+          "dependency_graph",
+          "summary"
+        ],
+        "validated_keys": [
+          "document_id",
+          "filename",
+          "analyzed_at",
+          "metadata",
+          "document_profile",
+          "parties",
+          "financial_terms",
+          "linked_documents",
+          "clauses",
+          "risks",
+          "obligations",
+          "rights",
+          "timelines",
+          "clause_dependencies",
+          "missing_clauses",
+          "negotiation_points",
+          "compliance_flags",
+          "dependency_graph",
+          "summary"
+        ]
+      }
+    }
+  ]
+}

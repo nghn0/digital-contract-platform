@@ -1,0 +1,280 @@
+{
+  "kb_name": "document_templates",
+  "version": "1.0.0",
+  "description": "Expected clause inventory per document type. Used by RAG during Pass 5 to detect missing clauses. If a required clause is absent, it is flagged as a missing clause with the appropriate risk level.",
+  "entries": [
+    {
+      "id": "dt_001",
+      "text": "Non-Disclosure Agreement (NDA) expected clauses: A well-formed NDA must contain: (1) Definition of Confidential Information — what counts as secret, (2) Obligations of Receiving Party — how they must handle secrets, (3) Exclusions from Confidentiality — public domain, prior knowledge, independent development, (4) Term and Duration — when the NDA starts and ends, (5) Return or Destruction of Information — what happens to materials at end, (6) Remedies for Breach — injunctive relief, damages, (7) Governing Law, (8) Entire Agreement. Optional but recommended: Purpose limitation, Residuals clause, Mutual vs Unilateral designation.",
+      "metadata": {
+        "document_type": "NDA",
+        "required_clauses": [
+          "Confidentiality",
+          "Definition of Confidential Information",
+          "Exclusions from Confidentiality",
+          "Term and Duration",
+          "Return/Destruction of Information",
+          "Governing Law",
+          "Entire Agreement"
+        ],
+        "recommended_clauses": [
+          "Dispute Resolution",
+          "Remedies",
+          "Purpose Limitation",
+          "Mutual/Unilateral Designation",
+          "Non-Solicitation"
+        ],
+        "commonly_missing": [
+          "Dispute Resolution",
+          "Force Majeure",
+          "Return of Confidential Information",
+          "Definition of Receiving Party Representatives"
+        ],
+        "typical_duration": "1-3 years",
+        "high_risk_if_missing": ["Exclusions from Confidentiality", "Term and Duration"]
+      }
+    },
+    {
+      "id": "dt_002",
+      "text": "Master Service Agreement (MSA) expected clauses: A complete MSA must contain: (1) Scope of Services, (2) Payment Terms and Invoicing, (3) Term and Renewal, (4) Termination (for cause and convenience), (5) Limitation of Liability, (6) Indemnification, (7) Intellectual Property Ownership, (8) Confidentiality, (9) Warranties, (10) Dispute Resolution, (11) Governing Law, (12) Assignment, (13) Amendment process, (14) Entire Agreement, (15) Severability. Highly recommended: Force Majeure, Audit Rights, Data Protection/DPA, Non-Solicitation, Insurance requirements.",
+      "metadata": {
+        "document_type": "MSA",
+        "required_clauses": [
+          "Scope of Services",
+          "Payment Terms",
+          "Term and Renewal",
+          "Termination",
+          "Limitation of Liability",
+          "Indemnification",
+          "Intellectual Property",
+          "Confidentiality",
+          "Warranties",
+          "Dispute Resolution",
+          "Governing Law",
+          "Assignment",
+          "Amendment",
+          "Entire Agreement",
+          "Severability"
+        ],
+        "recommended_clauses": [
+          "Force Majeure",
+          "Audit Rights",
+          "Data Protection",
+          "Non-Solicitation",
+          "Insurance",
+          "Subcontracting",
+          "Change Order Process",
+          "Acceptance Criteria"
+        ],
+        "commonly_missing": [
+          "Force Majeure",
+          "Data Protection",
+          "Acceptance Criteria",
+          "Change Order Process",
+          "Insurance Requirements"
+        ],
+        "high_risk_if_missing": ["Limitation of Liability", "Dispute Resolution", "Termination for Convenience"]
+      }
+    },
+    {
+      "id": "dt_003",
+      "text": "Employment Agreement expected clauses: A complete employment contract must contain: (1) Job Title and Duties, (2) Compensation and Benefits — salary, bonus, equity, (3) Start Date and Term, (4) Work Location and Hours, (5) Termination conditions — at-will, for cause, resignation, (6) Confidentiality, (7) Intellectual Property/Work for Hire, (8) Non-Compete (if applicable by law), (9) Non-Solicitation, (10) Dispute Resolution, (11) Governing Law, (12) At-Will Employment Statement (if applicable). Highly recommended: Severance, Benefits details, Expense reimbursement, Code of conduct reference.",
+      "metadata": {
+        "document_type": "Employment",
+        "required_clauses": [
+          "Job Title and Duties",
+          "Compensation",
+          "Start Date",
+          "Termination",
+          "Confidentiality",
+          "Intellectual Property",
+          "Governing Law"
+        ],
+        "recommended_clauses": [
+          "Non-Compete",
+          "Non-Solicitation",
+          "Dispute Resolution",
+          "Severance",
+          "Benefits",
+          "Expense Reimbursement",
+          "Code of Conduct Reference"
+        ],
+        "commonly_missing": [
+          "Severance Provisions",
+          "Dispute Resolution",
+          "Benefits Detail",
+          "Expense Reimbursement Policy",
+          "Remote Work Policy"
+        ],
+        "high_risk_if_missing": ["Termination conditions", "IP Ownership", "Confidentiality"]
+      }
+    },
+    {
+      "id": "dt_004",
+      "text": "Service Level Agreement (SLA) expected clauses: A well-formed SLA must contain: (1) Service Description — precise scope, (2) Service Level Objectives (SLOs) — uptime %, response times, (3) Measurement methodology — how metrics are tracked, (4) SLA Credits and Remedies — compensation for breaches, (5) Exclusions — scheduled downtime, force majeure, customer-caused issues, (6) Reporting and Monitoring, (7) Escalation Procedures, (8) Term and Review, (9) Termination for persistent failure, (10) Governing Law. Recommended: Security standards, Data backup SLOs, Disaster recovery provisions.",
+      "metadata": {
+        "document_type": "SLA",
+        "required_clauses": [
+          "Service Description",
+          "Service Level Objectives",
+          "Measurement Methodology",
+          "SLA Credits",
+          "Exclusions",
+          "Reporting",
+          "Term and Review",
+          "Termination for Persistent Failure"
+        ],
+        "recommended_clauses": [
+          "Escalation Procedures",
+          "Security Standards",
+          "Data Backup SLOs",
+          "Disaster Recovery",
+          "Planned Maintenance Window"
+        ],
+        "commonly_missing": [
+          "Measurement Methodology",
+          "Customer-caused Exclusions",
+          "Escalation Procedures",
+          "Disaster Recovery SLOs"
+        ],
+        "high_risk_if_missing": ["SLA Credits sole remedy limitation", "Exclusions Clause", "Termination for Persistent SLA Failure"]
+      }
+    },
+    {
+      "id": "dt_005",
+      "text": "Consulting Agreement expected clauses: A complete consulting agreement must contain: (1) Scope of Work and Deliverables, (2) Fees and Expenses — hourly/fixed/retainer, (3) Payment Schedule and Invoicing, (4) Term and Termination, (5) Independent Contractor Status — not employee, (6) Intellectual Property Ownership, (7) Confidentiality, (8) Non-Solicitation of Employees, (9) Limitation of Liability, (10) Governing Law, (11) Dispute Resolution. Highly recommended: Insurance requirement, Key personnel provision, Substitution rights.",
+      "metadata": {
+        "document_type": "Consulting",
+        "required_clauses": [
+          "Scope of Work",
+          "Fees",
+          "Payment Terms",
+          "Term and Termination",
+          "Independent Contractor Status",
+          "Intellectual Property",
+          "Confidentiality",
+          "Limitation of Liability",
+          "Governing Law"
+        ],
+        "recommended_clauses": [
+          "Non-Solicitation",
+          "Dispute Resolution",
+          "Insurance",
+          "Key Personnel",
+          "Acceptance Criteria",
+          "Change Order"
+        ],
+        "commonly_missing": [
+          "Acceptance Criteria",
+          "Dispute Resolution",
+          "Insurance",
+          "Expense Reimbursement Policy",
+          "Ownership of Pre-existing IP"
+        ],
+        "high_risk_if_missing": ["Independent Contractor Status", "IP Ownership", "Limitation of Liability"]
+      }
+    },
+    {
+      "id": "dt_006",
+      "text": "Vendor Agreement expected clauses: A complete vendor agreement must contain: (1) Products/Services Description, (2) Pricing and Payment Terms, (3) Delivery and Acceptance, (4) Term and Renewal, (5) Warranties — product quality, (6) Limitation of Liability, (7) Indemnification, (8) Termination, (9) Confidentiality, (10) Governing Law, (11) Dispute Resolution, (12) Compliance with Laws. Highly recommended: Audit Rights, Data Protection, Insurance, Force Majeure, Change Order Process, Most Favored Nation pricing.",
+      "metadata": {
+        "document_type": "Vendor",
+        "required_clauses": [
+          "Product/Service Description",
+          "Pricing",
+          "Payment Terms",
+          "Delivery",
+          "Warranties",
+          "Limitation of Liability",
+          "Indemnification",
+          "Termination",
+          "Confidentiality",
+          "Governing Law"
+        ],
+        "recommended_clauses": [
+          "Audit Rights",
+          "Data Protection",
+          "Insurance",
+          "Force Majeure",
+          "Dispute Resolution",
+          "Compliance with Laws",
+          "Most Favored Nation"
+        ],
+        "commonly_missing": [
+          "Force Majeure",
+          "Audit Rights",
+          "Data Protection",
+          "Business Continuity",
+          "Supplier Code of Conduct"
+        ],
+        "high_risk_if_missing": ["Limitation of Liability", "Warranties", "Termination Rights"]
+      }
+    },
+    {
+      "id": "dt_007",
+      "text": "Loan Agreement expected clauses: A complete loan agreement must contain: (1) Loan Amount — principal, (2) Interest Rate — fixed or variable, (3) Repayment Schedule — EMI, balloon, bullet, (4) Prepayment Rights and Penalties, (5) Default and Acceleration, (6) Security/Collateral, (7) Covenants — financial and restrictive, (8) Representations and Warranties, (9) Events of Default, (10) Remedies upon Default, (11) Governing Law, (12) Dispute Resolution. Highly recommended: Force Majeure, Assignment restrictions, Cross-default provisions.",
+      "metadata": {
+        "document_type": "Loan",
+        "required_clauses": [
+          "Loan Amount",
+          "Interest Rate",
+          "Repayment Schedule",
+          "Events of Default",
+          "Remedies upon Default",
+          "Security/Collateral",
+          "Representations and Warranties",
+          "Governing Law"
+        ],
+        "recommended_clauses": [
+          "Prepayment Rights",
+          "Covenants",
+          "Cross-Default",
+          "Assignment Restrictions",
+          "Dispute Resolution",
+          "Force Majeure"
+        ],
+        "commonly_missing": [
+          "Prepayment Penalties",
+          "Cross-Default Provisions",
+          "Financial Covenants",
+          "Dispute Resolution",
+          "Grace Period for Default"
+        ],
+        "high_risk_if_missing": ["Events of Default", "Remedies", "Collateral Description"]
+      }
+    },
+    {
+      "id": "dt_008",
+      "text": "Partnership Agreement expected clauses: A complete partnership agreement must contain: (1) Partnership Name and Purpose, (2) Capital Contributions — each partner's share, (3) Profit and Loss Distribution, (4) Management and Decision-making, (5) Voting Rights, (6) Partner Duties and Obligations, (7) Admission of New Partners, (8) Withdrawal and Retirement, (9) Dissolution and Winding Up, (10) Dispute Resolution, (11) Non-Compete and Non-Solicitation, (12) Governing Law. Highly recommended: IP Ownership, Deadlock Provisions, Exit Mechanism/Buy-Sell.",
+      "metadata": {
+        "document_type": "Partnership",
+        "required_clauses": [
+          "Partnership Purpose",
+          "Capital Contributions",
+          "Profit Distribution",
+          "Management Structure",
+          "Voting Rights",
+          "Withdrawal",
+          "Dissolution",
+          "Governing Law"
+        ],
+        "recommended_clauses": [
+          "Non-Compete",
+          "Non-Solicitation",
+          "Dispute Resolution",
+          "IP Ownership",
+          "Deadlock Resolution",
+          "Buy-Sell Agreement"
+        ],
+        "commonly_missing": [
+          "Deadlock Resolution",
+          "Buy-Sell / Exit Mechanism",
+          "IP Ownership",
+          "Fiduciary Duty",
+          "Partner Loan Provisions"
+        ],
+        "high_risk_if_missing": ["Dissolution Procedure", "Dispute Resolution", "Deadlock Resolution"]
+      }
+    }
+  ]
+}

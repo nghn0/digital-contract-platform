@@ -1,0 +1,636 @@
+{
+  "document_id": "doc_1775980574.73644",
+  "filename": "contract.pdf",
+  "analyzed_at": "2026-04-12T13:26:14.736447",
+  "metadata": {
+    "document_type": "Employment",
+    "document_subtype": "Internship Agreement",
+    "title": "Internship Letter",
+    "effective_date": "2026-03-02",
+    "execution_date": "2026-03-02",
+    "expiration_date": null,
+    "auto_renewal": null,
+    "renewal_notice_period": null,
+    "jurisdiction": "India",
+    "governing_law": null,
+    "venue": null,
+    "language": "English",
+    "amendment_number": null,
+    "parent_agreement_ref": null,
+    "confidentiality_classification": "Confidential"
+  },
+  "document_profile": {
+    "detected_type": "Employment",
+    "subtype": "Internship Agreement",
+    "confidence": 0.9500000000000001,
+    "reasoning": [
+      "Detected type from metadata: Employment",
+      "Observed clause types: Confidentiality, Other, Termination",
+      "Subtype hint: Internship Agreement"
+    ],
+    "required_clauses": [
+      "Job Title and Duties",
+      "Compensation",
+      "Start Date",
+      "Termination",
+      "Confidentiality",
+      "Intellectual Property",
+      "Governing Law"
+    ],
+    "recommended_clauses": [
+      "Non-Compete",
+      "Non-Solicitation",
+      "Dispute Resolution",
+      "Severance",
+      "Benefits",
+      "Expense Reimbursement",
+      "Code of Conduct Reference"
+    ],
+    "high_risk_clauses": [
+      "Termination conditions",
+      "IP Ownership",
+      "Confidentiality"
+    ],
+    "extensions": {
+      "source": "dt_003",
+      "commonly_missing": [
+        "Severance Provisions",
+        "Dispute Resolution",
+        "Benefits Detail",
+        "Expense Reimbursement Policy",
+        "Remote Work Policy"
+      ],
+      "observed_clause_types": [
+        "Confidentiality",
+        "Other",
+        "Termination"
+      ],
+      "observed_headings": [
+        "1. Internship Details",
+        "2. Roles and Responsibilities",
+        "3. Confidentiality",
+        "4. Code of Conduct",
+        "5. Separation"
+      ],
+      "jurisdiction": "India",
+      "governing_law": null,
+      "linked_documents": []
+    }
+  },
+  "parties": {
+    "parties": [
+      {
+        "name": "Neutrinos Software Services Pvt Ltd",
+        "legal_entity_type": "Private Limited Company",
+        "role": "Employer",
+        "address": "No. 9, 14th Main Road, Sarjapura Road, HSR Layout Sector 5, Bengaluru 560 034",
+        "country": "India",
+        "registration_number": null
+      },
+      {
+        "name": "Mohan Chandra S S",
+        "legal_entity_type": "Individual",
+        "role": "Employee",
+        "address": null,
+        "country": null,
+        "registration_number": null
+      }
+    ],
+    "signatories": [
+      {
+        "name": "Mohini Kumar",
+        "company": "Neutrinos Software Services Pvt Ltd",
+        "designation": "Chief Human Resource Officer",
+        "email": null,
+        "signing_date": null,
+        "signing_authority": null
+      },
+      {
+        "name": "Mohan Chandra S S",
+        "company": "",
+        "designation": "SDE-Intern",
+        "email": null,
+        "signing_date": "2026-03-02",
+        "signing_authority": null
+      }
+    ],
+    "beneficiaries": [],
+    "excluded_parties": []
+  },
+  "financial_terms": {
+    "payment_terms": {
+      "currency": null,
+      "total_contract_value": null,
+      "payment_schedule": null,
+      "amount_per_period": null,
+      "due_days": 7,
+      "payment_method": null,
+      "advance_payment": null,
+      "late_payment_interest": null,
+      "invoice_period": null
+    },
+    "penalties": [],
+    "liability_cap": null,
+    "indemnification_cap": null,
+    "liquidated_damages": null,
+    "revenue_share": null,
+    "equity_terms": null
+  },
+  "linked_documents": [],
+  "clauses": [
+    {
+      "clause_id": "1",
+      "section_number": null,
+      "heading": "1. Internship Details",
+      "text": "\u2022 Position: SDE - Intern\n\u2022 Department: Professional Services\n\u2022 Internship Start Date: 02-Mar-2026\n\u2022 Duration: 10 weeks\n\u2022 Working Hours: 15 hours per week\n\u2022 Reporting To: Technical Lead\n\u2022 Location: Bangalore",
+      "plain_english": "This clause outlines the basic terms of the internship, including the role, department, start date, duration, weekly hours, reporting structure, and work location.",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 5,
+      "risk_justification": "This is a standard descriptive clause defining the scope and logistics of the internship. It contains no punitive, financial, or restrictive terms.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [
+        "Internship Start Date: 02-Mar-2026"
+      ],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "internship",
+        "logistics",
+        "employment"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "2",
+      "section_number": null,
+      "heading": "2. Roles and Responsibilities",
+      "text": "During your internship, you will be expected to:\n\u2022 Participate in onboarding and training sessions\n\u2022 Work on assigned tasks/modules under the supervision of Technical Lead, under defined timelines\n\u2022 Prepare reports, presentations, or summaries as required\n\u2022 Follow coding standards / operational guidelines and attend meetings as needed\nYou are expected to perform your duties diligently and adhere to company policies and maintain a professional\nconduct.",
+      "plain_english": "This clause outlines the intern's core responsibilities, including training, task completion under supervision, reporting, and adherence to company standards and professional conduct.",
+      "type": "Other",
+      "category": "Obligation",
+      "risk_level": "LOW",
+      "risk_score": 10,
+      "risk_justification": "The clause contains standard, reasonable expectations for an internship role and does not impose unusual or onerous burdens.",
+      "affected_party": "Mohan Chandra S S",
+      "obligations": [
+        "Participate in onboarding and training sessions",
+        "Work on assigned tasks/modules under the supervision of Technical Lead",
+        "Prepare reports, presentations, or summaries as required",
+        "Follow coding standards and operational guidelines",
+        "Attend meetings as needed",
+        "Perform duties diligently",
+        "Adhere to company policies",
+        "Maintain professional conduct"
+      ],
+      "rights": [],
+      "deadlines": [
+        "under defined timelines"
+      ],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "internship",
+        "duties",
+        "professional conduct",
+        "supervision"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "3",
+      "section_number": null,
+      "heading": "3. Confidentiality",
+      "text": "Neutrinos Software Services Pvt Ltd is ISO 27001 and SOC 2 Certified, demonstrating its commitment to international best practices in information security and data privacy. You are required to comply with the Neutrinos confidentiality and Non-disclosure agreement.",
+      "plain_english": "The employee is required to follow the terms of the company's separate confidentiality and non-disclosure agreement.",
+      "type": "Confidentiality",
+      "category": "Obligation",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "risk_justification": "The clause incorporates an external agreement by reference without providing the terms, creating uncertainty regarding the scope and duration of the confidentiality obligations.",
+      "affected_party": "Mohan Chandra S S",
+      "obligations": [
+        "Comply with the Neutrinos confidentiality and Non-disclosure agreement"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": true,
+      "ambiguity_reason": "The clause refers to an external document ('the Neutrinos confidentiality and Non-disclosure agreement') that is not attached or defined within this text.",
+      "tags": [
+        "confidentiality",
+        "non-disclosure",
+        "compliance",
+        "incorporation by reference"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "4",
+      "section_number": null,
+      "heading": "4. Code of Conduct",
+      "text": "You are required to comply with all company rules, regulations, and policies. Any misconduct may result in termination of the internship.",
+      "plain_english": "The intern must follow all company policies and rules; failing to do so could lead to the termination of their internship.",
+      "type": "Termination",
+      "category": "Obligation",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "risk_justification": "The clause grants the employer broad discretion to terminate the internship based on 'misconduct' without defining what constitutes misconduct, creating potential for arbitrary enforcement.",
+      "affected_party": "Mohan Chandra S S",
+      "obligations": [
+        "Comply with all company rules, regulations, and policies"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": true,
+      "ambiguity_reason": "The term 'misconduct' is not defined, leaving it open to subjective interpretation by the employer.",
+      "tags": [
+        "compliance",
+        "misconduct",
+        "termination",
+        "internship"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "5",
+      "section_number": null,
+      "heading": "5. Separation",
+      "text": "Either party may terminate this internship with 7 days of written notice.",
+      "plain_english": "Both the company and the intern have the right to end the internship early, provided they give the other party at least 7 days' notice in writing.",
+      "type": "Termination",
+      "category": "Right",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "The clause provides a mutual right to terminate for convenience with a reasonable notice period, which is standard for internship agreements.",
+      "affected_party": null,
+      "obligations": [
+        "Provide 7 days of written notice prior to termination"
+      ],
+      "rights": [
+        "Right to terminate the internship"
+      ],
+      "deadlines": [
+        "7 days of written notice"
+      ],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "termination",
+        "notice period",
+        "internship"
+      ],
+      "cross_references": []
+    }
+  ],
+  "risks": [
+    {
+      "clause_id": "3",
+      "risk_type": "Ambiguous Language",
+      "severity": "MEDIUM",
+      "reason": "The clause incorporates an external agreement by reference without providing the terms, creating uncertainty regarding the scope and duration of the confidentiality obligations.",
+      "impacted_party": "Mohan Chandra S S",
+      "risk_sentence": "Neutrinos Software Services Pvt Ltd is ISO 27001 and SOC 2 Certified, demonstrating its commitment to international best practices in information security and data privacy. You are required to comply with the Neutrinos c",
+      "suggestion": "Review and negotiate clause 3.",
+      "legal_precedent": null,
+      "risk_labels": [
+        "Ambiguous Language",
+        "data",
+        "privacy"
+      ],
+      "risk_context": "3. Confidentiality"
+    },
+    {
+      "clause_id": "4",
+      "risk_type": "One-sided Termination",
+      "severity": "MEDIUM",
+      "reason": "The clause grants the employer broad discretion to terminate the internship based on 'misconduct' without defining what constitutes misconduct, creating potential for arbitrary enforcement.",
+      "impacted_party": "Mohan Chandra S S",
+      "risk_sentence": "You are required to comply with all company rules, regulations, and policies. Any misconduct may result in termination of the internship.",
+      "suggestion": "Review and negotiate clause 4.",
+      "legal_precedent": null,
+      "risk_labels": [
+        "One-sided Termination",
+        "intellectual-property",
+        "termination"
+      ],
+      "risk_context": "4. Code of Conduct"
+    },
+    {
+      "clause_id": "1",
+      "risk_type": "Ambiguous Language",
+      "severity": "MEDIUM",
+      "reason": "This is a standard descriptive clause defining the scope and logistics of the internship. It contains no punitive, financial, or restrictive terms.",
+      "impacted_party": null,
+      "risk_sentence": "\u2022 Position: SDE - Intern\n\u2022 Department: Professional Services\n\u2022 Internship Start Date: 02-Mar-2026\n\u2022 Duration: 10 weeks\n\u2022 Working Hours: 15 hours per week\n\u2022 Reporting To: Technical Lead\n\u2022 Location: Bangalore",
+      "suggestion": "Review and negotiate clause 1.",
+      "legal_precedent": null,
+      "risk_labels": [
+        "Ambiguous Language",
+        "intellectual-property"
+      ],
+      "risk_context": "1. Internship Details"
+    }
+  ],
+  "obligations": [
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Participate in onboarding and training sessions",
+      "clause_id": "2",
+      "deadline": null,
+      "consequence_of_breach": "Termination of the internship",
+      "is_recurring": false
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Work on assigned tasks/modules under the supervision of Technical Lead, under defined timelines",
+      "clause_id": "2",
+      "deadline": null,
+      "consequence_of_breach": "Termination of the internship",
+      "is_recurring": true
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Prepare reports, presentations, or summaries as required",
+      "clause_id": "2",
+      "deadline": null,
+      "consequence_of_breach": "Termination of the internship",
+      "is_recurring": true
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Follow coding standards / operational guidelines and attend meetings as needed",
+      "clause_id": "2",
+      "deadline": null,
+      "consequence_of_breach": "Termination of the internship",
+      "is_recurring": true
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Comply with the Neutrinos confidentiality and Non-disclosure agreement",
+      "clause_id": "3",
+      "deadline": null,
+      "consequence_of_breach": "Disciplinary action, up to and including termination and potential legal consequences",
+      "is_recurring": true
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Comply with all company rules, regulations, and policies",
+      "clause_id": "4",
+      "deadline": null,
+      "consequence_of_breach": "Termination of the internship",
+      "is_recurring": true
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Sign and return a copy of the offer letter",
+      "clause_id": null,
+      "deadline": "02-Mar-2026",
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Maintain all Confidential Information in the strictest confidence and use such information solely for the performance of their duties",
+      "clause_id": "Non-Disclosure Agreement",
+      "deadline": null,
+      "consequence_of_breach": "Disciplinary action, up to and including termination and potential legal consequences",
+      "is_recurring": true
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "action": "Return to the Company or securely destroy all copies of Confidential Information in their possession or control",
+      "clause_id": "Non-Disclosure Agreement",
+      "deadline": "Upon termination of employment, or upon request by the Company",
+      "consequence_of_breach": null,
+      "is_recurring": false
+    }
+  ],
+  "rights": [
+    {
+      "party": "Mohan Chandra S S",
+      "right": "Receive an Internship Completion Letter",
+      "clause_id": null,
+      "conditions": "Successful completion of the internship",
+      "is_exclusive": false
+    },
+    {
+      "party": "Neutrinos Software Services Pvt Ltd",
+      "right": "Terminate the internship",
+      "clause_id": "5",
+      "conditions": "7 days of written notice",
+      "is_exclusive": false
+    },
+    {
+      "party": "Mohan Chandra S S",
+      "right": "Terminate the internship",
+      "clause_id": "5",
+      "conditions": "7 days of written notice",
+      "is_exclusive": false
+    }
+  ],
+  "timelines": [
+    {
+      "event": "Internship Start Date",
+      "timeframe": "02-Mar-2026",
+      "trigger": "Contract start",
+      "party_responsible": "Mohan Chandra S S",
+      "clause_id": "1",
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Acceptance of offer",
+      "timeframe": "02-Mar-2026",
+      "trigger": "Offer date",
+      "party_responsible": "Mohan Chandra S S",
+      "clause_id": null,
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Survival of confidentiality obligations",
+      "timeframe": "3 years",
+      "trigger": "Termination of employment",
+      "party_responsible": "Mohan Chandra S S",
+      "clause_id": "Non-Disclosure Agreement",
+      "is_hard_deadline": true
+    }
+  ],
+  "clause_dependencies": [],
+  "missing_clauses": [
+    {
+      "clause_type": "Job Title and Duties",
+      "importance": "HIGH",
+      "reason_needed": "This clause is part of the required template for Employment agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Compensation",
+      "importance": "HIGH",
+      "reason_needed": "This clause is part of the required template for Employment agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Intellectual Property",
+      "importance": "HIGH",
+      "reason_needed": "This clause is part of the required template for Employment agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Governing Law",
+      "importance": "HIGH",
+      "reason_needed": "This clause is part of the required template for Employment agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Termination conditions",
+      "importance": "CRITICAL",
+      "reason_needed": "This clause is high-risk when missing because the KB flags it as important for Employment agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "IP Ownership",
+      "importance": "CRITICAL",
+      "reason_needed": "This clause is high-risk when missing because the KB flags it as important for Employment agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Severance Provisions",
+      "importance": "MEDIUM",
+      "reason_needed": "This clause is expected for a Employment agreement and reduces ambiguity, loss allocation, or enforcement risk.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Dispute Resolution",
+      "importance": "MEDIUM",
+      "reason_needed": "This clause is expected for a Employment agreement and reduces ambiguity, loss allocation, or enforcement risk.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Benefits Detail",
+      "importance": "MEDIUM",
+      "reason_needed": "This clause is expected for a Employment agreement and reduces ambiguity, loss allocation, or enforcement risk.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Expense Reimbursement Policy",
+      "importance": "MEDIUM",
+      "reason_needed": "This clause is expected for a Employment agreement and reduces ambiguity, loss allocation, or enforcement risk.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Remote Work Policy",
+      "importance": "MEDIUM",
+      "reason_needed": "This clause is expected for a Employment agreement and reduces ambiguity, loss allocation, or enforcement risk.",
+      "suggested_language": null
+    }
+  ],
+  "negotiation_points": [
+    {
+      "issue": "Ambiguous Language: The clause incorporates an external agreement by reference without providing the terms, creating uncertainty regarding the scope and duration of the confidentiality obligations.",
+      "clause_id": "3",
+      "favorable_to": null,
+      "disadvantaged_party": "Mohan Chandra S S",
+      "leverage": "The clause incorporates an external agreement by reference without providing the terms, creating uncertainty regarding the scope and duration of the confidentiality obligations.",
+      "suggested_counter": "Review and negotiate clause 3."
+    },
+    {
+      "issue": "One-sided Termination: The clause grants the employer broad discretion to terminate the internship based on 'misconduct' without defining what constitutes misconduct, creating potential for arbitrary enforcement.",
+      "clause_id": "4",
+      "favorable_to": null,
+      "disadvantaged_party": "Mohan Chandra S S",
+      "leverage": "The clause grants the employer broad discretion to terminate the internship based on 'misconduct' without defining what constitutes misconduct, creating potential for arbitrary enforcement.",
+      "suggested_counter": "Review and negotiate clause 4."
+    },
+    {
+      "issue": "Ambiguous Language: This is a standard descriptive clause defining the scope and logistics of the internship. It contains no punitive, financial, or restrictive terms.",
+      "clause_id": "1",
+      "favorable_to": null,
+      "disadvantaged_party": null,
+      "leverage": "This is a standard descriptive clause defining the scope and logistics of the internship. It contains no punitive, financial, or restrictive terms.",
+      "suggested_counter": "Review and negotiate clause 1."
+    }
+  ],
+  "compliance_flags": [],
+  "dependency_graph": {
+    "nodes": [
+      {
+        "clause_id": "1",
+        "heading": "1. Internship Details",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 5
+      },
+      {
+        "clause_id": "2",
+        "heading": "2. Roles and Responsibilities",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 10
+      },
+      {
+        "clause_id": "3",
+        "heading": "3. Confidentiality",
+        "type": "Confidentiality",
+        "risk_level": "MEDIUM",
+        "risk_score": 40
+      },
+      {
+        "clause_id": "4",
+        "heading": "4. Code of Conduct",
+        "type": "Termination",
+        "risk_level": "MEDIUM",
+        "risk_score": 45
+      },
+      {
+        "clause_id": "5",
+        "heading": "5. Separation",
+        "type": "Termination",
+        "risk_level": "LOW",
+        "risk_score": 20
+      }
+    ],
+    "edges": [],
+    "node_count": 5,
+    "edge_count": 0
+  },
+  "summary": {
+    "executive_summary": "The document contains 5 clauses.",
+    "key_points": [],
+    "red_flags": [],
+    "favorable_clauses": [],
+    "unusual_clauses": [],
+    "favorable_to": null,
+    "overall_risk_score": 35,
+    "risk_distribution": {
+      "LOW": 2,
+      "MEDIUM": 2,
+      "HIGH": 0,
+      "CRITICAL": 0
+    },
+    "recommended_actions": [
+      "Include a formal Intellectual Property assignment clause to ensure all work created during the internship is owned by the company.",
+      "Specify the Governing Law and Dispute Resolution mechanism (e.g., arbitration in Bangalore) to avoid jurisdictional ambiguity.",
+      "Explicitly define compensation or stipulate if the internship is unpaid to ensure compliance with the Code on Wages.",
+      "Incorporate a formal reference to the POSH (Prevention of Sexual Harassment) policy as required by Indian law.",
+      "Clarify the specific scope of 'Confidential Information' rather than relying solely on a separate NDA document.",
+      "Include a formal 'At-Will' or 'Notice Period' clarification that aligns with the Industrial Disputes Act regarding termination procedures."
+    ]
+  }
+}

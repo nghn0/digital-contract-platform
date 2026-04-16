@@ -1,0 +1,338 @@
+{
+  "document_id": "doc_1775802708.481621",
+  "filename": "contract.pdf",
+  "analyzed_at": "2026-04-10T12:01:48.481621",
+  "metadata": {
+    "document_type": "NDA",
+    "document_subtype": null,
+    "title": "SAMPLE SERVICE AGREEMENT",
+    "effective_date": null,
+    "execution_date": null,
+    "expiration_date": null,
+    "auto_renewal": null,
+    "renewal_notice_period": null,
+    "jurisdiction": "California",
+    "governing_law": "California",
+    "venue": null,
+    "language": "English",
+    "amendment_number": null,
+    "parent_agreement_ref": null,
+    "confidentiality_classification": null
+  },
+  "parties": {
+    "parties": [
+      {
+        "name": "ABC Corporation",
+        "legal_entity_type": null,
+        "role": "Party",
+        "address": null,
+        "country": null,
+        "registration_number": null
+      },
+      {
+        "name": "XYZ Services Inc.",
+        "legal_entity_type": null,
+        "role": "Party",
+        "address": null,
+        "country": null,
+        "registration_number": null
+      }
+    ],
+    "signatories": [],
+    "beneficiaries": [],
+    "excluded_parties": []
+  },
+  "financial_terms": {
+    "payment_terms": null,
+    "penalties": [],
+    "liability_cap": null,
+    "indemnification_cap": null,
+    "liquidated_damages": null,
+    "revenue_share": null,
+    "equity_terms": null
+  },
+  "clauses": [
+    {
+      "clause_id": "1",
+      "section_number": null,
+      "heading": "SAMPLE SERVICE AGREEMENT",
+      "text": "This Service Agreement (\"Agreement\") is entered into as of January 1, 2024, between ABC Corporation, a Delaware corporation (\"Client\"), and XYZ Services Inc., a California corporation (\"Vendor\").",
+      "plain_english": "definition",
+      "type": "definition",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "The clause is a basic agreement definition without any explicit risks or obligations.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "extraction_failed"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "2",
+      "section_number": null,
+      "heading": "1. SERVICES",
+      "text": "Vendor shall provide software development services as requested by Client. Services include development, testing, and deployment of software solutions.",
+      "plain_english": "Obligation Clause",
+      "type": "Obligation Clause",
+      "category": "Obligation",
+      "risk_level": "MEDIUM",
+      "risk_score": 50,
+      "risk_justification": "Vendor's failure to provide software development services may impact the project's success.",
+      "affected_party": null,
+      "obligations": [
+        "provide software development services as requested by Client"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "extraction_failed"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "3",
+      "section_number": null,
+      "heading": "2. PAYMENT TERMS",
+      "text": "Client shall pay Vendor $50,000 per month for the services. Payment is due within 30 days of invoice. Late payments shall accrue interest at 1.5% per month.",
+      "plain_english": "Payment Term",
+      "type": "Payment Term",
+      "category": "Obligation",
+      "risk_level": "MEDIUM",
+      "risk_score": 50,
+      "risk_justification": "Late payments shall accrue interest at 1.5% per month.",
+      "affected_party": null,
+      "obligations": [
+        "Client shall pay Vendor $50,000 per month for the services"
+      ],
+      "rights": [],
+      "deadlines": [
+        "within 30 days"
+      ],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "extraction_failed"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "4",
+      "section_number": null,
+      "heading": "3. CONFIDENTIALITY",
+      "text": "Both parties agree to maintain the confidentiality of any proprietary information shared during the term of this Agreement. This obligation shall survive termination for a period of 2 years.",
+      "plain_english": "Confidentiality",
+      "type": "Confidentiality",
+      "category": "Obligation",
+      "risk_level": "MEDIUM",
+      "risk_score": 50,
+      "risk_justification": "The parties are obligated to maintain confidentiality of proprietary information, which if breached, could pose a risk.",
+      "affected_party": null,
+      "obligations": [
+        "maintain the confidentiality of any proprietary information shared during the term of this Agreement"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "extraction_failed"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "5",
+      "section_number": null,
+      "heading": "4. TERM AND TERMINATION",
+      "text": "This Agreement shall commence on the date hereof and continue for one (1) year. Either party may terminate this Agreement with 30 days written notice.",
+      "plain_english": "Termination",
+      "type": "Termination",
+      "category": "Right",
+      "risk_level": "MEDIUM",
+      "risk_score": 50,
+      "risk_justification": "The agreement can be terminated by either party with 30 days written notice, which may pose a risk to the stability of the contract.",
+      "affected_party": "null",
+      "obligations": [],
+      "rights": [
+        "terminate this Agreement with 30 days written notice"
+      ],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "extraction_failed"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "6",
+      "section_number": null,
+      "heading": "5. LIABILITY LIMITATION",
+      "text": "Neither party shall be liable for indirect, incidental, or consequential damages arising out of this Agreement. Each party's total liability shall not exceed the fees paid in the preceding 12 months.",
+      "plain_english": "liability limitation",
+      "type": "liability limitation",
+      "category": "Prohibition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "The clause limits the total liability of each party to the fees paid in the preceding 12 months.",
+      "affected_party": "null",
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "extraction_failed"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "7",
+      "section_number": null,
+      "heading": "6. GOVERNING LAW",
+      "text": "This Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles.",
+      "plain_english": "governing law",
+      "type": "governing law",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "The agreement is governed by California law, which may pose regulatory risks.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "extraction_failed"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "8",
+      "section_number": null,
+      "heading": "7. ENTIRE AGREEMENT",
+      "text": "This Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements.\n\nIN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.\n\nCLIENT:\nABC Corporation\nBy: _________________________\nName: John Smith\nTitle: CEO\nDate: _______________________\n\nVENDOR:\nXYZ Services Inc.\nBy: _________________________\nName: Jane Doe\nTitle: President\nDate: _______________________",
+      "plain_english": "Entire Agreement",
+      "type": "Entire Agreement",
+      "category": "Representation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "The agreement supersedes all prior negotiations, representations, and agreements, which may reduce potential risks related to misunderstandings or miscommunications.",
+      "affected_party": "null",
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": false,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "extraction_failed"
+      ],
+      "cross_references": []
+    }
+  ],
+  "risks": [],
+  "obligations": [
+    {
+      "party": "Unknown",
+      "action": "provide software development services as requested by Client",
+      "clause_id": "2",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Unknown",
+      "action": "Client shall pay Vendor $50,000 per month for the services",
+      "clause_id": "3",
+      "deadline": "within 30 days",
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Unknown",
+      "action": "maintain the confidentiality of any proprietary information shared during the term of this Agreement",
+      "clause_id": "4",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    }
+  ],
+  "rights": [
+    {
+      "party": "null",
+      "right": "terminate this Agreement with 30 days written notice",
+      "clause_id": "5",
+      "conditions": null,
+      "is_exclusive": false
+    }
+  ],
+  "timelines": [
+    {
+      "event": "Deadline from clause 3",
+      "timeframe": "within 30 days",
+      "trigger": null,
+      "party_responsible": null,
+      "clause_id": "3",
+      "is_hard_deadline": true
+    }
+  ],
+  "clause_dependencies": [],
+  "missing_clauses": [],
+  "negotiation_points": [],
+  "compliance_flags": [],
+  "summary": {
+    "executive_summary": "Grounded two-pass extraction completed for 8 clauses.",
+    "key_points": [
+      "SAMPLE SERVICE AGREEMENT",
+      "1. SERVICES",
+      "2. PAYMENT TERMS",
+      "3. CONFIDENTIALITY",
+      "4. TERM AND TERMINATION"
+    ],
+    "red_flags": [],
+    "favorable_clauses": [],
+    "unusual_clauses": [],
+    "favorable_to": null,
+    "overall_risk_score": 35,
+    "risk_distribution": {
+      "LOW": 4,
+      "MEDIUM": 4,
+      "HIGH": 0,
+      "CRITICAL": 0
+    },
+    "recommended_actions": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "tokens": 3740,
+  "mode": "full_doc",
+  "mode_source": "auto-selected",
+  "text_length": 14960,
+  "approx_pages": 4,
+  "has_encoding_issues": false,
+  "mode_config": {
+    "max_tokens_per_call": 8000,
+    "clauses_per_batch": null,
+    "chunk_size": null,
+    "description": "Full document fits in single context window"
+  },
+  "stage1_validation_errors": [],
+  "timestamp": "2026-04-11T16:13:30.240548"
+}

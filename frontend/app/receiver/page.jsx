@@ -112,7 +112,7 @@ export default function ReceiverDashboard() {
                       onClick={() =>
                         updateStatus(
                           contract.contract_id,
-                          "PENDING_SIGNATURE_B",
+                          "AWAITING_RECEIVER_SIGNATURE",
                         )
                       }
                       className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl transition"
@@ -132,7 +132,7 @@ export default function ReceiverDashboard() {
                 )}
 
                 {/* ================= STEP 2: RECEIVER SIGN ================= */}
-                {contract.status?.trim().toUpperCase() === "PENDING_SIGNATURE_B" && (
+                {contract.status?.trim().toUpperCase() === "AWAITING_RECEIVER_SIGNATURE" && (
                   <button
                     onClick={() => handleReceiverSign(contract)}
                     className="bg-[#8B5DFF] hover:bg-[#6A42C2] text-white px-4 py-2 rounded-xl transition"
@@ -142,7 +142,7 @@ export default function ReceiverDashboard() {
                 )}
 
                 {/* ================= WAITING STATES ================= */}
-                {contract.status === "PENDING_SIGNATURE_A" && (
+                {contract.status === "AWAITING_SENDER_SIGNATURE" && (
                   <span className="text-yellow-400 text-sm self-center">
                     Waiting for sender signature…
                   </span>

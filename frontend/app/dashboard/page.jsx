@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getCurrentUser, signOutUser } from "@/lib/auth";
 import { signWithMetaMask } from "@/utils/signContract";
 import { useRouter } from "next/navigation";
-import { FileText, LogOut, PlusCircle, Files, Clock, ChevronRight, Moon, Sun } from "lucide-react";
+import { FileText, LogOut, PlusCircle, Files, Clock, ChevronRight, Moon, Sun, Brain, ShieldCheck } from "lucide-react";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
@@ -44,11 +44,15 @@ export default function Dashboard() {
   const fetchRecent = async (userId) => {
     try {
       const res = await fetch(`${API_BASE_URL}/contracts/all/${userId}`);
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({ error: "Unknown error" }));
+        throw new Error(errorData.error || "Failed to fetch contracts");
+      }
       const data = await res.json();
       const sorted = data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
       setRecentContracts(sorted.slice(0, 5));
     } catch (err) {
-      console.error(err);
+      console.error("Dashboard fetch error:", err);
     }
   };
 
@@ -136,7 +140,7 @@ export default function Dashboard() {
         <main className="space-y-12">
           
           {/* ACTION CARDS */}
-          <section className="grid md:grid-cols-2 gap-6">
+          <section className="grid md:grid-cols-2 gap-6 pb-6">
             {/* SEND CONTRACT CARD */}
             <div
               onClick={() => router.push("/upload")}
@@ -178,6 +182,48 @@ export default function Dashboard() {
                 Open Records <ChevronRight size={16} />
               </div>
             </div>
+
+            {/* LEGALT INTELLIGENCE CARD */}
+            <div
+              onClick={() => router.push("/intelligence")}
+              className={`group cursor-pointer p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-1 shadow-lg flex flex-col h-full min-h-[220px] backdrop-blur-md ${
+                darkMode 
+                  ? 'bg-[#1A110D] border-[#D4AF37]/30 hover:bg-[#D4AF37]/10' 
+                  : 'bg-white border-[#D4AF37]/40 hover:bg-[#D4AF37]/10 shadow-sm'
+              }`}
+            >
+              <Brain className={`mb-6 transition-colors ${darkMode ? 'text-[#D4AF37]' : 'text-[#D4AF37]'}`} size={32} />
+              <h2 className={`text-2xl font-serif font-bold mb-2 transition-colors ${darkMode ? 'text-[#F5E6D8]' : 'text-[#2C1810]'}`}>
+                LegalT Intelligence
+              </h2>
+              <p className={`leading-relaxed font-medium transition-opacity ${darkMode ? 'text-[#F5E6D8]/60 group-hover:opacity-100' : 'text-[#2C1810]/70'}`}>
+                Instantly audit any drafted agreement against established multi-jurisdictional precedents and flag critical risks ephemerally.
+              </p>
+              <div className="mt-auto pt-6 flex items-center text-[#D4AF37] font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
+                Analyze Drafts <ChevronRight size={16} />
+              </div>
+            </div>
+
+            {/* LEGAL VERIFIER CARD */}
+            <div
+              onClick={() => router.push("/verifier")}
+              className={`group cursor-pointer p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-1 shadow-lg flex flex-col h-full min-h-[220px] backdrop-blur-md ${
+                darkMode 
+                  ? 'bg-[#150D0A]/80 border-[#F5F5DC]/20 hover:bg-[#F5F5DC]/10' 
+                  : 'bg-stone-50 border-stone-200 hover:bg-stone-100 shadow-sm'
+              }`}
+            >
+              <ShieldCheck className={`mb-6 transition-colors ${darkMode ? 'text-[#A39284] group-hover:text-[#F5F5DC]' : 'text-[#6B5A4E]'}`} size={32} />
+              <h2 className={`text-2xl font-serif font-bold mb-2 transition-colors ${darkMode ? 'text-[#F5E6D8]' : 'text-[#2C1810]'}`}>
+                Legal Verifier
+              </h2>
+              <p className={`leading-relaxed font-medium transition-opacity ${darkMode ? 'text-[#F5E6D8]/60 group-hover:opacity-100' : 'text-[#2C1810]/70'}`}>
+                Cross-reference local documents against decentralized blockchain ledger to detect tampering immediately.
+              </p>
+              <div className="mt-auto pt-6 flex items-center text-[#A39284] group-hover:text-[#F5F5DC] font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
+                Verify Authenticity <ChevronRight size={16} />
+              </div>
+            </div>
           </section>
 
           {/* RECENT ACTIVITY */}
@@ -201,7 +247,7 @@ export default function Dashboard() {
               <div className="space-y-4">
                 {recentContracts.map((c) => {
                   const isSender = c.sender_id === user.id;
-                  const needsSenderSign = isSender && c.status === "PENDING_SIGNATURE_A";
+                  const needsSenderSign = isSender && c.status === "AWAITING_SENDER_SIGNATURE";
                   const isRejected = isSender && c.status === "REJECTED";
 
                   return (
@@ -245,7 +291,11 @@ export default function Dashboard() {
                             ? 'bg-black/40 text-[#A39284] border-white/10' 
                             : 'bg-stone-200 text-[#2C1810] border-stone-300'
                         }`}>
-                          {c.status === "FINALIZED" ? "ON BLOCKCHAIN" : c.status.replace(/_/g, ' ')}
+                          {c.status === "FINALIZED" || c.status === "ON_BLOCKCHAIN" 
+                            ? "ON BLOCKCHAIN" 
+                            : c.status === "AWAITING_SENDER_SIGNATURE" ? "Awaiting sender signature"
+                            : c.status === "AWAITING_RECEIVER_SIGNATURE" ? "Awaiting receiver signature"
+                            : c.status.replace(/_/g, ' ')}
                         </span>
 
                         {needsSenderSign && (

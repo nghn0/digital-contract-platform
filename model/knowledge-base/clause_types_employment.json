@@ -1,0 +1,79 @@
+{
+  "kb_name": "clause_types_employment",
+  "version": "1.0.0",
+  "description": "Employment-contract clause taxonomy for domain-specific extraction and risk labeling.",
+  "entries": [
+    {
+      "id": "emp_001",
+      "text": "At-will employment clause: clarifies either party may terminate employment at any time, with or without cause, subject to law.",
+      "metadata": {
+        "clause_type": "At-Will Employment",
+        "category": "Condition",
+        "domain": "Employment",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["at-will", "with or without cause", "terminate at any time"],
+        "standard_language_patterns": ["employment is at-will"]
+      }
+    },
+    {
+      "id": "emp_002",
+      "text": "Non-compete or non-solicitation clause: restricts competitive activity, recruiting, or customer solicitation during and after employment.",
+      "metadata": {
+        "clause_type": "Non-Compete / Non-Solicitation",
+        "category": "Prohibition",
+        "domain": "Employment",
+        "typical_risk": "HIGH",
+        "key_indicators": ["non-compete", "non-solicit", "not solicit customers", "restricted period"],
+        "standard_language_patterns": ["employee shall not compete", "employee shall not solicit"]
+      }
+    },
+    {
+      "id": "emp_003",
+      "text": "IP assignment (work-for-hire) clause: allocates ownership of inventions, code, and works created in the scope of employment.",
+      "metadata": {
+        "clause_type": "IP Assignment",
+        "category": "Right",
+        "domain": "Employment",
+        "typical_risk": "HIGH",
+        "key_indicators": ["work made for hire", "assign all rights", "inventions", "intellectual property"],
+        "standard_language_patterns": ["employee hereby assigns"]
+      }
+    },
+    {
+      "id": "emp_004",
+      "text": "Severance and separation clause: defines severance pay, benefits continuation, release requirements, and post-termination obligations.",
+      "metadata": {
+        "clause_type": "Severance / Separation",
+        "category": "Remedy",
+        "domain": "Employment",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["severance", "separation", "release agreement", "termination benefits"],
+        "standard_language_patterns": ["upon termination", "in exchange for release"]
+      }
+    },
+    {
+      "id": "emp_005",
+      "text": "Benefits and compensation clause: describes salary, bonus, incentives, paid leave, healthcare, and eligibility conditions.",
+      "metadata": {
+        "clause_type": "Compensation and Benefits",
+        "category": "Obligation",
+        "domain": "Employment",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["salary", "bonus", "benefits", "vacation", "medical"],
+        "standard_language_patterns": ["employee shall be eligible for"]
+      }
+    },
+    {
+      "id": "emp_006",
+      "text": "Arbitration clause for employment disputes: requires arbitration, defines forum, rules, cost-sharing, and waiver of court litigation.",
+      "metadata": {
+        "clause_type": "Employment Arbitration",
+        "category": "Condition",
+        "domain": "Employment",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["arbitration", "employment disputes", "waive jury", "AAA"],
+        "standard_language_patterns": ["all disputes shall be resolved by arbitration"]
+      }
+    }
+  ]
+}

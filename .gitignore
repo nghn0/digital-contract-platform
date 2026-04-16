@@ -15,3 +15,27 @@ npm-debug.log
 
 # OS
 .DS_Store
+*.swp
+
+# Python / Model
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.pytest_cache/
+knowledge-base/chroma_db/
+model/env
+model/.env

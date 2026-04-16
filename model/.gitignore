@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and traces
+*.log
+trace_output.json
+trace*.json
+results.json
+trace.json
+logs/stage_debug*/
+logs/stage_debug*/**
+
+# Generated data and caches
+*.sqlite3
+*.db
+knowledge-base/chroma_db/
+docs/synopsis_output.json
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Node / Next.js
+node_modules/
+legalvault-ui/.next/
+legalvault-ui/out/
+legalvault-ui/node_modules/
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/

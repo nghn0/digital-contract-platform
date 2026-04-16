@@ -1,0 +1,6 @@
+Stage 1: INGESTION
+Verdict : PASS
+Reason  : 14960 chars from ~1 pages
+Duration: 1051ms
+Errors  : 0
+Warnings: 0

@@ -1,0 +1,140 @@
+{
+  "kb_name": "compliance_rules",
+  "version": "1.0.0",
+  "description": "Regulatory compliance checkpoints per jurisdiction. Used during Pass 5 to populate compliance_flags. Triggered when contract involves data, employment, or cross-border dealings.",
+  "entries": [
+    {
+      "id": "cr_001",
+      "text": "GDPR Compliance for Contracts (EU General Data Protection Regulation): Any contract where a party processes personal data of EU residents must include a Data Processing Agreement (DPA) with: (1) Nature and purpose of processing, (2) Type of personal data and categories of data subjects, (3) Duration of processing, (4) Obligations and rights of the controller, (5) Technical and organizational security measures, (6) Sub-processor restrictions and approval process, (7) Data breach notification within 72 hours, (8) Data subject rights fulfillment (access, deletion, portability), (9) Data transfer safeguards for non-EU transfers (Standard Contractual Clauses), (10) Data deletion/return upon termination. Failure = fines up to 4% of global annual revenue or EUR 20 million.",
+      "metadata": {
+        "regulation": "GDPR",
+        "jurisdiction": "European Union",
+        "effective_date": "2018-05-25",
+        "applies_when": ["Processing EU personal data", "Any EU resident as data subject", "EU-based processor or controller"],
+        "required_contract_elements": [
+          "Data Processing Agreement",
+          "Security measures specification",
+          "72-hour breach notification",
+          "Sub-processor restrictions",
+          "Standard Contractual Clauses for transfers",
+          "Data deletion on termination"
+        ],
+        "max_penalty": "4% global revenue or EUR 20 million",
+        "severity": "CRITICAL"
+      }
+    },
+    {
+      "id": "cr_002",
+      "text": "India DPDP Act 2023 Compliance (Digital Personal Data Protection Act): Any contract processing personal data of Indian residents must address: (1) Data Fiduciary (controller) obligations — must have lawful basis for processing, (2) Consent requirements — specific, informed, unambiguous, (3) Data Principal (data subject) rights — access, correction, erasure, grievance redress, (4) Data Processor obligations — only act on Data Fiduciary instructions, (5) Cross-border transfer restrictions — only to approved countries/territories, (6) Data breach notification to DPDB (Data Protection Board) and affected data principals, (7) Data Localisation for certain sensitive categories. Fines up to INR 250 crore per violation.",
+      "metadata": {
+        "regulation": "DPDP Act 2023",
+        "jurisdiction": "India",
+        "effective_date": "2023-08-11 (Rules pending)",
+        "applies_when": ["Processing Indian residents' personal data", "Data Fiduciary or Processor based in India", "Cross-border transfers involving Indian data"],
+        "required_contract_elements": [
+          "Lawful basis for processing",
+          "Consent mechanism",
+          "Data Principal rights fulfillment",
+          "Breach notification to DPDB",
+          "Cross-border transfer compliance",
+          "Data deletion obligations"
+        ],
+        "max_penalty": "INR 250 crore per violation",
+        "severity": "CRITICAL"
+      }
+    },
+    {
+      "id": "cr_003",
+      "text": "CCPA/CPRA Compliance for Contracts (California Consumer Privacy Act / California Privacy Rights Act): Contracts with California consumers or involving California resident data must address: (1) Right to know what data is collected, (2) Right to delete personal information, (3) Right to opt-out of sale/sharing of personal information, (4) Non-discrimination for exercising privacy rights, (5) Service Provider agreements must include processing restrictions, (6) Prohibition on selling data without consent, (7) Sensitive Personal Information handling restrictions, (8) Data minimization requirements. Fines up to $7,500 per intentional violation.",
+      "metadata": {
+        "regulation": "CCPA/CPRA",
+        "jurisdiction": "California, USA",
+        "effective_date": "2020-01-01 (CPRA amendments 2023-01-01)",
+        "applies_when": ["For-profit businesses with CA residents' data", "Annual gross revenue over $25M", "Buying/selling data of 100,000+ CA consumers/households"],
+        "required_contract_elements": [
+          "Service Provider agreement with processing restrictions",
+          "Prohibition on selling PI",
+          "Consumer rights fulfillment mechanism",
+          "Data deletion procedures",
+          "Opt-out rights"
+        ],
+        "max_penalty": "$7,500 per intentional violation",
+        "severity": "HIGH"
+      }
+    },
+    {
+      "id": "cr_004",
+      "text": "Indian Labour Law Compliance for Employment Contracts: Employment contracts with Indian employees must comply with: (1) Shops and Establishments Act — working hours, leave entitlements per state, (2) Contract Labour (Regulation and Abolition) Act 1970 — for contract workers, (3) Industrial Disputes Act — retrenchment compensation, notice period requirements, (4) Maternity Benefit Act — 26 weeks paid maternity leave, (5) Employees' Provident Funds Act — 12% employer contribution, (6) Payment of Gratuity Act — after 5 years, (7) Code on Wages — minimum wage compliance, (8) Sexual Harassment of Women at Workplace Act (POSH) — internal committee requirement. Non-compliance = criminal liability for HR and directors.",
+      "metadata": {
+        "regulation": "Indian Labour Laws",
+        "jurisdiction": "India",
+        "applies_when": ["Employment contracts with Indian employees", "Contract/gig workers in India"],
+        "required_contract_elements": [
+          "Notice period (minimum per ID Act)",
+          "Leave policy per state Shops Act",
+          "PF and ESI contribution mention",
+          "Gratuity entitlement after 5 years",
+          "POSH policy reference",
+          "Minimum wage compliance"
+        ],
+        "common_missing": [
+          "Gratuity provision",
+          "POSH policy reference",
+          "Notice period per Industrial Disputes Act",
+          "PF contribution acknowledgment"
+        ],
+        "severity": "HIGH"
+      }
+    },
+    {
+      "id": "cr_005",
+      "text": "HIPAA Compliance for Healthcare Contracts (Health Insurance Portability and Accountability Act): Any contract involving Protected Health Information (PHI) in the US must include a Business Associate Agreement (BAA) covering: (1) Permitted uses and disclosures of PHI, (2) Security safeguards — administrative, physical, technical, (3) Subcontractor BAA requirements, (4) Breach notification within 60 days of discovery, (5) PHI return or destruction upon termination, (6) Minimum necessary standard for PHI access. Fines range from $100 to $50,000 per violation, up to $1.9 million per violation category per year.",
+      "metadata": {
+        "regulation": "HIPAA",
+        "jurisdiction": "United States",
+        "applies_when": ["Healthcare providers, insurers, clearinghouses", "Business associates handling PHI", "Health technology and data companies"],
+        "required_contract_elements": [
+          "Business Associate Agreement (BAA)",
+          "PHI use and disclosure restrictions",
+          "Security safeguards",
+          "Breach notification (60 days)",
+          "PHI destruction on termination"
+        ],
+        "max_penalty": "$1.9 million per violation category per year",
+        "severity": "CRITICAL"
+      }
+    },
+    {
+      "id": "cr_006",
+      "text": "Indian IT Act 2000 and Amendment Compliance for Tech Contracts: Technology contracts involving Indian parties must comply with: (1) Section 43A — reasonable security practices for sensitive personal data, (2) Section 72A — unauthorized disclosure of personal information, (3) IT (Reasonable Security Practices) Rules 2011 — ISO/IEC 27001 or equivalent security standard, (4) CERT-In Directions 2022 — mandatory 6-hour breach reporting to CERT-In for service providers, (5) VPN and cloud services logging requirements. Non-compliance = imprisonment up to 3 years and/or fines.",
+      "metadata": {
+        "regulation": "IT Act 2000 + CERT-In Directions",
+        "jurisdiction": "India",
+        "applies_when": ["IT services contracts in India", "Data processing for Indian parties", "Cloud services with Indian users"],
+        "required_contract_elements": [
+          "Security standards (IS/ISO 27001)",
+          "Breach notification within 6 hours to CERT-In",
+          "Log retention for 180 days",
+          "Incident response procedures"
+        ],
+        "severity": "HIGH"
+      }
+    },
+    {
+      "id": "cr_007",
+      "text": "Standard Contractual Clauses (SCCs) for Cross-border Data Transfers: When personal data is transferred from the EU or UK to a country without an adequacy decision (including India), Standard Contractual Clauses (SCCs) adopted by the European Commission must be incorporated into the contract or as an addendum. The 2021 SCCs have four modules: (1) Controller to Controller, (2) Controller to Processor, (3) Processor to Processor, (4) Processor to Controller. Indian companies receiving EU data must implement the relevant module. Transfer Impact Assessments (TIAs) may also be required.",
+      "metadata": {
+        "regulation": "GDPR Chapter V / SCCs",
+        "jurisdiction": "Cross-border (EU to third countries)",
+        "applies_when": ["Transferring EU personal data to India", "EU data to any country without adequacy decision", "Data sharing across EU/non-EU parties"],
+        "required_elements": [
+          "Correct SCC module selection",
+          "Transfer Impact Assessment if required",
+          "Local law analysis",
+          "Supplementary measures if needed"
+        ],
+        "severity": "CRITICAL"
+      }
+    }
+  ]
+}

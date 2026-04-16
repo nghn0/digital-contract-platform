@@ -1,0 +1,77 @@
+{
+  "kb_name": "risk_rules_financial",
+  "version": "1.0.0",
+  "description": "Financial and lending specific risk scoring rules for loan and amendment analysis.",
+  "entries": [
+    {
+      "id": "fr_001",
+      "text": "HIGH risk: Broad release of claims language that waives known and unknown claims against lender can materially limit remediation options.",
+      "metadata": {
+        "risk_type": "Broad Release of Claims",
+        "risk_level": "HIGH",
+        "trigger_phrases": ["release", "known or unknown claims", "forever discharge", "waive all claims"],
+        "suggested_fix": "Narrow release scope to known claims as of execution date and preserve fraud/gross-negligence carve-outs."
+      }
+    },
+    {
+      "id": "fr_002",
+      "text": "HIGH risk: Conditions subsequent with immediate default trigger may create accelerated default exposure without cure period.",
+      "metadata": {
+        "risk_type": "Immediate Default Trigger",
+        "risk_level": "HIGH",
+        "trigger_phrases": ["condition subsequent", "immediate event of default", "without cure period"],
+        "suggested_fix": "Add notice and cure windows; make default trigger proportional to materiality."
+      }
+    },
+    {
+      "id": "fr_003",
+      "text": "MEDIUM risk: Amendment fee calculated on total commitment instead of incremental increase can materially overcharge borrower.",
+      "metadata": {
+        "risk_type": "Amendment Fee Basis",
+        "risk_level": "MEDIUM",
+        "trigger_phrases": ["amendment fee", "aggregate commitment", "full commitment amount"],
+        "suggested_fix": "Tie fee basis to incremental commitment increase or negotiated cap."
+      }
+    },
+    {
+      "id": "fr_004",
+      "text": "MEDIUM risk: Mandatory quarterly principal or commitment reductions can stress liquidity and increase refinancing pressure.",
+      "metadata": {
+        "risk_type": "Liquidity Reduction Risk",
+        "risk_level": "MEDIUM",
+        "trigger_phrases": ["quarterly commitment reduction", "mandatory prepayment", "scheduled reduction"],
+        "suggested_fix": "Negotiate reduction schedule flexibility or performance-based step-down triggers."
+      }
+    },
+    {
+      "id": "fr_005",
+      "text": "MEDIUM risk: Sole discretion language in lender rights can create one-sided enforcement and interpretation outcomes.",
+      "metadata": {
+        "risk_type": "Sole Discretion Exposure",
+        "risk_level": "MEDIUM",
+        "trigger_phrases": ["sole discretion", "lender may determine", "absolute discretion"],
+        "suggested_fix": "Add objective standards, reasonableness qualifiers, and notice obligations."
+      }
+    },
+    {
+      "id": "fr_006",
+      "text": "LOW to MEDIUM risk: Jury trial waivers are common in commercial lending but should be highlighted for litigation strategy impact.",
+      "metadata": {
+        "risk_type": "Jury Trial Waiver",
+        "risk_level": "MEDIUM",
+        "trigger_phrases": ["waive trial by jury", "jury waiver"],
+        "suggested_fix": "Confirm jurisdictional enforceability and evaluate strategic litigation trade-offs."
+      }
+    },
+    {
+      "id": "fr_007",
+      "text": "MEDIUM risk: Submission to distant or out-of-state jurisdiction may increase defense costs and procedural burden.",
+      "metadata": {
+        "risk_type": "Out-of-State Jurisdiction",
+        "risk_level": "MEDIUM",
+        "trigger_phrases": ["submit to jurisdiction", "exclusive courts of", "venue in"],
+        "suggested_fix": "Negotiate neutral or home-state venue, or add arbitration venue compromise."
+      }
+    }
+  ]
+}

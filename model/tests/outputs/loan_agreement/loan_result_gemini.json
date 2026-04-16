@@ -1,0 +1,1376 @@
+{
+  "document_id": "doc_1775925964.44753",
+  "filename": "contract.pdf",
+  "analyzed_at": "2026-04-11T22:16:04.447530",
+  "metadata": {
+    "document_type": "Loan",
+    "document_subtype": "Amendment",
+    "title": "FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT",
+    "effective_date": "2019-03-27",
+    "execution_date": null,
+    "expiration_date": "2021-03-27",
+    "auto_renewal": null,
+    "renewal_notice_period": null,
+    "jurisdiction": "Oklahoma",
+    "governing_law": "Oklahoma",
+    "venue": "Tulsa County, Oklahoma",
+    "language": "English",
+    "amendment_number": "1",
+    "parent_agreement_ref": "Senior Revolver Loan Agreement dated as of September 20, 2018",
+    "confidentiality_classification": null
+  },
+  "parties": {
+    "parties": [
+      {
+        "name": "EMPIRE LOUISIANA LLC",
+        "legal_entity_type": "LLC",
+        "role": "Borrower",
+        "address": null,
+        "country": "USA",
+        "registration_number": null
+      },
+      {
+        "name": "EMPIRE NORTH DAKOTA LLC",
+        "legal_entity_type": "LLC",
+        "role": "Borrower",
+        "address": null,
+        "country": "USA",
+        "registration_number": null
+      },
+      {
+        "name": "CROSSFIRST BANK",
+        "legal_entity_type": "Bank",
+        "role": "Bank",
+        "address": null,
+        "country": "USA",
+        "registration_number": null
+      }
+    ],
+    "signatories": [
+      {
+        "name": "Michael R. Morrisett",
+        "company": "EMPIRE LOUISIANA LLC",
+        "designation": "President",
+        "email": null,
+        "signing_date": null,
+        "signing_authority": null
+      },
+      {
+        "name": "Michael R. Morrisett",
+        "company": "EMPIRE NORTH DAKOTA LLC",
+        "designation": "President",
+        "email": null,
+        "signing_date": null,
+        "signing_authority": null
+      }
+    ],
+    "beneficiaries": [],
+    "excluded_parties": []
+  },
+  "financial_terms": {
+    "payment_terms": null,
+    "penalties": [],
+    "liability_cap": null,
+    "indemnification_cap": null,
+    "liquidated_damages": null,
+    "revenue_share": null,
+    "equity_terms": null
+  },
+  "clauses": [
+    {
+      "clause_id": "1",
+      "section_number": null,
+      "heading": "FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT",
+      "text": "THIS FIRST AMENDMENT TO SENIOR REVOLVER LOAN AGREEMENT, dated effective as of March 27, 2019 (the \"First Amendment\"), is entered into by and among EMPIRE LOUISIANA LLC, a Delaware limited liability company (the \"Original Borrower\" or \"EL\") and EMPIRE NORTH DAKOTA LLC, a Delaware limited liability company (\"END\", together with the Original Borrower are sometimes referred to herein collectively as the \"Borrower\") and CROSSFIRST BANK, a Kansas state-chartered bank (the \"Bank\").",
+      "plain_english": "This clause identifies the parties involved in the First Amendment to the Senior Revolver Loan Agreement, which are Empire Louisiana LLC, Empire North Dakota LLC, and CrossFirst Bank, effective as of March 27, 2019.",
+      "type": "Amendment",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 10,
+      "risk_justification": "This is a standard introductory clause identifying the parties and the effective date of the amendment. It carries minimal risk as it is purely descriptive.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "parties",
+        "effective date",
+        "amendment"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "2",
+      "section_number": null,
+      "heading": "1. Definitions. Capitalized terms used herein and not otherwise",
+      "text": "\"Guaranty Agreement\" means that certain Amended and Restated Guaranty Agreement of even date herewith, from Guarantor, in favor of Bank, in form, scope and substance acceptable to Bank.\n\"Revolver Commitment Amount\" shall be the maximum outstanding principal amount plus Letter of Credit Exposure the Bank agrees from time to time to make available under the Revolver Commitment (initially stipulated to be equal to $9,000,000.00), subject to the QCR.\n\"Revolver Final Maturity Date\" shall mean March 27, 2021, unless otherwise extended or renewed in writing by the mutual agreement of the Borrower and the Bank.\n\"QCR\" shall have the meaning given in Section 2.13 of the Loan Agreement.",
+      "plain_english": "This clause defines key terms used in the agreement, specifically the Guaranty Agreement, the Revolver Commitment Amount (capped at $9,000,000), the Revolver Final Maturity Date (March 27, 2021), and the QCR.",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 10,
+      "risk_justification": "These are standard definitions used to clarify the scope and maturity of the financial commitment. The terms are objective and standard for loan documentation.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [
+        "March 27, 2021"
+      ],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "definitions",
+        "maturity date",
+        "revolver commitment"
+      ],
+      "cross_references": [
+        "Section 2.13 of the Loan Agreement"
+      ]
+    },
+    {
+      "clause_id": "3",
+      "section_number": null,
+      "heading": "2. Revolver Commitment. The Revolver Commitment is hereby increa",
+      "text": "sed and renewed to the Revolver Final Maturity Date, subject to the Revolver Commitment Amount, the Collateral Borrowing Base limitations and QCR described below. All of the Indebtedness created pursuant thereto is evidenced by that certain replacement Promissory Note (Revolver Note) dated as of March 27, 2019, from the Borrower payable to the order of the Bank in the maximum principal amount of $20,000,000.00 (subject to the Revolver Commitment Amount and the Collateral Borrowing Base). The Revolver Commitment Amount and the Collateral Borrowing Base are stipulated to be set at $9,000,000.00 as of the effective date of this First Amendment, which increase shall be in accordance with and satisfy the Collateral Borrowing Base Redeterminations under Section 4.2 of the Loan Agreement for April 2019.",
+      "plain_english": "The Revolver Commitment is increased and renewed until the maturity date, with the current commitment and borrowing base set at $9,000,000.00. This amount is subject to the terms of the Revolver Note and the borrowing base redetermination process defined in the original loan agreement.",
+      "type": "Amendment",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard amendment clause adjusting the commitment amount and referencing existing loan documentation. The risks are mitigated by the explicit reference to the established redetermination process in the original Loan Agreement.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower must adhere to the Revolver Commitment Amount and Collateral Borrowing Base limitations",
+        "Borrower must satisfy the Collateral Borrowing Base Redeterminations under Section 4.2 of the Loan Agreement"
+      ],
+      "rights": [
+        "Borrower is entitled to a revolving credit facility up to the stipulated commitment amount"
+      ],
+      "deadlines": [
+        "April 2019 (for Collateral Borrowing Base Redeterminations)"
+      ],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "Revolver Commitment",
+        "Borrowing Base",
+        "Amendment",
+        "Promissory Note"
+      ],
+      "cross_references": [
+        "Section 4.2 of the Loan Agreement"
+      ]
+    },
+    {
+      "clause_id": "4",
+      "section_number": "2.4",
+      "heading": "2.4 Loan Origination Fee. Borrower shall pay to Bank a fully earn",
+      "text": "ed and non-refundable loan origination fee equal to $76,900.00 (one hundred basis points (1.00%) on the $7,690,000.00 increase in the Revolver Commitment Amount).",
+      "plain_english": "The Borrower is required to pay the Bank a non-refundable fee of $76,900.00, which represents 1% of the $7,690,000.00 increase in the Revolver Commitment Amount.",
+      "type": "Payment",
+      "category": "Obligation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard, clearly defined, one-time payment obligation associated with a loan increase. It is common in commercial lending and does not present unusual or hidden risks.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower shall pay to Bank a non-refundable loan origination fee of $76,900.00."
+      ],
+      "rights": [
+        "Bank is entitled to receive a non-refundable loan origination fee."
+      ],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "fee",
+        "loan",
+        "origination",
+        "payment"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "5",
+      "section_number": "2.12",
+      "heading": "2.12 Payment of Fees. All fees payable under Sections 2.4, 2.5, 2.",
+      "text": "2.10 and 2.14 shall be paid on the dates due, in immediately available funds, US Dollars, to Bank and shall be fully earned and non-refundable under any circumstances.",
+      "plain_english": "Fees required under sections 2.4, 2.5, 2.10, and 2.14 must be paid to the Bank in US Dollars by their respective due dates and are non-refundable.",
+      "type": "Payment",
+      "category": "Obligation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard payment clause requiring fees to be paid in a specific currency and manner. The 'non-refundable' provision is common in commercial lending agreements.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Pay fees under Sections 2.4, 2.5, 2.10, and 2.14 to Bank in immediately available US Dollars by the due dates."
+      ],
+      "rights": [
+        "Bank has the right to receive fees in immediately available US Dollars."
+      ],
+      "deadlines": [
+        "Fees must be paid on the dates due."
+      ],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "payment",
+        "fees",
+        "non-refundable",
+        "currency"
+      ],
+      "cross_references": [
+        "2.4",
+        "2.5",
+        "2.10",
+        "2.14"
+      ]
+    },
+    {
+      "clause_id": "6",
+      "section_number": "5",
+      "heading": "5. Quarterly Commitment Reduction. The following replaces Sectio",
+      "text": "5. Quarterly Commitment Reduction. The following replaces Sectio n 2.13 of the Existing Loan Agreement in its entirety:",
+      "plain_english": "This clause serves as a placeholder or introductory statement indicating that a new provision regarding quarterly commitment reductions is replacing the existing Section 2.13 of the original loan agreement.",
+      "type": "Amendment",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 10,
+      "risk_justification": "This is a standard administrative amendment clause. It does not contain substantive terms, obligations, or risks on its own, as it merely points to a replacement section.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": true,
+      "ambiguity_reason": "The text is truncated ('replaces Sectio n 2.13') and does not contain the actual terms of the reduction, making it incomplete.",
+      "tags": [
+        "Amendment",
+        "Loan Agreement",
+        "Commitment Reduction"
+      ],
+      "cross_references": [
+        "Section 2.13"
+      ]
+    },
+    {
+      "clause_id": "7",
+      "section_number": "2.13",
+      "heading": "2.13 Quarterly Commitment Reduction (QCR). On the last day of each",
+      "text": "calendar quarter, commencing June 30, 2019, the Revolver Commitment\nAmount shall automatically be reduced by $150,000.00 per quarter (the\n\"QCR\"), and Borrower shall make any principal payment necessary to\ncomply with the QCR. Such principal payment shall be in addition to the\nregularly scheduled interest payment.\nThe definition of \"MCR\" and all references to \"MCR\" in the Existing Loan Agreement are\nhereby deleted.",
+      "plain_english": "Starting June 30, 2019, the total amount the Borrower can borrow under the revolver will decrease by $150,000 every quarter. The Borrower is required to make principal payments to ensure the loan balance stays within this reducing limit, in addition to regular interest payments. The term 'MCR' is removed from the agreement.",
+      "type": "Payment",
+      "category": "Obligation",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "risk_justification": "This clause imposes a mandatory, recurring principal reduction obligation on the Borrower, which increases liquidity pressure and reduces available credit over time. While standard in credit facilities, it creates a fixed financial burden.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower shall make any principal payment necessary to comply with the QCR on the last day of each calendar quarter."
+      ],
+      "rights": [],
+      "deadlines": [
+        "Last day of each calendar quarter, commencing June 30, 2019"
+      ],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "Revolver Commitment",
+        "Principal Reduction",
+        "Loan Amortization",
+        "Credit Facility"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "8",
+      "section_number": "2.14",
+      "heading": "2.14 Loan Amendment Fee. For each amendment or other change to",
+      "text": "this Agreement that is required (in the sole discretion of the Bank) as a result of a change in terms or conditions requested by Borrower, Borrower shall pay Bank a fee in an amount equal to the Revolver Commitment Amount then outstanding, multiplied by twenty five basis points (0.25%), which fee shall be payable in immediately available funds concurrent with the closing of such amendment.",
+      "plain_english": "If the Borrower requests a change to the loan agreement and the Bank agrees to it, the Borrower must pay the Bank a fee equal to 0.25% of the outstanding Revolver Commitment Amount at the time the amendment is finalized.",
+      "type": "Payment",
+      "category": "Obligation",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "risk_justification": "The fee is calculated based on the total outstanding commitment rather than the scope of the amendment, which could result in significant costs for minor changes. The Bank has sole discretion to determine if an amendment is required.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower shall pay Bank a fee in an amount equal to the Revolver Commitment Amount then outstanding, multiplied by twenty five basis points (0.25%) upon the closing of an amendment."
+      ],
+      "rights": [
+        "Bank has the right to collect a fee for amendments requested by the Borrower."
+      ],
+      "deadlines": [
+        "concurrent with the closing of such amendment"
+      ],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "fee",
+        "amendment",
+        "revolver",
+        "payment"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "9",
+      "section_number": "6.6(b)",
+      "heading": "7. Financial Statements and Reports. Section 6.6(a) and the firs",
+      "text": "6.6(b) of the Existing Loan Agreement are hereby modified to provide that the Guarantor will furnish such Financial Statements and Reports pursuant to the terms of the Guaranty Agreement.",
+      "plain_english": "The requirements for the Guarantor to provide financial statements and reports are now governed by the terms set forth in the Guaranty Agreement rather than the previous terms in the Existing Loan Agreement.",
+      "type": "Amendment",
+      "category": "Obligation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard administrative amendment clarifying the source of reporting obligations. It does not impose new financial burdens but redirects the governing terms for existing reporting requirements.",
+      "affected_party": "Guarantor",
+      "obligations": [
+        "Guarantor must furnish Financial Statements and Reports pursuant to the terms of the Guaranty Agreement."
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "reporting",
+        "financial statements",
+        "amendment",
+        "guarantor"
+      ],
+      "cross_references": [
+        "6.6(a)",
+        "6.6(b)",
+        "Guaranty Agreement"
+      ]
+    },
+    {
+      "clause_id": "10",
+      "section_number": "6(c)",
+      "heading": "Net Lease Operating Reports",
+      "text": "Net Lease Operating Reports. No later than sixty (60) days after the end of each calendar quarter, reports regarding leases in the same form as they are received by the operator under each applicable operators agreement.",
+      "plain_english": "The Borrowers must provide the Bank with copies of lease reports within 60 days after the end of each calendar quarter, using the same format provided to the operator.",
+      "type": "Other",
+      "category": "Obligation",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "risk_justification": "This is a standard reporting obligation common in loan agreements to ensure the lender has visibility into the collateral's performance. The 60-day window is reasonable.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Provide reports regarding leases to the Bank no later than sixty (60) days after the end of each calendar quarter."
+      ],
+      "rights": [],
+      "deadlines": [
+        "No later than sixty (60) days after the end of each calendar quarter"
+      ],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "reporting",
+        "compliance",
+        "leases",
+        "quarterly"
+      ],
+      "cross_references": [
+        "Section 6"
+      ]
+    },
+    {
+      "clause_id": "11",
+      "section_number": null,
+      "heading": "Section 28 (Minimum Leverage Ratio) and Section 29 (Minimum",
+      "text": "Interest Coverage\nRatio) of the Existing Loan Agreement shall be measured for Borrower on a combined\nbasis using consolidated financial statements provided by the Guarantor.",
+      "plain_english": "The financial ratios required by the loan agreement (Interest Coverage Ratio and Leverage Ratio) must be calculated by combining the financial results of the Borrower and the Guarantor using consolidated financial statements.",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard financial reporting requirement for loan agreements involving guarantors. It clarifies the methodology for calculating compliance with financial covenants.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower must measure Interest Coverage Ratio and Minimum Leverage Ratio on a combined basis using consolidated financial statements provided by the Guarantor."
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "financial covenants",
+        "reporting",
+        "consolidated statements",
+        "loan agreement"
+      ],
+      "cross_references": [
+        "Section 28",
+        "Section 29"
+      ]
+    },
+    {
+      "clause_id": "12",
+      "section_number": null,
+      "heading": "10. Collateral/Mortgages. The term \"Collateral\" as that term is d",
+      "text": "efined in Article III of the Existing Loan Agreement shall incorporate and include, without limitation, all real and personal property lien interests granted by END to Bank by the following: (i) mortgage liens or deeds of trust (as applicable) encumbering END's proved producing and proved non-producing oil, gas and other leasehold and mineral interests (including, without limitation, behind-the pipe values), on a first priority basis, including without limitation, those properties situated in the States of North Dakota and Montana (the \"END Mortgages\"), and (ii) a first priority security interest in substantially all of END's personal property according to the terms of a certain Pledge, Security Agreement and Assignment instrument dated as even date with this First Amendment, in form and substance satisfactory to Bank (the \"END Security Agreement\"). The term \"Mortgages\" as that term is defined in Article III of the Existing Loan Agreement shall incorporate and include the END Mortgages.",
+      "plain_english": "This clause expands the definition of 'Collateral' and 'Mortgages' under the existing loan agreement to include specific oil, gas, and mineral property liens in North Dakota and Montana, as well as a first-priority security interest in the borrower's personal property as defined in a new security agreement.",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "risk_justification": "The clause establishes broad, first-priority security interests over substantially all of the borrower's assets, which significantly limits the borrower's ability to encumber or dispose of assets and increases the bank's control over the collateral.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower must grant first priority mortgage liens on oil, gas, and mineral interests in North Dakota and Montana",
+        "Borrower must grant a first priority security interest in substantially all personal property"
+      ],
+      "rights": [
+        "Bank is granted first priority lien and security interest in specified real and personal property"
+      ],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "Collateral",
+        "Mortgage",
+        "Security Interest",
+        "Lien",
+        "Asset"
+      ],
+      "cross_references": [
+        "Article III of the Existing Loan Agreement"
+      ]
+    },
+    {
+      "clause_id": "13",
+      "section_number": "11",
+      "heading": "11. Amended Louisiana Mortgage. EL, as mortgagor, and CrossFirst,",
+      "text": "as mortgagee, are parties to a certain Mortgage, Assignment of As-Extracted Collateral, Security Agreement and Fixture Filing dated as of September 20, 2018, as corrected by instrument dated November 7, 2018, whereby EL granted a first priority mortgage lien and security interest in all of its oil and gas leases, leasehold interests, and related assets located in the State of Louisiana (the \"Original Louisiana Mortgage\"). As a condition precedent to CrossFirst's obligations under this First Amendment, CrossFirst requires that the Original Louisiana Mortgage be amended and modified to incorporate and secure repayment of all amounts extended under and evidenced by the increased Revolver Commitment, all according to the terms of a certain First Amendment to Mortgage, Assignment of As-Extracted Collateral, Security Agreement and Fixture Filing dated on or about the date of the First Amendment (the \"Amended Louisiana Mortgage\").",
+      "plain_english": "The parties agree to amend an existing mortgage on Louisiana oil and gas assets to ensure that the new, increased loan commitment is fully secured by those same assets.",
+      "type": "Amendment",
+      "category": "Condition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard administrative requirement to ensure that collateral coverage matches the increased loan amount. It is a typical condition precedent in secured lending transactions.",
+      "affected_party": "EMPIRE LOUISIANA LLC",
+      "obligations": [
+        "EL must amend and modify the Original Louisiana Mortgage to incorporate and secure repayment of all amounts extended under the increased Revolver Commitment."
+      ],
+      "rights": [
+        "CrossFirst has the right to require the amendment of the Original Louisiana Mortgage as a condition precedent to its obligations under the First Amendment."
+      ],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "collateral",
+        "mortgage",
+        "security interest",
+        "amendment"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "14",
+      "section_number": null,
+      "heading": "12. Conditions Precedent. The Borrower shall execute and deliver,",
+      "text": "or cause to be executed and delivered, to the Bank, each of the following as express conditions precedent to the effectiveness of the amendments and modifications contemplated by this First Amendment: ( This First Amendment; a ) ( The replacement Promissory Note (Revolver Note); b ) ( The END Mortgages; c ) ( The END Security Agreements; d ) ( The Amended Louisiana Mortgage; e ) ( The Guaranty Agreement; f ) ( The obligation of Borrower to furnish the Bank with appropriate g certificates from the State of North Dakota that demonstrate END is registered and qualified to do business in the State of North Dakota, shall be an express condition subsequent and must be accomplished by Borrower to the Bank's satisfaction no later than April 12, 2019, and failure of Borrower to timely satisfy such condition subsequent shall constitute an Event of Default hereunder without further or other notice from the Bank. ) ( Payment to the Bank of the fully earned and non-refundable one percent (1.0%) loan origination fee in the amount of $76,900.00 h concurrently herewith in immediately available funds (US Dollars); and ( Closing certificates from each of the Borrowers. i )",
+      "plain_english": "The Borrower must provide several documents and payments to the Bank as conditions for the First Amendment to take effect. Additionally, the Borrower must provide proof of registration in North Dakota by April 12, 2019; failure to do so will result in an immediate Event of Default.",
+      "type": "Other",
+      "category": "Condition",
+      "risk_level": "HIGH",
+      "risk_score": 75,
+      "risk_justification": "The clause includes a condition subsequent that triggers an immediate Event of Default without notice if the Borrower fails to provide specific state registration certificates by a hard deadline, creating significant operational risk.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Execute and deliver the First Amendment",
+        "Execute and deliver the replacement Promissory Note (Revolver Note)",
+        "Execute and deliver the END Mortgages",
+        "Execute and deliver the END Security Agreements",
+        "Execute and deliver the Amended Louisiana Mortgage",
+        "Execute and deliver the Guaranty Agreement",
+        "Furnish the Bank with certificates from the State of North Dakota demonstrating registration and qualification to do business by April 12, 2019",
+        "Pay the Bank a one percent (1.0%) loan origination fee of $76,900.00",
+        "Provide closing certificates from each of the Borrowers"
+      ],
+      "rights": [
+        "Bank's right to receive specified documents and payments as conditions precedent",
+        "Bank's right to declare an Event of Default upon failure to satisfy the North Dakota registration condition"
+      ],
+      "deadlines": [
+        "April 12, 2019 for North Dakota registration certificates"
+      ],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "Conditions Precedent",
+        "Event of Default",
+        "Loan Origination Fee",
+        "Registration"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "15",
+      "section_number": null,
+      "heading": "13. Fees and Expenses. Borrower shall promptly (in any event with",
+      "text": "in ten (10) days of receipt of an invoice therefor) reimburse the Bank for its reasonable legal fees and all filing and recording fees and other costs and expenses reasonably incurred in connection with the negotiation, preparation and closing of the transactions contemplated by this First Amendment, including the reasonable attorney fees and costs and expenses of Bank's legal counsel and any applicable mortgage taxes.",
+      "plain_english": "The Borrower is required to pay the Bank back for all reasonable legal fees, filing fees, and other costs the Bank incurred while negotiating and closing this amendment, provided the Bank sends an invoice and the Borrower pays within ten days.",
+      "type": "Payment",
+      "category": "Obligation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard reimbursement clause for transaction costs. The requirement is limited to 'reasonable' fees and costs, which provides a standard level of protection against excessive billing.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower must reimburse the Bank for reasonable legal fees, filing fees, recording fees, and other costs incurred in connection with the First Amendment.",
+        "Borrower must make payment within ten (10) days of receiving an invoice."
+      ],
+      "rights": [
+        "Bank has the right to be reimbursed for reasonable transaction-related expenses."
+      ],
+      "deadlines": [
+        "Payment must be made within ten (10) days of receipt of an invoice."
+      ],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "reimbursement",
+        "legal fees",
+        "transaction costs",
+        "payment"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "16",
+      "section_number": null,
+      "heading": "14. Ratification. The remaining terms, provisions and conditions",
+      "text": "set forth in the Existing Loan Agreement shall remain in full force and effect as long as any Indebtedness of the Borrower is owing to the Bank and/or the Revolver Commitment remains in effect. The Borrower adopts, restates, confirms and ratifies the warranties, covenants and representations set forth in the Existing Loan Agreement (except the representations and warranties that specify a specific date or period of time) and further represents to the Bank that, as of the date hereof, no Default or Event of Default exists under the Loan Agreement (including this First Amendment). All references to the \"Loan Agreement\" appearing in any of the Loan Documents shall hereafter be deemed references to the Existing Loan Agreement as amended, modified and supplemented by this First Amendment.",
+      "plain_english": "The Borrower confirms that the original loan agreement remains active and valid. The Borrower also re-confirms their previous promises and warranties, and states that they are currently not in default of the loan agreement.",
+      "type": "Warranty",
+      "category": "Representation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard ratification and representation clause common in loan amendments. It confirms existing obligations and the current status of the borrower's compliance, which is standard practice for maintaining loan agreements.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower must maintain the Existing Loan Agreement in full force and effect as long as Indebtedness is owing or the Revolver Commitment remains in effect.",
+        "Borrower must adopt, restate, confirm and ratify the warranties, covenants and representations set forth in the Existing Loan Agreement."
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "Ratification",
+        "Representation",
+        "Loan Agreement",
+        "Compliance"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "17",
+      "section_number": "4",
+      "heading": "Amendment and the terms of the Existing Loan Agreement, the t",
+      "text": "erms of this First Amendment shall control and govern, and the agreements shall be interpreted so as to carry out and give full effect to the intent of this First Amendment. Each Borrower and the Bank hereby adopt, ratify and confirm the Loan Agreement, as amended hereby, and acknowledge and agree that the Loan Agreement and all other Loan Documents, are and remain in full force and effect. Borrower acknowledges and agrees that its liabilities and obligations under the Loan Agreement and all other Loan Documents, including the Security Instruments, are not impaired in any respect by this First Amendment. Original Borrower further ratifies and confirms the mortgage liens and security interests granted thereby pursuant to Article III of the Existing Loan Agreement and hereby grants and regrants such mortgage liens and security interests in favor of the Bank.",
+      "plain_english": "This clause confirms that the original loan agreement remains valid and in effect as modified by this amendment. It also ensures that the borrowers' existing obligations and the bank's security interests (such as mortgage liens) remain fully enforceable and are not weakened by this amendment.",
+      "type": "Amendment",
+      "category": "Representation",
+      "risk_level": "LOW",
+      "risk_score": 10,
+      "risk_justification": "This is a standard ratification and confirmation clause common in loan amendments to ensure continuity of security interests and obligations. It does not introduce new, unusual, or one-sided burdens.",
+      "affected_party": null,
+      "obligations": [
+        "Borrower and Bank must adopt, ratify and confirm the Loan Agreement as amended",
+        "Borrower must acknowledge that liabilities and obligations are not impaired",
+        "Original Borrower must ratify and confirm mortgage liens and security interests",
+        "Original Borrower must grant and regrant mortgage liens and security interests in favor of the Bank"
+      ],
+      "rights": [
+        "Bank retains its mortgage liens and security interests"
+      ],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "ratification",
+        "security interest",
+        "loan agreement",
+        "confirmation"
+      ],
+      "cross_references": [
+        "Article III of the Existing Loan Agreement"
+      ]
+    },
+    {
+      "clause_id": "18",
+      "section_number": "15",
+      "heading": "15. SUBMISSION TO JURISDICTION. BORROWER AND THE BANK HEREBY",
+      "text": "CONSENT TO THE JURISDICTION OF ANY OF THE LOCAL, STATE, AND FEDERAL COURTS LOCATED WITHIN TULSA COUNTY, OKLAHOMA AND WAIVES ANY OBJECTION WHICH THE BORROWER MAY HAVE BASED ON IMPROPER VENUE OR FORUM NON CONVENIENS TO THE CONDUCT OF ANY PROCEEDING IN ANY SUCH COURT.",
+      "plain_english": "The Borrower and the Bank agree that any legal disputes will be handled in the courts of Tulsa County, Oklahoma. The Borrower specifically gives up the right to argue that this location is inconvenient or improper for a lawsuit.",
+      "type": "Dispute Resolution",
+      "category": "Condition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard forum selection clause. While it mandates a specific venue, it is common in commercial lending agreements and does not impose an unreasonable burden on the parties.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower must submit to the jurisdiction of courts in Tulsa County, Oklahoma",
+        "Borrower must waive objections based on improper venue or forum non conveniens"
+      ],
+      "rights": [
+        "Bank and Borrower have the right to initiate proceedings in Tulsa County, Oklahoma courts"
+      ],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "jurisdiction",
+        "venue",
+        "forum selection",
+        "litigation"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "19",
+      "section_number": null,
+      "heading": "16. WAIVER OF JURY TRIAL. BORROWER FULLY, VOLUNTARILY AND",
+      "text": "EXPRESSLY WAIVES ANY RIGHT TO A TRIAL BY JURY IN ANY ACTION OR PROCEEDING TO ENFORCE OR DEFEND ANY RIGHTS UNDER THE LOAN AGREEMENT (INCLUDING THIS FIRST AMENDMENT), THE SECURITY INSTRUMENTS OR UNDER ANY AMENDMENT, SUPPLEMENT, INSTRUMENT, DOCUMENT OR AGREEMENT DELIVERED (OR WHICH MAY IN THE FUTURE BE DELIVERED) IN CONNECTION HEREWITH OR ARISING FROM ANY BANKING RELATIONSHIP EXISTING IN CONNECTION WITH THIS AGREEMENT. THE BORROWER AGREES THAT ANY SUCH ACTION OR PROCEEDING SHALL BE TRIED BEFORE A COURT AND NOT BEFORE A JURY.",
+      "plain_english": "The Borrower agrees to give up their right to a jury trial for any legal disputes related to the loan agreement or the banking relationship, meaning any such case will be decided by a judge alone.",
+      "type": "Dispute Resolution",
+      "category": "Obligation",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "risk_justification": "Waiver of jury trial is a standard commercial provision but represents a significant procedural concession by the Borrower, limiting their options in litigation.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower must waive the right to a jury trial in any action or proceeding related to the loan agreement or banking relationship.",
+        "Borrower must ensure any such action or proceeding is tried before a court and not a jury."
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "jury trial waiver",
+        "litigation",
+        "dispute resolution",
+        "procedural waiver"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "20",
+      "section_number": null,
+      "heading": "17. Governing Law. The Loan Agreement (including the First Amendm",
+      "text": "ent) shall be deemed to have been made or incurred under the Laws of the State of Oklahoma and shall be construed and enforced in accordance with and governed by the Laws of Oklahoma.",
+      "plain_english": "This contract is governed by and will be interpreted according to the laws of the State of Oklahoma.",
+      "type": "Governing Law",
+      "category": "Condition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard governing law provision. It is common practice to designate a specific state's law for contract interpretation, and Oklahoma law is generally predictable for commercial agreements.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "Governing Law",
+        "Oklahoma",
+        "Jurisdiction"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "21",
+      "section_number": null,
+      "heading": "18. Release. In consideration of the amendments contained herein,",
+      "text": "Borrower hereby waives and releases Bank from any and all claims and defenses, known or unknown, as of the effective date of this First Amendment, with respect to the Loan Agreement (including this First Amendment) and the Loan Documents and the transactions contemplated thereby.",
+      "plain_english": "The Borrower agrees to give up any legal claims or defenses they might have against the Bank regarding the loan agreement and related documents up to the date of this amendment.",
+      "type": "Other",
+      "category": "Remedy",
+      "risk_level": "HIGH",
+      "risk_score": 75,
+      "risk_justification": "This is a broad waiver of legal rights and defenses, including 'unknown' claims, which significantly limits the Borrower's ability to seek legal recourse against the Bank for past actions.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Borrower must waive and release Bank from all claims and defenses known or unknown as of the effective date"
+      ],
+      "rights": [
+        "Bank is released from liability for claims and defenses arising from the Loan Agreement and related transactions"
+      ],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "waiver",
+        "release",
+        "claims",
+        "defenses"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "22",
+      "section_number": null,
+      "heading": "19. Counterparts. This First Amendment may be executed in multipl",
+      "text": "counterparts, each of which, when so executed, shall constitute an original copy. Transmission by facsimile or electronic transmission (e.g., pdf format) of an executed counterpart of this First Amendment by any party shall be deemed to constitute due and sufficient delivery of such counterpart and such facsimile or electronic transmission shall be deemed to be an original counterpart of this First Amendment.",
+      "plain_english": "This agreement can be signed in separate copies, which together form one complete contract. Sending a signed copy by fax or email (like a PDF) is legally considered the same as delivering an original signed document.",
+      "type": "Other",
+      "category": "Condition",
+      "risk_level": "LOW",
+      "risk_score": 5,
+      "risk_justification": "This is a standard boilerplate clause regarding the execution of documents in counterparts and the validity of electronic transmission, which is common and low-risk in modern commercial contracts.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [
+        "Parties may execute the agreement in multiple counterparts",
+        "Parties may deliver the agreement via facsimile or electronic transmission"
+      ],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "counterparts",
+        "execution",
+        "electronic transmission",
+        "delivery"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "23",
+      "section_number": null,
+      "heading": "20. Reaffirmation of Indebtedness. Borrower acknowledges the term",
+      "text": "s of this First Amendment and ratifies and affirms its obligations under, and acknowledges, renews and extends its continued liability under, each Loan Document to which it is a party, and agrees that each Loan Document to which it is a party remains in full force and effect.",
+      "plain_english": "The Borrower confirms that all existing loan agreements remain valid and binding, and they continue to be responsible for all obligations and liabilities under those documents.",
+      "type": "Other",
+      "category": "Representation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard reaffirmation clause commonly found in amendments to loan agreements to ensure that the original debt obligations remain enforceable after the amendment.",
+      "affected_party": "Borrower",
+      "obligations": [
+        "Ratify and affirm obligations under each Loan Document",
+        "Acknowledge, renew, and extend continued liability under each Loan Document"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "reaffirmation",
+        "loan documents",
+        "liability",
+        "amendment"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "24",
+      "section_number": null,
+      "heading": "5 IN WITNESS WHEREOF, the parties hereto have caused this First",
+      "text": "IN WITNESS WHEREOF, the parties hereto have caused this First Amendment to be duly executed and delivered in Tulsa, Oklahoma, in multiple counterparts effective as of the day and year first above written.",
+      "plain_english": "This clause confirms that the parties have officially signed and executed the amendment in Tulsa, Oklahoma, and that it is effective as of the date stated in the document.",
+      "type": "Amendment",
+      "category": "Condition",
+      "risk_level": "LOW",
+      "risk_score": 5,
+      "risk_justification": "This is a standard execution and witness clause (testimonium) used to formalize the agreement. It carries no substantive legal risk.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "execution",
+        "witness",
+        "effective date"
+      ],
+      "cross_references": []
+    }
+  ],
+  "risks": [
+    {
+      "clause_id": "14",
+      "risk_type": "Ambiguous Language",
+      "severity": "HIGH",
+      "reason": "The clause includes a condition subsequent that triggers an immediate Event of Default without notice if the Borrower fails to provide specific state registration certificates by a hard deadline, creating significant operational risk.",
+      "impacted_party": "Borrower",
+      "risk_sentence": "or cause to be executed and delivered, to the Bank, each of the following as express conditions precedent to the effectiveness of the amendments and modifications contemplated by this First Amendment:",
+      "suggestion": "Review and negotiate clause 14",
+      "legal_precedent": null
+    },
+    {
+      "clause_id": "21",
+      "risk_type": "Ambiguous Language",
+      "severity": "HIGH",
+      "reason": "This is a broad waiver of legal rights and defenses, including 'unknown' claims, which significantly limits the Borrower's ability to seek legal recourse against the Bank for past actions.",
+      "impacted_party": "Borrower",
+      "risk_sentence": "Borrower hereby waives and releases Bank from any and all claims and defenses, known or unknown, as of the effective date of this First Amendment, with respect to the Loan Agreement (including this Fi",
+      "suggestion": "Review and negotiate clause 21",
+      "legal_precedent": null
+    }
+  ],
+  "obligations": [
+    {
+      "party": "Borrower",
+      "action": "Borrower must adhere to the Revolver Commitment Amount and Collateral Borrowing Base limitations",
+      "clause_id": "3",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must satisfy the Collateral Borrowing Base Redeterminations under Section 4.2 of the Loan Agreement",
+      "clause_id": "3",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower shall pay to Bank a non-refundable loan origination fee of $76,900.00.",
+      "clause_id": "4",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Pay fees under Sections 2.4, 2.5, 2.10, and 2.14 to Bank in immediately available US Dollars by the due dates.",
+      "clause_id": "5",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower shall make any principal payment necessary to comply with the QCR on the last day of each calendar quarter.",
+      "clause_id": "7",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower shall pay Bank a fee in an amount equal to the Revolver Commitment Amount then outstanding, multiplied by twenty five basis points (0.25%) upon the closing of an amendment.",
+      "clause_id": "8",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Guarantor",
+      "action": "Guarantor must furnish Financial Statements and Reports pursuant to the terms of the Guaranty Agreement.",
+      "clause_id": "9",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Provide reports regarding leases to the Bank no later than sixty (60) days after the end of each calendar quarter.",
+      "clause_id": "10",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must measure Interest Coverage Ratio and Minimum Leverage Ratio on a combined basis using consolidated financial statements provided by the Guarantor.",
+      "clause_id": "11",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must grant first priority mortgage liens on oil, gas, and mineral interests in North Dakota and Montana",
+      "clause_id": "12",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must grant a first priority security interest in substantially all personal property",
+      "clause_id": "12",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "EMPIRE LOUISIANA LLC",
+      "action": "EL must amend and modify the Original Louisiana Mortgage to incorporate and secure repayment of all amounts extended under the increased Revolver Commitment.",
+      "clause_id": "13",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Execute and deliver the First Amendment",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Execute and deliver the replacement Promissory Note (Revolver Note)",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Execute and deliver the END Mortgages",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Execute and deliver the END Security Agreements",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Execute and deliver the Amended Louisiana Mortgage",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Execute and deliver the Guaranty Agreement",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Furnish the Bank with certificates from the State of North Dakota demonstrating registration and qualification to do business by April 12, 2019",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Pay the Bank a one percent (1.0%) loan origination fee of $76,900.00",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Provide closing certificates from each of the Borrowers",
+      "clause_id": "14",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must reimburse the Bank for reasonable legal fees, filing fees, recording fees, and other costs incurred in connection with the First Amendment.",
+      "clause_id": "15",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must make payment within ten (10) days of receiving an invoice.",
+      "clause_id": "15",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must maintain the Existing Loan Agreement in full force and effect as long as Indebtedness is owing or the Revolver Commitment remains in effect.",
+      "clause_id": "16",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must adopt, restate, confirm and ratify the warranties, covenants and representations set forth in the Existing Loan Agreement.",
+      "clause_id": "16",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Unknown",
+      "action": "Borrower and Bank must adopt, ratify and confirm the Loan Agreement as amended",
+      "clause_id": "17",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Unknown",
+      "action": "Borrower must acknowledge that liabilities and obligations are not impaired",
+      "clause_id": "17",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Unknown",
+      "action": "Original Borrower must ratify and confirm mortgage liens and security interests",
+      "clause_id": "17",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Unknown",
+      "action": "Original Borrower must grant and regrant mortgage liens and security interests in favor of the Bank",
+      "clause_id": "17",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must submit to the jurisdiction of courts in Tulsa County, Oklahoma",
+      "clause_id": "18",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must waive objections based on improper venue or forum non conveniens",
+      "clause_id": "18",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must waive the right to a jury trial in any action or proceeding related to the loan agreement or banking relationship.",
+      "clause_id": "19",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must ensure any such action or proceeding is tried before a court and not a jury.",
+      "clause_id": "19",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Borrower must waive and release Bank from all claims and defenses known or unknown as of the effective date",
+      "clause_id": "21",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Ratify and affirm obligations under each Loan Document",
+      "clause_id": "23",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    },
+    {
+      "party": "Borrower",
+      "action": "Acknowledge, renew, and extend continued liability under each Loan Document",
+      "clause_id": "23",
+      "deadline": null,
+      "consequence_of_breach": null,
+      "is_recurring": false
+    }
+  ],
+  "rights": [
+    {
+      "party": "Borrower",
+      "right": "Borrower is entitled to a revolving credit facility up to the stipulated commitment amount",
+      "clause_id": "3",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank is entitled to receive a non-refundable loan origination fee.",
+      "clause_id": "4",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank has the right to receive fees in immediately available US Dollars.",
+      "clause_id": "5",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank has the right to collect a fee for amendments requested by the Borrower.",
+      "clause_id": "8",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank is granted first priority lien and security interest in specified real and personal property",
+      "clause_id": "12",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "EMPIRE LOUISIANA LLC",
+      "right": "CrossFirst has the right to require the amendment of the Original Louisiana Mortgage as a condition precedent to its obligations under the First Amendment.",
+      "clause_id": "13",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank's right to receive specified documents and payments as conditions precedent",
+      "clause_id": "14",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank's right to declare an Event of Default upon failure to satisfy the North Dakota registration condition",
+      "clause_id": "14",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank has the right to be reimbursed for reasonable transaction-related expenses.",
+      "clause_id": "15",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Unknown",
+      "right": "Bank retains its mortgage liens and security interests",
+      "clause_id": "17",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank and Borrower have the right to initiate proceedings in Tulsa County, Oklahoma courts",
+      "clause_id": "18",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Borrower",
+      "right": "Bank is released from liability for claims and defenses arising from the Loan Agreement and related transactions",
+      "clause_id": "21",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Unknown",
+      "right": "Parties may execute the agreement in multiple counterparts",
+      "clause_id": "22",
+      "conditions": null,
+      "is_exclusive": false
+    },
+    {
+      "party": "Unknown",
+      "right": "Parties may deliver the agreement via facsimile or electronic transmission",
+      "clause_id": "22",
+      "conditions": null,
+      "is_exclusive": false
+    }
+  ],
+  "timelines": [
+    {
+      "event": "Deadline from 1. Definitions. Capitalized terms used herein and not otherwise",
+      "timeframe": "March 27, 2021",
+      "trigger": null,
+      "party_responsible": null,
+      "clause_id": "2",
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Deadline from 2. Revolver Commitment. The Revolver Commitment is hereby increa",
+      "timeframe": "April 2019 (for Collateral Borrowing Base Redeterminations)",
+      "trigger": null,
+      "party_responsible": "Borrower",
+      "clause_id": "3",
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Deadline from 2.12 Payment of Fees. All fees payable under Sections 2.4, 2.5, 2.",
+      "timeframe": "Fees must be paid on the dates due.",
+      "trigger": null,
+      "party_responsible": "Borrower",
+      "clause_id": "5",
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Deadline from 2.13 Quarterly Commitment Reduction (QCR). On the last day of each",
+      "timeframe": "Last day of each calendar quarter, commencing June 30, 2019",
+      "trigger": null,
+      "party_responsible": "Borrower",
+      "clause_id": "7",
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Deadline from 2.14 Loan Amendment Fee. For each amendment or other change to",
+      "timeframe": "concurrent with the closing of such amendment",
+      "trigger": null,
+      "party_responsible": "Borrower",
+      "clause_id": "8",
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Deadline from Net Lease Operating Reports",
+      "timeframe": "No later than sixty (60) days after the end of each calendar quarter",
+      "trigger": null,
+      "party_responsible": "Borrower",
+      "clause_id": "10",
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Deadline from 12. Conditions Precedent. The Borrower shall execute and deliver,",
+      "timeframe": "April 12, 2019 for North Dakota registration certificates",
+      "trigger": null,
+      "party_responsible": "Borrower",
+      "clause_id": "14",
+      "is_hard_deadline": true
+    },
+    {
+      "event": "Deadline from 13. Fees and Expenses. Borrower shall promptly (in any event with",
+      "timeframe": "Payment must be made within ten (10) days of receipt of an invoice.",
+      "trigger": null,
+      "party_responsible": "Borrower",
+      "clause_id": "15",
+      "is_hard_deadline": true
+    }
+  ],
+  "clause_dependencies": [],
+  "missing_clauses": [],
+  "negotiation_points": [],
+  "compliance_flags": [],
+  "summary": {
+    "executive_summary": "This DocumentType.LOAN contract contains 24 clauses.",
+    "key_points": [
+      "This clause identifies the parties involved in the First Amendment to the Senior Revolver Loan Agreement, which are Empire Louisiana LLC, Empire North Dakota LLC, and CrossFirst Bank, effective as of March 27, 2019.",
+      "This clause defines key terms used in the agreement, specifically the Guaranty Agreement, the Revolver Commitment Amount (capped at $9,000,000), the Revolver Final Maturity Date (March 27, 2021), and the QCR.",
+      "The Revolver Commitment is increased and renewed until the maturity date, with the current commitment and borrowing base set at $9,000,000.00. This amount is subject to the terms of the Revolver Note and the borrowing base redetermination process defined in the original loan agreement.",
+      "The Borrower is required to pay the Bank a non-refundable fee of $76,900.00, which represents 1% of the $7,690,000.00 increase in the Revolver Commitment Amount.",
+      "Fees required under sections 2.4, 2.5, 2.10, and 2.14 must be paid to the Bank in US Dollars by their respective due dates and are non-refundable."
+    ],
+    "red_flags": [
+      "12. Conditions Precedent. The Borrower shall execute and deliver,: The clause includes a condition subsequent that triggers an immediate Event of Default without notice if the Borrower fails to provide specific state registration certificates by a hard deadline, creating significant operational risk.",
+      "18. Release. In consideration of the amendments contained herein,: This is a broad waiver of legal rights and defenses, including 'unknown' claims, which significantly limits the Borrower's ability to seek legal recourse against the Bank for past actions."
+    ],
+    "favorable_clauses": [],
+    "unusual_clauses": [],
+    "favorable_to": null,
+    "overall_risk_score": 25,
+    "risk_distribution": {
+      "LOW": 18,
+      "MEDIUM": 4,
+      "HIGH": 2,
+      "CRITICAL": 0
+    },
+    "recommended_actions": []
+  }
+}

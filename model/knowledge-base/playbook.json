@@ -1,0 +1,130 @@
+{
+  "kb_name": "negotiation_playbook",
+  "version": "1.0.0",
+  "description": "Negotiation strategies and counter-proposals for common problem clauses. Used during Pass 5 to populate the negotiation_points field with actionable, specific guidance.",
+  "entries": [
+    {
+      "id": "np_001",
+      "text": "Negotiation strategy for unlimited liability: When a contract lacks a liability cap or has unlimited liability, the standard negotiation position is to propose a mutual cap equal to the total fees paid or payable under the contract in the 12 months preceding the claim. Counter-proposal language: 'In no event shall either party's aggregate liability arising out of or related to this Agreement, whether in contract, tort, or otherwise, exceed the total fees paid by Client to Vendor in the 12 months immediately preceding the claim giving rise to the liability.' Typical outcomes: Vendor often agrees to 1-2x annual contract value. Exceptions: IP infringement, fraud, gross negligence, death/personal injury are typically carved out.",
+      "metadata": {
+        "issue": "Unlimited Liability",
+        "clause_type": "Liability",
+        "negotiation_stance": "Propose mutual cap at 12 months fees",
+        "counter_proposal": "Aggregate liability cap equal to fees paid in preceding 12 months",
+        "typical_carve_outs": ["Fraud", "Gross negligence", "IP infringement", "Data breach", "Death/personal injury"],
+        "win_condition": "Cap included, mutual, with standard carve-outs only"
+      }
+    },
+    {
+      "id": "np_002",
+      "text": "Negotiation strategy for one-sided termination for convenience: When only one party has the right to terminate for convenience, the standard position is to demand a mutual termination right with adequate notice. Counter-proposal: 'Either party may terminate this Agreement for any reason or no reason, provided that the terminating party provides [30/60] days prior written notice to the other party. In the event Client terminates for convenience, Client shall pay all fees for work performed through the termination date plus any non-cancellable commitments incurred.' Key points: ensure payment for work done, protect against immediate termination, add wind-down period.",
+      "metadata": {
+        "issue": "One-sided Termination",
+        "clause_type": "Termination",
+        "negotiation_stance": "Demand mutual right with reasonable notice",
+        "counter_proposal": "Mutual 30-60 day notice, payment for work through termination date",
+        "leverage": "A contract you cannot exit is a trap — one-sided termination is fundamentally unfair",
+        "win_condition": "Mutual termination right, 30+ days notice, payment protection for completed work"
+      }
+    },
+    {
+      "id": "np_003",
+      "text": "Negotiation strategy for broad IP assignment: When a contractor or consultant is asked to assign all IP including pre-existing tools and frameworks, the standard defensive position is to carve out all pre-existing IP and limit assignment to deliverables specifically created for the client. Counter-proposal: 'Contractor retains ownership of all Pre-Existing IP (defined as all IP owned or developed by Contractor prior to or independent of this Agreement). Contractor grants Client a perpetual, royalty-free, non-exclusive license to use Pre-Existing IP solely as incorporated in the Deliverables. Client owns the Deliverables upon full payment.' Key point: maintain a Pre-Existing IP Schedule attached to the contract listing key tools.",
+      "metadata": {
+        "issue": "Broad IP Assignment",
+        "clause_type": "Intellectual Property",
+        "negotiation_stance": "Carve out all pre-existing IP, assign only deliverables upon payment",
+        "counter_proposal": "Pre-Existing IP stays with Contractor; Client gets license to use it in deliverables",
+        "leverage": "Assigning pre-existing tools would prevent contractor from ever using their own stack again",
+        "win_condition": "Pre-Existing IP carve-out, deliverables assigned only on full payment"
+      }
+    },
+    {
+      "id": "np_004",
+      "text": "Negotiation strategy for auto-renewal traps: When an auto-renewal clause has a notice window under 60 days, the recommended position is to extend the window and require proactive notification. Counter-proposal: 'This Agreement will automatically renew for successive one-year terms unless either party provides written notice of non-renewal at least 90 days before the end of the then-current term. Each party agrees to send a renewal reminder to the other party 120 days before the renewal date.' If vendor refuses, ask to switch to opt-in renewal: 'This Agreement expires on [date] and will not renew unless both parties execute a written renewal addendum.'",
+      "metadata": {
+        "issue": "Auto Renewal Trap",
+        "clause_type": "Auto-Renewal",
+        "negotiation_stance": "Extend notice window to 90 days minimum; prefer opt-in renewal",
+        "counter_proposal": "90-day notice window with mutual renewal reminders, or opt-in renewal",
+        "leverage": "Short notice windows create accidental renewals — reasonable parties should prefer clarity",
+        "win_condition": "90+ day notice window or explicit opt-in renewal required"
+      }
+    },
+    {
+      "id": "np_005",
+      "text": "Negotiation strategy for overbroad non-compete: When a non-compete is too broad in scope, geography, or duration, the recommended approach is to narrow all three axes simultaneously. Framework for counter: (1) Scope — limit to the exact product category or service that competes with the disclosing party's current offerings, not 'any business that competes in any way', (2) Geography — limit to regions where the disclosing party actually operates, (3) Duration — maximum 12 months post-termination for consultants, 24 months for senior employees and business sales, (4) Compensation — in several jurisdictions non-competes require compensation to be enforceable. Counter-proposal: 'Contractor agrees not to directly solicit [Company]'s identified clients from Exhibit A for a period of 12 months following termination, within [specific states/countries].'",
+      "metadata": {
+        "issue": "Overbroad Non-Compete",
+        "clause_type": "Non-Compete",
+        "negotiation_stance": "Narrow scope, geography, and duration — or eliminate for contractors",
+        "counter_proposal": "Non-solicitation of specific named clients only, 12 months, limited geography",
+        "leverage": "Courts frequently void overbroad non-competes entirely — a narrower clause is actually more enforceable",
+        "win_condition": "Specific scope, defined geography, 12 months maximum, or converted to non-solicitation only"
+      }
+    },
+    {
+      "id": "np_006",
+      "text": "Negotiation strategy for payment terms beyond Net 30: When payment terms are Net 60, Net 90 or longer, or when payment triggers are subjective, the standard position for vendors and contractors is to push back to Net 30 with deemed-acceptance provisions. Counter-proposal for payment timing: 'Client shall pay all undisputed invoices within 30 days of receipt. Invoices not disputed in writing within 5 business days of receipt shall be deemed accepted.' Counter-proposal for interest: 'Unpaid amounts shall accrue interest at 1.5% per month (18% per annum) from the due date until paid.' Leverage: late payment damages real businesses and should be compensated.",
+      "metadata": {
+        "issue": "Long Payment Terms",
+        "clause_type": "Payment",
+        "negotiation_stance": "Net 30 maximum with deemed acceptance and late payment interest",
+        "counter_proposal": "Net 30, 5-day deemed acceptance window, 1.5%/month late interest",
+        "leverage": "Net 60/90 is a hidden cash flow problem — vendors providing credit without compensation",
+        "win_condition": "Net 30 or Net 45 with deemed acceptance and late payment interest provision"
+      }
+    },
+    {
+      "id": "np_007",
+      "text": "Negotiation strategy for missing dispute resolution clause: When no dispute resolution mechanism is specified, add one that is favorable to the reviewing party. For Indian companies: prefer arbitration under ICADR or DIAC rules seated in India. For cross-border contracts: SIAC or ICC arbitration is common. Counter-proposal: 'Any dispute arising out of or in connection with this Agreement shall be referred to and finally resolved by arbitration administered by [ICADR/SIAC/ICC] in accordance with its rules. The seat of arbitration shall be [City]. The arbitration panel shall consist of [1/3] arbitrator(s). The language of arbitration shall be English. Judgment on any award may be entered in any court of competent jurisdiction.' Always include: confidentiality of proceedings, quick interim relief carve-out.",
+      "metadata": {
+        "issue": "Missing Dispute Resolution",
+        "clause_type": "Dispute Resolution",
+        "negotiation_stance": "Add arbitration with favorable seat and rules",
+        "counter_proposal": "ICADR arbitration seated in India for domestic; SIAC for international",
+        "leverage": "Without dispute resolution, parties default to expensive court litigation",
+        "win_condition": "Arbitration clause with India seat, ICADR or SIAC rules, confidentiality"
+      }
+    },
+    {
+      "id": "np_008",
+      "text": "Negotiation strategy for missing force majeure: When a contract has no force majeure clause, particularly in services, construction, supply chain, or any contract dependent on third-party infrastructure, add a balanced force majeure provision. Key elements to include: (1) Triggering events — acts of God, pandemic, war, government action, internet/infrastructure failure, (2) Notice requirement — 48-72 hours from discovery, (3) Duty to mitigate — affected party must use reasonable efforts to minimize impact, (4) Extended force majeure right to terminate — after 60-90 days of continued force majeure, either party may terminate. Counter-proposal template provided in recommended legal language KB.",
+      "metadata": {
+        "issue": "Missing Force Majeure",
+        "clause_type": "Force Majeure",
+        "negotiation_stance": "Add balanced force majeure with notice, mitigation, and 60-day termination right",
+        "leverage": "COVID-19 demonstrated that force majeure clauses protect both parties equally",
+        "win_condition": "Balanced clause covering both parties, clear triggers, 48-hour notice, termination after 60 days"
+      }
+    },
+    {
+      "id": "np_009",
+      "text": "Negotiation strategy for problematic confidentiality terms: Key issues and fixes in NDA/confidentiality clauses. (1) Missing exclusions — add: public domain, already known, independently developed, disclosed by third party, required by law. (2) Perpetual duration — negotiate 3-5 year limit for general confidential information; trade secrets can remain perpetual. (3) Residuals clause — push to remove entirely; it effectively nullifies the NDA for knowledge workers. (4) Overly broad definition — narrow the definition of confidential information to marked or identified information only; oral disclosures should require written confirmation within 5 days.",
+      "metadata": {
+        "issue": "Problematic Confidentiality Terms",
+        "clause_type": "Confidentiality",
+        "negotiation_stance": "Ensure standard exclusions, time limit, remove residuals",
+        "critical_fixes": [
+          "Add standard exclusions (public domain, prior knowledge, independent development, legal requirement)",
+          "Add 3-5 year time limit",
+          "Remove residuals clause",
+          "Limit to marked/identified information"
+        ],
+        "win_condition": "Standard exclusions present, 3-5 year limit, no residuals clause"
+      }
+    },
+    {
+      "id": "np_010",
+      "text": "Negotiation strategy for broad indemnification: When an indemnification clause requires one party to indemnify against all third-party claims regardless of fault, the standard defensive position is to limit indemnification to claims arising from the indemnifying party's own negligence or breach. Counter-proposal: 'Vendor shall indemnify, defend, and hold harmless Client from any third-party claims arising solely out of (i) Vendor's breach of its representations or warranties, (ii) Vendor's negligence or willful misconduct, or (iii) infringement of any third-party intellectual property right by the Deliverables as delivered, provided Client (a) promptly notifies Vendor of such claim, (b) grants Vendor sole control of the defense, and (c) provides reasonable cooperation.' Key addition: Cap the indemnification obligation at the total contract value.",
+      "metadata": {
+        "issue": "Broad Indemnification",
+        "clause_type": "Indemnification",
+        "negotiation_stance": "Limit to own negligence/breach, require notice and control, cap the obligation",
+        "counter_proposal": "Indemnification only for own negligence/breach/IP infringement, capped at contract value",
+        "leverage": "Unlimited open-ended indemnification creates insurance-level risk for contractors",
+        "win_condition": "Fault-based indemnification, prompt notice requirement, sole control, cap equal to contract value"
+      }
+    }
+  ]
+}

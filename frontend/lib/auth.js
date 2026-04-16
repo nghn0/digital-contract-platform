@@ -3,6 +3,9 @@ import { supabase } from "./supabaseClient";
 /* ================= SIGN UP ================= */
 
 export const signUpUser = async (email, password) => {
+  // Clear any existing stale session to prevent "Refresh Token Not Found" error
+  await supabase.auth.signOut();
+
   const { data, error } = await supabase.auth.signUp({
     email,
     password,

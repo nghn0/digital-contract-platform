@@ -1,0 +1,13 @@
+Stage 3: PASS1_METADATA
+Verdict : PASS
+Reason  : Pass1 fallback used | parties=4
+Duration: 2ms
+Errors  : 0
+Warnings: 1
+
+WARNING DETAILS:
+  - Pass1 LLM parse failed, using fallback extraction: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+
+LLM CALLS: 1
+  [Pass1] parse=fallback in=17239chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1

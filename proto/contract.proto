@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package legal_tech;
+
+service ContractAnalyzer {
+  rpc AnalyzeDocument (AnalysisRequest) returns (AnalysisResponse);
+}
+
+message AnalysisRequest {
+  bytes file_bytes = 1;
+  string file_extension = 2; // e.g. ".pdf"
+}
+
+// ─── Document Metadata ───
+message DocumentTypeMetadata {
+  string document_type = 1;
+  string document_subtype = 2;
+  string jurisdiction = 3;
+  string governing_law = 4;
+}
+
+// ─── Risk Analysis ───
+message RiskItem {
+  string clause_id = 1;
+  string risk_type = 2;
+  string severity = 3; // "LOW", "MEDIUM", "HIGH", "CRITICAL"
+  string reason = 4;
+  string impacted_party = 5;
+  string risk_sentence = 6;
+  string suggestion = 7;
+  string legal_precedent = 8;
+  repeated string risk_labels = 9;
+  string risk_context = 10;
+}
+
+message MissingClause {
+  string clause_type = 1;
+  string importance = 2; // "LOW", "MEDIUM", "HIGH", "CRITICAL"
+  string reason_needed = 3;
+  string suggested_language = 4;
+}
+
+message NegotiationPoint {
+  string issue = 1;
+  string clause_id = 2;
+  string favorable_to = 3;
+  string disadvantaged_party = 4;
+  string leverage = 5;
+  string suggested_counter = 6;
+}
+
+message DocumentSummary {
+  string executive_summary = 1;
+  repeated string key_points = 2;
+  repeated string red_flags = 3;
+  repeated string favorable_clauses = 4;
+  repeated string unusual_clauses = 5;
+  string favorable_to = 6;
+  int32 overall_risk_score = 7;
+  repeated string recommended_actions = 8;
+}
+
+// ─── Main Response ───
+message AnalysisResponse {
+  bool success = 1;
+  string error_message = 2;
+  
+  string document_id = 3;
+  string analyzed_at = 4;
+  
+  DocumentTypeMetadata metadata = 5;
+  
+  repeated RiskItem risks = 6;
+  repeated MissingClause missing_clauses = 7;
+  repeated NegotiationPoint negotiation_points = 8;
+  
+  DocumentSummary summary = 9;
+}

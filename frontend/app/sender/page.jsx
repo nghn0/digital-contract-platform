@@ -63,7 +63,7 @@ export default function SenderDashboard() {
           <div key={c.contract_id} className="bg-[#3C3D37] p-5 rounded-xl">
             <p className="text-[#ECDFCC] mb-3">Status: {c.status}</p>
 
-            {(c.status === "PENDING_SIGNATURE_A" || c.status === "SIGNED") &&
+            {(c.status === "AWAITING_SENDER_SIGNATURE" || c.status === "SIGNED") &&
               !c.blockchain_tx_hash && (
                 <button
                   onClick={() => handleSign(c)}

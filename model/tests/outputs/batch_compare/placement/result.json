@@ -1,0 +1,1363 @@
+{
+  "document_id": "doc_1776018716.874041",
+  "filename": "Placement Policy.pdf",
+  "analyzed_at": "2026-04-13T00:01:56.874052",
+  "metadata": {
+    "document_type": "Other",
+    "document_subtype": "Placement Policy",
+    "title": "RVU PLACEMENT POLICY",
+    "effective_date": "2022-01-01",
+    "execution_date": null,
+    "expiration_date": null,
+    "auto_renewal": null,
+    "renewal_notice_period": null,
+    "jurisdiction": "India",
+    "governing_law": null,
+    "venue": null,
+    "language": "English",
+    "amendment_number": null,
+    "parent_agreement_ref": null,
+    "confidentiality_classification": null
+  },
+  "document_profile": {
+    "detected_type": "Other",
+    "subtype": "Placement Policy",
+    "confidence": 0.7000000000000001,
+    "reasoning": [
+      "Detected type from metadata: Other",
+      "Observed clause types: Other, Payment",
+      "Subtype hint: Placement Policy"
+    ],
+    "required_clauses": [
+      "Confidentiality",
+      "Definition of Confidential Information",
+      "Exclusions from Confidentiality",
+      "Term and Duration",
+      "Return/Destruction of Information",
+      "Governing Law",
+      "Entire Agreement"
+    ],
+    "recommended_clauses": [
+      "Dispute Resolution",
+      "Remedies",
+      "Purpose Limitation",
+      "Mutual/Unilateral Designation",
+      "Non-Solicitation"
+    ],
+    "high_risk_clauses": [
+      "Exclusions from Confidentiality",
+      "Term and Duration"
+    ],
+    "extensions": {
+      "source": "dt_001",
+      "commonly_missing": [
+        "Dispute Resolution",
+        "Force Majeure",
+        "Return of Confidential Information",
+        "Definition of Receiving Party Representatives"
+      ],
+      "observed_clause_types": [
+        "Other",
+        "Payment"
+      ],
+      "observed_headings": [
+        "Section 1",
+        "Section 10",
+        "Section 11",
+        "Section 12",
+        "Section 13",
+        "Section 14",
+        "Section 15",
+        "Section 16",
+        "Section 17",
+        "Section 18",
+        "Section 19",
+        "Section 2",
+        "Section 20",
+        "Section 21",
+        "Section 22",
+        "Section 23",
+        "Section 24",
+        "Section 25",
+        "Section 26",
+        "Section 27"
+      ],
+      "jurisdiction": "India",
+      "governing_law": null,
+      "linked_documents": []
+    }
+  },
+  "parties": {
+    "parties": [
+      {
+        "name": "RVU University",
+        "legal_entity_type": "University",
+        "role": "University",
+        "address": "RV Vidyaniketan, Mysore Road, Bengaluru, India 560059",
+        "country": "India",
+        "registration_number": null
+      }
+    ],
+    "signatories": [
+      {
+        "name": "Dr. Sahana",
+        "company": "RVU University",
+        "designation": "Registrar",
+        "email": null,
+        "signing_date": null,
+        "signing_authority": null
+      },
+      {
+        "name": "Prof. K. K. Ramachandra",
+        "company": "RVU University",
+        "designation": "Vice Chancellor",
+        "email": null,
+        "signing_date": null,
+        "signing_authority": null
+      }
+    ],
+    "beneficiaries": [],
+    "excluded_parties": []
+  },
+  "financial_terms": {
+    "payment_terms": {
+      "currency": null,
+      "total_contract_value": null,
+      "payment_schedule": null,
+      "amount_per_period": null,
+      "due_days": null,
+      "payment_method": null,
+      "advance_payment": null,
+      "late_payment_interest": null,
+      "invoice_period": null
+    },
+    "penalties": [
+      "Disciplinary action by the Student Disciplinary Committee (STDC) for misrepresentation of academic, personal, or contact data in the Registration Form.",
+      "Disciplinary action by the STDC for withdrawal from the process without valid approval after applying to a company.",
+      "Disciplinary action by the STDC for tampering with documents, offer letters, or providing false documentation.",
+      "Disciplinary action by the STDC for failure to join an organization after selection without valid reason.",
+      "Disciplinary action by the STDC for attempting to influence recruiters directly.",
+      "Suspension or disciplinary action for non-compliance with placement policy requirements."
+    ],
+    "liability_cap": null,
+    "indemnification_cap": null,
+    "liquidated_damages": null,
+    "revenue_share": null,
+    "equity_terms": null
+  },
+  "linked_documents": [
+    {
+      "reference_text": "Section 6",
+      "relation_type": "cross_reference",
+      "document_type": "Other",
+      "confidence": 0.35,
+      "notes": "Referenced by clause 25",
+      "source_clause_id": "25"
+    }
+  ],
+  "clauses": [
+    {
+      "clause_id": "1",
+      "section_number": "1",
+      "heading": "Section 1",
+      "text": "1.P1r eamble TheC areer & AlumnRie la(tiCoARno)sfR VU niverisressip tyo nsfoirfacb illei tating structurfeaiadrn, trad n sparpenlta cemanedin ntt ernospportunihtiipes fors tudentsa cross allS chootfoh lUesn iversThiistpo yl.ie csyt abaunl iifishiedesn stituframtiewoonrk:a thla t govserntsud eenlti gibtrainiilnigdty,o, c umenditsactiipoprlnoi,cn edureansds takeholder responsaisbsio1cwiiithtiap estl eadc eImaitem nstts oen. s urthea evtery studreceienvte s equiataccesbslt eoc areer-readineisnsi tiwahitilvmeea si nntgthai enh iighsestantd ardso f profecsosnideouxpncectalted b yi nduresctryrui,t aersn tdhU eni versity.",
+      "plain_english": "This section introduces the Career & Alumni Relations (CAR) office at RVU University, which is responsible for managing student placement opportunities and ensuring fair and transparent processes.",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 10,
+      "risk_justification": "This is a preamble/introductory clause setting the scope and purpose of the policy, containing no binding obligations or risks.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "Preamble",
+        "University",
+        "Placement"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "2",
+      "section_number": null,
+      "heading": "Section 2",
+      "text": "1.P2u rpoothfse Pe o licy\nTheo bjectiovtfeshi pso lariect yo :\na.Defintheeg overnanancdeo peratiosntruaclto urCfeA Rf ocorn ductinpgl acemaednnt\ninternsahicpt iavcirotasilSselc s h oooRflV Us n iversity.\nb.Standardpirsoece sresleast tions gtu deenlti gibpire-lpiltyac,e traimnienntg ,\ndocumentreactiruiotn,ener g agemaenntod ff meranagem ent.\nc.Establcilseehxar p ecfotras tituodncensot n dduurictnal glp lacementa-crtievliatitedes\nandd efithneme ec hanifosrma sd dressinvigo lations.\nd.Enscourem pliwiatnhic nes tirtuetiguloantiaaolccredin ts,a tioreqnu irementsan d\nrecruiterp rotocols.\ne.Fcailisteaatmecl oeosrsd bientwaetiCeoAnnRS ,c hofaoculltysm ,en torss,tud entsan d\nrecruitterspo ro mostuec cescarsefuler o utcomes.",
+      "plain_english": "1.P2u rpoothfse Pe o licy\nTheo bjectiovtfeshi pso lariect yo :\na.Defintheeg overnanancdeo peratiosntruaclto urCfeA Rf ocorn ductinpgl acemaednnt\ninternsahicpt iavcirotasilSselc s h oooRflV Us n iversity.\nb.Standardpirsoece sresleast tions gtu deenlti gibpire-lpiltyac,e traimnienn",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 2'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "3",
+      "section_number": null,
+      "heading": "Section 3",
+      "text": "1.S3c oopthfee P olicy\nThiposl iapcyp ltioe:s\na. AlSlc hooplrosgram,m es anadc aduemniitcos fR VU niverpsartiicityp aitinng\nplacanemdeni tn ternshipp rocesses.\nb.Alsltu denwthssoee tkro e gifosrtp erl acementtra-irelnaiintntedgerns ,h iipnst,erv iews\nandfinal recruitment opportunitifaecsi libtyCat AedR .\nc.Alpll acemenotffi cersS,c hoolp-llaecemvenrepretes len tativess,tud enptl acement\ncoordianndaC tAoRsrs t inavffo livcneo dn dupctilnagc aemctienvti ties.\nd.Alrecruilters , employaersne dx terntrainianlg partneerngasgin gwi tRhV U niversity\nfori nternsprhiopjsecp,tsre ,- platcalkemosenrr t e cruitment.",
+      "plain_english": "1.S3c oopthfee P olicy\nThiposl iapcyp ltioe:s\na. AlSlc hooplrosgram,m es anadc aduemniitcos fR VU niverpsartiicityp aitinng\nplacanemdeni tn ternshipp rocesses.\nb.Alsltu denwthssoee tkro e gifosrtp erl acementtra-irelnaiintntedgerns ,h iipnst,erv iews\nandfinal recruitment opportun",
+      "type": "Payment",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 3'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "4",
+      "section_number": null,
+      "heading": "Section 4",
+      "text": "1.A4p plicaanEbdffili etyc Dtiavtee\nThiPsl acemPenotl (iVcersyi 1o./n20 0 2s6h)ba ele lff ecfrotmith vegraduae tin g Batch of\n202o2n wardAsls.lt udenotfths eB atoc2fh0 2an2dl aterc ohorts iwnhtote pona drti cipate\nipna lcemacetinvtim tiuesst wcioththme pp lroyvi sioothfni spos l icy.\nTheU nivrersesiervtye tshri egh tt roe vupdatieew ,o amre nd pthiso lpiericyod icalblays ed\nona cademrieqcu iremenretcrusi,t expere ctationresgul,a togryu ideolrinstii tutinoesn al\ndecisions.\nRVV ldyanel\u2022kM\u00b7.ti alMnoys.,u ruR oadBe.11 9aluru.I nd5i6a00 S9.\nPh+:9 18 06 81999I0 0www .rvu.edu.in\nSECTI2O NG- OVERNANCOEF P LACEMAECTIVITNITE S",
+      "plain_english": "1.A4p plicaanEbdffili etyc Dtiavtee\nThiPsl acemPenotl (iVcersyi 1o./n20 0 2s6h)ba ele lff ecfrotmith vegraduae tin g Batch of\n202o2n wardAsls.lt udenotfths eB atoc2fh0 2an2dl aterc ohorts iwnhtote pona drti cipate\nipna lcemacetinvtim tiuesst wcioththme pp lroyvi sioothfni spos l ",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 4'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "5",
+      "section_number": "5",
+      "heading": "Section 5",
+      "text": "The Career & Alumni Relations (CAR) is the central body responsible for planning, coordinating, and facilitating placement and career-readiness activities across all Schools of RVU University. It acts as the primary institutional interface for recruiters and ensures uniformity and operational consistency in all placement-related processes.",
+      "plain_english": "The Career & Alumni Relations (CAR) department is the official office at RVU University responsible for managing all student placement and career preparation activities.",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 10,
+      "risk_justification": "This is a descriptive clause defining the role and responsibility of an internal university department.",
+      "affected_party": "RVU University",
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "CAR",
+        "Placement",
+        "University"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "6",
+      "section_number": null,
+      "heading": "Section 6",
+      "text": "2.D2o cumenatnAadct ciroendi Stuaptipoornt\nCARi,cn o ordiwniatiStochnh Poloalc Oeffimcerse,ns th malainltain authentireccaotrdeds\nofal lp lacemanedni tn ternsohuitpc foorim nest uernsalane da ccreditation.\nThisi ncludes:\na. OffeLre tters\nb.AppointmLenett ters\nc.OffeArc ceptance/J oLietCnitonersng fi rmations\nd.Withdra/Uw naalppo inLetttmersent\nDiscirpelfiernrraearylc o(raappdsls i caThbelsede)o .c umeshalnlt bses ubmitttedoth e\nUnivearsdimtyi nifosratra cticroedinta atiuodnri ankingts ,fram eworksa ncdo mplwiianthce\nstaturepotrtionrygreq uirements.",
+      "plain_english": "2.D2o cumenatnAadct ciroendi Stuaptipoornt\nCARi,cn o ordiwniatiStochnh Poloalc Oeffimcerse,ns th malainltain authentireccaotrdeds\nofal lp lacemanedni tn ternsohuitpc foorim nest uernsalane da ccreditation.\nThisi ncludes:\na. OffeLre tters\nb.AppointmLenett ters\nc.OffeArc ceptance/J",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 6'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "7",
+      "section_number": null,
+      "heading": "Section 7",
+      "text": "2.S3t udPelnatc eCmoeonrtd inators (SPCs)\nStudenPtl acementC oordiarnena ominattoedrs b yS chotooal sssC iAsRtht,e S chool\nPlacemeOffincter & SchooPll acemCenhtai tpersonin facilitpatinlga cement-related\nactiThvietdyio ne oshot.l andy fo rmaadmli nistraatiuvtheoo rirrtyes ponsibility.\nTheir roillsei mtiot:ed\na.Assiansdtiw nigtn esthsecin ogn doupfctl acemdrienvtes t,e sitsnt,e rvieanwdres l ated\nlogistics.\nb.Suppobrtianscgio co rdibnatietwoeenn Schoofacullt-ylC,eAR v anedls tudents.\nc.Helpwiitnhdg o cummeonvtem encto,mm uniancatidos ntud entco ordinwathienon\nrequired.\nd.Offerinvgo lusnutparytp enoos rtu smreo oothr ganiosfartiecruointm proencte sses.\nRVV idyani8'\"k MeitfMaeyn.s, u Rruo aBde,n g\ufffdl5u6r0u0,5I 9n,d ia\nPh+:9 18 06 81999Iwww0 .0rv u.edu.in\nAlolffi criesalpo nsibciertliifiticesa,sti ubomnisssa,in oddnec si sriesoetnx sc luwistihv ely\ntheS chPoollacem enCth airpanersdoC nA R.\nSECTI3O-NS TUDEENLTI GIB&IT LRAINIITYN GFRA MEWORK",
+      "plain_english": "2.S3t udPelnatc eCmoeonrtd inators (SPCs)\nStudenPtl acementC oordiarnena ominattoedrs b yS chotooal sssC iAsRtht,e S chool\nPlacemeOffincter & SchooPll acemCenhtai tpersonin facilitpatinlga cement-related\nactiThvietdyio ne oshot.l andy fo rmaadmli nistraatiuvtheoo rirrtyes ponsibi",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 7'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "8",
+      "section_number": null,
+      "heading": "Section 8",
+      "text": "3.E1li gibiliCtyr itfeoPrirla a cePmaertincti pation\nStudenptermistt edart epo arti cipinap tlea cemanendint t ernshoipppo rtunitifaecsi lbiyta ted\nCAR onilthfyey fu lfialllth efo llowmianndgat ocoryn ditions:\na. NoB acklogs\nAlRlVU studareen eligibtlse t poarti cipaitpner e-platrcaienminAengttht. e tim eo f\nregistfoerpri lnga cemdrievnestt, h set umdueshntatn v oep endibnagc kluonglsaes,s\nspecrieficruict alelroo wthserwi se.\nb.Minimum 80%A ttendianPre-n Plcaec emTernatin ing\nAttendanocf8e 0 %o rab ovine th eo fficipreal- plactraemieninnprotggramm e is\ncompulsory.\nc.SubmissoifPo lna ceRmeeginsttra ti&Do enc laraFtioormn\nStudmeusntfot rmsa lrleygi fostrerp lacebmyse unbmtisttti hnpegr escriPbleadcem ent\nRegisantradtD iecolnara tiFoonrmc ,l eiarnldyi thceainittrier ngie pns artti ciipnating\nplacemenatcti vitanidagres e eitona glru ll esan drespo nsibiulnidthitiesespr o licy.\nd.ComploeRftie oqnu Eixrpeedr iCeonmtpioanle nts\nTob eco nsidperleda cement-sretuaddearyne,et xsp ewchtereappe ldi,c asaper b ltheeir\nprogrammes tructureto,h acovmep lethtefoe ldl owing:",
+      "plain_english": "3.E1li gibiliCtyr itfeoPrirla a cePmaertincti pation\nStudenptermistt edart epo arti cipinap tlea cemanendint t ernshoipppo rtunitifaecsi lbiyta ted\nCAR onilthfyey fu lfialllth efo llowmianndgat ocoryn ditions:\na. NoB acklogs\nAlRlVU studareen eligibtlse t poarti cipaitpner e-platr",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 8'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "9",
+      "section_number": "3",
+      "heading": "Section 9",
+      "text": "3.CapstoPronjeect / M ajAocra dPemrioc-j AecftterY ear3 Thesexep eriencfoesnn thbeas elpirnepeara tieoxnp ecbteefoadrs et usdeeenkstfi nal placemenotpp ortunities. e.ExcepAtipopnra(olCv aasle- byN-otMC eanstio ansaedRi ght) Inrar ec asewsh ears etu dhenastn ocomtp letoedno emr o reo thfe abo veex periential compontheenS tsc,hC ohoailrpe ransdoth neD eanm ajyo irnectolmym theesn tdu dent's eligibSiulceihxty cep.ti oanpproalv aslh balelr ecordiedwrn i tianndgc optioCed A R, anpdl aceemlenti gisbhiballecolim tyea ctoinvaftleery C ARco nfirmsth es amein i ts recordsTh.i si nso ant a lternaptiavthewa anysd h ablepl erm ittedonl bya soedn meaningfulv,a liadcadaemtedi ocir n duesxtryp eriaenthtce die s cretiooftn h Sec hool leadership. f.CompliwaniceCth o mpany-ESlipgiebcilCiiofitync d itions Studemnuststm eetan ye ligcriitberiimalian tyd atbedy re cruitiersn,c lbuudntio ntg limtiot:ed \u2022 MiniCmGwnP A \u2022 Absenocafecti vbeac klogs \u2022 Portfosluibmoi s(swihaoepnrp el icable) \u2022 Technitcealps erfto rmance \u2022 Branch/direqsuciirempenltisne Noex ceptioncsanb em adfoerc ompany-sreqpuiremecienfiteds .",
+      "plain_english": "Students must complete specific experiential components and meet company-defined eligibility criteria (such as GPA and technical performance) to be eligible for placement opportunities. Exceptions to these requirements are at the discretion of school leadership.",
+      "type": "Other",
+      "category": "Condition",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "risk_justification": "The clause relies on subjective discretion of school leadership for exceptions and mandates compliance with external company criteria which may be subject to change.",
+      "affected_party": "Student",
+      "obligations": [
+        "Complete experiential components",
+        "Meet minimum GPA",
+        "Maintain absence of active backlogs",
+        "Submit portfolio if applicable",
+        "Meet technical performance standards",
+        "Meet branch requirements"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": true,
+      "ambiguity_reason": "The criteria for 'meaningful, valid academic or industry experience' are not defined, leaving them to the discretion of school leadership.",
+      "tags": [
+        "eligibility",
+        "placement",
+        "academic requirements"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "10",
+      "section_number": null,
+      "heading": "Section 10",
+      "text": "4.B1a sOiffceR ru l(elO xff er)\nAs tudiencostn sidtoe hreda vseec ured onceo nfirmpedl aceomffeer(xn 1)tht e m oment\ntheinram ea ppiearstn h fien saell elctiireoslnteas ebdyar ecruitthroeru gh CARr,e gardless\nofacc: eptaonrercej ecThtiilso onxff. ce oru tnotsw tharedstu denptl'asc proemgressenito n\nelig.i bility",
+      "plain_english": "4.B1a sOiffceR ru l(elO xff er)\nAs tudiencostn sidtoe hreda vseec ured onceo nfirmpedl aceomffeer(xn 1)tht e m oment\ntheinram ea ppiearstn h fien saell elctiireoslnteas ebdyar ecruitthroeru gh CARr,e gardless\nofacc: eptaonrercej ecThtiilso onxff. ce oru tnotsw tharedstu denptl'as",
+      "type": "Payment",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 10'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "11",
+      "section_number": null,
+      "heading": "Section 11",
+      "text": "4.R2e cruiter-IRmesptriocstiedo ns\nIfs tau adcecnanet op fftesanr dt hreec ruitoeffirc'poislal i ocroy ff erl ettrere sfurthtriecrt s\nparticipiaontth ierpo lna cprocesesmeesnth,te s tubdecoenmtes i nelfoiralgi lsb ulbes equent\nCAR-facidlriitvaest.ed\nAfters uacchc epe,tanth ces tuidnseno telt i gfoirbth leOffe er ProgressRiuloaends et ailed\nin Secti4o.nan3 dm apyarti cipoanitlDneyr eamO ffeorp portunities.",
+      "plain_english": "4.R2e cruiter-IRmesptriocstiedo ns\nIfs tau adcecnanet op fftesanr dt hreec ruitoeffirc'poislal i ocroy ff erl ettrere sfurthtriecrt s\nparticipiaontth ierpo lna cprocesesmeesnth,te s tubdecoenmtes i nelfoiralgi lsb ulbes equent\nCAR-facidlriitvaest.ed\nAfters uacchc epe,tanth ces tu",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 11'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "12",
+      "section_number": null,
+      "heading": "Section 12",
+      "text": "4.O3ff ePrr ogresRsuiloen\nInfor ecruiter restraipcpttlianoio e esnx isotiffnerg:\nActivationC ondition:\nTheO fferPro gressiRounl( .el5 oxpp ortunityi)ns o t autaovmaaitulipacreobalcnllei eyp t\nofafi rosffterTh .iru sl sehal lb ecomeo peratoinloaynft alermi nai moum4f 0 o%ef l igible\nstudenotthfse co ncernSedc hareoo lp laocedar,ans d w hetnhD ee ano thfe S chfoormalolly\nannouncaescti vawthiiochnev,ier es ar lUinert.si ulac chti vatipoartinc,i pianhti ighoern\u00ad\nvalue opposhrtunaibltielges o vernbedyi nstidtuitsicretioanondnfal ai rncoesnss iderations.\nSubjtectoth ea ctivatioconn ditiostnasta ebdo avstu ed,en tm aya ttendup tfoou (r4 )\naddiptiloanalcem drienvte asft receeri vithneigfirr s otff erpr,o vidtheadt :",
+      "plain_english": "4.O3ff ePrr ogresRsuiloen\nInfor ecruiter restraipcpttlianoio e esnx isotiffnerg:\nActivationC ondition:\nTheO fferPro gressiRounl( .el5 oxpp ortunityi)ns o t autaovmaaitulipacreobalcnllei eyp t\nofafi rosffterTh .iru sl sehal lb ecomeo peratoinloaynft alermi nai moum4f 0 o%ef l igib",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 12'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "13",
+      "section_number": "2",
+      "heading": "Section 13",
+      "text": "2.Thnee owp portuonffiersaty C TCo fal te las.t(5 1x5 o0thf%e )e xisotffiern.g Aftethre sfoeur p ermitdtrievdthe ess ,t udent'ss heielftnistigi rtbeoDil reamly iO tyff er companies only.",
+      "plain_english": "Students are permitted to accept only one offer that is at least 1.5 times the value of their existing offer, specifically for 'Dream' company offers.",
+      "type": "Other",
+      "category": "Condition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "This is a standard placement policy rule governing student offer progression and eligibility.",
+      "affected_party": "Student",
+      "obligations": [
+        "Student must adhere to the 1.5x offer progression rule for Dream offers"
+      ],
+      "rights": [
+        "Student has the right to upgrade to a Dream offer if it meets the 1.5x criteria"
+      ],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "placement",
+        "offer",
+        "eligibility",
+        "student"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "14",
+      "section_number": null,
+      "heading": "Section 14",
+      "text": "4.D4ual SeleScctieonna rio\nIfs tau apdpearesnfo tr an otherc ompwanhyia lweai tresiulntfrogsm ap revicoompuasn y\nandi sse lectbedyb o\ufffdth en:\n\u2022 Thes tudiecsno tn sitdoherea dvc eo mpthleeteirdp lacemreeqnuitr emfrenotthm e\nCARp erspec(tNieovltei ungdierb4 l.Oe3ff erPro gression Rule).\n\u2022 Thes tudmenutsc th ooonsoeefth eo ffers.\n\u2022 Afterc hoothseins gtu,d remenati nesl ioginlbfoylr eD reOamff ecormp anies going\nforward.\nThise nsfureaisrn esasv,o bildosckin ogpp ortunitfoirpe eerssa ,n sudp portrantss parent\nrecruiteenrg agement\nRVVl dyani8k'('M'ti alne,, RMoyasSdue,run galuru. 5600S9. lr,d;a\nPh: +89016 81999I0 0www .r,u.edu.in\n45C lassifieaotiOfffoe nn\na.FinPall acemOenffter\nAc onfirmfuedl l-rotilapmepe l icaabftgralerde u atiCoonu.an 1st osxff eurpos ne lection.\nb.I nternshiwpith P re-PlOaffcemer(e PnPt/PO e)rf ormance-CBoansveers(diP oBnC )\nIaf comspealanecs ytt su fodren:t\n\u2022 An Internslheaidpi PnPgOo ,rt o\n\u2022 AnIn ternship withP BC,\nthethne se lectioinm medcioautanesttl xosy ff ethrem, o mentths etu dennamtea' pspears\nithne c ompanyfinal' ss electiloines vtie,tfn h setu dcehnotot sreoej sei cltta ter.\nIthfe s turdeenjtse uctancs ih n teornshiffepa r ft beeris negl eecltied,itg foyir anb cithloeffre r\nwiblecl o nsideroendalth tye J. SCTxC leveslu,b tojt ehctae c ticvoantidooinfthti eo ns\nOffePrr ogreRsuslieo.n\nc.IndependentI nternsh&iS pposn soRredes earch/Fell(oAwcasdheimpisc )\nIndepenidnenternsthi porsa cadenemgiacg emsenutascs:h\n\u2022 Sponrsoesearchred\n\u2022 Fellowships\n\u2022 Acadaesmsiics tantships\nDon ocotun tt owtharde 1 oxr1 .p5roxgr esssyisobtnecae umst ehar eye a cadeimnniature, c\nnofitn emalp loymoenffter s.\nIafr ecruitwierth drawsan offer aftecro nfirmingi tt,hs et umdaenyst u bmai trequest to\nCARfo ra ppropriaitnstiet utcoinosniald eration.",
+      "plain_english": "4.D4ual SeleScctieonna rio\nIfs tau apdpearesnfo tr an otherc ompwanhyia lweai tresiulntfrogsm ap revicoompuasn y\nandi sse lectbedyb o\ufffdth en:\n\u2022 Thes tudiecsno tn sitdoherea dvc eo mpthleeteirdp lacemreeqnuitr emfrenotthm e\nCARp erspec(tNieovltei ungdierb4 l.Oe3ff erPro gression Ru",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 14'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "15",
+      "section_number": null,
+      "heading": "Section 15",
+      "text": "4.O6ff -CamOpffuesn\nOfferss eciurneddepen denbtlyaystu de(nto ff-cdamonp oucotsun )tt oward:\n\u2022 The1 x ruloe,ffo err\n\u2022 Thet p.roSgresxs iruloen.\nHowever:\n\u2022 Studmenustrtseport suocffhers t toh Seicrho Choairperslo n /S chPoloalc Oeffimcenetr\nfore thicalc omplanidrean cordc-ek eeping.\n\u2022 Onp rofessanidoco nalmpassi onatgreo undsst,unt darsee a dvised tvo olunotariploutyt\nofuni verspiltaycem enittfs h heya valerea dys ecured a ofinnff -camopuffser \u00ad\nbutthii sns o mtan datoanrydth, e fi ndaelc irsieossnot lswie thlth yes tudent.",
+      "plain_english": "4.O6ff -CamOpffuesn\nOfferss eciurneddepen denbtlyaystu de(nto ff-cdamonp oucotsun )tt oward:\n\u2022 The1 x ruloe,ffo err\n\u2022 Thet p.roSgresxs iruloen.\nHowever:\n\u2022 Studmenustrtseport suocffhers t toh Seicrho Choairperslo n /S chPoloalc Oeffimcenetr\nfore thicalc omplanidrean cordc-ek eepin",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 15'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "16",
+      "section_number": null,
+      "heading": "Section 16",
+      "text": "4.D7r eOaffme Rru le\nAD reOamff eidrse fineda san offwehro CTsCei ssi gnifihcianghtltheryan t hper evailing\nhighesotff ersh istoaricchialeblvyyted he c oncerned School,an dno tm ererleyl tatiaov e\nsinrgelcruietm epnerito d.\nTheDr eamO fferb enchsmharkab ledl y naanmdpri ocg reansdsm ivayeb ,ed etermined\nbased on:\na)Theh ighCesTtCa chibeythv eSed c hiornoe lco enrpt as atc ademiyce arsa;n d/or\nb)Anyr evibseedn chmfoarkrm alnloyt biyfith edeD eano thfe S chinoco onls,ul tation\nwithC AR.\nThei ntoenftht e D ream Offecrl assiifistca oensuret iothna Drteam Offersr emain\nexceptianodnas apli ratanidot nhalsa,tt u dareen ntosprt o viduedn lipmroigretseds ion\nopportunitieosn cpel acThedeD. ream Offerb enchmsarkh ableSl ch ool-anspde cific\nuniformlayp wplaicrcaobaslle sell ipgiblroegram mewsi thinth atS chool.\nRVV klyani8k\"e tMainle,, R oadM,yB seunru9 a5l6u0r011l5,n9 d,i \ufffd\nPh+:9 18 06 8199I9www 0.0rv u.edu.in\nIllustration:\nIafS choofCo olm pSuctieeanrdn E cnegi neeri(nSgo ChSarecEsord) ed ah igChTeCost f\n\ufffd3J0ak hpsea rnn uimn t hreec epnatst thv,aa tl suhalelbe treaatsthe edDr eamO ffer\nbenchmfoarrthk a Stch ooIlfa.,atl asttera agcome pan,y offearsC TCo fU Sl akhs per\nannwnt,h Der eaOmff erb enchfomrtark hS ech osohltha ereaftlelr s treavinsdted \ufffdo 3 l5akh s\nperann umo hirgh earas,p plfoircs aubblseeo qpupenortunitti es.\nSECTI5O-NPL ACEMEPNRTO CESS\nS.S1tu deRnetgi strfoarPti loanc ements\na.Studienrlttsen tdpoiart nigci pipanlt aec eamcentitvm iutiscoestm pltehPtele a cement\nRegis&tr Daeticolna Froarmwti iothnthi edn e adannloiunncede b yC AR.\nb.Registriapsterm iiotnot nedal ftyver eri fyinge ligiasbp ierlS iectityo3 n.\nc.Studmenutpssrt o vcoirredctacade em icp,e rsanonald,co ntdaectta Ainlfysa .l sification\norm isreprweisresullentlta itdni iosnc iapcltiiuonnnadth ryeeS r tu denDtisci plinary\nCommit(tSeeT DdCep)en,d oinns gev erity.\nd.Registroanticsoeun b msihtbalteltreaed t edas a formalco mmitmenttpo art iciipnate\nplacperomceesnastne adsd htealorl te erm so thfi Pso licy.\nS.P2r e-PlaTcaelkm(PseP nTtas n)Cd o mpOanriyen tation\na.Co mpanimesa cyo ndpurcte- platcemaentltkexo sp latheirio nr ganisjatoirobol n,e s,\nselecptroicoends uareslp,arya cksaegrviescc,oe n ditanidemo pnlso,ym teennsn.t\nb.AttenfodrPan PcTmesa b yem andafotorspry eci ficd rivwesh ereth er ecruirteerq uires\ni.t\nc.Studemnutmssat indtiains cdiecopruml,ian ndep ,r ofessdiurionnPgalP iTassthsm e y\narec onsipdaoerrtfte hdpe l acempenrotc ess.\nd.Studareneet xsp etctoced l aridfyo urebltastt joedo probfi les,w olrokc aatniodot nhse,r\ntermdsu riPnPgTra sth ert hdaurinn lga sttera ogfses e lection.",
+      "plain_english": "4.D7r eOaffme Rru le\nAD reOamff eidrse fineda san offwehro CTsCei ssi gnifihcianghtltheryan t hper evailing\nhighesotff ersh istoaricchialeblvyyted he c oncerned School,an dno tm ererleyl tatiaov e\nsinrgelcruietm epnerito d.\nTheDr eamO fferb enchsmharkab ledl y naanmdpri ocg reans",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 16'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "17",
+      "section_number": "5.A3",
+      "heading": "Section 17",
+      "text": "5.A3p plitcCoao timopnani es a.Studmeanapytp slt ycoo m panieosnthro luygh thoeffi ccihalaIU1 ecolmmsuni catedb y CAR. b.Nod ircoecmmtun icatoirio nnd iappvildiucaatilto oren cru itierpsserm ittedwtl ess expraelslsoblwyCye A dR . c.Studmeunsvtster ithfya tth meeye atlc lo mpanye-lspiegcicriifitbcerii balie tfyo re applying. d.Oncase t uadpenpttl aoic es o mpwianthydr,a wfroaml th ep roceswisth oauv tal iadn d apprroevaewisdlo blne t reaatsaedvi olaatinomdna bye rep ortedt oth eS tudent DisciCpolmmiintary(t SeTeD C). e.AnCyV po,rtf oloirdo o cumesnutbamttiiortto eednc rumiutbsetetrrs u thfulan dfree froem xaggeroarfalti socenl aims.",
+      "plain_english": "Students must apply to companies only through official channels managed by the CAR and are prohibited from direct communication with recruiters without approval. Misrepresentation or unauthorized withdrawal from the process may result in disciplinary action.",
+      "type": "Other",
+      "category": "Prohibition",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "risk_justification": "The clause imposes strict procedural requirements on students with potential disciplinary consequences for non-compliance, which is a significant burden for the student.",
+      "affected_party": "Student",
+      "obligations": [
+        "Apply to companies only through official CAR channels",
+        "Verify company-specific eligibility criteria before applying",
+        "Submit truthful and accurate portfolio documentation"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "student",
+        "application",
+        "disciplinary",
+        "recruitment"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "18",
+      "section_number": null,
+      "heading": "Section 18",
+      "text": "5.S4e lePcrtioocCneo sosr dination\na.CAR wicololrdi natalels electiopronc eduresi ncluding:\n\u2022 WrittTeensIO t nsl Aisnsees sments\nRVV idyanikMeltlaMeny,,s uR8ro\"uaB de,n ga5l6u0r0uI5,ndi9 a,\nPh+;9 1B O6 8199I9 0www0. rvu.edu.in\n\u2022 TechanndiH calRI nterviews\n\u2022 GroupD iscussions\n\u2022 CasSetudi /esP ortRfeovileiwos\n\u2022CodRionugonds Pr ra ctiEcavla luations\nb.Studmeunsrtteps o ortnti mefo rea chst agLea.ta erri vaabls,e onrunce a pproved\nwithdrawwaiblUe tr eateda asvi olation.\nc.StudenPtl aceCmoordinatorse nt maays siinths elt o gisatincsdsm ocoonth duoctf\nselecptrocessieso,nu dnetrh e suopthfee rviS scihoono l Placement Officer.\nd.Studemnutsmsta inptairno fessianodan vadoal inibysme hathvatim oauayrd versely\naffetcthU en iversreiltyat'iso wnshiipthth e r ecruiter.\ne.Ifas tudeinsdit s quaatl ainfisyedt agdeu toe m iscomnidsureprcets.en otration\nunprofessiboehnaalv ithoeiu nrc,i sdhenabtlefo l nn alfolrwya rdedt ot hSetu dent\nDisciplin(aSryT DCfoCorex)mm aminati iotnt.ee",
+      "plain_english": "5.S4e lePcrtioocCneo sosr dination\na.CAR wicololrdi natalels electiopronc eduresi ncluding:\n\u2022 WrittTeensIO t nsl Aisnsees sments\nRVV idyanikMeltlaMeny,,s uR8ro\"uaB de,n ga5l6u0r0uI5,ndi9 a,\nPh+;9 1B O6 8199I9 0www0. rvu.edu.in\n\u2022 TechanndiH calRI nterviews\n\u2022 GroupD iscussions\n\u2022 Ca",
+      "type": "Payment",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 18'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "19",
+      "section_number": null,
+      "heading": "Section 19",
+      "text": "5.O5ff eRre leaansAdec ceptance\na.Recrumiatyanne orsu nrcesulet eisth ero n-camvpiurstu,oa rlthr loyu,gho fficial\ncmomunicatoCti AoRn.\nb.Studenwhtso re ceianv eo ffmeru sfotrmal lyaccep t ord ecliiwtni et thhedi enad line\nspecibfiythed er ecruitero Cr AR.\nc.Onceas tudaenctc aepnotff ser th,es tuidesenx tp ecttedho o nthoeurco mmibneanntd\nfollthroouwgh withj oifonrmaliintgi Aesn.wy i thdrawaaftale crcep tawnibcletrel e ated\naasv iolundaerti Soecnt 6i.on\nd.Studseenltectedbs y a c ompmaanyby e g overnbedy th eO ne-OanffdeO rff er\nProgresrusliesdo efinn iedSn e c4ti.on\ne.Aneyrro rsc,l arificaotiordn isspu tregardinegs offelre ttmerussb teb routghoCtA R\nimmedifaotrrees loylw uitiththoe nrecrui ter.",
+      "plain_english": "5.O5ff eRre leaansAdec ceptance\na.Recrumiatyanne orsu nrcesulet eisth ero n-camvpiurstu,oa rlthr loyu,gho fficial\ncmomunicatoCti AoRn.\nb.Studenwhtso re ceianv eo ffmeru sfotrmal lyaccep t ord ecliiwtni et thhedi enad line\nspecibfiythed er ecruitero Cr AR.\nc.Onceas tudaenctc aepno",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 19'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "20",
+      "section_number": null,
+      "heading": "Section 20",
+      "text": "5.S6u bmisosfPi loanc eDmoceumnetn tation\na.Studenmtsu ssut bamlrequiliredt docwnentation,O ffierLn ectlAtupersdp,io nign tment\nLettAercscep,t aLnecteat nersJd o ining Caocosnfimm rmuaniticonasbt,yCed A R.\nb.Aldlo cumenmtussbt e s ubmoinot brte edfo threpe r escridbeaedd lines.\nc.Tamperinwgi dtho cumaelnttoerisnff,gle ettrers o prro vifdakideno gcu mentwaitiloln\nsmc.\nresiulintm meesdciaalttatieoo n",
+      "plain_english": "5.S6u bmisosfPi loanc eDmoceumnetn tation\na.Studenmtsu ssut bamlrequiliredt docwnentation,O ffierLn ectlAtupersdp,io nign tment\nLettAercscep,t aLnecteat nersJd o ining Caocosnfimm rmuaniticonasbt,yCed A R.\nb.Aldlo cumenmtussbt e s ubmoinot brte edfo threpe r escridbeaedd lines.\nc",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 20'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "21",
+      "section_number": "5.7",
+      "heading": "Section 21",
+      "text": "5.J7o inFionrgm alitiaenPsdo st-SeCloectinodnu ct a.S tudenstesl efoctrfiedna lp lacemmenutsco tm pwliyo thn boarreqduireimnengt sas specdib fiythe eemp loyer. b.Studenmtuss mta inptaironf essicoonnaldd uuricntgb ackgrounvderi fication, onboardisnesgs ipornes-,emp lotrainiynmgen ort orientation. c.Iafs elected fsaittljouso d thienenot r ganiwsiattvahilooiundt thereas omna,tm taery ber eferrtedtho e S tudntDe iscipCloimnmiazyt( tSeTeDfo Cra) p proapcritiatoen . d.Schomoarlyeqs u seusbtmi sosifint oernshinp /placcemoenmptl ectiertiofinca taepssart oafca dermeqiuci rements.",
+      "plain_english": "Students selected for placement must comply with employer requirements, maintain professional conduct during onboarding, and submit necessary certification documents.",
+      "type": "Other",
+      "category": "Obligation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Standard academic and professional conduct requirements for students participating in placement programs.",
+      "affected_party": "Student",
+      "obligations": [
+        "Comply with employer requirements",
+        "Maintain professional conduct during background verification and onboarding",
+        "Submit internship/placement certification documents"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": true,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "student conduct",
+        "placement",
+        "onboarding"
+      ],
+      "cross_references": []
+    },
+    {
+      "clause_id": "22",
+      "section_number": null,
+      "heading": "Section 22",
+      "text": "5.8C ommunicaantUdip odsna te\na.Alolffi cipalla cecmoemnmtu niscahtalbileroo unt oedn throluygh CAR-approved\nchanne(lesm EaRiPdl,a, s hbooroa ffirdcsgroi uapls }.\nb.Studenarters e spofonrrs eigbulcleha ecrkloiyffin cgci oamlm uniFcaialttiureodo on.\nsow inlolbt eco nsidavered al iedx cfuorms ies sdieadnlgino esor ppo rtunities.\nc.Studmenutsstn octo nrtecruaitcerts duinrlectleesyxs p lpiermciittAtlneyayd tte .mp tto\ninflureecnrucei mtaebyrsetrea tedas avi olation.",
+      "plain_english": "5.8C ommunicaantUdip odsna te\na.Alolffi cipalla cecmoemnmtu niscahtalbileroo unt oedn throluygh CAR-approved\nchanne(lesm EaRiPdl,a, s hbooroa ffirdcsgroi uapls }.\nb.Studenarters e spofonrrs eigbulcleha ecrkloiyffin cgci oamlm uniFcaialttiureodo on.\nsow inlolbt eco nsidavered al i",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 22'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "23",
+      "section_number": null,
+      "heading": "Section 23",
+      "text": "5.P9a rticiLpiamtiaiontPndsl aceEmlieginbtiliC tyo ntinuity\naL.imoinct o nsemicsustieevldei gidribvlees\nOncase t uidfosenu tn edl iaginbhdlas re e gisfotrerp elda cementhtests u,d ieexsnp te cted\ntpoar ticcoinspiasttieetn nh ptell ayce pmrenotc faecsislebisyCt AaRtI.aefst d u dmeints ses\nam aximouthreefm (3e)l ipgilbalceemd erinvcotesn secutiv(eialron yw )wi,th ouptri or\nwrittaenp prfroovmCa AlR/ ScChhoairpersooln fo ra v alrieasond, th es tushdaelnblte\ntreatased i nacfotrpi lvaec emanendmts a byed eclaoreduo tthf e p lacproemceessnfo tr t he\nongopilnagc cemyentc le.\nbM.aximpulma ceompepnotr tuniotffieebrsyed/R aVUttempts\nCARfa cilpiltaactemesensut p paso anrt i nstitouptipoonrtwriastylu, b jtectos tudent\ncoopearnacodtn isoipnsart tiecnitAp stu adtienostnh .ba eplr lo viamd aximedmn ofifv (e5 )\nplaceompenpotrt unitifaes/caittlemibptyRtsa YU t CedA Ri np laacem entc ycAlfteer.\ncomploethifts im oaxni mulmim itet,hU niveprlsaictyase'smsie snfotantrce th ats tudent\nshallc easean,d th es tudwienltnl o btep ermittteoad p pfolrfurthy er placemendtri ves\nthrougChAR forth acty cAltte h.Se c hDeoano'lsd iscreanti aodn,d ittwio(o 2n)a l\nopportmuanbyie pti reso voindc4ede0 o% fth et oetlailsgi tbuldeoen ftte hSs c hareo ol\nplaiccnedo ,n sulwittaChtA iRo.n\ncA.ctivaot1fi. ooSnpx p ortunity\ni.Thle. 5oxp portunity( OffPerorgres siRounls eh)ba eclolma epp licabolnaelft yaer\nminiomf4u 0mo% f e lisgitubdltseneo fth eco ncernedS chareo opll acedo,ra sa nd\nwhethneD eano thfe S chfoonnoalll annyo unceelsi giwohiiclhiietyesv,ar er l ier.\niiU.ntislu acchti vsatituodnear,nee ts x petceotx ede rcdiudseie l iangded nices cretion\nbeforreeg istfoerirpn lga cdemrenitanv deare s s tronagldyvi tsappoedl yonl yto tho se\nrolanesdo rganisatitoharene syg enuwiilnletiljonyo g i n.\niiOin.case t udneamneat ppears' si anc ompanfinaly 'sse lectiloiinstit ,ps ro fessionally\nexpethcatthtede s tuwidlenhlto nthoeuo rff eanrdas socriesaptoedns iinbl iliitinese,\nwithi nstituetithoianncdais ln dunsotryrms .\nivAn.yco ncerns ariasftiserne gl ectioorann y,n on-adhrerenescueli tinnrg ep utational,\ninstiatlutio,orp n eer-leivmeplas chtab,lefo l nn aJflonvya rded toth eS tudent\nDisciCpolmmiittene(ary S TDfoCre) x aminuantdieoUrnnth iev erSstiutCdyoe'dnset\nofC onduct.\nRVVi dyanlk8e't\"a nM,My islu\u2022Rru,o aBde.n g;o5l6u00nStI9,n, d ia\nPh: +851061 8 19519Iwww0 .0rv u.\ufffdu.in\ndD.reCaomm pOapnpyo rtu(Enxietym ption):\nNotwithsCtlaa5nu.ds)9iea,(n D bgream CompOpanpoyrtu niitdfye ,c laassru ebcdyhth e\nDeano thfe S chooVoSfSc thuiodcnoyo l n sulwtiaCthtiAR o,sn h nalolbt ec ounwtiedth in\nthem aximpwnl aceompenpto rtunities/laimtteimatpn,etsd l igisbtludenetm sa yb e\npermitttepodarti cipiarrtespeecti voefth en umboerfo pportunialretiaesed xyh auThsteed .\ndeciosfthi eDo eann, i nco nsultwaitCthiAR, o nt ode calc aroem pany/oppoarsat unity\nDream CompanyOpp ortusnhibatef1y i1 fon rath lap tl acceymcleen.t\neL.inkagteo disfcriapmlinearyw ork:\nNon-particirpepaetaiatobedns ,ewi nthcdera,wo arrle ,fus wailth aopuprto svhabeal trl ela ted\nianc cordanwciethth e d iscirpelfimerralnec aryh anoiustlmi nSeecdt 6ii.on n\nSECTI6O-DNI SCIPLRIENFAERRRAYLM ECHANISM\nAlvli olmaitisocnoson,rnd oucnt-,co mrpellatiteanpodc l ea caemctievntiw tiheseth,em ri nor\nomra jionnra tsuhrbaeefol, nnl ally fotrthowe Sar tuddeDendit s cipCloimminttarye( eS TDC)\nfore xaminunadtiertho enU niveSrtsuiCdtyode'enos tfC onduct.\nCARs hnalolat d judipceatnaleio,sr ei,n dependresenotldlviyes cimpatltieUnrpasorzy.ne ferral\noafc ats$oeT DthCec, o ncsernteudsd hennaltolb t ep e rmitttpoedarti cipiatanney p lacement\u00ad\nrelaacttedui nviattyfi i nlwria tlt deneci siiiossn s buySed T DC.\nfollow\nAlolu tcopmeesn,a rletiienss,tcond aittiemoensan,nat dp pealm echanismsshal ls trictly\nSTDCp roceedianndgi sn stiregultuatitioonnals .\nSECTI7O PN-O LIACPYP LICABRIELVIIETWAY N,DRE VISION",
+      "plain_english": "5.P9a rticiLpiamtiaiontPndsl aceEmlieginbtiliC tyo ntinuity\naL.imoinct o nsemicsustieevldei gidribvlees\nOncase t uidfosenu tn edl iaginbhdlas re e gisfotrerp elda cementhtests u,d ieexsnp te cted\ntpoar ticcoinspiasttieetn nh ptell ayce pmrenotc faecsislebisyCt AaRtI.aefst d u dme",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 23'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "24",
+      "section_number": null,
+      "heading": "Section 24",
+      "text": "7.A1p plicoaftb hPieol liityc y\nThiPsl acemPenotl (Viersciyo 1n. 200 2/i6a s)p pltioc:ab le\na.Alsltu denfrotmsth eB atocfh2 o0n2w2ar adcrossa,sl S lcho oolRfsV U niversity, who\nare eligiblet poaart nidc iisppneal etakce e omrie nntterns hip activitibesy facilitated\nCAR.\nb.All SchPoloalcem enOtffi cefarsc,u mlentyt osrtusd,pen lta cemencto ordianndators\nCARs tianffv oilpnvl eadcem pernotces ses.\nc.Allre cruiteremsp,l oyceorsm,p anainesed x ternaplartn ers engawgiinthgR V\nUnivfoersrii tnyt ernsprohjiepcastnfi,sdn palla cements.\nStudenfrtosem ar lbiaetrwc hhhoea scv oem pthleetpiedrr o grammereq uireomarrene tsp arto f\nlegparocyc essshefoasll lltho epw l acemgeunitd appelliicndaeubsril thneeg pi eriro odfs tudy.",
+      "plain_english": "7.A1p plicoaftb hPieol liityc y\nThiPsl acemPenotl (Viersciyo 1n. 200 2/i6a s)p pltioc:ab le\na.Alsltu denfrotmsth eB atocfh2 o0n2w2ar adcrossa,sl S lcho oolRfsV U niversity, who\nare eligiblet poaart nidc iisppneal etakce e omrie nntterns hip activitibesy facilitated\nCAR.\nb.All Sch",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 24'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "25",
+      "section_number": "7.2",
+      "heading": "Section 25",
+      "text": "7.2P oliCcoym pliance Studenmtussco tm plwyia thl plr ovoifsth iiPoson lsai sacp yr erequfoirps artiicitpea inti ng pre-pltraaicemneinintng t,ernshi prsec,r uidbnrienvtane dsp ost-poroffcesers eNso.n \u00ad complimanacryee siurnle ts tricstuispenosniosord,n i sciapctliaiossnnpecary i fiinSed e ction 6o thfi Pso licy. SchooalnCsdA Rs hjaloli ennsturltheya altlp laceamcetniatvir ticeeo sn ductiedn strictly accordwanithicthse P olicy.",
+      "plain_english": "Students must comply with placement policy requirements, and schools must ensure all placement activities strictly follow the policy.",
+      "type": "Other",
+      "category": "Obligation",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Standard compliance requirement for students and schools within a university policy framework.",
+      "affected_party": "Students",
+      "obligations": [
+        "Students must comply with placement policy requirements",
+        "Schools must ensure all placement activities are conducted strictly in accordance with the policy"
+      ],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": true,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [
+        "compliance",
+        "placement",
+        "students",
+        "policy"
+      ],
+      "cross_references": [
+        "Section 6"
+      ]
+    },
+    {
+      "clause_id": "26",
+      "section_number": null,
+      "heading": "Section 26",
+      "text": "7.P3o lRiecviyea wnU dp dation\na.ThiPso lsihalcybl er evipeewrieodd biyCc ARal ilcnyo nsuwlitatthth Rieeo gni strar's\nOfficeS,c hlooela deandrsre hliepvU annitv ercosmmiitttyees .\nb.Revismiaobynem s a dbea soedn :\n\u2022 Changiesin n dustrye xpectations,\n\u2022 Regulguiadetloiryn es,\n\u2022 Accreditatrieqouni rements,\n\u2022 Anyo therd uteio n taerncala doemarid cmi nistranteedsi.ve\n\u2022 Anyupd atoer r evishaslilbo efon rm alnloyti fibedyth eU niversiatyns dh all\nsupersperdevieo vusers iofronmst hneo tidfiatfoederw ard.",
+      "plain_english": "7.P3o lRiecviyea wnU dp dation\na.ThiPso lsihalcybl er evipeewrieodd biyCc ARal ilcnyo nsuwlitatthth Rieeo gni strar's\nOfficeS,c hlooela deandrsre hliepvU annitv ercosmmiitttyees .\nb.Revismiaobynem s a dbea soedn :\n\u2022 Changiesin n dustrye xpectations,\n\u2022 Regulguiadetloiryn es,\n\u2022 Acc",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 26'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "27",
+      "section_number": null,
+      "heading": "Section 27",
+      "text": "7.I4n terparentCdal tariiofinc ation\nIthne ev enotf ambioguirty fnoreedi nterprethtaeauti thoonri,tt coyl aprirofyv isoifo ns\nthiPso lshiacyrl eslwt i ththe D irectCoArR-i,cn o nsuwilthtth aeRti eogni sOtrffiarc'es.\nSucchl arifishcaalbtlebi ionnsdan idun nigfo rmlayp plaiccrabaolllSse chs oo losfth e\nUniversity, tsthoue ob vjerectaal ulth oorfti hVteiy Cc hean cellor.",
+      "plain_english": "7.I4n terparentCdal tariiofinc ation\nIthne ev enotf ambioguirty fnoreedi nterprethtaeauti thoonri,tt coyl aprirofyv isoifo ns\nthiPso lshiacyrl eslwt i ththe D irectCoArR-i,cn o nsuwilthtth aeRti eogni sOtrffiarc'es.\nSucchl arifishcaalbtlebi ionnsdan idun nigfo rmlayp plaiccrabaol",
+      "type": "Other",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 27'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    },
+    {
+      "clause_id": "28",
+      "section_number": null,
+      "heading": "Section 28",
+      "text": "7.U5n iversRiightyt'ss\nTheU niversirtye servteshri egh tto :\na.Modpilfya cermuelguneitsd ,e oleril niesgi cribtierilai;ty\nb.Withhopllda cempernitvfro iml setguesdwh eonvi toslins attiet untioonnnsa;l\nc.Impaodsdieti ocnnodiatilob nasseo dna cadpemeirfco nnance,o recruird tiesrcipline\nrequirements;\nd.Discoonrrtin euvepi lsaecem peronctes isrfeeq sui riedthn e i ntoeresfit n stitutional\nintegrity.\nAttachAedn nexures(wi thE xDlaAn-aEti)o:n s\nAnnexuPraert iculars\nA StudenRte gistr&aDec tliaroant Fioonnn\nB IntimaotfWi iothdranw a/Dl e fennent\nC RecommenIddnedu sCtertiryfi catioanndJs o Rbo Mlaep pbiySn cgh ool\nApprobvye:d\n\ufffd \\\ufffd\\\ufffd\n\ufffd\nPro(Dfr..S )a h ProRafm. K umaKraka ni\nRegisRtrVa nrv ,e rsi VicCeh ancReVlU lnoirv,e nity\n(SignatuwirteDh a te) (SignawitutrDahet e)",
+      "plain_english": "7.U5n iversRiightyt'ss\nTheU niversirtye servteshri egh tto :\na.Modpilfya cermuelguneitsd ,e oleril niesgi cribtierilai;ty\nb.Withhopllda cempernitvfro iml setguesdwh eonvi toslins attiet untioonnnsa;l\nc.Impaodsdieti ocnnodiatilob nasseo dna cadpemeirfco nnance,o recruird tiesrcipl",
+      "type": "Payment",
+      "category": "Definition",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "risk_justification": "Risk inferred from clause language in 'Section 28'.",
+      "affected_party": null,
+      "obligations": [],
+      "rights": [],
+      "deadlines": [],
+      "is_unilateral": false,
+      "is_mutual": false,
+      "is_standard": true,
+      "is_ambiguous": false,
+      "ambiguity_reason": null,
+      "tags": [],
+      "cross_references": []
+    }
+  ],
+  "risks": [
+    {
+      "clause_id": "9",
+      "risk_type": "Ambiguous Language",
+      "severity": "LOW",
+      "reason": "The clause relies on subjective discretion of school leadership for exceptions and mandates compliance with external company criteria which may be subject to change.",
+      "impacted_party": "Student",
+      "risk_sentence": "3.CapstoPronjeect / M ajAocra dPemrioc-j AecftterY ear3 Thesexep eriencfoesnn thbeas elpirnepeara tieoxnp ecbteefoadrs et usdeeenkstfi nal placemenotpp ortunities. e.ExcepAtipopnra(olCv aasle- byN-otMC eanstio ansaedRi g",
+      "suggestion": "Review and negotiate clause 9.",
+      "legal_precedent": null,
+      "risk_labels": [
+        "Ambiguous Language",
+        "intellectual-property"
+      ],
+      "risk_context": "Section 9"
+    },
+    {
+      "clause_id": "17",
+      "risk_type": "Ambiguous Language",
+      "severity": "LOW",
+      "reason": "The clause imposes strict procedural requirements on students with potential disciplinary consequences for non-compliance, which is a significant burden for the student.",
+      "impacted_party": "Student",
+      "risk_sentence": "5.A3p plitcCoao timopnani es a.Studmeanapytp slt ycoo m panieosnthro luygh thoeffi ccihalaIU1 ecolmmsuni catedb y CAR. b.Nod ircoecmmtun icatoirio nnd iappvildiucaatilto oren cru itierpsserm ittedwtl ess expraelslsoblwyC",
+      "suggestion": "Review and negotiate clause 17.",
+      "legal_precedent": null,
+      "risk_labels": [
+        "Ambiguous Language",
+        "intellectual-property"
+      ],
+      "risk_context": "Section 17"
+    },
+    {
+      "clause_id": "28",
+      "risk_type": "Ambiguous Language",
+      "severity": "LOW",
+      "reason": "Risk inferred from clause language in 'Section 28'.",
+      "impacted_party": null,
+      "risk_sentence": "7.U5n iversRiightyt'ss\nTheU niversirtye servteshri egh tto :\na.Modpilfya cermuelguneitsd ,e oleril niesgi cribtierilai;ty\nb.Withhopllda cempernitvfro iml setguesdwh eonvi toslins attiet untioonnnsa;l\nc.Impaodsdieti ocnno",
+      "suggestion": "Review and negotiate clause 28.",
+      "legal_precedent": null,
+      "risk_labels": [
+        "Ambiguous Language",
+        "intellectual-property"
+      ],
+      "risk_context": "Section 28"
+    }
+  ],
+  "obligations": [
+    {
+      "party": "Student",
+      "action": "Maintain a minimum of 80% attendance in the official pre-placement training programme",
+      "clause_id": "8",
+      "deadline": null,
+      "consequence_of_breach": "Ineligibility for placement participation",
+      "is_recurring": true
+    },
+    {
+      "party": "Student",
+      "action": "Submit the prescribed Placement Registration & Declaration Form",
+      "clause_id": "8",
+      "deadline": "As announced by CAR",
+      "consequence_of_breach": "Ineligibility for placement participation",
+      "is_recurring": false
+    },
+    {
+      "party": "Student",
+      "action": "Report off-campus offers to the School Chairperson / School Placement Officer",
+      "clause_id": "15",
+      "deadline": null,
+      "consequence_of_breach": "Ethical compliance violation",
+      "is_recurring": false
+    },
+    {
+      "party": "Student",
+      "action": "Submit required documentation (Offer Letters, Appointment Letters, Acceptance Letters, Joining Confirmations) to CAR",
+      "clause_id": "20",
+      "deadline": "As prescribed by CAR",
+      "consequence_of_breach": "Immediate disciplinary action",
+      "is_recurring": false
+    },
+    {
+      "party": "Student",
+      "action": "Formally accept or decline offers within the deadline specified by the recruiter or CAR",
+      "clause_id": "19",
+      "deadline": "As specified by recruiter or CAR",
+      "consequence_of_breach": "Violation of policy, potential disciplinary action",
+      "is_recurring": false
+    }
+  ],
+  "rights": [
+    {
+      "party": "RVU University",
+      "right": "Update, amend, or modify the placement policy periodically",
+      "clause_id": "4",
+      "conditions": "Based on academic requirements, recruiter expectations, regulatory guidelines, or institutional decisions",
+      "is_exclusive": true
+    },
+    {
+      "party": "RVU University",
+      "right": "Withhold placement services from students who violate institutional norms",
+      "clause_id": "28",
+      "conditions": "Violation of institutional norms",
+      "is_exclusive": true
+    },
+    {
+      "party": "Student",
+      "right": "Participate in up to four additional placement drives after receiving a first offer",
+      "clause_id": "12",
+      "conditions": "First offer CTC is below 8 lakhs and new opportunity CTC is at least 50% higher than the existing offer",
+      "is_exclusive": false
+    }
+  ],
+  "timelines": [
+    {
+      "event": "Activation of Offer Progression Rule",
+      "timeframe": "When 40% of eligible students of the concerned school are placed",
+      "trigger": "Formal announcement by the Dean of the School",
+      "party_responsible": "Dean of the School",
+      "clause_id": "12",
+      "is_hard_deadline": false
+    },
+    {
+      "event": "Policy Effectiveness",
+      "timeframe": "From the graduating batch of 2022 onwards",
+      "trigger": "Graduation of the batch",
+      "party_responsible": "RVU University",
+      "clause_id": "4",
+      "is_hard_deadline": true
+    }
+  ],
+  "clause_dependencies": [
+    {
+      "source_clause": "25",
+      "target_clause": "Section6",
+      "relation_type": "linked_to",
+      "description": "Clause 25 cross-references clause Section6.",
+      "clause_id_1": "25",
+      "clause_id_2": "Section6",
+      "cross_document_reference": "Section 6"
+    }
+  ],
+  "missing_clauses": [
+    {
+      "clause_type": "Dispute Resolution",
+      "importance": "MEDIUM",
+      "reason_needed": "Expected clause not clearly found in the analyzed document.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Force Majeure",
+      "importance": "MEDIUM",
+      "reason_needed": "Expected clause not clearly found in the analyzed document.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Confidentiality",
+      "importance": "MEDIUM",
+      "reason_needed": "Expected clause not clearly found in the analyzed document.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Limitation of Liability",
+      "importance": "MEDIUM",
+      "reason_needed": "Expected clause not clearly found in the analyzed document.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Governing Law",
+      "importance": "MEDIUM",
+      "reason_needed": "Expected clause not clearly found in the analyzed document.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Entire Agreement",
+      "importance": "MEDIUM",
+      "reason_needed": "Expected clause not clearly found in the analyzed document.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Data Protection and Privacy",
+      "importance": "MEDIUM",
+      "reason_needed": "Expected clause not clearly found in the analyzed document.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Termination",
+      "importance": "MEDIUM",
+      "reason_needed": "Expected clause not clearly found in the analyzed document.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Definition of Confidential Information",
+      "importance": "HIGH",
+      "reason_needed": "This clause is part of the required template for Other agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Exclusions from Confidentiality",
+      "importance": "CRITICAL",
+      "reason_needed": "This clause is high-risk when missing because the KB flags it as important for Other agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Term and Duration",
+      "importance": "CRITICAL",
+      "reason_needed": "This clause is high-risk when missing because the KB flags it as important for Other agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Return/Destruction of Information",
+      "importance": "HIGH",
+      "reason_needed": "This clause is part of the required template for Other agreements.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Return of Confidential Information",
+      "importance": "MEDIUM",
+      "reason_needed": "This clause is expected for a Other agreement and reduces ambiguity, loss allocation, or enforcement risk.",
+      "suggested_language": null
+    },
+    {
+      "clause_type": "Definition of Receiving Party Representatives",
+      "importance": "MEDIUM",
+      "reason_needed": "This clause is expected for a Other agreement and reduces ambiguity, loss allocation, or enforcement risk.",
+      "suggested_language": null
+    }
+  ],
+  "negotiation_points": [
+    {
+      "issue": "Ambiguous Language: The clause relies on subjective discretion of school leadership for exceptions and mandates compliance with external company criteria which may be subject to change.",
+      "clause_id": "9",
+      "favorable_to": null,
+      "disadvantaged_party": "Student",
+      "leverage": "The clause relies on subjective discretion of school leadership for exceptions and mandates compliance with external company criteria which may be subject to change.",
+      "suggested_counter": "Review and negotiate clause 9."
+    },
+    {
+      "issue": "Ambiguous Language: The clause imposes strict procedural requirements on students with potential disciplinary consequences for non-compliance, which is a significant burden for the student.",
+      "clause_id": "17",
+      "favorable_to": null,
+      "disadvantaged_party": "Student",
+      "leverage": "The clause imposes strict procedural requirements on students with potential disciplinary consequences for non-compliance, which is a significant burden for the student.",
+      "suggested_counter": "Review and negotiate clause 17."
+    },
+    {
+      "issue": "Ambiguous Language: Risk inferred from clause language in 'Section 28'.",
+      "clause_id": "28",
+      "favorable_to": null,
+      "disadvantaged_party": null,
+      "leverage": "Risk inferred from clause language in 'Section 28'.",
+      "suggested_counter": "Review and negotiate clause 28."
+    }
+  ],
+  "compliance_flags": [],
+  "dependency_graph": {
+    "nodes": [
+      {
+        "clause_id": "1",
+        "heading": "Section 1",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 10
+      },
+      {
+        "clause_id": "2",
+        "heading": "Section 2",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "3",
+        "heading": "Section 3",
+        "type": "Payment",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "4",
+        "heading": "Section 4",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "5",
+        "heading": "Section 5",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 10
+      },
+      {
+        "clause_id": "6",
+        "heading": "Section 6",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "7",
+        "heading": "Section 7",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "8",
+        "heading": "Section 8",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "9",
+        "heading": "Section 9",
+        "type": "Other",
+        "risk_level": "MEDIUM",
+        "risk_score": 45
+      },
+      {
+        "clause_id": "10",
+        "heading": "Section 10",
+        "type": "Payment",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "11",
+        "heading": "Section 11",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "12",
+        "heading": "Section 12",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "13",
+        "heading": "Section 13",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "14",
+        "heading": "Section 14",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "15",
+        "heading": "Section 15",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "16",
+        "heading": "Section 16",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "17",
+        "heading": "Section 17",
+        "type": "Other",
+        "risk_level": "MEDIUM",
+        "risk_score": 40
+      },
+      {
+        "clause_id": "18",
+        "heading": "Section 18",
+        "type": "Payment",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "19",
+        "heading": "Section 19",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "20",
+        "heading": "Section 20",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "21",
+        "heading": "Section 21",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "22",
+        "heading": "Section 22",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "23",
+        "heading": "Section 23",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "24",
+        "heading": "Section 24",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "25",
+        "heading": "Section 25",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "26",
+        "heading": "Section 26",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "27",
+        "heading": "Section 27",
+        "type": "Other",
+        "risk_level": "LOW",
+        "risk_score": 20
+      },
+      {
+        "clause_id": "28",
+        "heading": "Section 28",
+        "type": "Payment",
+        "risk_level": "LOW",
+        "risk_score": 20
+      }
+    ],
+    "edges": [
+      {
+        "source": "25",
+        "target": "Section6",
+        "relation_type": "linked_to",
+        "description": "Clause 25 cross-references clause Section6.",
+        "cross_document_reference": "Section 6"
+      }
+    ],
+    "node_count": 28,
+    "edge_count": 1
+  },
+  "summary": {
+    "executive_summary": "The RVU University Placement Policy establishes the governance, operational structure, and eligibility criteria for student participation in placement and internship activities. It defines the roles of the Career & Alumni Relations (CAR) department and Student Placement Coordinators (SPCs) in managing recruitment processes, documentation, and student conduct. The policy mandates strict adherence to eligibility requirements, including academic performance and attendance, and outlines specific rules regarding offer progression, off-campus offers, and the 'Dream Offer' mechanism. Failure to comply with these provisions may result in disciplinary action or the withholding of placement services by the University.",
+    "key_points": [
+      "The policy applies to all students from the 2022 graduating batch onwards across all RVU University schools.",
+      "Students must maintain a minimum of 80% attendance in pre-placement training and have no backlogs to be eligible for placement activities.",
+      "The 'Offer Progression Rule' allows students to participate in up to four additional placement drives after receiving a first offer, provided the initial offer meets specific criteria.",
+      "Students are required to report all off-campus offers to the School Chairperson or Placement Officer for record-keeping and ethical compliance.",
+      "The University reserves the right to modify placement rules, eligibility criteria, or withhold services from students who violate institutional norms.",
+      "All official placement communication must occur through CAR-approved channels; direct communication with recruiters without CAR approval is prohibited."
+    ],
+    "red_flags": [
+      "The policy lacks a formal dispute resolution mechanism, leaving students with no clear recourse if they disagree with CAR decisions.",
+      "The 'Offer Progression Rule' and 'Dream Offer' criteria are subject to unilateral modification by the University, creating uncertainty for students.",
+      "The policy contains broad, discretionary language regarding the withholding of placement services for 'violating institutional norms' without defining specific triggers or due process."
+    ],
+    "favorable_clauses": [
+      "Section 16 (Dream Offer Rule) provides students with the opportunity to pursue higher-value offers than their current standing, allowing for career advancement.",
+      "Section 12 (Offer Progression Rule) provides a structured framework allowing students to continue participating in recruitment even after securing an initial offer, provided specific thresholds are met."
+    ],
+    "unusual_clauses": [
+      "Section 28 (University's Rights) grants the University broad, unilateral authority to withhold placement services based on 'institutional norms' and to modify eligibility criteria at its discretion.",
+      "Section 14 (Dual Selection Scenario) creates a specific rule for students who are selected by two companies simultaneously, which is a highly specific operational constraint not typically found in general university policies."
+    ],
+    "favorable_to": null,
+    "overall_risk_score": 20,
+    "risk_distribution": {
+      "LOW": 26,
+      "MEDIUM": 2,
+      "HIGH": 0,
+      "CRITICAL": 0
+    },
+    "recommended_actions": [
+      "Request a formal grievance redressal mechanism to be added to the policy to protect students from arbitrary decisions by the CAR department.",
+      "Seek clarification on the definition of 'institutional norms' to ensure students understand the specific behaviors that could lead to the withholding of placement services.",
+      "Advocate for a 'notice period' or 'consultation requirement' before the University implements changes to eligibility criteria to ensure students are not unfairly disadvantaged mid-cycle.",
+      "Ensure that the policy is updated to explicitly reference compliance with the Digital Personal Data Protection Act (DPDP) regarding the handling of student data during the recruitment process.",
+      "Establish a clear appeals process for students who are deemed ineligible for placement due to technicalities or administrative errors."
+    ]
+  }
+}

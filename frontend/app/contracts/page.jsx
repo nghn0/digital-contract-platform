@@ -55,6 +55,10 @@ export default function ContractsPage() {
   const fetchContracts = async (userId) => {
     try {
       const res = await fetch(`${API_BASE_URL}/contracts/all/${userId}`);
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({ error: "Unknown error" }));
+        throw new Error(errorData.error || "Failed to fetch contracts");
+      }
       const data = await res.json();
       setContracts(data);
     } catch (err) {
@@ -69,7 +73,7 @@ export default function ContractsPage() {
       await fetch(`${API_BASE_URL}/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ status: "PENDING_SIGNATURE_B" }),
+        body: JSON.stringify({ status: "AWAITING_RECEIVER_SIGNATURE" }),
       });
       fetchContracts(user.id);
     } catch (err) { console.error(err); } finally { setLoadingId(null); }
@@ -126,9 +130,12 @@ export default function ContractsPage() {
     } catch (err) { console.error(err); } finally { setLoadingId(null); }
   };
 
+  const [copiedId, setCopiedId] = useState(null);
+
   const copyTx = (tx) => {
     navigator.clipboard.writeText(tx);
-    alert("✅ TX Hash copied to clipboard");
+    setCopiedId(tx);
+    setTimeout(() => setCopiedId(null), 2000);
   };
 
   if (!user) return null;
@@ -209,7 +216,11 @@ export default function ContractsPage() {
                               ? "bg-green-500/10 border-green-500/30 text-green-500"
                               : "bg-amber-500/10 border-amber-500/30 text-amber-500"
                           }`}>
-                            {status === "FINALIZED" ? "ON BLOCKCHAIN" : status.replace(/_/g, ' ')}
+                            {status === "FINALIZED" || status === "ON_BLOCKCHAIN" 
+                              ? "ON BLOCKCHAIN" 
+                              : status === "AWAITING_SENDER_SIGNATURE" ? "Awaiting sender signature"
+                              : status === "AWAITING_RECEIVER_SIGNATURE" ? "Awaiting receiver signature"
+                              : status.replace(/_/g, ' ')}
                           </span>
                         </div>
                         <p className={`text-sm font-mono opacity-70 flex items-center gap-2 ${darkMode ? 'text-[#A39284]' : 'text-[#6B5A4E]'}`}>
@@ -220,15 +231,16 @@ export default function ContractsPage() {
 
                     {/* ACTION SIDE */}
                     <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-                      <a
-                        href={c.file_url}
-                        target="_blank"
-                        className={`flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all ${
-                          darkMode ? "bg-white/5 text-[#F5E6D8] hover:bg-white/10" : "bg-stone-100 text-[#2C1810] hover:bg-stone-200"
-                        }`}
-                      >
-                        <ExternalLink size={14} /> Review
-                      </a>
+                      {status !== "ON_BLOCKCHAIN" && status !== "FINALIZED" && (
+                        <button
+                          onClick={() => router.push(`/contracts/${c.contract_id}`)}
+                          className={`flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all ${
+                            darkMode ? "bg-white/5 text-[#F5E6D8] hover:bg-white/10" : "bg-stone-100 text-[#2C1810] hover:bg-stone-200"
+                          }`}
+                        >
+                          <ExternalLink size={14} /> Review
+                        </button>
+                      )}
 
                       {c.blockchain_tx_hash && (
                         <button
@@ -237,7 +249,11 @@ export default function ContractsPage() {
                             darkMode ? "bg-black/40 text-[#D4AF37] border border-white/10" : "bg-stone-800 text-white"
                           }`}
                         >
-                          <Copy size={14} /> Hash
+                          {copiedId === c.blockchain_tx_hash ? (
+                            <span className="flex items-center gap-1"><CheckCircle size={14} /> Copied</span>
+                          ) : (
+                            <><Copy size={14} /> Hash</>
+                          )}
                         </button>
                       )}
 
@@ -260,7 +276,7 @@ export default function ContractsPage() {
                         </>
                       )}
 
-                      {!isSender && status === "PENDING_SIGNATURE_B" && (
+                      {!isSender && status === "AWAITING_RECEIVER_SIGNATURE" && (
                         <button
                           disabled={loadingId === c.contract_id}
                           onClick={() => handleReceiverSign(c)}
@@ -270,7 +286,7 @@ export default function ContractsPage() {
                         </button>
                       )}
 
-                      {isSender && status === "PENDING_SIGNATURE_A" && (
+                      {isSender && status === "AWAITING_SENDER_SIGNATURE" && (
                         <button
                           disabled={loadingId === c.contract_id}
                           onClick={() => handleSenderSign(c)}

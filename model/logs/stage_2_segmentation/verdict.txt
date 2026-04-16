@@ -1,0 +1,6 @@
+Stage 2: SEGMENTATION
+Verdict : PASS
+Reason  : 24 segments, avg 543 chars each
+Duration: 0ms
+Errors  : 0
+Warnings: 0

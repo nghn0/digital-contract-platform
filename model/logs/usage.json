@@ -1,0 +1,6277 @@
+[
+  {
+    "timestamp": "2026-04-11T14:43:35Z",
+    "requests_used": 1,
+    "estimated_tokens": 1234
+  },
+  {
+    "timestamp": "2026-04-11T15:03:23Z",
+    "requests_used": 1,
+    "estimated_tokens": 81
+  },
+  {
+    "timestamp": "2026-04-11T15:03:35Z",
+    "requests_used": 1,
+    "estimated_tokens": 81
+  },
+  {
+    "timestamp": "2026-04-11T15:03:35Z",
+    "requests_used": 2,
+    "estimated_tokens": 81
+  },
+  {
+    "timestamp": "2026-04-11T15:03:36Z",
+    "requests_used": 3,
+    "estimated_tokens": 81
+  },
+  {
+    "timestamp": "2026-04-11T15:03:41Z",
+    "requests_used": 1,
+    "estimated_tokens": 81
+  },
+  {
+    "timestamp": "2026-04-11T15:03:49Z",
+    "requests_used": 1,
+    "estimated_tokens": 81
+  },
+  {
+    "timestamp": "2026-04-11T15:09:51Z",
+    "requests_used": 1,
+    "estimated_tokens": 31104
+  },
+  {
+    "timestamp": "2026-04-11T15:09:53Z",
+    "requests_used": 2,
+    "estimated_tokens": 31137
+  },
+  {
+    "timestamp": "2026-04-11T15:13:13Z",
+    "requests_used": 1,
+    "estimated_tokens": 31104
+  },
+  {
+    "timestamp": "2026-04-11T15:13:15Z",
+    "requests_used": 2,
+    "estimated_tokens": 31137
+  },
+  {
+    "timestamp": "2026-04-11T15:19:07Z",
+    "requests_used": 1,
+    "estimated_tokens": 31104
+  },
+  {
+    "timestamp": "2026-04-11T15:19:11Z",
+    "requests_used": 2,
+    "estimated_tokens": 30814
+  },
+  {
+    "timestamp": "2026-04-11T15:19:15Z",
+    "requests_used": 1,
+    "estimated_tokens": 31104
+  },
+  {
+    "timestamp": "2026-04-11T15:19:18Z",
+    "requests_used": 2,
+    "estimated_tokens": 30814
+  },
+  {
+    "timestamp": "2026-04-11T15:19:23Z",
+    "requests_used": 3,
+    "estimated_tokens": 30682
+  },
+  {
+    "timestamp": "2026-04-11T15:19:29Z",
+    "requests_used": 4,
+    "estimated_tokens": 30763
+  },
+  {
+    "timestamp": "2026-04-11T15:19:34Z",
+    "requests_used": 5,
+    "estimated_tokens": 30766
+  },
+  {
+    "timestamp": "2026-04-11T15:19:38Z",
+    "requests_used": 6,
+    "estimated_tokens": 31142
+  },
+  {
+    "timestamp": "2026-04-11T15:19:50Z",
+    "requests_used": 3,
+    "estimated_tokens": 30846
+  },
+  {
+    "timestamp": "2026-04-11T15:19:52Z",
+    "requests_used": 7,
+    "estimated_tokens": 31175
+  },
+  {
+    "timestamp": "2026-04-11T15:21:20Z",
+    "requests_used": 1,
+    "estimated_tokens": 8603
+  },
+  {
+    "timestamp": "2026-04-11T15:21:48Z",
+    "requests_used": 2,
+    "estimated_tokens": 8470
+  },
+  {
+    "timestamp": "2026-04-11T15:22:10Z",
+    "requests_used": 3,
+    "estimated_tokens": 8178
+  },
+  {
+    "timestamp": "2026-04-11T15:22:13Z",
+    "requests_used": 4,
+    "estimated_tokens": 8265
+  },
+  {
+    "timestamp": "2026-04-11T15:22:40Z",
+    "requests_used": 5,
+    "estimated_tokens": 8324
+  },
+  {
+    "timestamp": "2026-04-11T15:22:43Z",
+    "requests_used": 6,
+    "estimated_tokens": 8733
+  },
+  {
+    "timestamp": "2026-04-11T15:22:46Z",
+    "requests_used": 7,
+    "estimated_tokens": 8483
+  },
+  {
+    "timestamp": "2026-04-11T15:22:57Z",
+    "requests_used": 8,
+    "estimated_tokens": 8471
+  },
+  {
+    "timestamp": "2026-04-11T15:23:14Z",
+    "requests_used": 1,
+    "estimated_tokens": 4582
+  },
+  {
+    "timestamp": "2026-04-11T15:23:54Z",
+    "requests_used": 2,
+    "estimated_tokens": 4440
+  },
+  {
+    "timestamp": "2026-04-11T15:24:42Z",
+    "requests_used": 3,
+    "estimated_tokens": 4299
+  },
+  {
+    "timestamp": "2026-04-11T15:24:44Z",
+    "requests_used": 4,
+    "estimated_tokens": 4331
+  },
+  {
+    "timestamp": "2026-04-11T15:24:47Z",
+    "requests_used": 5,
+    "estimated_tokens": 4255
+  },
+  {
+    "timestamp": "2026-04-11T15:25:00Z",
+    "requests_used": 6,
+    "estimated_tokens": 4360
+  },
+  {
+    "timestamp": "2026-04-11T15:25:02Z",
+    "requests_used": 7,
+    "estimated_tokens": 4269
+  },
+  {
+    "timestamp": "2026-04-11T15:25:04Z",
+    "requests_used": 8,
+    "estimated_tokens": 4292
+  },
+  {
+    "timestamp": "2026-04-11T15:25:36Z",
+    "requests_used": 9,
+    "estimated_tokens": 4339
+  },
+  {
+    "timestamp": "2026-04-11T15:25:40Z",
+    "requests_used": 10,
+    "estimated_tokens": 4419
+  },
+  {
+    "timestamp": "2026-04-11T15:26:04Z",
+    "requests_used": 11,
+    "estimated_tokens": 4248
+  },
+  {
+    "timestamp": "2026-04-11T15:26:26Z",
+    "requests_used": 12,
+    "estimated_tokens": 4340
+  },
+  {
+    "timestamp": "2026-04-11T15:26:30Z",
+    "requests_used": 13,
+    "estimated_tokens": 4394
+  },
+  {
+    "timestamp": "2026-04-11T15:26:40Z",
+    "requests_used": 14,
+    "estimated_tokens": 4393
+  },
+  {
+    "timestamp": "2026-04-11T16:12:13Z",
+    "requests_used": 1,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-11T16:12:39Z",
+    "requests_used": 1,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-11T16:13:04Z",
+    "requests_used": 1,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-11T16:13:30Z",
+    "requests_used": 1,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-11T16:43:18Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T16:43:33Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T16:43:38Z",
+    "requests_used": 2,
+    "estimated_tokens": 4190
+  },
+  {
+    "timestamp": "2026-04-11T16:43:40Z",
+    "requests_used": 3,
+    "estimated_tokens": 3947
+  },
+  {
+    "timestamp": "2026-04-11T16:43:56Z",
+    "requests_used": 4,
+    "estimated_tokens": 3900
+  },
+  {
+    "timestamp": "2026-04-11T16:44:01Z",
+    "requests_used": 5,
+    "estimated_tokens": 3791
+  },
+  {
+    "timestamp": "2026-04-11T16:44:04Z",
+    "requests_used": 6,
+    "estimated_tokens": 3746
+  },
+  {
+    "timestamp": "2026-04-11T16:44:12Z",
+    "requests_used": 7,
+    "estimated_tokens": 3738
+  },
+  {
+    "timestamp": "2026-04-11T16:44:14Z",
+    "requests_used": 8,
+    "estimated_tokens": 3834
+  },
+  {
+    "timestamp": "2026-04-11T16:44:32Z",
+    "requests_used": 9,
+    "estimated_tokens": 3715
+  },
+  {
+    "timestamp": "2026-04-11T16:44:38Z",
+    "requests_used": 10,
+    "estimated_tokens": 3804
+  },
+  {
+    "timestamp": "2026-04-11T16:44:42Z",
+    "requests_used": 11,
+    "estimated_tokens": 3797
+  },
+  {
+    "timestamp": "2026-04-11T16:44:46Z",
+    "requests_used": 12,
+    "estimated_tokens": 3809
+  },
+  {
+    "timestamp": "2026-04-11T16:44:49Z",
+    "requests_used": 13,
+    "estimated_tokens": 4018
+  },
+  {
+    "timestamp": "2026-04-11T16:44:55Z",
+    "requests_used": 14,
+    "estimated_tokens": 3980
+  },
+  {
+    "timestamp": "2026-04-11T16:45:02Z",
+    "requests_used": 15,
+    "estimated_tokens": 4076
+  },
+  {
+    "timestamp": "2026-04-11T16:45:12Z",
+    "requests_used": 16,
+    "estimated_tokens": 3784
+  },
+  {
+    "timestamp": "2026-04-11T16:45:20Z",
+    "requests_used": 17,
+    "estimated_tokens": 3989
+  },
+  {
+    "timestamp": "2026-04-11T16:45:26Z",
+    "requests_used": 18,
+    "estimated_tokens": 3942
+  },
+  {
+    "timestamp": "2026-04-11T16:45:31Z",
+    "requests_used": 19,
+    "estimated_tokens": 3764
+  },
+  {
+    "timestamp": "2026-04-11T16:45:34Z",
+    "requests_used": 20,
+    "estimated_tokens": 3867
+  },
+  {
+    "timestamp": "2026-04-11T16:45:39Z",
+    "requests_used": 21,
+    "estimated_tokens": 3766
+  },
+  {
+    "timestamp": "2026-04-11T16:45:47Z",
+    "requests_used": 22,
+    "estimated_tokens": 3820
+  },
+  {
+    "timestamp": "2026-04-11T16:45:51Z",
+    "requests_used": 23,
+    "estimated_tokens": 3798
+  },
+  {
+    "timestamp": "2026-04-11T16:45:58Z",
+    "requests_used": 24,
+    "estimated_tokens": 3834
+  },
+  {
+    "timestamp": "2026-04-11T16:46:01Z",
+    "requests_used": 25,
+    "estimated_tokens": 3824
+  },
+  {
+    "timestamp": "2026-04-11T17:27:07Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T17:27:13Z",
+    "requests_used": 2,
+    "estimated_tokens": 4185
+  },
+  {
+    "timestamp": "2026-04-11T17:27:20Z",
+    "requests_used": 3,
+    "estimated_tokens": 3942
+  },
+  {
+    "timestamp": "2026-04-11T17:27:27Z",
+    "requests_used": 4,
+    "estimated_tokens": 3895
+  },
+  {
+    "timestamp": "2026-04-11T17:27:30Z",
+    "requests_used": 5,
+    "estimated_tokens": 3785
+  },
+  {
+    "timestamp": "2026-04-11T17:27:33Z",
+    "requests_used": 6,
+    "estimated_tokens": 3740
+  },
+  {
+    "timestamp": "2026-04-11T17:27:37Z",
+    "requests_used": 7,
+    "estimated_tokens": 3733
+  },
+  {
+    "timestamp": "2026-04-11T17:27:40Z",
+    "requests_used": 8,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:27:51Z",
+    "requests_used": 9,
+    "estimated_tokens": 3710
+  },
+  {
+    "timestamp": "2026-04-11T17:27:58Z",
+    "requests_used": 10,
+    "estimated_tokens": 3799
+  },
+  {
+    "timestamp": "2026-04-11T17:28:03Z",
+    "requests_used": 11,
+    "estimated_tokens": 3791
+  },
+  {
+    "timestamp": "2026-04-11T17:28:10Z",
+    "requests_used": 12,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-11T17:28:29Z",
+    "requests_used": 13,
+    "estimated_tokens": 4012
+  },
+  {
+    "timestamp": "2026-04-11T17:28:32Z",
+    "requests_used": 14,
+    "estimated_tokens": 3975
+  },
+  {
+    "timestamp": "2026-04-11T17:28:37Z",
+    "requests_used": 15,
+    "estimated_tokens": 4071
+  },
+  {
+    "timestamp": "2026-04-11T17:28:42Z",
+    "requests_used": 16,
+    "estimated_tokens": 3779
+  },
+  {
+    "timestamp": "2026-04-11T17:28:47Z",
+    "requests_used": 17,
+    "estimated_tokens": 3983
+  },
+  {
+    "timestamp": "2026-04-11T17:28:50Z",
+    "requests_used": 18,
+    "estimated_tokens": 3936
+  },
+  {
+    "timestamp": "2026-04-11T17:28:57Z",
+    "requests_used": 19,
+    "estimated_tokens": 3759
+  },
+  {
+    "timestamp": "2026-04-11T17:29:01Z",
+    "requests_used": 20,
+    "estimated_tokens": 3862
+  },
+  {
+    "timestamp": "2026-04-11T17:29:06Z",
+    "requests_used": 21,
+    "estimated_tokens": 3761
+  },
+  {
+    "timestamp": "2026-04-11T17:29:09Z",
+    "requests_used": 22,
+    "estimated_tokens": 3815
+  },
+  {
+    "timestamp": "2026-04-11T17:29:12Z",
+    "requests_used": 23,
+    "estimated_tokens": 3792
+  },
+  {
+    "timestamp": "2026-04-11T17:29:14Z",
+    "requests_used": 24,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:29:16Z",
+    "requests_used": 25,
+    "estimated_tokens": 3819
+  },
+  {
+    "timestamp": "2026-04-11T17:29:20Z",
+    "requests_used": 26,
+    "estimated_tokens": 8251
+  },
+  {
+    "timestamp": "2026-04-11T17:29:24Z",
+    "requests_used": 27,
+    "estimated_tokens": 8314
+  },
+  {
+    "timestamp": "2026-04-11T17:29:31Z",
+    "requests_used": 28,
+    "estimated_tokens": 8326
+  },
+  {
+    "timestamp": "2026-04-11T17:30:41Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T17:30:48Z",
+    "requests_used": 2,
+    "estimated_tokens": 4185
+  },
+  {
+    "timestamp": "2026-04-11T17:30:52Z",
+    "requests_used": 3,
+    "estimated_tokens": 3942
+  },
+  {
+    "timestamp": "2026-04-11T17:30:58Z",
+    "requests_used": 4,
+    "estimated_tokens": 3895
+  },
+  {
+    "timestamp": "2026-04-11T17:31:03Z",
+    "requests_used": 5,
+    "estimated_tokens": 3785
+  },
+  {
+    "timestamp": "2026-04-11T17:31:09Z",
+    "requests_used": 6,
+    "estimated_tokens": 3740
+  },
+  {
+    "timestamp": "2026-04-11T17:31:24Z",
+    "requests_used": 7,
+    "estimated_tokens": 3733
+  },
+  {
+    "timestamp": "2026-04-11T17:31:28Z",
+    "requests_used": 8,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:31:33Z",
+    "requests_used": 9,
+    "estimated_tokens": 3710
+  },
+  {
+    "timestamp": "2026-04-11T17:31:37Z",
+    "requests_used": 10,
+    "estimated_tokens": 3799
+  },
+  {
+    "timestamp": "2026-04-11T17:31:40Z",
+    "requests_used": 11,
+    "estimated_tokens": 3791
+  },
+  {
+    "timestamp": "2026-04-11T17:31:43Z",
+    "requests_used": 12,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-11T17:31:49Z",
+    "requests_used": 13,
+    "estimated_tokens": 4012
+  },
+  {
+    "timestamp": "2026-04-11T17:32:01Z",
+    "requests_used": 14,
+    "estimated_tokens": 3975
+  },
+  {
+    "timestamp": "2026-04-11T17:32:24Z",
+    "requests_used": 15,
+    "estimated_tokens": 4071
+  },
+  {
+    "timestamp": "2026-04-11T17:32:31Z",
+    "requests_used": 16,
+    "estimated_tokens": 3779
+  },
+  {
+    "timestamp": "2026-04-11T17:32:33Z",
+    "requests_used": 17,
+    "estimated_tokens": 3983
+  },
+  {
+    "timestamp": "2026-04-11T17:32:40Z",
+    "requests_used": 18,
+    "estimated_tokens": 3936
+  },
+  {
+    "timestamp": "2026-04-11T17:32:44Z",
+    "requests_used": 19,
+    "estimated_tokens": 3759
+  },
+  {
+    "timestamp": "2026-04-11T17:32:48Z",
+    "requests_used": 20,
+    "estimated_tokens": 3862
+  },
+  {
+    "timestamp": "2026-04-11T17:32:53Z",
+    "requests_used": 21,
+    "estimated_tokens": 3761
+  },
+  {
+    "timestamp": "2026-04-11T17:33:17Z",
+    "requests_used": 22,
+    "estimated_tokens": 3815
+  },
+  {
+    "timestamp": "2026-04-11T17:33:21Z",
+    "requests_used": 23,
+    "estimated_tokens": 3792
+  },
+  {
+    "timestamp": "2026-04-11T17:33:25Z",
+    "requests_used": 24,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:33:27Z",
+    "requests_used": 25,
+    "estimated_tokens": 3819
+  },
+  {
+    "timestamp": "2026-04-11T17:33:32Z",
+    "requests_used": 26,
+    "estimated_tokens": 8251
+  },
+  {
+    "timestamp": "2026-04-11T17:33:38Z",
+    "requests_used": 27,
+    "estimated_tokens": 5523
+  },
+  {
+    "timestamp": "2026-04-11T17:33:42Z",
+    "requests_used": 28,
+    "estimated_tokens": 5523
+  },
+  {
+    "timestamp": "2026-04-11T17:33:45Z",
+    "requests_used": 29,
+    "estimated_tokens": 5535
+  },
+  {
+    "timestamp": "2026-04-11T17:33:50Z",
+    "requests_used": 30,
+    "estimated_tokens": 5525
+  },
+  {
+    "timestamp": "2026-04-11T17:34:36Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T17:34:41Z",
+    "requests_used": 2,
+    "estimated_tokens": 4185
+  },
+  {
+    "timestamp": "2026-04-11T17:34:46Z",
+    "requests_used": 3,
+    "estimated_tokens": 3942
+  },
+  {
+    "timestamp": "2026-04-11T17:34:52Z",
+    "requests_used": 4,
+    "estimated_tokens": 3895
+  },
+  {
+    "timestamp": "2026-04-11T17:34:57Z",
+    "requests_used": 5,
+    "estimated_tokens": 3785
+  },
+  {
+    "timestamp": "2026-04-11T17:35:00Z",
+    "requests_used": 6,
+    "estimated_tokens": 3740
+  },
+  {
+    "timestamp": "2026-04-11T17:35:09Z",
+    "requests_used": 7,
+    "estimated_tokens": 3733
+  },
+  {
+    "timestamp": "2026-04-11T17:35:16Z",
+    "requests_used": 8,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:35:26Z",
+    "requests_used": 9,
+    "estimated_tokens": 3710
+  },
+  {
+    "timestamp": "2026-04-11T17:35:29Z",
+    "requests_used": 10,
+    "estimated_tokens": 3799
+  },
+  {
+    "timestamp": "2026-04-11T17:35:32Z",
+    "requests_used": 11,
+    "estimated_tokens": 3791
+  },
+  {
+    "timestamp": "2026-04-11T17:35:36Z",
+    "requests_used": 12,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-11T17:35:41Z",
+    "requests_used": 13,
+    "estimated_tokens": 4012
+  },
+  {
+    "timestamp": "2026-04-11T17:35:44Z",
+    "requests_used": 14,
+    "estimated_tokens": 3975
+  },
+  {
+    "timestamp": "2026-04-11T17:35:47Z",
+    "requests_used": 15,
+    "estimated_tokens": 4071
+  },
+  {
+    "timestamp": "2026-04-11T17:35:54Z",
+    "requests_used": 16,
+    "estimated_tokens": 3779
+  },
+  {
+    "timestamp": "2026-04-11T17:35:59Z",
+    "requests_used": 17,
+    "estimated_tokens": 3983
+  },
+  {
+    "timestamp": "2026-04-11T17:36:03Z",
+    "requests_used": 18,
+    "estimated_tokens": 3936
+  },
+  {
+    "timestamp": "2026-04-11T17:36:08Z",
+    "requests_used": 19,
+    "estimated_tokens": 3759
+  },
+  {
+    "timestamp": "2026-04-11T17:36:13Z",
+    "requests_used": 20,
+    "estimated_tokens": 3862
+  },
+  {
+    "timestamp": "2026-04-11T17:36:18Z",
+    "requests_used": 21,
+    "estimated_tokens": 3761
+  },
+  {
+    "timestamp": "2026-04-11T17:36:23Z",
+    "requests_used": 22,
+    "estimated_tokens": 3815
+  },
+  {
+    "timestamp": "2026-04-11T17:36:28Z",
+    "requests_used": 23,
+    "estimated_tokens": 3792
+  },
+  {
+    "timestamp": "2026-04-11T17:36:31Z",
+    "requests_used": 24,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:36:34Z",
+    "requests_used": 25,
+    "estimated_tokens": 3819
+  },
+  {
+    "timestamp": "2026-04-11T17:36:38Z",
+    "requests_used": 26,
+    "estimated_tokens": 8251
+  },
+  {
+    "timestamp": "2026-04-11T17:36:50Z",
+    "requests_used": 27,
+    "estimated_tokens": 5551
+  },
+  {
+    "timestamp": "2026-04-11T17:37:43Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T17:37:46Z",
+    "requests_used": 2,
+    "estimated_tokens": 4185
+  },
+  {
+    "timestamp": "2026-04-11T17:37:50Z",
+    "requests_used": 3,
+    "estimated_tokens": 3942
+  },
+  {
+    "timestamp": "2026-04-11T17:37:55Z",
+    "requests_used": 4,
+    "estimated_tokens": 3895
+  },
+  {
+    "timestamp": "2026-04-11T17:37:59Z",
+    "requests_used": 5,
+    "estimated_tokens": 3785
+  },
+  {
+    "timestamp": "2026-04-11T17:38:04Z",
+    "requests_used": 6,
+    "estimated_tokens": 3740
+  },
+  {
+    "timestamp": "2026-04-11T17:38:09Z",
+    "requests_used": 7,
+    "estimated_tokens": 3733
+  },
+  {
+    "timestamp": "2026-04-11T17:38:14Z",
+    "requests_used": 8,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:38:19Z",
+    "requests_used": 9,
+    "estimated_tokens": 3710
+  },
+  {
+    "timestamp": "2026-04-11T17:38:23Z",
+    "requests_used": 10,
+    "estimated_tokens": 3799
+  },
+  {
+    "timestamp": "2026-04-11T17:38:28Z",
+    "requests_used": 11,
+    "estimated_tokens": 3791
+  },
+  {
+    "timestamp": "2026-04-11T17:38:31Z",
+    "requests_used": 12,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-11T17:38:39Z",
+    "requests_used": 13,
+    "estimated_tokens": 4012
+  },
+  {
+    "timestamp": "2026-04-11T17:38:43Z",
+    "requests_used": 14,
+    "estimated_tokens": 3975
+  },
+  {
+    "timestamp": "2026-04-11T17:39:00Z",
+    "requests_used": 15,
+    "estimated_tokens": 4071
+  },
+  {
+    "timestamp": "2026-04-11T17:39:03Z",
+    "requests_used": 16,
+    "estimated_tokens": 3779
+  },
+  {
+    "timestamp": "2026-04-11T17:39:22Z",
+    "requests_used": 17,
+    "estimated_tokens": 3983
+  },
+  {
+    "timestamp": "2026-04-11T17:39:28Z",
+    "requests_used": 18,
+    "estimated_tokens": 3936
+  },
+  {
+    "timestamp": "2026-04-11T17:39:33Z",
+    "requests_used": 19,
+    "estimated_tokens": 3759
+  },
+  {
+    "timestamp": "2026-04-11T17:39:37Z",
+    "requests_used": 20,
+    "estimated_tokens": 3862
+  },
+  {
+    "timestamp": "2026-04-11T17:39:40Z",
+    "requests_used": 21,
+    "estimated_tokens": 3761
+  },
+  {
+    "timestamp": "2026-04-11T17:39:42Z",
+    "requests_used": 22,
+    "estimated_tokens": 3815
+  },
+  {
+    "timestamp": "2026-04-11T17:39:45Z",
+    "requests_used": 23,
+    "estimated_tokens": 3792
+  },
+  {
+    "timestamp": "2026-04-11T17:39:48Z",
+    "requests_used": 24,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:39:51Z",
+    "requests_used": 25,
+    "estimated_tokens": 3819
+  },
+  {
+    "timestamp": "2026-04-11T17:39:55Z",
+    "requests_used": 26,
+    "estimated_tokens": 8251
+  },
+  {
+    "timestamp": "2026-04-11T17:40:00Z",
+    "requests_used": 27,
+    "estimated_tokens": 5491
+  },
+  {
+    "timestamp": "2026-04-11T17:40:14Z",
+    "requests_used": 28,
+    "estimated_tokens": 5491
+  },
+  {
+    "timestamp": "2026-04-11T17:40:21Z",
+    "requests_used": 29,
+    "estimated_tokens": 5503
+  },
+  {
+    "timestamp": "2026-04-11T17:40:25Z",
+    "requests_used": 30,
+    "estimated_tokens": 5493
+  },
+  {
+    "timestamp": "2026-04-11T17:41:06Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T17:41:10Z",
+    "requests_used": 2,
+    "estimated_tokens": 4185
+  },
+  {
+    "timestamp": "2026-04-11T17:41:25Z",
+    "requests_used": 3,
+    "estimated_tokens": 3942
+  },
+  {
+    "timestamp": "2026-04-11T17:41:32Z",
+    "requests_used": 4,
+    "estimated_tokens": 3895
+  },
+  {
+    "timestamp": "2026-04-11T17:41:39Z",
+    "requests_used": 5,
+    "estimated_tokens": 3785
+  },
+  {
+    "timestamp": "2026-04-11T17:41:46Z",
+    "requests_used": 6,
+    "estimated_tokens": 3740
+  },
+  {
+    "timestamp": "2026-04-11T17:41:49Z",
+    "requests_used": 7,
+    "estimated_tokens": 3733
+  },
+  {
+    "timestamp": "2026-04-11T17:41:51Z",
+    "requests_used": 8,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:41:57Z",
+    "requests_used": 9,
+    "estimated_tokens": 3710
+  },
+  {
+    "timestamp": "2026-04-11T17:42:01Z",
+    "requests_used": 10,
+    "estimated_tokens": 3799
+  },
+  {
+    "timestamp": "2026-04-11T17:42:04Z",
+    "requests_used": 11,
+    "estimated_tokens": 3791
+  },
+  {
+    "timestamp": "2026-04-11T17:42:07Z",
+    "requests_used": 12,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-11T17:42:13Z",
+    "requests_used": 13,
+    "estimated_tokens": 4012
+  },
+  {
+    "timestamp": "2026-04-11T17:42:20Z",
+    "requests_used": 14,
+    "estimated_tokens": 3975
+  },
+  {
+    "timestamp": "2026-04-11T17:42:25Z",
+    "requests_used": 15,
+    "estimated_tokens": 4071
+  },
+  {
+    "timestamp": "2026-04-11T17:42:30Z",
+    "requests_used": 16,
+    "estimated_tokens": 3779
+  },
+  {
+    "timestamp": "2026-04-11T17:42:34Z",
+    "requests_used": 17,
+    "estimated_tokens": 3983
+  },
+  {
+    "timestamp": "2026-04-11T17:42:37Z",
+    "requests_used": 18,
+    "estimated_tokens": 3936
+  },
+  {
+    "timestamp": "2026-04-11T17:42:41Z",
+    "requests_used": 19,
+    "estimated_tokens": 3759
+  },
+  {
+    "timestamp": "2026-04-11T17:42:45Z",
+    "requests_used": 20,
+    "estimated_tokens": 3862
+  },
+  {
+    "timestamp": "2026-04-11T17:42:49Z",
+    "requests_used": 21,
+    "estimated_tokens": 3761
+  },
+  {
+    "timestamp": "2026-04-11T17:42:54Z",
+    "requests_used": 22,
+    "estimated_tokens": 3815
+  },
+  {
+    "timestamp": "2026-04-11T17:42:59Z",
+    "requests_used": 23,
+    "estimated_tokens": 3792
+  },
+  {
+    "timestamp": "2026-04-11T17:43:02Z",
+    "requests_used": 24,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:43:07Z",
+    "requests_used": 25,
+    "estimated_tokens": 3819
+  },
+  {
+    "timestamp": "2026-04-11T17:43:10Z",
+    "requests_used": 26,
+    "estimated_tokens": 8251
+  },
+  {
+    "timestamp": "2026-04-11T17:43:14Z",
+    "requests_used": 27,
+    "estimated_tokens": 5513
+  },
+  {
+    "timestamp": "2026-04-11T17:43:17Z",
+    "requests_used": 28,
+    "estimated_tokens": 5513
+  },
+  {
+    "timestamp": "2026-04-11T17:43:20Z",
+    "requests_used": 29,
+    "estimated_tokens": 5525
+  },
+  {
+    "timestamp": "2026-04-11T17:43:25Z",
+    "requests_used": 30,
+    "estimated_tokens": 5515
+  },
+  {
+    "timestamp": "2026-04-11T17:43:50Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T17:43:53Z",
+    "requests_used": 2,
+    "estimated_tokens": 4185
+  },
+  {
+    "timestamp": "2026-04-11T17:43:57Z",
+    "requests_used": 3,
+    "estimated_tokens": 3942
+  },
+  {
+    "timestamp": "2026-04-11T17:44:02Z",
+    "requests_used": 4,
+    "estimated_tokens": 3895
+  },
+  {
+    "timestamp": "2026-04-11T17:44:04Z",
+    "requests_used": 5,
+    "estimated_tokens": 3785
+  },
+  {
+    "timestamp": "2026-04-11T17:44:09Z",
+    "requests_used": 6,
+    "estimated_tokens": 3740
+  },
+  {
+    "timestamp": "2026-04-11T17:44:11Z",
+    "requests_used": 7,
+    "estimated_tokens": 3733
+  },
+  {
+    "timestamp": "2026-04-11T17:44:24Z",
+    "requests_used": 8,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:44:30Z",
+    "requests_used": 9,
+    "estimated_tokens": 3710
+  },
+  {
+    "timestamp": "2026-04-11T17:44:34Z",
+    "requests_used": 10,
+    "estimated_tokens": 3799
+  },
+  {
+    "timestamp": "2026-04-11T17:44:38Z",
+    "requests_used": 11,
+    "estimated_tokens": 3791
+  },
+  {
+    "timestamp": "2026-04-11T17:44:43Z",
+    "requests_used": 12,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-11T17:44:46Z",
+    "requests_used": 13,
+    "estimated_tokens": 4012
+  },
+  {
+    "timestamp": "2026-04-11T17:44:51Z",
+    "requests_used": 14,
+    "estimated_tokens": 3975
+  },
+  {
+    "timestamp": "2026-04-11T17:44:56Z",
+    "requests_used": 15,
+    "estimated_tokens": 4071
+  },
+  {
+    "timestamp": "2026-04-11T17:45:00Z",
+    "requests_used": 16,
+    "estimated_tokens": 3779
+  },
+  {
+    "timestamp": "2026-04-11T17:45:11Z",
+    "requests_used": 17,
+    "estimated_tokens": 3983
+  },
+  {
+    "timestamp": "2026-04-11T17:45:15Z",
+    "requests_used": 18,
+    "estimated_tokens": 3936
+  },
+  {
+    "timestamp": "2026-04-11T17:45:23Z",
+    "requests_used": 19,
+    "estimated_tokens": 3759
+  },
+  {
+    "timestamp": "2026-04-11T17:45:26Z",
+    "requests_used": 20,
+    "estimated_tokens": 3862
+  },
+  {
+    "timestamp": "2026-04-11T17:45:30Z",
+    "requests_used": 21,
+    "estimated_tokens": 3761
+  },
+  {
+    "timestamp": "2026-04-11T17:45:35Z",
+    "requests_used": 22,
+    "estimated_tokens": 3815
+  },
+  {
+    "timestamp": "2026-04-11T17:45:37Z",
+    "requests_used": 23,
+    "estimated_tokens": 3792
+  },
+  {
+    "timestamp": "2026-04-11T17:45:41Z",
+    "requests_used": 24,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:45:45Z",
+    "requests_used": 25,
+    "estimated_tokens": 3819
+  },
+  {
+    "timestamp": "2026-04-11T17:45:49Z",
+    "requests_used": 26,
+    "estimated_tokens": 8251
+  },
+  {
+    "timestamp": "2026-04-11T17:45:55Z",
+    "requests_used": 27,
+    "estimated_tokens": 5506
+  },
+  {
+    "timestamp": "2026-04-11T17:45:57Z",
+    "requests_used": 28,
+    "estimated_tokens": 5506
+  },
+  {
+    "timestamp": "2026-04-11T17:46:01Z",
+    "requests_used": 29,
+    "estimated_tokens": 5517
+  },
+  {
+    "timestamp": "2026-04-11T17:46:12Z",
+    "requests_used": 30,
+    "estimated_tokens": 5507
+  },
+  {
+    "timestamp": "2026-04-11T17:46:47Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-11T17:46:51Z",
+    "requests_used": 2,
+    "estimated_tokens": 4185
+  },
+  {
+    "timestamp": "2026-04-11T17:46:55Z",
+    "requests_used": 3,
+    "estimated_tokens": 3942
+  },
+  {
+    "timestamp": "2026-04-11T17:46:59Z",
+    "requests_used": 4,
+    "estimated_tokens": 3895
+  },
+  {
+    "timestamp": "2026-04-11T17:47:04Z",
+    "requests_used": 5,
+    "estimated_tokens": 3785
+  },
+  {
+    "timestamp": "2026-04-11T17:47:08Z",
+    "requests_used": 6,
+    "estimated_tokens": 3740
+  },
+  {
+    "timestamp": "2026-04-11T17:47:24Z",
+    "requests_used": 7,
+    "estimated_tokens": 3733
+  },
+  {
+    "timestamp": "2026-04-11T17:47:34Z",
+    "requests_used": 8,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:47:38Z",
+    "requests_used": 9,
+    "estimated_tokens": 3710
+  },
+  {
+    "timestamp": "2026-04-11T17:47:42Z",
+    "requests_used": 10,
+    "estimated_tokens": 3799
+  },
+  {
+    "timestamp": "2026-04-11T17:47:45Z",
+    "requests_used": 11,
+    "estimated_tokens": 3791
+  },
+  {
+    "timestamp": "2026-04-11T17:47:48Z",
+    "requests_used": 12,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-11T17:47:52Z",
+    "requests_used": 13,
+    "estimated_tokens": 4012
+  },
+  {
+    "timestamp": "2026-04-11T17:47:57Z",
+    "requests_used": 14,
+    "estimated_tokens": 3975
+  },
+  {
+    "timestamp": "2026-04-11T17:48:01Z",
+    "requests_used": 15,
+    "estimated_tokens": 4071
+  },
+  {
+    "timestamp": "2026-04-11T17:48:04Z",
+    "requests_used": 16,
+    "estimated_tokens": 3779
+  },
+  {
+    "timestamp": "2026-04-11T17:48:10Z",
+    "requests_used": 17,
+    "estimated_tokens": 3983
+  },
+  {
+    "timestamp": "2026-04-11T17:48:29Z",
+    "requests_used": 18,
+    "estimated_tokens": 3936
+  },
+  {
+    "timestamp": "2026-04-11T17:48:35Z",
+    "requests_used": 19,
+    "estimated_tokens": 3759
+  },
+  {
+    "timestamp": "2026-04-11T17:48:42Z",
+    "requests_used": 20,
+    "estimated_tokens": 3862
+  },
+  {
+    "timestamp": "2026-04-11T17:48:44Z",
+    "requests_used": 21,
+    "estimated_tokens": 3761
+  },
+  {
+    "timestamp": "2026-04-11T17:48:47Z",
+    "requests_used": 22,
+    "estimated_tokens": 3815
+  },
+  {
+    "timestamp": "2026-04-11T17:48:51Z",
+    "requests_used": 23,
+    "estimated_tokens": 3792
+  },
+  {
+    "timestamp": "2026-04-11T17:48:55Z",
+    "requests_used": 24,
+    "estimated_tokens": 3828
+  },
+  {
+    "timestamp": "2026-04-11T17:48:58Z",
+    "requests_used": 25,
+    "estimated_tokens": 3819
+  },
+  {
+    "timestamp": "2026-04-11T17:49:00Z",
+    "requests_used": 26,
+    "estimated_tokens": 8251
+  },
+  {
+    "timestamp": "2026-04-11T17:49:07Z",
+    "requests_used": 27,
+    "estimated_tokens": 5527
+  },
+  {
+    "timestamp": "2026-04-11T17:49:12Z",
+    "requests_used": 28,
+    "estimated_tokens": 5526
+  },
+  {
+    "timestamp": "2026-04-11T17:49:19Z",
+    "requests_used": 29,
+    "estimated_tokens": 5538
+  },
+  {
+    "timestamp": "2026-04-11T17:49:23Z",
+    "requests_used": 30,
+    "estimated_tokens": 5528
+  },
+  {
+    "timestamp": "2026-04-12T06:47:09Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T06:47:13Z",
+    "requests_used": 2,
+    "estimated_tokens": 3764
+  },
+  {
+    "timestamp": "2026-04-12T06:47:22Z",
+    "requests_used": 3,
+    "estimated_tokens": 3849
+  },
+  {
+    "timestamp": "2026-04-12T06:47:32Z",
+    "requests_used": 4,
+    "estimated_tokens": 3776
+  },
+  {
+    "timestamp": "2026-04-12T06:47:45Z",
+    "requests_used": 5,
+    "estimated_tokens": 3668
+  },
+  {
+    "timestamp": "2026-04-12T06:47:53Z",
+    "requests_used": 6,
+    "estimated_tokens": 5013
+  },
+  {
+    "timestamp": "2026-04-12T06:48:45Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T06:48:49Z",
+    "requests_used": 2,
+    "estimated_tokens": 3764
+  },
+  {
+    "timestamp": "2026-04-12T06:48:55Z",
+    "requests_used": 3,
+    "estimated_tokens": 3849
+  },
+  {
+    "timestamp": "2026-04-12T06:49:03Z",
+    "requests_used": 4,
+    "estimated_tokens": 3776
+  },
+  {
+    "timestamp": "2026-04-12T06:49:11Z",
+    "requests_used": 5,
+    "estimated_tokens": 3668
+  },
+  {
+    "timestamp": "2026-04-12T06:49:19Z",
+    "requests_used": 6,
+    "estimated_tokens": 5013
+  },
+  {
+    "timestamp": "2026-04-12T06:49:25Z",
+    "requests_used": 7,
+    "estimated_tokens": 3590
+  },
+  {
+    "timestamp": "2026-04-12T06:49:36Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T06:49:42Z",
+    "requests_used": 2,
+    "estimated_tokens": 3764
+  },
+  {
+    "timestamp": "2026-04-12T06:49:45Z",
+    "requests_used": 3,
+    "estimated_tokens": 3849
+  },
+  {
+    "timestamp": "2026-04-12T06:49:49Z",
+    "requests_used": 4,
+    "estimated_tokens": 3776
+  },
+  {
+    "timestamp": "2026-04-12T06:49:52Z",
+    "requests_used": 5,
+    "estimated_tokens": 3668
+  },
+  {
+    "timestamp": "2026-04-12T06:49:56Z",
+    "requests_used": 6,
+    "estimated_tokens": 5013
+  },
+  {
+    "timestamp": "2026-04-12T06:49:58Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T06:50:02Z",
+    "requests_used": 2,
+    "estimated_tokens": 3764
+  },
+  {
+    "timestamp": "2026-04-12T06:50:03Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T06:50:04Z",
+    "requests_used": 3,
+    "estimated_tokens": 3849
+  },
+  {
+    "timestamp": "2026-04-12T06:50:08Z",
+    "requests_used": 4,
+    "estimated_tokens": 3776
+  },
+  {
+    "timestamp": "2026-04-12T06:50:09Z",
+    "requests_used": 2,
+    "estimated_tokens": 3764
+  },
+  {
+    "timestamp": "2026-04-12T06:50:12Z",
+    "requests_used": 5,
+    "estimated_tokens": 3668
+  },
+  {
+    "timestamp": "2026-04-12T06:50:16Z",
+    "requests_used": 6,
+    "estimated_tokens": 5013
+  },
+  {
+    "timestamp": "2026-04-12T06:50:19Z",
+    "requests_used": 3,
+    "estimated_tokens": 3849
+  },
+  {
+    "timestamp": "2026-04-12T06:50:23Z",
+    "requests_used": 4,
+    "estimated_tokens": 3776
+  },
+  {
+    "timestamp": "2026-04-12T06:50:34Z",
+    "requests_used": 5,
+    "estimated_tokens": 3668
+  },
+  {
+    "timestamp": "2026-04-12T06:50:37Z",
+    "requests_used": 6,
+    "estimated_tokens": 5013
+  },
+  {
+    "timestamp": "2026-04-12T06:50:59Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T06:51:03Z",
+    "requests_used": 2,
+    "estimated_tokens": 3764
+  },
+  {
+    "timestamp": "2026-04-12T06:51:06Z",
+    "requests_used": 3,
+    "estimated_tokens": 3849
+  },
+  {
+    "timestamp": "2026-04-12T06:51:09Z",
+    "requests_used": 4,
+    "estimated_tokens": 3776
+  },
+  {
+    "timestamp": "2026-04-12T06:51:20Z",
+    "requests_used": 5,
+    "estimated_tokens": 3668
+  },
+  {
+    "timestamp": "2026-04-12T06:51:24Z",
+    "requests_used": 6,
+    "estimated_tokens": 5013
+  },
+  {
+    "timestamp": "2026-04-12T06:51:27Z",
+    "requests_used": 7,
+    "estimated_tokens": 3590
+  },
+  {
+    "timestamp": "2026-04-12T06:51:33Z",
+    "requests_used": 8,
+    "estimated_tokens": 3002
+  },
+  {
+    "timestamp": "2026-04-12T06:51:45Z",
+    "requests_used": 9,
+    "estimated_tokens": 3002
+  },
+  {
+    "timestamp": "2026-04-12T06:51:50Z",
+    "requests_used": 10,
+    "estimated_tokens": 3014
+  },
+  {
+    "timestamp": "2026-04-12T06:51:56Z",
+    "requests_used": 11,
+    "estimated_tokens": 3004
+  },
+  {
+    "timestamp": "2026-04-12T06:52:29Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T06:52:33Z",
+    "requests_used": 2,
+    "estimated_tokens": 3764
+  },
+  {
+    "timestamp": "2026-04-12T06:52:36Z",
+    "requests_used": 3,
+    "estimated_tokens": 3849
+  },
+  {
+    "timestamp": "2026-04-12T06:52:44Z",
+    "requests_used": 4,
+    "estimated_tokens": 3776
+  },
+  {
+    "timestamp": "2026-04-12T06:52:47Z",
+    "requests_used": 5,
+    "estimated_tokens": 3668
+  },
+  {
+    "timestamp": "2026-04-12T06:52:50Z",
+    "requests_used": 6,
+    "estimated_tokens": 5013
+  },
+  {
+    "timestamp": "2026-04-12T06:52:52Z",
+    "requests_used": 7,
+    "estimated_tokens": 3590
+  },
+  {
+    "timestamp": "2026-04-12T06:52:56Z",
+    "requests_used": 8,
+    "estimated_tokens": 2989
+  },
+  {
+    "timestamp": "2026-04-12T06:53:00Z",
+    "requests_used": 9,
+    "estimated_tokens": 2989
+  },
+  {
+    "timestamp": "2026-04-12T06:53:04Z",
+    "requests_used": 10,
+    "estimated_tokens": 3001
+  },
+  {
+    "timestamp": "2026-04-12T06:53:06Z",
+    "requests_used": 11,
+    "estimated_tokens": 2991
+  },
+  {
+    "timestamp": "2026-04-12T07:01:06Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T07:01:15Z",
+    "requests_used": 2,
+    "estimated_tokens": 10166
+  },
+  {
+    "timestamp": "2026-04-12T07:01:19Z",
+    "requests_used": 3,
+    "estimated_tokens": 8161
+  },
+  {
+    "timestamp": "2026-04-12T07:01:27Z",
+    "requests_used": 4,
+    "estimated_tokens": 2655
+  },
+  {
+    "timestamp": "2026-04-12T07:01:36Z",
+    "requests_used": 5,
+    "estimated_tokens": 2655
+  },
+  {
+    "timestamp": "2026-04-12T07:01:40Z",
+    "requests_used": 6,
+    "estimated_tokens": 2666
+  },
+  {
+    "timestamp": "2026-04-12T07:01:43Z",
+    "requests_used": 7,
+    "estimated_tokens": 2656
+  },
+  {
+    "timestamp": "2026-04-12T07:21:23Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T07:21:28Z",
+    "requests_used": 2,
+    "estimated_tokens": 3814
+  },
+  {
+    "timestamp": "2026-04-12T07:21:32Z",
+    "requests_used": 3,
+    "estimated_tokens": 3898
+  },
+  {
+    "timestamp": "2026-04-12T07:21:36Z",
+    "requests_used": 4,
+    "estimated_tokens": 3826
+  },
+  {
+    "timestamp": "2026-04-12T07:21:39Z",
+    "requests_used": 5,
+    "estimated_tokens": 3717
+  },
+  {
+    "timestamp": "2026-04-12T07:21:42Z",
+    "requests_used": 6,
+    "estimated_tokens": 5063
+  },
+  {
+    "timestamp": "2026-04-12T07:21:46Z",
+    "requests_used": 7,
+    "estimated_tokens": 3698
+  },
+  {
+    "timestamp": "2026-04-12T07:21:50Z",
+    "requests_used": 8,
+    "estimated_tokens": 3260
+  },
+  {
+    "timestamp": "2026-04-12T07:21:54Z",
+    "requests_used": 9,
+    "estimated_tokens": 3260
+  },
+  {
+    "timestamp": "2026-04-12T07:21:57Z",
+    "requests_used": 10,
+    "estimated_tokens": 3271
+  },
+  {
+    "timestamp": "2026-04-12T07:22:02Z",
+    "requests_used": 11,
+    "estimated_tokens": 3261
+  },
+  {
+    "timestamp": "2026-04-12T07:22:21Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T07:22:25Z",
+    "requests_used": 2,
+    "estimated_tokens": 4247
+  },
+  {
+    "timestamp": "2026-04-12T07:22:28Z",
+    "requests_used": 3,
+    "estimated_tokens": 4004
+  },
+  {
+    "timestamp": "2026-04-12T07:22:32Z",
+    "requests_used": 4,
+    "estimated_tokens": 3957
+  },
+  {
+    "timestamp": "2026-04-12T07:22:37Z",
+    "requests_used": 5,
+    "estimated_tokens": 3848
+  },
+  {
+    "timestamp": "2026-04-12T07:22:41Z",
+    "requests_used": 6,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-12T07:22:45Z",
+    "requests_used": 7,
+    "estimated_tokens": 3795
+  },
+  {
+    "timestamp": "2026-04-12T07:22:49Z",
+    "requests_used": 8,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T07:22:53Z",
+    "requests_used": 9,
+    "estimated_tokens": 3772
+  },
+  {
+    "timestamp": "2026-04-12T07:22:57Z",
+    "requests_used": 10,
+    "estimated_tokens": 3861
+  },
+  {
+    "timestamp": "2026-04-12T07:23:01Z",
+    "requests_used": 11,
+    "estimated_tokens": 3854
+  },
+  {
+    "timestamp": "2026-04-12T07:23:03Z",
+    "requests_used": 12,
+    "estimated_tokens": 3866
+  },
+  {
+    "timestamp": "2026-04-12T07:23:08Z",
+    "requests_used": 13,
+    "estimated_tokens": 4074
+  },
+  {
+    "timestamp": "2026-04-12T07:23:12Z",
+    "requests_used": 14,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T07:23:18Z",
+    "requests_used": 15,
+    "estimated_tokens": 4133
+  },
+  {
+    "timestamp": "2026-04-12T07:23:23Z",
+    "requests_used": 16,
+    "estimated_tokens": 3841
+  },
+  {
+    "timestamp": "2026-04-12T07:23:27Z",
+    "requests_used": 17,
+    "estimated_tokens": 4045
+  },
+  {
+    "timestamp": "2026-04-12T07:23:31Z",
+    "requests_used": 18,
+    "estimated_tokens": 3999
+  },
+  {
+    "timestamp": "2026-04-12T07:23:34Z",
+    "requests_used": 19,
+    "estimated_tokens": 3821
+  },
+  {
+    "timestamp": "2026-04-12T07:23:42Z",
+    "requests_used": 20,
+    "estimated_tokens": 3924
+  },
+  {
+    "timestamp": "2026-04-12T07:23:45Z",
+    "requests_used": 21,
+    "estimated_tokens": 3823
+  },
+  {
+    "timestamp": "2026-04-12T07:23:50Z",
+    "requests_used": 22,
+    "estimated_tokens": 3877
+  },
+  {
+    "timestamp": "2026-04-12T07:23:52Z",
+    "requests_used": 23,
+    "estimated_tokens": 3855
+  },
+  {
+    "timestamp": "2026-04-12T07:23:55Z",
+    "requests_used": 24,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T07:24:01Z",
+    "requests_used": 25,
+    "estimated_tokens": 3881
+  },
+  {
+    "timestamp": "2026-04-12T07:24:05Z",
+    "requests_used": 26,
+    "estimated_tokens": 8600
+  },
+  {
+    "timestamp": "2026-04-12T07:24:11Z",
+    "requests_used": 27,
+    "estimated_tokens": 6201
+  },
+  {
+    "timestamp": "2026-04-12T07:24:14Z",
+    "requests_used": 28,
+    "estimated_tokens": 6201
+  },
+  {
+    "timestamp": "2026-04-12T07:24:19Z",
+    "requests_used": 29,
+    "estimated_tokens": 6213
+  },
+  {
+    "timestamp": "2026-04-12T07:24:22Z",
+    "requests_used": 30,
+    "estimated_tokens": 6203
+  },
+  {
+    "timestamp": "2026-04-12T07:24:59Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T07:25:06Z",
+    "requests_used": 2,
+    "estimated_tokens": 4247
+  },
+  {
+    "timestamp": "2026-04-12T07:25:09Z",
+    "requests_used": 3,
+    "estimated_tokens": 4004
+  },
+  {
+    "timestamp": "2026-04-12T07:25:15Z",
+    "requests_used": 4,
+    "estimated_tokens": 3957
+  },
+  {
+    "timestamp": "2026-04-12T07:25:21Z",
+    "requests_used": 5,
+    "estimated_tokens": 3848
+  },
+  {
+    "timestamp": "2026-04-12T07:25:25Z",
+    "requests_used": 6,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-12T07:25:28Z",
+    "requests_used": 7,
+    "estimated_tokens": 3795
+  },
+  {
+    "timestamp": "2026-04-12T07:25:31Z",
+    "requests_used": 8,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T07:25:35Z",
+    "requests_used": 9,
+    "estimated_tokens": 3772
+  },
+  {
+    "timestamp": "2026-04-12T07:25:39Z",
+    "requests_used": 10,
+    "estimated_tokens": 3861
+  },
+  {
+    "timestamp": "2026-04-12T07:25:42Z",
+    "requests_used": 11,
+    "estimated_tokens": 3854
+  },
+  {
+    "timestamp": "2026-04-12T07:25:46Z",
+    "requests_used": 12,
+    "estimated_tokens": 3866
+  },
+  {
+    "timestamp": "2026-04-12T07:25:50Z",
+    "requests_used": 13,
+    "estimated_tokens": 4074
+  },
+  {
+    "timestamp": "2026-04-12T07:25:52Z",
+    "requests_used": 14,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T07:25:57Z",
+    "requests_used": 15,
+    "estimated_tokens": 4133
+  },
+  {
+    "timestamp": "2026-04-12T07:26:03Z",
+    "requests_used": 16,
+    "estimated_tokens": 3841
+  },
+  {
+    "timestamp": "2026-04-12T07:26:07Z",
+    "requests_used": 17,
+    "estimated_tokens": 4045
+  },
+  {
+    "timestamp": "2026-04-12T07:26:11Z",
+    "requests_used": 18,
+    "estimated_tokens": 3999
+  },
+  {
+    "timestamp": "2026-04-12T07:26:21Z",
+    "requests_used": 19,
+    "estimated_tokens": 3821
+  },
+  {
+    "timestamp": "2026-04-12T07:26:25Z",
+    "requests_used": 20,
+    "estimated_tokens": 3924
+  },
+  {
+    "timestamp": "2026-04-12T07:26:29Z",
+    "requests_used": 21,
+    "estimated_tokens": 3823
+  },
+  {
+    "timestamp": "2026-04-12T07:26:32Z",
+    "requests_used": 22,
+    "estimated_tokens": 3877
+  },
+  {
+    "timestamp": "2026-04-12T07:26:34Z",
+    "requests_used": 23,
+    "estimated_tokens": 3855
+  },
+  {
+    "timestamp": "2026-04-12T07:26:38Z",
+    "requests_used": 24,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T07:26:40Z",
+    "requests_used": 25,
+    "estimated_tokens": 3881
+  },
+  {
+    "timestamp": "2026-04-12T07:26:43Z",
+    "requests_used": 26,
+    "estimated_tokens": 8588
+  },
+  {
+    "timestamp": "2026-04-12T07:26:49Z",
+    "requests_used": 27,
+    "estimated_tokens": 6216
+  },
+  {
+    "timestamp": "2026-04-12T07:26:53Z",
+    "requests_used": 28,
+    "estimated_tokens": 6215
+  },
+  {
+    "timestamp": "2026-04-12T07:26:58Z",
+    "requests_used": 29,
+    "estimated_tokens": 6227
+  },
+  {
+    "timestamp": "2026-04-12T07:27:01Z",
+    "requests_used": 30,
+    "estimated_tokens": 6217
+  },
+  {
+    "timestamp": "2026-04-12T07:27:49Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T07:27:53Z",
+    "requests_used": 2,
+    "estimated_tokens": 4247
+  },
+  {
+    "timestamp": "2026-04-12T07:27:57Z",
+    "requests_used": 3,
+    "estimated_tokens": 4004
+  },
+  {
+    "timestamp": "2026-04-12T07:28:02Z",
+    "requests_used": 4,
+    "estimated_tokens": 3957
+  },
+  {
+    "timestamp": "2026-04-12T07:28:08Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T07:28:11Z",
+    "requests_used": 2,
+    "estimated_tokens": 4247
+  },
+  {
+    "timestamp": "2026-04-12T07:28:14Z",
+    "requests_used": 3,
+    "estimated_tokens": 4004
+  },
+  {
+    "timestamp": "2026-04-12T07:28:18Z",
+    "requests_used": 4,
+    "estimated_tokens": 3957
+  },
+  {
+    "timestamp": "2026-04-12T07:28:22Z",
+    "requests_used": 5,
+    "estimated_tokens": 3848
+  },
+  {
+    "timestamp": "2026-04-12T07:28:25Z",
+    "requests_used": 6,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-12T07:28:29Z",
+    "requests_used": 7,
+    "estimated_tokens": 3795
+  },
+  {
+    "timestamp": "2026-04-12T07:28:31Z",
+    "requests_used": 8,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T07:28:34Z",
+    "requests_used": 9,
+    "estimated_tokens": 3772
+  },
+  {
+    "timestamp": "2026-04-12T07:28:38Z",
+    "requests_used": 10,
+    "estimated_tokens": 3861
+  },
+  {
+    "timestamp": "2026-04-12T07:28:41Z",
+    "requests_used": 11,
+    "estimated_tokens": 3854
+  },
+  {
+    "timestamp": "2026-04-12T07:28:45Z",
+    "requests_used": 12,
+    "estimated_tokens": 3866
+  },
+  {
+    "timestamp": "2026-04-12T07:28:48Z",
+    "requests_used": 13,
+    "estimated_tokens": 4074
+  },
+  {
+    "timestamp": "2026-04-12T07:28:56Z",
+    "requests_used": 14,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T07:29:05Z",
+    "requests_used": 15,
+    "estimated_tokens": 4133
+  },
+  {
+    "timestamp": "2026-04-12T07:29:10Z",
+    "requests_used": 16,
+    "estimated_tokens": 3841
+  },
+  {
+    "timestamp": "2026-04-12T07:29:15Z",
+    "requests_used": 17,
+    "estimated_tokens": 4045
+  },
+  {
+    "timestamp": "2026-04-12T07:29:30Z",
+    "requests_used": 18,
+    "estimated_tokens": 3999
+  },
+  {
+    "timestamp": "2026-04-12T07:29:34Z",
+    "requests_used": 19,
+    "estimated_tokens": 3821
+  },
+  {
+    "timestamp": "2026-04-12T07:29:38Z",
+    "requests_used": 20,
+    "estimated_tokens": 3924
+  },
+  {
+    "timestamp": "2026-04-12T07:29:43Z",
+    "requests_used": 21,
+    "estimated_tokens": 3823
+  },
+  {
+    "timestamp": "2026-04-12T07:29:49Z",
+    "requests_used": 22,
+    "estimated_tokens": 3877
+  },
+  {
+    "timestamp": "2026-04-12T07:29:52Z",
+    "requests_used": 23,
+    "estimated_tokens": 3855
+  },
+  {
+    "timestamp": "2026-04-12T07:29:56Z",
+    "requests_used": 24,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T07:30:00Z",
+    "requests_used": 25,
+    "estimated_tokens": 3881
+  },
+  {
+    "timestamp": "2026-04-12T07:30:02Z",
+    "requests_used": 26,
+    "estimated_tokens": 8588
+  },
+  {
+    "timestamp": "2026-04-12T07:30:11Z",
+    "requests_used": 27,
+    "estimated_tokens": 6223
+  },
+  {
+    "timestamp": "2026-04-12T07:30:14Z",
+    "requests_used": 28,
+    "estimated_tokens": 6222
+  },
+  {
+    "timestamp": "2026-04-12T07:30:18Z",
+    "requests_used": 29,
+    "estimated_tokens": 6234
+  },
+  {
+    "timestamp": "2026-04-12T07:30:21Z",
+    "requests_used": 30,
+    "estimated_tokens": 6224
+  },
+  {
+    "timestamp": "2026-04-12T07:50:30Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T07:50:38Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T07:50:42Z",
+    "requests_used": 2,
+    "estimated_tokens": 3814
+  },
+  {
+    "timestamp": "2026-04-12T07:50:45Z",
+    "requests_used": 3,
+    "estimated_tokens": 3898
+  },
+  {
+    "timestamp": "2026-04-12T07:50:49Z",
+    "requests_used": 4,
+    "estimated_tokens": 3826
+  },
+  {
+    "timestamp": "2026-04-12T07:50:53Z",
+    "requests_used": 5,
+    "estimated_tokens": 3717
+  },
+  {
+    "timestamp": "2026-04-12T07:50:55Z",
+    "requests_used": 6,
+    "estimated_tokens": 5063
+  },
+  {
+    "timestamp": "2026-04-12T07:50:58Z",
+    "requests_used": 7,
+    "estimated_tokens": 3698
+  },
+  {
+    "timestamp": "2026-04-12T07:51:03Z",
+    "requests_used": 8,
+    "estimated_tokens": 3288
+  },
+  {
+    "timestamp": "2026-04-12T07:51:07Z",
+    "requests_used": 9,
+    "estimated_tokens": 3288
+  },
+  {
+    "timestamp": "2026-04-12T07:51:10Z",
+    "requests_used": 10,
+    "estimated_tokens": 3300
+  },
+  {
+    "timestamp": "2026-04-12T07:51:14Z",
+    "requests_used": 11,
+    "estimated_tokens": 3290
+  },
+  {
+    "timestamp": "2026-04-12T07:54:04Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T07:54:17Z",
+    "requests_used": 2,
+    "estimated_tokens": 3814
+  },
+  {
+    "timestamp": "2026-04-12T07:54:31Z",
+    "requests_used": 3,
+    "estimated_tokens": 3898
+  },
+  {
+    "timestamp": "2026-04-12T07:54:47Z",
+    "requests_used": 4,
+    "estimated_tokens": 3826
+  },
+  {
+    "timestamp": "2026-04-12T07:54:52Z",
+    "requests_used": 5,
+    "estimated_tokens": 3717
+  },
+  {
+    "timestamp": "2026-04-12T07:54:58Z",
+    "requests_used": 6,
+    "estimated_tokens": 5063
+  },
+  {
+    "timestamp": "2026-04-12T07:55:09Z",
+    "requests_used": 7,
+    "estimated_tokens": 3698
+  },
+  {
+    "timestamp": "2026-04-12T07:55:22Z",
+    "requests_used": 8,
+    "estimated_tokens": 3710
+  },
+  {
+    "timestamp": "2026-04-12T07:55:27Z",
+    "requests_used": 9,
+    "estimated_tokens": 3366
+  },
+  {
+    "timestamp": "2026-04-12T07:55:48Z",
+    "requests_used": 10,
+    "estimated_tokens": 3366
+  },
+  {
+    "timestamp": "2026-04-12T07:55:58Z",
+    "requests_used": 11,
+    "estimated_tokens": 3377
+  },
+  {
+    "timestamp": "2026-04-12T07:56:12Z",
+    "requests_used": 12,
+    "estimated_tokens": 3367
+  },
+  {
+    "timestamp": "2026-04-12T07:56:20Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T07:57:24Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T07:58:28Z",
+    "requests_used": 1,
+    "estimated_tokens": 5106
+  },
+  {
+    "timestamp": "2026-04-12T07:58:31Z",
+    "requests_used": 2,
+    "estimated_tokens": 3770
+  },
+  {
+    "timestamp": "2026-04-12T07:58:44Z",
+    "requests_used": 3,
+    "estimated_tokens": 3852
+  },
+  {
+    "timestamp": "2026-04-12T07:58:48Z",
+    "requests_used": 4,
+    "estimated_tokens": 4321
+  },
+  {
+    "timestamp": "2026-04-12T07:58:51Z",
+    "requests_used": 5,
+    "estimated_tokens": 4200
+  },
+  {
+    "timestamp": "2026-04-12T07:58:54Z",
+    "requests_used": 6,
+    "estimated_tokens": 4014
+  },
+  {
+    "timestamp": "2026-04-12T07:59:01Z",
+    "requests_used": 7,
+    "estimated_tokens": 4738
+  },
+  {
+    "timestamp": "2026-04-12T07:59:03Z",
+    "requests_used": 8,
+    "estimated_tokens": 4631
+  },
+  {
+    "timestamp": "2026-04-12T07:59:14Z",
+    "requests_used": 9,
+    "estimated_tokens": 5832
+  },
+  {
+    "timestamp": "2026-04-12T07:59:51Z",
+    "requests_used": 10,
+    "estimated_tokens": 3325
+  },
+  {
+    "timestamp": "2026-04-12T08:00:07Z",
+    "requests_used": 11,
+    "estimated_tokens": 3325
+  },
+  {
+    "timestamp": "2026-04-12T08:00:11Z",
+    "requests_used": 12,
+    "estimated_tokens": 3337
+  },
+  {
+    "timestamp": "2026-04-12T08:00:21Z",
+    "requests_used": 13,
+    "estimated_tokens": 3327
+  },
+  {
+    "timestamp": "2026-04-12T08:00:47Z",
+    "requests_used": 1,
+    "estimated_tokens": 5106
+  },
+  {
+    "timestamp": "2026-04-12T08:00:56Z",
+    "requests_used": 2,
+    "estimated_tokens": 3770
+  },
+  {
+    "timestamp": "2026-04-12T08:01:01Z",
+    "requests_used": 3,
+    "estimated_tokens": 3852
+  },
+  {
+    "timestamp": "2026-04-12T08:06:08Z",
+    "requests_used": 1,
+    "estimated_tokens": 5106
+  },
+  {
+    "timestamp": "2026-04-12T08:06:16Z",
+    "requests_used": 2,
+    "estimated_tokens": 3770
+  },
+  {
+    "timestamp": "2026-04-12T08:06:23Z",
+    "requests_used": 3,
+    "estimated_tokens": 3852
+  },
+  {
+    "timestamp": "2026-04-12T08:06:41Z",
+    "requests_used": 4,
+    "estimated_tokens": 4321
+  },
+  {
+    "timestamp": "2026-04-12T08:06:44Z",
+    "requests_used": 5,
+    "estimated_tokens": 4200
+  },
+  {
+    "timestamp": "2026-04-12T08:06:48Z",
+    "requests_used": 6,
+    "estimated_tokens": 4014
+  },
+  {
+    "timestamp": "2026-04-12T08:06:57Z",
+    "requests_used": 7,
+    "estimated_tokens": 4738
+  },
+  {
+    "timestamp": "2026-04-12T08:07:03Z",
+    "requests_used": 8,
+    "estimated_tokens": 4631
+  },
+  {
+    "timestamp": "2026-04-12T08:07:11Z",
+    "requests_used": 9,
+    "estimated_tokens": 5835
+  },
+  {
+    "timestamp": "2026-04-12T08:07:14Z",
+    "requests_used": 10,
+    "estimated_tokens": 3325
+  },
+  {
+    "timestamp": "2026-04-12T08:07:17Z",
+    "requests_used": 11,
+    "estimated_tokens": 3324
+  },
+  {
+    "timestamp": "2026-04-12T08:07:24Z",
+    "requests_used": 12,
+    "estimated_tokens": 3336
+  },
+  {
+    "timestamp": "2026-04-12T08:07:34Z",
+    "requests_used": 13,
+    "estimated_tokens": 3326
+  },
+  {
+    "timestamp": "2026-04-12T08:07:52Z",
+    "requests_used": 1,
+    "estimated_tokens": 5106
+  },
+  {
+    "timestamp": "2026-04-12T08:07:54Z",
+    "requests_used": 2,
+    "estimated_tokens": 3770
+  },
+  {
+    "timestamp": "2026-04-12T08:08:00Z",
+    "requests_used": 1,
+    "estimated_tokens": 5106
+  },
+  {
+    "timestamp": "2026-04-12T08:08:04Z",
+    "requests_used": 2,
+    "estimated_tokens": 3770
+  },
+  {
+    "timestamp": "2026-04-12T08:08:07Z",
+    "requests_used": 3,
+    "estimated_tokens": 3852
+  },
+  {
+    "timestamp": "2026-04-12T08:08:14Z",
+    "requests_used": 4,
+    "estimated_tokens": 4321
+  },
+  {
+    "timestamp": "2026-04-12T08:10:09Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T08:10:12Z",
+    "requests_used": 2,
+    "estimated_tokens": 4247
+  },
+  {
+    "timestamp": "2026-04-12T08:10:17Z",
+    "requests_used": 3,
+    "estimated_tokens": 4004
+  },
+  {
+    "timestamp": "2026-04-12T08:10:19Z",
+    "requests_used": 4,
+    "estimated_tokens": 3957
+  },
+  {
+    "timestamp": "2026-04-12T08:10:24Z",
+    "requests_used": 5,
+    "estimated_tokens": 3848
+  },
+  {
+    "timestamp": "2026-04-12T08:10:29Z",
+    "requests_used": 6,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-12T08:10:34Z",
+    "requests_used": 7,
+    "estimated_tokens": 3795
+  },
+  {
+    "timestamp": "2026-04-12T08:10:36Z",
+    "requests_used": 8,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T08:10:40Z",
+    "requests_used": 9,
+    "estimated_tokens": 3772
+  },
+  {
+    "timestamp": "2026-04-12T08:10:44Z",
+    "requests_used": 10,
+    "estimated_tokens": 3861
+  },
+  {
+    "timestamp": "2026-04-12T08:10:47Z",
+    "requests_used": 11,
+    "estimated_tokens": 3854
+  },
+  {
+    "timestamp": "2026-04-12T08:10:49Z",
+    "requests_used": 12,
+    "estimated_tokens": 3866
+  },
+  {
+    "timestamp": "2026-04-12T08:10:52Z",
+    "requests_used": 13,
+    "estimated_tokens": 4074
+  },
+  {
+    "timestamp": "2026-04-12T08:10:58Z",
+    "requests_used": 14,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T08:11:06Z",
+    "requests_used": 15,
+    "estimated_tokens": 4133
+  },
+  {
+    "timestamp": "2026-04-12T08:11:14Z",
+    "requests_used": 16,
+    "estimated_tokens": 3841
+  },
+  {
+    "timestamp": "2026-04-12T08:11:18Z",
+    "requests_used": 17,
+    "estimated_tokens": 4045
+  },
+  {
+    "timestamp": "2026-04-12T08:11:21Z",
+    "requests_used": 18,
+    "estimated_tokens": 3999
+  },
+  {
+    "timestamp": "2026-04-12T08:11:25Z",
+    "requests_used": 19,
+    "estimated_tokens": 3821
+  },
+  {
+    "timestamp": "2026-04-12T08:11:29Z",
+    "requests_used": 20,
+    "estimated_tokens": 3924
+  },
+  {
+    "timestamp": "2026-04-12T08:11:32Z",
+    "requests_used": 21,
+    "estimated_tokens": 3823
+  },
+  {
+    "timestamp": "2026-04-12T08:11:35Z",
+    "requests_used": 22,
+    "estimated_tokens": 3877
+  },
+  {
+    "timestamp": "2026-04-12T08:11:39Z",
+    "requests_used": 23,
+    "estimated_tokens": 3855
+  },
+  {
+    "timestamp": "2026-04-12T08:11:41Z",
+    "requests_used": 24,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T08:11:44Z",
+    "requests_used": 25,
+    "estimated_tokens": 3881
+  },
+  {
+    "timestamp": "2026-04-12T08:11:48Z",
+    "requests_used": 26,
+    "estimated_tokens": 8596
+  },
+  {
+    "timestamp": "2026-04-12T08:11:55Z",
+    "requests_used": 27,
+    "estimated_tokens": 8608
+  },
+  {
+    "timestamp": "2026-04-12T08:12:06Z",
+    "requests_used": 28,
+    "estimated_tokens": 6177
+  },
+  {
+    "timestamp": "2026-04-12T08:12:09Z",
+    "requests_used": 29,
+    "estimated_tokens": 6176
+  },
+  {
+    "timestamp": "2026-04-12T08:12:17Z",
+    "requests_used": 30,
+    "estimated_tokens": 6188
+  },
+  {
+    "timestamp": "2026-04-12T08:12:19Z",
+    "requests_used": 31,
+    "estimated_tokens": 6178
+  },
+  {
+    "timestamp": "2026-04-12T16:18:09Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:18:13Z",
+    "requests_used": 2,
+    "estimated_tokens": 4247
+  },
+  {
+    "timestamp": "2026-04-12T16:18:18Z",
+    "requests_used": 3,
+    "estimated_tokens": 4004
+  },
+  {
+    "timestamp": "2026-04-12T16:18:21Z",
+    "requests_used": 4,
+    "estimated_tokens": 3957
+  },
+  {
+    "timestamp": "2026-04-12T16:18:26Z",
+    "requests_used": 5,
+    "estimated_tokens": 3848
+  },
+  {
+    "timestamp": "2026-04-12T16:18:31Z",
+    "requests_used": 6,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-12T16:18:35Z",
+    "requests_used": 7,
+    "estimated_tokens": 3795
+  },
+  {
+    "timestamp": "2026-04-12T16:18:39Z",
+    "requests_used": 8,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T16:18:44Z",
+    "requests_used": 9,
+    "estimated_tokens": 3772
+  },
+  {
+    "timestamp": "2026-04-12T16:18:47Z",
+    "requests_used": 10,
+    "estimated_tokens": 3861
+  },
+  {
+    "timestamp": "2026-04-12T16:18:52Z",
+    "requests_used": 11,
+    "estimated_tokens": 3854
+  },
+  {
+    "timestamp": "2026-04-12T16:18:55Z",
+    "requests_used": 12,
+    "estimated_tokens": 3866
+  },
+  {
+    "timestamp": "2026-04-12T16:19:02Z",
+    "requests_used": 13,
+    "estimated_tokens": 4074
+  },
+  {
+    "timestamp": "2026-04-12T16:19:06Z",
+    "requests_used": 14,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T16:19:11Z",
+    "requests_used": 15,
+    "estimated_tokens": 4133
+  },
+  {
+    "timestamp": "2026-04-12T16:19:14Z",
+    "requests_used": 16,
+    "estimated_tokens": 3841
+  },
+  {
+    "timestamp": "2026-04-12T16:19:16Z",
+    "requests_used": 17,
+    "estimated_tokens": 4045
+  },
+  {
+    "timestamp": "2026-04-12T16:19:27Z",
+    "requests_used": 18,
+    "estimated_tokens": 3999
+  },
+  {
+    "timestamp": "2026-04-12T16:19:33Z",
+    "requests_used": 19,
+    "estimated_tokens": 3821
+  },
+  {
+    "timestamp": "2026-04-12T16:19:43Z",
+    "requests_used": 20,
+    "estimated_tokens": 3924
+  },
+  {
+    "timestamp": "2026-04-12T16:19:45Z",
+    "requests_used": 21,
+    "estimated_tokens": 3823
+  },
+  {
+    "timestamp": "2026-04-12T16:19:48Z",
+    "requests_used": 22,
+    "estimated_tokens": 3877
+  },
+  {
+    "timestamp": "2026-04-12T16:19:52Z",
+    "requests_used": 23,
+    "estimated_tokens": 3855
+  },
+  {
+    "timestamp": "2026-04-12T16:19:57Z",
+    "requests_used": 24,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T16:20:00Z",
+    "requests_used": 25,
+    "estimated_tokens": 3881
+  },
+  {
+    "timestamp": "2026-04-12T16:20:03Z",
+    "requests_used": 26,
+    "estimated_tokens": 8596
+  },
+  {
+    "timestamp": "2026-04-12T16:20:13Z",
+    "requests_used": 27,
+    "estimated_tokens": 8608
+  },
+  {
+    "timestamp": "2026-04-12T16:20:39Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:20:45Z",
+    "requests_used": 2,
+    "estimated_tokens": 4247
+  },
+  {
+    "timestamp": "2026-04-12T16:20:53Z",
+    "requests_used": 3,
+    "estimated_tokens": 4004
+  },
+  {
+    "timestamp": "2026-04-12T16:20:57Z",
+    "requests_used": 4,
+    "estimated_tokens": 3957
+  },
+  {
+    "timestamp": "2026-04-12T16:21:04Z",
+    "requests_used": 5,
+    "estimated_tokens": 3848
+  },
+  {
+    "timestamp": "2026-04-12T16:21:08Z",
+    "requests_used": 6,
+    "estimated_tokens": 3803
+  },
+  {
+    "timestamp": "2026-04-12T16:21:12Z",
+    "requests_used": 7,
+    "estimated_tokens": 3795
+  },
+  {
+    "timestamp": "2026-04-12T16:21:20Z",
+    "requests_used": 8,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T16:21:23Z",
+    "requests_used": 9,
+    "estimated_tokens": 3772
+  },
+  {
+    "timestamp": "2026-04-12T16:21:27Z",
+    "requests_used": 10,
+    "estimated_tokens": 3861
+  },
+  {
+    "timestamp": "2026-04-12T16:21:29Z",
+    "requests_used": 11,
+    "estimated_tokens": 3854
+  },
+  {
+    "timestamp": "2026-04-12T16:21:34Z",
+    "requests_used": 12,
+    "estimated_tokens": 3866
+  },
+  {
+    "timestamp": "2026-04-12T16:21:39Z",
+    "requests_used": 13,
+    "estimated_tokens": 4074
+  },
+  {
+    "timestamp": "2026-04-12T16:21:45Z",
+    "requests_used": 14,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T16:21:54Z",
+    "requests_used": 15,
+    "estimated_tokens": 4133
+  },
+  {
+    "timestamp": "2026-04-12T16:22:01Z",
+    "requests_used": 16,
+    "estimated_tokens": 3841
+  },
+  {
+    "timestamp": "2026-04-12T16:22:09Z",
+    "requests_used": 17,
+    "estimated_tokens": 4045
+  },
+  {
+    "timestamp": "2026-04-12T16:22:13Z",
+    "requests_used": 18,
+    "estimated_tokens": 3999
+  },
+  {
+    "timestamp": "2026-04-12T16:22:23Z",
+    "requests_used": 19,
+    "estimated_tokens": 3821
+  },
+  {
+    "timestamp": "2026-04-12T16:22:28Z",
+    "requests_used": 20,
+    "estimated_tokens": 3924
+  },
+  {
+    "timestamp": "2026-04-12T16:22:36Z",
+    "requests_used": 21,
+    "estimated_tokens": 3823
+  },
+  {
+    "timestamp": "2026-04-12T16:22:38Z",
+    "requests_used": 22,
+    "estimated_tokens": 3877
+  },
+  {
+    "timestamp": "2026-04-12T16:22:40Z",
+    "requests_used": 23,
+    "estimated_tokens": 3855
+  },
+  {
+    "timestamp": "2026-04-12T16:22:47Z",
+    "requests_used": 24,
+    "estimated_tokens": 3890
+  },
+  {
+    "timestamp": "2026-04-12T16:22:54Z",
+    "requests_used": 25,
+    "estimated_tokens": 3881
+  },
+  {
+    "timestamp": "2026-04-12T16:23:07Z",
+    "requests_used": 26,
+    "estimated_tokens": 8597
+  },
+  {
+    "timestamp": "2026-04-12T16:23:13Z",
+    "requests_used": 27,
+    "estimated_tokens": 8609
+  },
+  {
+    "timestamp": "2026-04-12T16:23:19Z",
+    "requests_used": 28,
+    "estimated_tokens": 6166
+  },
+  {
+    "timestamp": "2026-04-12T16:23:21Z",
+    "requests_used": 29,
+    "estimated_tokens": 6166
+  },
+  {
+    "timestamp": "2026-04-12T16:23:27Z",
+    "requests_used": 30,
+    "estimated_tokens": 6177
+  },
+  {
+    "timestamp": "2026-04-12T16:23:51Z",
+    "requests_used": 31,
+    "estimated_tokens": 6167
+  },
+  {
+    "timestamp": "2026-04-12T16:49:03Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:49:08Z",
+    "requests_used": 2,
+    "estimated_tokens": 8107
+  },
+  {
+    "timestamp": "2026-04-12T16:49:08Z",
+    "requests_used": 3,
+    "estimated_tokens": 7452
+  },
+  {
+    "timestamp": "2026-04-12T16:49:08Z",
+    "requests_used": 4,
+    "estimated_tokens": 7595
+  },
+  {
+    "timestamp": "2026-04-12T16:49:14Z",
+    "requests_used": 5,
+    "estimated_tokens": 8106
+  },
+  {
+    "timestamp": "2026-04-12T16:49:16Z",
+    "requests_used": 6,
+    "estimated_tokens": 7619
+  },
+  {
+    "timestamp": "2026-04-12T16:49:21Z",
+    "requests_used": 7,
+    "estimated_tokens": 7533
+  },
+  {
+    "timestamp": "2026-04-12T16:49:28Z",
+    "requests_used": 8,
+    "estimated_tokens": 9562
+  },
+  {
+    "timestamp": "2026-04-12T16:49:34Z",
+    "requests_used": 9,
+    "estimated_tokens": 5638
+  },
+  {
+    "timestamp": "2026-04-12T16:49:37Z",
+    "requests_used": 10,
+    "estimated_tokens": 6906
+  },
+  {
+    "timestamp": "2026-04-12T16:49:37Z",
+    "requests_used": 11,
+    "estimated_tokens": 6907
+  },
+  {
+    "timestamp": "2026-04-12T16:49:37Z",
+    "requests_used": 12,
+    "estimated_tokens": 6906
+  },
+  {
+    "timestamp": "2026-04-12T16:49:37Z",
+    "requests_used": 13,
+    "estimated_tokens": 8220
+  },
+  {
+    "timestamp": "2026-04-12T16:50:52Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:52:04Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:56:29Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:56:33Z",
+    "requests_used": 2,
+    "estimated_tokens": 8110
+  },
+  {
+    "timestamp": "2026-04-12T16:56:33Z",
+    "requests_used": 3,
+    "estimated_tokens": 7475
+  },
+  {
+    "timestamp": "2026-04-12T16:56:33Z",
+    "requests_used": 4,
+    "estimated_tokens": 7829
+  },
+  {
+    "timestamp": "2026-04-12T16:56:39Z",
+    "requests_used": 5,
+    "estimated_tokens": 8055
+  },
+  {
+    "timestamp": "2026-04-12T16:56:42Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:56:43Z",
+    "requests_used": 6,
+    "estimated_tokens": 7448
+  },
+  {
+    "timestamp": "2026-04-12T16:56:45Z",
+    "requests_used": 2,
+    "estimated_tokens": 8110
+  },
+  {
+    "timestamp": "2026-04-12T16:56:45Z",
+    "requests_used": 3,
+    "estimated_tokens": 7475
+  },
+  {
+    "timestamp": "2026-04-12T16:56:45Z",
+    "requests_used": 4,
+    "estimated_tokens": 7829
+  },
+  {
+    "timestamp": "2026-04-12T16:56:46Z",
+    "requests_used": 7,
+    "estimated_tokens": 5881
+  },
+  {
+    "timestamp": "2026-04-12T16:56:52Z",
+    "requests_used": 5,
+    "estimated_tokens": 8055
+  },
+  {
+    "timestamp": "2026-04-12T16:56:52Z",
+    "requests_used": 6,
+    "estimated_tokens": 7448
+  },
+  {
+    "timestamp": "2026-04-12T16:56:52Z",
+    "requests_used": 7,
+    "estimated_tokens": 5881
+  },
+  {
+    "timestamp": "2026-04-12T16:56:58Z",
+    "requests_used": 8,
+    "estimated_tokens": 9409
+  },
+  {
+    "timestamp": "2026-04-12T16:56:59Z",
+    "requests_used": 8,
+    "estimated_tokens": 9403
+  },
+  {
+    "timestamp": "2026-04-12T16:57:04Z",
+    "requests_used": 9,
+    "estimated_tokens": 5515
+  },
+  {
+    "timestamp": "2026-04-12T16:57:05Z",
+    "requests_used": 9,
+    "estimated_tokens": 5531
+  },
+  {
+    "timestamp": "2026-04-12T16:57:08Z",
+    "requests_used": 10,
+    "estimated_tokens": 6517
+  },
+  {
+    "timestamp": "2026-04-12T16:57:08Z",
+    "requests_used": 11,
+    "estimated_tokens": 6518
+  },
+  {
+    "timestamp": "2026-04-12T16:57:08Z",
+    "requests_used": 12,
+    "estimated_tokens": 6516
+  },
+  {
+    "timestamp": "2026-04-12T16:57:08Z",
+    "requests_used": 13,
+    "estimated_tokens": 7831
+  },
+  {
+    "timestamp": "2026-04-12T16:57:10Z",
+    "requests_used": 10,
+    "estimated_tokens": 6575
+  },
+  {
+    "timestamp": "2026-04-12T16:57:10Z",
+    "requests_used": 11,
+    "estimated_tokens": 6576
+  },
+  {
+    "timestamp": "2026-04-12T16:57:10Z",
+    "requests_used": 12,
+    "estimated_tokens": 6574
+  },
+  {
+    "timestamp": "2026-04-12T16:57:10Z",
+    "requests_used": 13,
+    "estimated_tokens": 7889
+  },
+  {
+    "timestamp": "2026-04-12T16:57:13Z",
+    "requests_used": 14,
+    "estimated_tokens": 6514
+  },
+  {
+    "timestamp": "2026-04-12T16:57:15Z",
+    "requests_used": 14,
+    "estimated_tokens": 6572
+  },
+  {
+    "timestamp": "2026-04-12T16:57:21Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:58:33Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T16:58:35Z",
+    "requests_used": 2,
+    "estimated_tokens": 8110
+  },
+  {
+    "timestamp": "2026-04-12T16:58:36Z",
+    "requests_used": 3,
+    "estimated_tokens": 7475
+  },
+  {
+    "timestamp": "2026-04-12T16:58:36Z",
+    "requests_used": 4,
+    "estimated_tokens": 7829
+  },
+  {
+    "timestamp": "2026-04-12T16:58:40Z",
+    "requests_used": 5,
+    "estimated_tokens": 8055
+  },
+  {
+    "timestamp": "2026-04-12T16:58:42Z",
+    "requests_used": 6,
+    "estimated_tokens": 7448
+  },
+  {
+    "timestamp": "2026-04-12T16:58:46Z",
+    "requests_used": 7,
+    "estimated_tokens": 5881
+  },
+  {
+    "timestamp": "2026-04-12T17:00:02Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T17:00:08Z",
+    "requests_used": 2,
+    "estimated_tokens": 8110
+  },
+  {
+    "timestamp": "2026-04-12T17:00:10Z",
+    "requests_used": 3,
+    "estimated_tokens": 7475
+  },
+  {
+    "timestamp": "2026-04-12T17:00:13Z",
+    "requests_used": 4,
+    "estimated_tokens": 7829
+  },
+  {
+    "timestamp": "2026-04-12T17:00:17Z",
+    "requests_used": 5,
+    "estimated_tokens": 8055
+  },
+  {
+    "timestamp": "2026-04-12T17:00:23Z",
+    "requests_used": 6,
+    "estimated_tokens": 7448
+  },
+  {
+    "timestamp": "2026-04-12T17:01:01Z",
+    "requests_used": 7,
+    "estimated_tokens": 5881
+  },
+  {
+    "timestamp": "2026-04-12T17:02:28Z",
+    "requests_used": 1,
+    "estimated_tokens": 5294
+  },
+  {
+    "timestamp": "2026-04-12T17:02:31Z",
+    "requests_used": 2,
+    "estimated_tokens": 4275
+  },
+  {
+    "timestamp": "2026-04-12T17:02:34Z",
+    "requests_used": 3,
+    "estimated_tokens": 3831
+  },
+  {
+    "timestamp": "2026-04-12T17:02:46Z",
+    "requests_used": 4,
+    "estimated_tokens": 3765
+  },
+  {
+    "timestamp": "2026-04-12T17:02:48Z",
+    "requests_used": 5,
+    "estimated_tokens": 3705
+  },
+  {
+    "timestamp": "2026-04-12T17:02:51Z",
+    "requests_used": 6,
+    "estimated_tokens": 3703
+  },
+  {
+    "timestamp": "2026-04-12T17:02:55Z",
+    "requests_used": 7,
+    "estimated_tokens": 4121
+  },
+  {
+    "timestamp": "2026-04-12T17:03:01Z",
+    "requests_used": 8,
+    "estimated_tokens": 4013
+  },
+  {
+    "timestamp": "2026-04-12T17:03:04Z",
+    "requests_used": 9,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T17:03:07Z",
+    "requests_used": 10,
+    "estimated_tokens": 3751
+  },
+  {
+    "timestamp": "2026-04-12T17:03:12Z",
+    "requests_used": 11,
+    "estimated_tokens": 3692
+  },
+  {
+    "timestamp": "2026-04-12T17:03:15Z",
+    "requests_used": 12,
+    "estimated_tokens": 3778
+  },
+  {
+    "timestamp": "2026-04-12T17:03:18Z",
+    "requests_used": 13,
+    "estimated_tokens": 2298
+  },
+  {
+    "timestamp": "2026-04-12T17:03:25Z",
+    "requests_used": 14,
+    "estimated_tokens": 8752
+  },
+  {
+    "timestamp": "2026-04-12T17:03:31Z",
+    "requests_used": 15,
+    "estimated_tokens": 8765
+  },
+  {
+    "timestamp": "2026-04-12T17:04:08Z",
+    "requests_used": 1,
+    "estimated_tokens": 5294
+  },
+  {
+    "timestamp": "2026-04-12T17:04:12Z",
+    "requests_used": 2,
+    "estimated_tokens": 4275
+  },
+  {
+    "timestamp": "2026-04-12T17:04:15Z",
+    "requests_used": 3,
+    "estimated_tokens": 3831
+  },
+  {
+    "timestamp": "2026-04-12T17:04:17Z",
+    "requests_used": 4,
+    "estimated_tokens": 3765
+  },
+  {
+    "timestamp": "2026-04-12T17:04:21Z",
+    "requests_used": 5,
+    "estimated_tokens": 3705
+  },
+  {
+    "timestamp": "2026-04-12T17:04:24Z",
+    "requests_used": 6,
+    "estimated_tokens": 3703
+  },
+  {
+    "timestamp": "2026-04-12T17:04:27Z",
+    "requests_used": 7,
+    "estimated_tokens": 4121
+  },
+  {
+    "timestamp": "2026-04-12T17:04:29Z",
+    "requests_used": 8,
+    "estimated_tokens": 4013
+  },
+  {
+    "timestamp": "2026-04-12T17:04:32Z",
+    "requests_used": 9,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T17:04:35Z",
+    "requests_used": 10,
+    "estimated_tokens": 3751
+  },
+  {
+    "timestamp": "2026-04-12T17:04:40Z",
+    "requests_used": 11,
+    "estimated_tokens": 3692
+  },
+  {
+    "timestamp": "2026-04-12T17:04:42Z",
+    "requests_used": 12,
+    "estimated_tokens": 3778
+  },
+  {
+    "timestamp": "2026-04-12T17:04:45Z",
+    "requests_used": 13,
+    "estimated_tokens": 2298
+  },
+  {
+    "timestamp": "2026-04-12T17:04:50Z",
+    "requests_used": 14,
+    "estimated_tokens": 8725
+  },
+  {
+    "timestamp": "2026-04-12T17:04:56Z",
+    "requests_used": 15,
+    "estimated_tokens": 4901
+  },
+  {
+    "timestamp": "2026-04-12T17:04:58Z",
+    "requests_used": 16,
+    "estimated_tokens": 6634
+  },
+  {
+    "timestamp": "2026-04-12T17:05:02Z",
+    "requests_used": 17,
+    "estimated_tokens": 6635
+  },
+  {
+    "timestamp": "2026-04-12T17:05:05Z",
+    "requests_used": 18,
+    "estimated_tokens": 6633
+  },
+  {
+    "timestamp": "2026-04-12T17:05:11Z",
+    "requests_used": 19,
+    "estimated_tokens": 7348
+  },
+  {
+    "timestamp": "2026-04-12T17:07:29Z",
+    "requests_used": 1,
+    "estimated_tokens": 5294
+  },
+  {
+    "timestamp": "2026-04-12T17:07:33Z",
+    "requests_used": 2,
+    "estimated_tokens": 4275
+  },
+  {
+    "timestamp": "2026-04-12T17:07:35Z",
+    "requests_used": 3,
+    "estimated_tokens": 3831
+  },
+  {
+    "timestamp": "2026-04-12T17:07:39Z",
+    "requests_used": 4,
+    "estimated_tokens": 3765
+  },
+  {
+    "timestamp": "2026-04-12T17:07:41Z",
+    "requests_used": 5,
+    "estimated_tokens": 3705
+  },
+  {
+    "timestamp": "2026-04-12T17:07:44Z",
+    "requests_used": 6,
+    "estimated_tokens": 3703
+  },
+  {
+    "timestamp": "2026-04-12T17:07:47Z",
+    "requests_used": 7,
+    "estimated_tokens": 4121
+  },
+  {
+    "timestamp": "2026-04-12T17:07:50Z",
+    "requests_used": 8,
+    "estimated_tokens": 4013
+  },
+  {
+    "timestamp": "2026-04-12T17:07:53Z",
+    "requests_used": 9,
+    "estimated_tokens": 4037
+  },
+  {
+    "timestamp": "2026-04-12T17:07:57Z",
+    "requests_used": 10,
+    "estimated_tokens": 3751
+  },
+  {
+    "timestamp": "2026-04-12T17:08:00Z",
+    "requests_used": 11,
+    "estimated_tokens": 3692
+  },
+  {
+    "timestamp": "2026-04-12T17:08:02Z",
+    "requests_used": 12,
+    "estimated_tokens": 3778
+  },
+  {
+    "timestamp": "2026-04-12T17:08:05Z",
+    "requests_used": 13,
+    "estimated_tokens": 2298
+  },
+  {
+    "timestamp": "2026-04-12T17:08:09Z",
+    "requests_used": 14,
+    "estimated_tokens": 8721
+  },
+  {
+    "timestamp": "2026-04-12T17:08:15Z",
+    "requests_used": 15,
+    "estimated_tokens": 4901
+  },
+  {
+    "timestamp": "2026-04-12T17:08:17Z",
+    "requests_used": 16,
+    "estimated_tokens": 6732
+  },
+  {
+    "timestamp": "2026-04-12T17:08:22Z",
+    "requests_used": 17,
+    "estimated_tokens": 6733
+  },
+  {
+    "timestamp": "2026-04-12T17:08:37Z",
+    "requests_used": 18,
+    "estimated_tokens": 6732
+  },
+  {
+    "timestamp": "2026-04-12T17:08:43Z",
+    "requests_used": 19,
+    "estimated_tokens": 7446
+  },
+  {
+    "timestamp": "2026-04-12T17:15:49Z",
+    "requests_used": 1,
+    "estimated_tokens": 3132
+  },
+  {
+    "timestamp": "2026-04-12T17:15:53Z",
+    "requests_used": 2,
+    "estimated_tokens": 4289
+  },
+  {
+    "timestamp": "2026-04-12T17:15:55Z",
+    "requests_used": 3,
+    "estimated_tokens": 4211
+  },
+  {
+    "timestamp": "2026-04-12T17:15:58Z",
+    "requests_used": 4,
+    "estimated_tokens": 3738
+  },
+  {
+    "timestamp": "2026-04-12T17:16:05Z",
+    "requests_used": 5,
+    "estimated_tokens": 3903
+  },
+  {
+    "timestamp": "2026-04-12T17:16:11Z",
+    "requests_used": 6,
+    "estimated_tokens": 1881
+  },
+  {
+    "timestamp": "2026-04-12T17:16:14Z",
+    "requests_used": 7,
+    "estimated_tokens": 3493
+  },
+  {
+    "timestamp": "2026-04-12T17:16:23Z",
+    "requests_used": 8,
+    "estimated_tokens": 3494
+  },
+  {
+    "timestamp": "2026-04-12T17:16:25Z",
+    "requests_used": 9,
+    "estimated_tokens": 3492
+  },
+  {
+    "timestamp": "2026-04-12T17:16:30Z",
+    "requests_used": 10,
+    "estimated_tokens": 4207
+  },
+  {
+    "timestamp": "2026-04-12T17:22:01Z",
+    "requests_used": 1,
+    "estimated_tokens": 7929
+  },
+  {
+    "timestamp": "2026-04-12T17:22:05Z",
+    "requests_used": 2,
+    "estimated_tokens": 9105
+  },
+  {
+    "timestamp": "2026-04-12T17:22:10Z",
+    "requests_used": 3,
+    "estimated_tokens": 8396
+  },
+  {
+    "timestamp": "2026-04-12T17:22:15Z",
+    "requests_used": 4,
+    "estimated_tokens": 8001
+  },
+  {
+    "timestamp": "2026-04-12T17:22:18Z",
+    "requests_used": 5,
+    "estimated_tokens": 3033
+  },
+  {
+    "timestamp": "2026-04-12T17:22:23Z",
+    "requests_used": 6,
+    "estimated_tokens": 3034
+  },
+  {
+    "timestamp": "2026-04-12T17:22:27Z",
+    "requests_used": 7,
+    "estimated_tokens": 3032
+  },
+  {
+    "timestamp": "2026-04-12T17:22:29Z",
+    "requests_used": 8,
+    "estimated_tokens": 3747
+  },
+  {
+    "timestamp": "2026-04-12T17:22:58Z",
+    "requests_used": 1,
+    "estimated_tokens": 7929
+  },
+  {
+    "timestamp": "2026-04-12T17:23:02Z",
+    "requests_used": 2,
+    "estimated_tokens": 9105
+  },
+  {
+    "timestamp": "2026-04-12T17:23:12Z",
+    "requests_used": 3,
+    "estimated_tokens": 8408
+  },
+  {
+    "timestamp": "2026-04-12T17:23:17Z",
+    "requests_used": 4,
+    "estimated_tokens": 1725
+  },
+  {
+    "timestamp": "2026-04-12T17:23:20Z",
+    "requests_used": 5,
+    "estimated_tokens": 2991
+  },
+  {
+    "timestamp": "2026-04-12T17:23:24Z",
+    "requests_used": 6,
+    "estimated_tokens": 2992
+  },
+  {
+    "timestamp": "2026-04-12T17:23:26Z",
+    "requests_used": 7,
+    "estimated_tokens": 2991
+  },
+  {
+    "timestamp": "2026-04-12T17:23:31Z",
+    "requests_used": 8,
+    "estimated_tokens": 3705
+  },
+  {
+    "timestamp": "2026-04-12T17:31:17Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T17:31:21Z",
+    "requests_used": 2,
+    "estimated_tokens": 9724
+  },
+  {
+    "timestamp": "2026-04-12T17:31:23Z",
+    "requests_used": 3,
+    "estimated_tokens": 10045
+  },
+  {
+    "timestamp": "2026-04-12T17:31:26Z",
+    "requests_used": 4,
+    "estimated_tokens": 9821
+  },
+  {
+    "timestamp": "2026-04-12T17:31:31Z",
+    "requests_used": 5,
+    "estimated_tokens": 10280
+  },
+  {
+    "timestamp": "2026-04-12T17:31:33Z",
+    "requests_used": 6,
+    "estimated_tokens": 9735
+  },
+  {
+    "timestamp": "2026-04-12T17:31:43Z",
+    "requests_used": 7,
+    "estimated_tokens": 10543
+  },
+  {
+    "timestamp": "2026-04-12T17:31:45Z",
+    "requests_used": 8,
+    "estimated_tokens": 9536
+  },
+  {
+    "timestamp": "2026-04-12T17:31:56Z",
+    "requests_used": 9,
+    "estimated_tokens": 12714
+  },
+  {
+    "timestamp": "2026-04-12T17:32:02Z",
+    "requests_used": 10,
+    "estimated_tokens": 8524
+  },
+  {
+    "timestamp": "2026-04-12T17:32:05Z",
+    "requests_used": 11,
+    "estimated_tokens": 6221
+  },
+  {
+    "timestamp": "2026-04-12T17:32:08Z",
+    "requests_used": 12,
+    "estimated_tokens": 6222
+  },
+  {
+    "timestamp": "2026-04-12T17:32:12Z",
+    "requests_used": 13,
+    "estimated_tokens": 6221
+  },
+  {
+    "timestamp": "2026-04-12T17:32:19Z",
+    "requests_used": 14,
+    "estimated_tokens": 7535
+  },
+  {
+    "timestamp": "2026-04-12T17:33:06Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T17:33:11Z",
+    "requests_used": 2,
+    "estimated_tokens": 9728
+  },
+  {
+    "timestamp": "2026-04-12T17:33:13Z",
+    "requests_used": 3,
+    "estimated_tokens": 10048
+  },
+  {
+    "timestamp": "2026-04-12T17:33:16Z",
+    "requests_used": 4,
+    "estimated_tokens": 9825
+  },
+  {
+    "timestamp": "2026-04-12T17:33:21Z",
+    "requests_used": 5,
+    "estimated_tokens": 10284
+  },
+  {
+    "timestamp": "2026-04-12T17:33:23Z",
+    "requests_used": 6,
+    "estimated_tokens": 9739
+  },
+  {
+    "timestamp": "2026-04-12T17:33:26Z",
+    "requests_used": 7,
+    "estimated_tokens": 10547
+  },
+  {
+    "timestamp": "2026-04-12T17:33:30Z",
+    "requests_used": 8,
+    "estimated_tokens": 9540
+  },
+  {
+    "timestamp": "2026-04-12T17:33:36Z",
+    "requests_used": 9,
+    "estimated_tokens": 12711
+  },
+  {
+    "timestamp": "2026-04-12T17:33:43Z",
+    "requests_used": 10,
+    "estimated_tokens": 8465
+  },
+  {
+    "timestamp": "2026-04-12T17:33:47Z",
+    "requests_used": 11,
+    "estimated_tokens": 6213
+  },
+  {
+    "timestamp": "2026-04-12T17:33:53Z",
+    "requests_used": 12,
+    "estimated_tokens": 6214
+  },
+  {
+    "timestamp": "2026-04-12T17:34:06Z",
+    "requests_used": 13,
+    "estimated_tokens": 6212
+  },
+  {
+    "timestamp": "2026-04-12T17:34:10Z",
+    "requests_used": 14,
+    "estimated_tokens": 7527
+  },
+  {
+    "timestamp": "2026-04-12T17:34:45Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T17:34:50Z",
+    "requests_used": 2,
+    "estimated_tokens": 9724
+  },
+  {
+    "timestamp": "2026-04-12T17:34:52Z",
+    "requests_used": 3,
+    "estimated_tokens": 10045
+  },
+  {
+    "timestamp": "2026-04-12T17:34:55Z",
+    "requests_used": 4,
+    "estimated_tokens": 9821
+  },
+  {
+    "timestamp": "2026-04-12T17:34:57Z",
+    "requests_used": 5,
+    "estimated_tokens": 10280
+  },
+  {
+    "timestamp": "2026-04-12T17:35:00Z",
+    "requests_used": 6,
+    "estimated_tokens": 9735
+  },
+  {
+    "timestamp": "2026-04-12T17:35:04Z",
+    "requests_used": 7,
+    "estimated_tokens": 10543
+  },
+  {
+    "timestamp": "2026-04-12T17:35:12Z",
+    "requests_used": 8,
+    "estimated_tokens": 9536
+  },
+  {
+    "timestamp": "2026-04-12T17:35:40Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T17:35:47Z",
+    "requests_used": 2,
+    "estimated_tokens": 9724
+  },
+  {
+    "timestamp": "2026-04-12T17:35:50Z",
+    "requests_used": 3,
+    "estimated_tokens": 10045
+  },
+  {
+    "timestamp": "2026-04-12T17:35:52Z",
+    "requests_used": 4,
+    "estimated_tokens": 9821
+  },
+  {
+    "timestamp": "2026-04-12T17:35:57Z",
+    "requests_used": 5,
+    "estimated_tokens": 10280
+  },
+  {
+    "timestamp": "2026-04-12T17:35:59Z",
+    "requests_used": 6,
+    "estimated_tokens": 9735
+  },
+  {
+    "timestamp": "2026-04-12T17:36:02Z",
+    "requests_used": 7,
+    "estimated_tokens": 10543
+  },
+  {
+    "timestamp": "2026-04-12T17:36:07Z",
+    "requests_used": 8,
+    "estimated_tokens": 9536
+  },
+  {
+    "timestamp": "2026-04-12T17:36:15Z",
+    "requests_used": 9,
+    "estimated_tokens": 12711
+  },
+  {
+    "timestamp": "2026-04-12T17:36:21Z",
+    "requests_used": 10,
+    "estimated_tokens": 8464
+  },
+  {
+    "timestamp": "2026-04-12T17:36:24Z",
+    "requests_used": 11,
+    "estimated_tokens": 6208
+  },
+  {
+    "timestamp": "2026-04-12T17:36:28Z",
+    "requests_used": 12,
+    "estimated_tokens": 6209
+  },
+  {
+    "timestamp": "2026-04-12T17:36:31Z",
+    "requests_used": 13,
+    "estimated_tokens": 6208
+  },
+  {
+    "timestamp": "2026-04-12T17:36:35Z",
+    "requests_used": 14,
+    "estimated_tokens": 7522
+  },
+  {
+    "timestamp": "2026-04-12T17:50:09Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T17:50:14Z",
+    "requests_used": 2,
+    "estimated_tokens": 8527
+  },
+  {
+    "timestamp": "2026-04-12T17:50:17Z",
+    "requests_used": 3,
+    "estimated_tokens": 3938
+  },
+  {
+    "timestamp": "2026-04-12T17:50:19Z",
+    "requests_used": 4,
+    "estimated_tokens": 4498
+  },
+  {
+    "timestamp": "2026-04-12T17:50:24Z",
+    "requests_used": 5,
+    "estimated_tokens": 2481
+  },
+  {
+    "timestamp": "2026-04-12T17:50:28Z",
+    "requests_used": 6,
+    "estimated_tokens": 3781
+  },
+  {
+    "timestamp": "2026-04-12T17:50:31Z",
+    "requests_used": 7,
+    "estimated_tokens": 3782
+  },
+  {
+    "timestamp": "2026-04-12T17:50:34Z",
+    "requests_used": 8,
+    "estimated_tokens": 3781
+  },
+  {
+    "timestamp": "2026-04-12T17:50:38Z",
+    "requests_used": 9,
+    "estimated_tokens": 5095
+  },
+  {
+    "timestamp": "2026-04-12T17:50:45Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T17:50:51Z",
+    "requests_used": 2,
+    "estimated_tokens": 9724
+  },
+  {
+    "timestamp": "2026-04-12T17:50:53Z",
+    "requests_used": 3,
+    "estimated_tokens": 10045
+  },
+  {
+    "timestamp": "2026-04-12T17:50:56Z",
+    "requests_used": 4,
+    "estimated_tokens": 9821
+  },
+  {
+    "timestamp": "2026-04-12T17:50:58Z",
+    "requests_used": 5,
+    "estimated_tokens": 10280
+  },
+  {
+    "timestamp": "2026-04-12T17:51:01Z",
+    "requests_used": 6,
+    "estimated_tokens": 9735
+  },
+  {
+    "timestamp": "2026-04-12T17:51:06Z",
+    "requests_used": 7,
+    "estimated_tokens": 10543
+  },
+  {
+    "timestamp": "2026-04-12T17:51:08Z",
+    "requests_used": 8,
+    "estimated_tokens": 9536
+  },
+  {
+    "timestamp": "2026-04-12T17:51:21Z",
+    "requests_used": 9,
+    "estimated_tokens": 12711
+  },
+  {
+    "timestamp": "2026-04-12T17:51:27Z",
+    "requests_used": 10,
+    "estimated_tokens": 8464
+  },
+  {
+    "timestamp": "2026-04-12T17:51:30Z",
+    "requests_used": 11,
+    "estimated_tokens": 6203
+  },
+  {
+    "timestamp": "2026-04-12T17:51:34Z",
+    "requests_used": 12,
+    "estimated_tokens": 6204
+  },
+  {
+    "timestamp": "2026-04-12T17:51:37Z",
+    "requests_used": 13,
+    "estimated_tokens": 6203
+  },
+  {
+    "timestamp": "2026-04-12T17:51:41Z",
+    "requests_used": 14,
+    "estimated_tokens": 7517
+  },
+  {
+    "timestamp": "2026-04-12T17:51:48Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T17:51:52Z",
+    "requests_used": 2,
+    "estimated_tokens": 8110
+  },
+  {
+    "timestamp": "2026-04-12T17:51:55Z",
+    "requests_used": 3,
+    "estimated_tokens": 7475
+  },
+  {
+    "timestamp": "2026-04-12T17:51:57Z",
+    "requests_used": 4,
+    "estimated_tokens": 7829
+  },
+  {
+    "timestamp": "2026-04-12T17:52:00Z",
+    "requests_used": 5,
+    "estimated_tokens": 8055
+  },
+  {
+    "timestamp": "2026-04-12T17:52:02Z",
+    "requests_used": 6,
+    "estimated_tokens": 7448
+  },
+  {
+    "timestamp": "2026-04-12T17:52:05Z",
+    "requests_used": 7,
+    "estimated_tokens": 5881
+  },
+  {
+    "timestamp": "2026-04-12T17:52:12Z",
+    "requests_used": 8,
+    "estimated_tokens": 9362
+  },
+  {
+    "timestamp": "2026-04-12T17:52:19Z",
+    "requests_used": 9,
+    "estimated_tokens": 5484
+  },
+  {
+    "timestamp": "2026-04-12T17:52:23Z",
+    "requests_used": 10,
+    "estimated_tokens": 6601
+  },
+  {
+    "timestamp": "2026-04-12T17:52:27Z",
+    "requests_used": 11,
+    "estimated_tokens": 6602
+  },
+  {
+    "timestamp": "2026-04-12T17:52:32Z",
+    "requests_used": 12,
+    "estimated_tokens": 6600
+  },
+  {
+    "timestamp": "2026-04-12T17:52:38Z",
+    "requests_used": 13,
+    "estimated_tokens": 7915
+  },
+  {
+    "timestamp": "2026-04-12T17:52:45Z",
+    "requests_used": 1,
+    "estimated_tokens": 5106
+  },
+  {
+    "timestamp": "2026-04-12T17:52:53Z",
+    "requests_used": 2,
+    "estimated_tokens": 10187
+  },
+  {
+    "timestamp": "2026-04-12T17:52:56Z",
+    "requests_used": 3,
+    "estimated_tokens": 9107
+  },
+  {
+    "timestamp": "2026-04-12T17:53:02Z",
+    "requests_used": 4,
+    "estimated_tokens": 6602
+  },
+  {
+    "timestamp": "2026-04-12T17:53:05Z",
+    "requests_used": 5,
+    "estimated_tokens": 3503
+  },
+  {
+    "timestamp": "2026-04-12T17:53:07Z",
+    "requests_used": 6,
+    "estimated_tokens": 3921
+  },
+  {
+    "timestamp": "2026-04-12T17:53:10Z",
+    "requests_used": 7,
+    "estimated_tokens": 3922
+  },
+  {
+    "timestamp": "2026-04-12T17:53:15Z",
+    "requests_used": 8,
+    "estimated_tokens": 3920
+  },
+  {
+    "timestamp": "2026-04-12T17:53:19Z",
+    "requests_used": 9,
+    "estimated_tokens": 5235
+  },
+  {
+    "timestamp": "2026-04-12T17:54:00Z",
+    "requests_used": 1,
+    "estimated_tokens": 1794
+  },
+  {
+    "timestamp": "2026-04-12T17:54:02Z",
+    "requests_used": 2,
+    "estimated_tokens": 2019
+  },
+  {
+    "timestamp": "2026-04-12T17:54:06Z",
+    "requests_used": 3,
+    "estimated_tokens": 2421
+  },
+  {
+    "timestamp": "2026-04-12T17:54:08Z",
+    "requests_used": 4,
+    "estimated_tokens": 2166
+  },
+  {
+    "timestamp": "2026-04-12T17:54:11Z",
+    "requests_used": 5,
+    "estimated_tokens": 3048
+  },
+  {
+    "timestamp": "2026-04-12T17:54:13Z",
+    "requests_used": 6,
+    "estimated_tokens": 3049
+  },
+  {
+    "timestamp": "2026-04-12T17:54:16Z",
+    "requests_used": 7,
+    "estimated_tokens": 3047
+  },
+  {
+    "timestamp": "2026-04-12T17:54:19Z",
+    "requests_used": 8,
+    "estimated_tokens": 4362
+  },
+  {
+    "timestamp": "2026-04-12T18:08:23Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T18:08:27Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:08:29Z",
+    "requests_used": 3,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:08:32Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:08:34Z",
+    "requests_used": 5,
+    "estimated_tokens": 8110
+  },
+  {
+    "timestamp": "2026-04-12T18:08:37Z",
+    "requests_used": 6,
+    "estimated_tokens": 7475
+  },
+  {
+    "timestamp": "2026-04-12T18:08:39Z",
+    "requests_used": 7,
+    "estimated_tokens": 7829
+  },
+  {
+    "timestamp": "2026-04-12T18:08:42Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:08:44Z",
+    "requests_used": 9,
+    "estimated_tokens": 8055
+  },
+  {
+    "timestamp": "2026-04-12T18:08:47Z",
+    "requests_used": 10,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:08:49Z",
+    "requests_used": 11,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:08:52Z",
+    "requests_used": 12,
+    "estimated_tokens": 7448
+  },
+  {
+    "timestamp": "2026-04-12T18:08:54Z",
+    "requests_used": 13,
+    "estimated_tokens": 5881
+  },
+  {
+    "timestamp": "2026-04-12T18:09:01Z",
+    "requests_used": 14,
+    "estimated_tokens": 9362
+  },
+  {
+    "timestamp": "2026-04-12T18:09:07Z",
+    "requests_used": 15,
+    "estimated_tokens": 5495
+  },
+  {
+    "timestamp": "2026-04-12T18:09:11Z",
+    "requests_used": 16,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:09:13Z",
+    "requests_used": 17,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:09:16Z",
+    "requests_used": 18,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:09:18Z",
+    "requests_used": 19,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:09:21Z",
+    "requests_used": 20,
+    "estimated_tokens": 6538
+  },
+  {
+    "timestamp": "2026-04-12T18:09:23Z",
+    "requests_used": 21,
+    "estimated_tokens": 6539
+  },
+  {
+    "timestamp": "2026-04-12T18:09:26Z",
+    "requests_used": 22,
+    "estimated_tokens": 6537
+  },
+  {
+    "timestamp": "2026-04-12T18:09:28Z",
+    "requests_used": 23,
+    "estimated_tokens": 7852
+  },
+  {
+    "timestamp": "2026-04-12T18:20:14Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T18:20:20Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:20:23Z",
+    "requests_used": 3,
+    "estimated_tokens": 8572
+  },
+  {
+    "timestamp": "2026-04-12T18:20:25Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:20:28Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:20:30Z",
+    "requests_used": 6,
+    "estimated_tokens": 7893
+  },
+  {
+    "timestamp": "2026-04-12T18:20:33Z",
+    "requests_used": 7,
+    "estimated_tokens": 8146
+  },
+  {
+    "timestamp": "2026-04-12T18:20:37Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:20:40Z",
+    "requests_used": 9,
+    "estimated_tokens": 8402
+  },
+  {
+    "timestamp": "2026-04-12T18:20:42Z",
+    "requests_used": 10,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:20:45Z",
+    "requests_used": 11,
+    "estimated_tokens": 7821
+  },
+  {
+    "timestamp": "2026-04-12T18:20:47Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:20:50Z",
+    "requests_used": 13,
+    "estimated_tokens": 6134
+  },
+  {
+    "timestamp": "2026-04-12T18:20:56Z",
+    "requests_used": 14,
+    "estimated_tokens": 9356
+  },
+  {
+    "timestamp": "2026-04-12T18:21:01Z",
+    "requests_used": 15,
+    "estimated_tokens": 5487
+  },
+  {
+    "timestamp": "2026-04-12T18:21:05Z",
+    "requests_used": 16,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:21:07Z",
+    "requests_used": 17,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:21:10Z",
+    "requests_used": 18,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:21:12Z",
+    "requests_used": 19,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:21:15Z",
+    "requests_used": 20,
+    "estimated_tokens": 6617
+  },
+  {
+    "timestamp": "2026-04-12T18:21:17Z",
+    "requests_used": 21,
+    "estimated_tokens": 6618
+  },
+  {
+    "timestamp": "2026-04-12T18:21:20Z",
+    "requests_used": 22,
+    "estimated_tokens": 6616
+  },
+  {
+    "timestamp": "2026-04-12T18:21:22Z",
+    "requests_used": 23,
+    "estimated_tokens": 7931
+  },
+  {
+    "timestamp": "2026-04-12T18:23:33Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T18:23:39Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:23:41Z",
+    "requests_used": 3,
+    "estimated_tokens": 8790
+  },
+  {
+    "timestamp": "2026-04-12T18:23:44Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:23:46Z",
+    "requests_used": 5,
+    "estimated_tokens": 3991
+  },
+  {
+    "timestamp": "2026-04-12T18:23:49Z",
+    "requests_used": 6,
+    "estimated_tokens": 4497
+  },
+  {
+    "timestamp": "2026-04-12T18:23:55Z",
+    "requests_used": 7,
+    "estimated_tokens": 2480
+  },
+  {
+    "timestamp": "2026-04-12T18:23:57Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:24:00Z",
+    "requests_used": 9,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:24:02Z",
+    "requests_used": 10,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:24:05Z",
+    "requests_used": 11,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:24:07Z",
+    "requests_used": 12,
+    "estimated_tokens": 3932
+  },
+  {
+    "timestamp": "2026-04-12T18:24:10Z",
+    "requests_used": 13,
+    "estimated_tokens": 3933
+  },
+  {
+    "timestamp": "2026-04-12T18:24:12Z",
+    "requests_used": 14,
+    "estimated_tokens": 3931
+  },
+  {
+    "timestamp": "2026-04-12T18:24:15Z",
+    "requests_used": 15,
+    "estimated_tokens": 5246
+  },
+  {
+    "timestamp": "2026-04-12T18:26:32Z",
+    "requests_used": 1,
+    "estimated_tokens": 5594
+  },
+  {
+    "timestamp": "2026-04-12T18:26:46Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:26:48Z",
+    "requests_used": 3,
+    "estimated_tokens": 8572
+  },
+  {
+    "timestamp": "2026-04-12T18:26:51Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:26:53Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:26:56Z",
+    "requests_used": 6,
+    "estimated_tokens": 7893
+  },
+  {
+    "timestamp": "2026-04-12T18:26:58Z",
+    "requests_used": 7,
+    "estimated_tokens": 8146
+  },
+  {
+    "timestamp": "2026-04-12T18:27:01Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:27:03Z",
+    "requests_used": 9,
+    "estimated_tokens": 8402
+  },
+  {
+    "timestamp": "2026-04-12T18:27:06Z",
+    "requests_used": 10,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:27:08Z",
+    "requests_used": 11,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:27:11Z",
+    "requests_used": 12,
+    "estimated_tokens": 7821
+  },
+  {
+    "timestamp": "2026-04-12T18:27:13Z",
+    "requests_used": 13,
+    "estimated_tokens": 6134
+  },
+  {
+    "timestamp": "2026-04-12T18:27:19Z",
+    "requests_used": 14,
+    "estimated_tokens": 9356
+  },
+  {
+    "timestamp": "2026-04-12T18:27:50Z",
+    "requests_used": 15,
+    "estimated_tokens": 5487
+  },
+  {
+    "timestamp": "2026-04-12T18:27:52Z",
+    "requests_used": 16,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:27:55Z",
+    "requests_used": 17,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:27:57Z",
+    "requests_used": 18,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:28:00Z",
+    "requests_used": 19,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:28:02Z",
+    "requests_used": 20,
+    "estimated_tokens": 6530
+  },
+  {
+    "timestamp": "2026-04-12T18:28:05Z",
+    "requests_used": 21,
+    "estimated_tokens": 6531
+  },
+  {
+    "timestamp": "2026-04-12T18:28:07Z",
+    "requests_used": 22,
+    "estimated_tokens": 6530
+  },
+  {
+    "timestamp": "2026-04-12T18:28:10Z",
+    "requests_used": 23,
+    "estimated_tokens": 7844
+  },
+  {
+    "timestamp": "2026-04-12T18:28:19Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-12T18:28:28Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:28:31Z",
+    "requests_used": 3,
+    "estimated_tokens": 8790
+  },
+  {
+    "timestamp": "2026-04-12T18:28:33Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:28:36Z",
+    "requests_used": 5,
+    "estimated_tokens": 3991
+  },
+  {
+    "timestamp": "2026-04-12T18:28:40Z",
+    "requests_used": 6,
+    "estimated_tokens": 4497
+  },
+  {
+    "timestamp": "2026-04-12T18:28:43Z",
+    "requests_used": 7,
+    "estimated_tokens": 2480
+  },
+  {
+    "timestamp": "2026-04-12T18:28:45Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:28:48Z",
+    "requests_used": 9,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:28:50Z",
+    "requests_used": 10,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:28:53Z",
+    "requests_used": 11,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:28:55Z",
+    "requests_used": 12,
+    "estimated_tokens": 3879
+  },
+  {
+    "timestamp": "2026-04-12T18:28:58Z",
+    "requests_used": 13,
+    "estimated_tokens": 3880
+  },
+  {
+    "timestamp": "2026-04-12T18:29:00Z",
+    "requests_used": 14,
+    "estimated_tokens": 3879
+  },
+  {
+    "timestamp": "2026-04-12T18:29:03Z",
+    "requests_used": 15,
+    "estimated_tokens": 5193
+  },
+  {
+    "timestamp": "2026-04-12T18:29:19Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T18:30:11Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-12T18:30:18Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:30:21Z",
+    "requests_used": 3,
+    "estimated_tokens": 9976
+  },
+  {
+    "timestamp": "2026-04-12T18:30:23Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:30:26Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:30:28Z",
+    "requests_used": 6,
+    "estimated_tokens": 10166
+  },
+  {
+    "timestamp": "2026-04-12T18:30:31Z",
+    "requests_used": 7,
+    "estimated_tokens": 10063
+  },
+  {
+    "timestamp": "2026-04-12T18:30:33Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:30:36Z",
+    "requests_used": 9,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:30:38Z",
+    "requests_used": 10,
+    "estimated_tokens": 10519
+  },
+  {
+    "timestamp": "2026-04-12T18:30:41Z",
+    "requests_used": 11,
+    "estimated_tokens": 10015
+  },
+  {
+    "timestamp": "2026-04-12T18:30:43Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:30:46Z",
+    "requests_used": 13,
+    "estimated_tokens": 10707
+  },
+  {
+    "timestamp": "2026-04-12T18:30:48Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:30:51Z",
+    "requests_used": 15,
+    "estimated_tokens": 9875
+  },
+  {
+    "timestamp": "2026-04-12T18:31:07Z",
+    "requests_used": 16,
+    "estimated_tokens": 12668
+  },
+  {
+    "timestamp": "2026-04-12T18:31:27Z",
+    "requests_used": 17,
+    "estimated_tokens": 8223
+  },
+  {
+    "timestamp": "2026-04-12T18:31:30Z",
+    "requests_used": 18,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:31:32Z",
+    "requests_used": 19,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:31:35Z",
+    "requests_used": 20,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:31:37Z",
+    "requests_used": 21,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-12T18:31:40Z",
+    "requests_used": 22,
+    "estimated_tokens": 6203
+  },
+  {
+    "timestamp": "2026-04-12T18:31:42Z",
+    "requests_used": 23,
+    "estimated_tokens": 6204
+  },
+  {
+    "timestamp": "2026-04-12T18:31:45Z",
+    "requests_used": 24,
+    "estimated_tokens": 6203
+  },
+  {
+    "timestamp": "2026-04-12T18:31:47Z",
+    "requests_used": 25,
+    "estimated_tokens": 7517
+  },
+  {
+    "timestamp": "2026-04-13T04:13:18Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T04:13:23Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T04:13:26Z",
+    "requests_used": 3,
+    "estimated_tokens": 8790
+  },
+  {
+    "timestamp": "2026-04-13T04:13:28Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T04:13:31Z",
+    "requests_used": 5,
+    "estimated_tokens": 3991
+  },
+  {
+    "timestamp": "2026-04-13T04:13:33Z",
+    "requests_used": 6,
+    "estimated_tokens": 4498
+  },
+  {
+    "timestamp": "2026-04-13T04:13:38Z",
+    "requests_used": 7,
+    "estimated_tokens": 2481
+  },
+  {
+    "timestamp": "2026-04-13T04:13:42Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T04:13:44Z",
+    "requests_used": 9,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T04:13:46Z",
+    "requests_used": 10,
+    "estimated_tokens": 3852
+  },
+  {
+    "timestamp": "2026-04-13T04:13:49Z",
+    "requests_used": 11,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T04:13:51Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T04:13:54Z",
+    "requests_used": 13,
+    "estimated_tokens": 3853
+  },
+  {
+    "timestamp": "2026-04-13T04:13:56Z",
+    "requests_used": 14,
+    "estimated_tokens": 3851
+  },
+  {
+    "timestamp": "2026-04-13T04:13:58Z",
+    "requests_used": 15,
+    "estimated_tokens": 5166
+  },
+  {
+    "timestamp": "2026-04-13T05:45:09Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T05:45:36Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:45:38Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T05:45:47Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:45:49Z",
+    "requests_used": 5,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T05:45:56Z",
+    "requests_used": 6,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:45:58Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T05:46:03Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:46:05Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T05:46:29Z",
+    "requests_used": 10,
+    "estimated_tokens": 5634
+  },
+  {
+    "timestamp": "2026-04-13T05:46:39Z",
+    "requests_used": 11,
+    "estimated_tokens": 3860
+  },
+  {
+    "timestamp": "2026-04-13T05:47:24Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:47:27Z",
+    "requests_used": 13,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:47:29Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:47:32Z",
+    "requests_used": 15,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:47:34Z",
+    "requests_used": 16,
+    "estimated_tokens": 4874
+  },
+  {
+    "timestamp": "2026-04-13T05:47:36Z",
+    "requests_used": 17,
+    "estimated_tokens": 4875
+  },
+  {
+    "timestamp": "2026-04-13T05:47:39Z",
+    "requests_used": 18,
+    "estimated_tokens": 4874
+  },
+  {
+    "timestamp": "2026-04-13T05:47:41Z",
+    "requests_used": 19,
+    "estimated_tokens": 6188
+  },
+  {
+    "timestamp": "2026-04-13T05:50:06Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T05:50:31Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:50:33Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T05:50:41Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:50:44Z",
+    "requests_used": 5,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T05:50:51Z",
+    "requests_used": 6,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:50:54Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T05:50:58Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:51:00Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T05:52:59Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T05:53:15Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T05:53:17Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T06:00:13Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:01:00Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:01:24Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:01:27Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T06:01:29Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:01:31Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:01:34Z",
+    "requests_used": 6,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T06:01:36Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T06:01:39Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:01:41Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T06:23:53Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:25:00Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:27:27Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:30:57Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:31:05Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:31:08Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T06:31:10Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:31:12Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:31:15Z",
+    "requests_used": 6,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T06:31:17Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T06:31:34Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:31:36Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T06:31:49Z",
+    "requests_used": 10,
+    "estimated_tokens": 5672
+  },
+  {
+    "timestamp": "2026-04-13T06:32:58Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:33:56Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:34:11Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:34:13Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T06:34:16Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:34:18Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:34:21Z",
+    "requests_used": 6,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T06:34:23Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T06:34:25Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:34:28Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T06:34:34Z",
+    "requests_used": 10,
+    "estimated_tokens": 5634
+  },
+  {
+    "timestamp": "2026-04-13T06:34:58Z",
+    "requests_used": 11,
+    "estimated_tokens": 3860
+  },
+  {
+    "timestamp": "2026-04-13T06:35:02Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:35:04Z",
+    "requests_used": 13,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:35:06Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:35:09Z",
+    "requests_used": 15,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:35:11Z",
+    "requests_used": 16,
+    "estimated_tokens": 4869
+  },
+  {
+    "timestamp": "2026-04-13T06:35:14Z",
+    "requests_used": 17,
+    "estimated_tokens": 4870
+  },
+  {
+    "timestamp": "2026-04-13T06:35:16Z",
+    "requests_used": 18,
+    "estimated_tokens": 4869
+  },
+  {
+    "timestamp": "2026-04-13T06:35:18Z",
+    "requests_used": 19,
+    "estimated_tokens": 6183
+  },
+  {
+    "timestamp": "2026-04-13T06:36:16Z",
+    "requests_used": 20,
+    "estimated_tokens": 4866
+  },
+  {
+    "timestamp": "2026-04-13T06:37:36Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:37:59Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:38:02Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T06:38:04Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:38:07Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:38:09Z",
+    "requests_used": 6,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T06:38:11Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T06:38:14Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:38:16Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T06:49:30Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:50:28Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:50:30Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T06:50:32Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:50:35Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:50:37Z",
+    "requests_used": 6,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T06:50:40Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T06:50:42Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:50:44Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T06:52:09Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:53:01Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:53:11Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:53:14Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T06:53:16Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:53:19Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:53:21Z",
+    "requests_used": 6,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T06:53:23Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T06:54:10Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:54:12Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T06:55:42Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:55:58Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:58:08Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-13T06:58:55Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:58:57Z",
+    "requests_used": 3,
+    "estimated_tokens": 8837
+  },
+  {
+    "timestamp": "2026-04-13T06:58:59Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:59:02Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:59:04Z",
+    "requests_used": 6,
+    "estimated_tokens": 9154
+  },
+  {
+    "timestamp": "2026-04-13T06:59:07Z",
+    "requests_used": 7,
+    "estimated_tokens": 8909
+  },
+  {
+    "timestamp": "2026-04-13T06:59:29Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T06:59:31Z",
+    "requests_used": 9,
+    "estimated_tokens": 6834
+  },
+  {
+    "timestamp": "2026-04-13T06:59:56Z",
+    "requests_used": 10,
+    "estimated_tokens": 5672
+  },
+  {
+    "timestamp": "2026-04-13T07:00:36Z",
+    "requests_used": 11,
+    "estimated_tokens": 3878
+  },
+  {
+    "timestamp": "2026-04-13T07:00:40Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:00:42Z",
+    "requests_used": 13,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:00:45Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:00:47Z",
+    "requests_used": 15,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:00:49Z",
+    "requests_used": 16,
+    "estimated_tokens": 4886
+  },
+  {
+    "timestamp": "2026-04-13T07:00:52Z",
+    "requests_used": 17,
+    "estimated_tokens": 4887
+  },
+  {
+    "timestamp": "2026-04-13T07:00:54Z",
+    "requests_used": 18,
+    "estimated_tokens": 4885
+  },
+  {
+    "timestamp": "2026-04-13T07:00:57Z",
+    "requests_used": 19,
+    "estimated_tokens": 6200
+  },
+  {
+    "timestamp": "2026-04-13T07:01:52Z",
+    "requests_used": 20,
+    "estimated_tokens": 4882
+  },
+  {
+    "timestamp": "2026-04-13T07:07:31Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-13T07:08:26Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:08:28Z",
+    "requests_used": 3,
+    "estimated_tokens": 10022
+  },
+  {
+    "timestamp": "2026-04-13T07:08:30Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:08:33Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:08:35Z",
+    "requests_used": 6,
+    "estimated_tokens": 10219
+  },
+  {
+    "timestamp": "2026-04-13T07:08:38Z",
+    "requests_used": 7,
+    "estimated_tokens": 10113
+  },
+  {
+    "timestamp": "2026-04-13T07:08:41Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:08:44Z",
+    "requests_used": 9,
+    "estimated_tokens": 9918
+  },
+  {
+    "timestamp": "2026-04-13T07:08:53Z",
+    "requests_used": 10,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:08:55Z",
+    "requests_used": 11,
+    "estimated_tokens": 10289
+  },
+  {
+    "timestamp": "2026-04-13T07:09:06Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:09:09Z",
+    "requests_used": 13,
+    "estimated_tokens": 10049
+  },
+  {
+    "timestamp": "2026-04-13T07:09:20Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:09:22Z",
+    "requests_used": 15,
+    "estimated_tokens": 10467
+  },
+  {
+    "timestamp": "2026-04-13T07:09:25Z",
+    "requests_used": 16,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:09:27Z",
+    "requests_used": 17,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:09:30Z",
+    "requests_used": 18,
+    "estimated_tokens": 9798
+  },
+  {
+    "timestamp": "2026-04-13T07:09:32Z",
+    "requests_used": 19,
+    "estimated_tokens": 9909
+  },
+  {
+    "timestamp": "2026-04-13T07:09:38Z",
+    "requests_used": 20,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:09:40Z",
+    "requests_used": 21,
+    "estimated_tokens": 5197
+  },
+  {
+    "timestamp": "2026-04-13T07:11:04Z",
+    "requests_used": 1,
+    "estimated_tokens": 8229
+  },
+  {
+    "timestamp": "2026-04-13T07:11:17Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:11:19Z",
+    "requests_used": 3,
+    "estimated_tokens": 10022
+  },
+  {
+    "timestamp": "2026-04-13T07:11:22Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:11:24Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:11:27Z",
+    "requests_used": 6,
+    "estimated_tokens": 10219
+  },
+  {
+    "timestamp": "2026-04-13T07:11:29Z",
+    "requests_used": 7,
+    "estimated_tokens": 10113
+  },
+  {
+    "timestamp": "2026-04-13T07:11:32Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:11:35Z",
+    "requests_used": 9,
+    "estimated_tokens": 9918
+  },
+  {
+    "timestamp": "2026-04-13T07:11:37Z",
+    "requests_used": 10,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:11:39Z",
+    "requests_used": 11,
+    "estimated_tokens": 10289
+  },
+  {
+    "timestamp": "2026-04-13T07:11:42Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:11:44Z",
+    "requests_used": 13,
+    "estimated_tokens": 10049
+  },
+  {
+    "timestamp": "2026-04-13T07:12:04Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:12:07Z",
+    "requests_used": 15,
+    "estimated_tokens": 10467
+  },
+  {
+    "timestamp": "2026-04-13T07:12:09Z",
+    "requests_used": 16,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:12:12Z",
+    "requests_used": 17,
+    "estimated_tokens": 9798
+  },
+  {
+    "timestamp": "2026-04-13T07:12:14Z",
+    "requests_used": 18,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:12:16Z",
+    "requests_used": 19,
+    "estimated_tokens": 9909
+  },
+  {
+    "timestamp": "2026-04-13T07:12:19Z",
+    "requests_used": 20,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:12:21Z",
+    "requests_used": 21,
+    "estimated_tokens": 5197
+  },
+  {
+    "timestamp": "2026-04-13T07:12:26Z",
+    "requests_used": 22,
+    "estimated_tokens": 14056
+  },
+  {
+    "timestamp": "2026-04-13T07:12:31Z",
+    "requests_used": 23,
+    "estimated_tokens": 9068
+  },
+  {
+    "timestamp": "2026-04-13T07:12:34Z",
+    "requests_used": 24,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:12:37Z",
+    "requests_used": 25,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:12:39Z",
+    "requests_used": 26,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:12:42Z",
+    "requests_used": 27,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-13T07:12:44Z",
+    "requests_used": 28,
+    "estimated_tokens": 7463
+  },
+  {
+    "timestamp": "2026-04-13T07:12:46Z",
+    "requests_used": 29,
+    "estimated_tokens": 7464
+  },
+  {
+    "timestamp": "2026-04-13T07:12:49Z",
+    "requests_used": 30,
+    "estimated_tokens": 7463
+  },
+  {
+    "timestamp": "2026-04-13T07:12:51Z",
+    "requests_used": 31,
+    "estimated_tokens": 8777
+  },
+  {
+    "timestamp": "2026-04-16T05:45:42Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-16T06:23:59Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-16T06:24:02Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:24:05Z",
+    "requests_used": 3,
+    "estimated_tokens": 8574
+  },
+  {
+    "timestamp": "2026-04-16T06:24:07Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:24:10Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:24:12Z",
+    "requests_used": 6,
+    "estimated_tokens": 8871
+  },
+  {
+    "timestamp": "2026-04-16T06:24:14Z",
+    "requests_used": 7,
+    "estimated_tokens": 8684
+  },
+  {
+    "timestamp": "2026-04-16T06:24:17Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:24:19Z",
+    "requests_used": 9,
+    "estimated_tokens": 6634
+  },
+  {
+    "timestamp": "2026-04-16T06:24:24Z",
+    "requests_used": 10,
+    "estimated_tokens": 5672
+  },
+  {
+    "timestamp": "2026-04-16T06:24:28Z",
+    "requests_used": 11,
+    "estimated_tokens": 3878
+  },
+  {
+    "timestamp": "2026-04-16T06:24:30Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:24:32Z",
+    "requests_used": 13,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:24:35Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:24:37Z",
+    "requests_used": 15,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:24:40Z",
+    "requests_used": 16,
+    "estimated_tokens": 4918
+  },
+  {
+    "timestamp": "2026-04-16T06:24:42Z",
+    "requests_used": 17,
+    "estimated_tokens": 4919
+  },
+  {
+    "timestamp": "2026-04-16T06:24:44Z",
+    "requests_used": 18,
+    "estimated_tokens": 4917
+  },
+  {
+    "timestamp": "2026-04-16T06:24:47Z",
+    "requests_used": 19,
+    "estimated_tokens": 6232
+  },
+  {
+    "timestamp": "2026-04-16T06:42:57Z",
+    "requests_used": 20,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-16T06:43:02Z",
+    "requests_used": 21,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:43:04Z",
+    "requests_used": 22,
+    "estimated_tokens": 8574
+  },
+  {
+    "timestamp": "2026-04-16T06:43:07Z",
+    "requests_used": 23,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:43:09Z",
+    "requests_used": 24,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:43:11Z",
+    "requests_used": 25,
+    "estimated_tokens": 8871
+  },
+  {
+    "timestamp": "2026-04-16T06:43:14Z",
+    "requests_used": 26,
+    "estimated_tokens": 8684
+  },
+  {
+    "timestamp": "2026-04-16T06:43:16Z",
+    "requests_used": 27,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:43:19Z",
+    "requests_used": 28,
+    "estimated_tokens": 6634
+  },
+  {
+    "timestamp": "2026-04-16T06:43:24Z",
+    "requests_used": 29,
+    "estimated_tokens": 5672
+  },
+  {
+    "timestamp": "2026-04-16T06:43:28Z",
+    "requests_used": 30,
+    "estimated_tokens": 3878
+  },
+  {
+    "timestamp": "2026-04-16T06:43:31Z",
+    "requests_used": 31,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:43:33Z",
+    "requests_used": 32,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:43:35Z",
+    "requests_used": 33,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:43:38Z",
+    "requests_used": 34,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T06:43:40Z",
+    "requests_used": 35,
+    "estimated_tokens": 4916
+  },
+  {
+    "timestamp": "2026-04-16T06:43:43Z",
+    "requests_used": 36,
+    "estimated_tokens": 4917
+  },
+  {
+    "timestamp": "2026-04-16T06:43:45Z",
+    "requests_used": 37,
+    "estimated_tokens": 4915
+  },
+  {
+    "timestamp": "2026-04-16T06:43:47Z",
+    "requests_used": 38,
+    "estimated_tokens": 6230
+  },
+  {
+    "timestamp": "2026-04-16T15:35:36Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-16T15:35:38Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T15:35:41Z",
+    "requests_used": 3,
+    "estimated_tokens": 8574
+  },
+  {
+    "timestamp": "2026-04-16T15:35:43Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T15:35:46Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T15:35:48Z",
+    "requests_used": 6,
+    "estimated_tokens": 8871
+  },
+  {
+    "timestamp": "2026-04-16T15:35:50Z",
+    "requests_used": 7,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T15:35:53Z",
+    "requests_used": 8,
+    "estimated_tokens": 8684
+  },
+  {
+    "timestamp": "2026-04-16T15:35:55Z",
+    "requests_used": 9,
+    "estimated_tokens": 6634
+  },
+  {
+    "timestamp": "2026-04-16T15:36:00Z",
+    "requests_used": 10,
+    "estimated_tokens": 5672
+  },
+  {
+    "timestamp": "2026-04-16T15:36:03Z",
+    "requests_used": 11,
+    "estimated_tokens": 3878
+  },
+  {
+    "timestamp": "2026-04-16T15:36:09Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T15:36:12Z",
+    "requests_used": 13,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T15:36:14Z",
+    "requests_used": 14,
+    "estimated_tokens": 4929
+  },
+  {
+    "timestamp": "2026-04-16T15:36:17Z",
+    "requests_used": 15,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T15:36:19Z",
+    "requests_used": 16,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T15:36:21Z",
+    "requests_used": 17,
+    "estimated_tokens": 4930
+  },
+  {
+    "timestamp": "2026-04-16T15:36:24Z",
+    "requests_used": 18,
+    "estimated_tokens": 4928
+  },
+  {
+    "timestamp": "2026-04-16T15:36:26Z",
+    "requests_used": 19,
+    "estimated_tokens": 6243
+  },
+  {
+    "timestamp": "2026-04-16T16:09:48Z",
+    "requests_used": 20,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-16T16:09:51Z",
+    "requests_used": 21,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:09:53Z",
+    "requests_used": 22,
+    "estimated_tokens": 8574
+  },
+  {
+    "timestamp": "2026-04-16T16:09:56Z",
+    "requests_used": 23,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:09:58Z",
+    "requests_used": 24,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:10:01Z",
+    "requests_used": 25,
+    "estimated_tokens": 8871
+  },
+  {
+    "timestamp": "2026-04-16T16:10:03Z",
+    "requests_used": 26,
+    "estimated_tokens": 8684
+  },
+  {
+    "timestamp": "2026-04-16T16:10:05Z",
+    "requests_used": 27,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:10:08Z",
+    "requests_used": 28,
+    "estimated_tokens": 6634
+  },
+  {
+    "timestamp": "2026-04-16T16:25:43Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-16T16:25:49Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:25:51Z",
+    "requests_used": 3,
+    "estimated_tokens": 8574
+  },
+  {
+    "timestamp": "2026-04-16T16:25:53Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:25:56Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:25:58Z",
+    "requests_used": 6,
+    "estimated_tokens": 8871
+  },
+  {
+    "timestamp": "2026-04-16T16:26:01Z",
+    "requests_used": 7,
+    "estimated_tokens": 8684
+  },
+  {
+    "timestamp": "2026-04-16T16:26:03Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:26:05Z",
+    "requests_used": 9,
+    "estimated_tokens": 6634
+  },
+  {
+    "timestamp": "2026-04-16T16:26:10Z",
+    "requests_used": 10,
+    "estimated_tokens": 5672
+  },
+  {
+    "timestamp": "2026-04-16T16:26:15Z",
+    "requests_used": 11,
+    "estimated_tokens": 3878
+  },
+  {
+    "timestamp": "2026-04-16T16:26:17Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:26:20Z",
+    "requests_used": 13,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:26:22Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:26:25Z",
+    "requests_used": 15,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:26:27Z",
+    "requests_used": 16,
+    "estimated_tokens": 4895
+  },
+  {
+    "timestamp": "2026-04-16T16:26:29Z",
+    "requests_used": 17,
+    "estimated_tokens": 4896
+  },
+  {
+    "timestamp": "2026-04-16T16:26:32Z",
+    "requests_used": 18,
+    "estimated_tokens": 4894
+  },
+  {
+    "timestamp": "2026-04-16T16:26:34Z",
+    "requests_used": 19,
+    "estimated_tokens": 6209
+  },
+  {
+    "timestamp": "2026-04-16T16:27:57Z",
+    "requests_used": 20,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-16T16:28:00Z",
+    "requests_used": 21,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:28:03Z",
+    "requests_used": 22,
+    "estimated_tokens": 8574
+  },
+  {
+    "timestamp": "2026-04-16T16:28:05Z",
+    "requests_used": 23,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:28:07Z",
+    "requests_used": 24,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:28:10Z",
+    "requests_used": 25,
+    "estimated_tokens": 8871
+  },
+  {
+    "timestamp": "2026-04-16T16:28:12Z",
+    "requests_used": 26,
+    "estimated_tokens": 8684
+  },
+  {
+    "timestamp": "2026-04-16T16:28:15Z",
+    "requests_used": 27,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:28:17Z",
+    "requests_used": 28,
+    "estimated_tokens": 6634
+  },
+  {
+    "timestamp": "2026-04-16T16:28:21Z",
+    "requests_used": 29,
+    "estimated_tokens": 5672
+  },
+  {
+    "timestamp": "2026-04-16T16:28:25Z",
+    "requests_used": 30,
+    "estimated_tokens": 3878
+  },
+  {
+    "timestamp": "2026-04-16T16:28:27Z",
+    "requests_used": 31,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:28:30Z",
+    "requests_used": 32,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:28:32Z",
+    "requests_used": 33,
+    "estimated_tokens": 4867
+  },
+  {
+    "timestamp": "2026-04-16T16:28:35Z",
+    "requests_used": 34,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:28:37Z",
+    "requests_used": 35,
+    "estimated_tokens": 4866
+  },
+  {
+    "timestamp": "2026-04-16T16:28:39Z",
+    "requests_used": 36,
+    "estimated_tokens": 4868
+  },
+  {
+    "timestamp": "2026-04-16T16:28:42Z",
+    "requests_used": 37,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-16T16:28:44Z",
+    "requests_used": 38,
+    "estimated_tokens": 6181
+  }
+]

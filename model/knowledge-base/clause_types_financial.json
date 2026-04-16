@@ -1,0 +1,137 @@
+{
+  "kb_name": "clause_types_financial",
+  "version": "1.0.0",
+  "description": "Domain-specific financial and lending clause taxonomy for loan agreements and amendments.",
+  "entries": [
+    {
+      "id": "fin_001",
+      "text": "Revolving credit clause: Establishes a revolving credit facility with a commitment amount, borrowing base mechanics, and availability terms. Often references borrowing requests, base rate margins, and commitment reductions.",
+      "metadata": {
+        "clause_type": "Revolving Credit",
+        "category": "Condition",
+        "domain": "Financial / Loan",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["revolver", "revolving credit", "borrowing base", "commitment amount"],
+        "standard_language_patterns": ["lender agrees to make revolving loans", "aggregate commitments", "availability period"],
+        "notes": "Common in commercial lending. Amendment documents may reference parent commitments by incorporation."
+      }
+    },
+    {
+      "id": "fin_002",
+      "text": "Quarterly commitment reduction clause: Requires scheduled reductions of revolving commitment or principal over defined quarterly dates.",
+      "metadata": {
+        "clause_type": "Quarterly Commitment Reduction",
+        "category": "Obligation",
+        "domain": "Financial / Loan",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["quarterly commitment reduction", "QCR", "MCR", "reduce commitment"],
+        "standard_language_patterns": ["on the last day of each quarter", "commitment shall be reduced"],
+        "notes": "Can create liquidity pressure when paired with strict covenants."
+      }
+    },
+    {
+      "id": "fin_003",
+      "text": "Collateral and security interest clause: Grants or reaffirms liens, mortgages, pledges, and security interests securing lender obligations.",
+      "metadata": {
+        "clause_type": "Collateral / Security Interest",
+        "category": "Condition",
+        "domain": "Financial / Loan",
+        "typical_risk": "HIGH",
+        "key_indicators": ["collateral", "security interest", "mortgage", "lien", "pledge"],
+        "standard_language_patterns": ["grant a first priority security interest", "secure the obligations"],
+        "notes": "Frequently updated in amendments when additional collateral is granted."
+      }
+    },
+    {
+      "id": "fin_004",
+      "text": "Event of default clause in lending: Defines triggers such as payment default, covenant breach, insolvency, cross-default, and acceleration rights.",
+      "metadata": {
+        "clause_type": "Events of Default",
+        "category": "Remedy",
+        "domain": "Financial / Loan",
+        "typical_risk": "HIGH",
+        "key_indicators": ["event of default", "acceleration", "cross-default", "insolvency"],
+        "standard_language_patterns": ["upon an event of default", "lender may declare immediately due and payable"],
+        "notes": "Default definitions should be evaluated with cure periods."
+      }
+    },
+    {
+      "id": "fin_005",
+      "text": "Conditions precedent clause for amendment effectiveness: Lists documents, approvals, fees, and certifications required before amendment takes effect.",
+      "metadata": {
+        "clause_type": "Conditions Precedent",
+        "category": "Condition",
+        "domain": "Financial / Loan",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["conditions precedent", "effective upon", "delivery of", "closing conditions"],
+        "standard_language_patterns": ["this amendment shall become effective when"],
+        "notes": "Missing fulfillment can delay funding or nullify amendment effectiveness."
+      }
+    },
+    {
+      "id": "fin_006",
+      "text": "Guaranty agreement clause: Captures guarantor obligations, guarantee scope, waivers, and continuing nature of guaranty.",
+      "metadata": {
+        "clause_type": "Guaranty",
+        "category": "Obligation",
+        "domain": "Financial / Loan",
+        "typical_risk": "HIGH",
+        "key_indicators": ["guaranty", "guarantor", "continuing guarantee", "waiver of defenses"],
+        "standard_language_patterns": ["guarantor unconditionally guarantees"],
+        "notes": "Waiver and unconditional language materially increase guarantor exposure."
+      }
+    },
+    {
+      "id": "fin_007",
+      "text": "Financial covenant clause: Imposes leverage, fixed-charge coverage, liquidity, interest coverage, and reporting ratio thresholds.",
+      "metadata": {
+        "clause_type": "Financial Covenants",
+        "category": "Obligation",
+        "domain": "Financial / Loan",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["leverage ratio", "interest coverage", "fixed charge coverage", "minimum EBITDA"],
+        "standard_language_patterns": ["borrower shall maintain", "tested quarterly"],
+        "notes": "Threshold calibration drives compliance and default risk."
+      }
+    },
+    {
+      "id": "fin_008",
+      "text": "Loan fee clause: Specifies origination fees, commitment fees, amendment fees, and fee calculation basis.",
+      "metadata": {
+        "clause_type": "Loan / Amendment Fees",
+        "category": "Obligation",
+        "domain": "Financial / Loan",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["origination fee", "amendment fee", "commitment fee", "upfront fee"],
+        "standard_language_patterns": ["borrower shall pay a fee equal to"],
+        "notes": "Fee base (full commitment vs incremental amount) materially impacts cost."
+      }
+    },
+    {
+      "id": "fin_009",
+      "text": "Borrowing base clause: Ties availability to collateral value, concentration limits, and eligibility criteria.",
+      "metadata": {
+        "clause_type": "Borrowing Base",
+        "category": "Condition",
+        "domain": "Financial / Loan",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["borrowing base", "eligible receivables", "advance rate", "availability"],
+        "standard_language_patterns": ["availability shall equal the borrowing base"],
+        "notes": "Frequent source of liquidity fluctuations and compliance disputes."
+      }
+    },
+    {
+      "id": "fin_010",
+      "text": "Release of claims clause in banking context: Borrower releases lender from known and unknown claims related to loan documents and relationship.",
+      "metadata": {
+        "clause_type": "Release of Claims",
+        "category": "Right",
+        "domain": "Financial / Loan",
+        "typical_risk": "HIGH",
+        "key_indicators": ["release", "waive claims", "known or unknown claims", "lender release"],
+        "standard_language_patterns": ["borrower hereby releases and forever discharges"],
+        "notes": "Broad release language can waive future disputes and litigation rights."
+      }
+    }
+  ]
+}

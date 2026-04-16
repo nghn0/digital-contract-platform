@@ -1,0 +1,227 @@
+{
+  "kb_name": "legal_glossary",
+  "version": "1.0.0",
+  "description": "Plain English definitions of legal terms. Used by RAG to power the plain_english field in clause extraction and for user-facing tooltips in the dashboard.",
+  "entries": [
+    {
+      "id": "gl_001",
+      "text": "Indemnify / Indemnification: One party agrees to pay for losses, legal fees, or damages that the other party suffers because of specific events. Plain English: If something goes wrong because of you, you pay to make the other party whole — including their lawyer bills. Example: 'Vendor shall indemnify Client for any third-party IP claims.' This means if someone sues the Client claiming Vendor stole their code, Vendor pays for the lawsuit.",
+      "metadata": {
+        "term": "Indemnification",
+        "plain_english": "You agree to pay for losses caused by your actions, including the other party's legal fees",
+        "risk_association": "HIGH",
+        "related_terms": ["Hold Harmless", "Defense Obligation", "Third-party Claims"],
+        "common_misunderstanding": "Parties often do not realize indemnification includes attorney fees, not just damages"
+      }
+    },
+    {
+      "id": "gl_002",
+      "text": "Limitation of Liability: A clause that sets a maximum ceiling on how much money a party can be held responsible for, no matter how large the actual damages are. Plain English: Even if we cause you $10 million in damages, we only have to pay up to the cap amount — usually the contract value. When this clause is absent, liability is unlimited, meaning one contract mistake could bankrupt a small vendor.",
+      "metadata": {
+        "term": "Limitation of Liability",
+        "plain_english": "Maximum amount one party can owe the other, no matter how big the actual loss is",
+        "risk_association": "CRITICAL when absent",
+        "related_terms": ["Liability Cap", "LOL Clause", "Consequential Damages Exclusion"],
+        "common_misunderstanding": "Parties assume liability is always limited by law — it is not; without this clause it can be unlimited"
+      }
+    },
+    {
+      "id": "gl_003",
+      "text": "Force Majeure: A clause that excuses a party from performing their obligations when extraordinary events completely beyond their control make it impossible — like earthquakes, wars, pandemics, or government shutdowns. Plain English: If an act of God or disaster makes it impossible for us to do our job, we are not legally at fault for not delivering. The clause typically requires: the event was unforeseeable, beyond control, and the affected party must give notice.",
+      "metadata": {
+        "term": "Force Majeure",
+        "plain_english": "You are not responsible for failing to perform when a disaster or extraordinary event makes it impossible",
+        "risk_association": "HIGH if absent",
+        "related_terms": ["Act of God", "Impossibility", "Frustration of Purpose", "Hardship Clause"],
+        "common_misunderstanding": "Force majeure does NOT cover events that are merely difficult or expensive — only truly impossible situations"
+      }
+    },
+    {
+      "id": "gl_004",
+      "text": "Governing Law: The law of a specific country or state that will be used to interpret the contract if there is a dispute. Plain English: If we argue about what this contract means, we use the laws of [State/Country] to decide who is right. This is critical because the same contract language can mean different things under different laws — especially for employment and IP clauses.",
+      "metadata": {
+        "term": "Governing Law",
+        "plain_english": "Which country or state's laws are used to interpret this contract",
+        "risk_association": "MEDIUM",
+        "related_terms": ["Choice of Law", "Applicable Law", "Jurisdiction"],
+        "common_misunderstanding": "Governing law is different from jurisdiction (where lawsuits are filed) — a contract can have California law but New York courts"
+      }
+    },
+    {
+      "id": "gl_005",
+      "text": "Consequential Damages: Losses that are not a direct result of a breach but are a downstream consequence — lost profits, lost business opportunities, reputational damage. Plain English: If you breach the contract and we lose a major client deal because of it, that lost deal profit is a consequential damage. Most contracts exclude consequential damages to avoid unpredictable, potentially enormous claims.",
+      "metadata": {
+        "term": "Consequential Damages",
+        "plain_english": "Indirect losses caused by a breach — like lost profits or lost business — that flow from but are not the direct result of the wrongful act",
+        "risk_association": "HIGH if not excluded",
+        "related_terms": ["Indirect Damages", "Special Damages", "Lost Profits", "Incidental Damages"],
+        "common_misunderstanding": "Parties often do not know the difference between direct and consequential damages — consequential can be far larger"
+      }
+    },
+    {
+      "id": "gl_006",
+      "text": "Liquidated Damages: A pre-agreed amount of money that one party must pay if they breach a specific provision, set at contract signing to represent anticipated losses. Plain English: Instead of going to court to prove how much money you lost, we agreed in advance that a breach costs exactly $X — like a late delivery fee of $5,000 per day. Enforceable only if the amount was a reasonable estimate of actual harm at the time of contracting — not a penalty.",
+      "metadata": {
+        "term": "Liquidated Damages",
+        "plain_english": "Pre-agreed amount either party must pay for a specific breach, set in advance instead of proving actual loss",
+        "risk_association": "HIGH if excessive",
+        "related_terms": ["LD Clause", "Delay Damages", "Penalty Clause"],
+        "common_misunderstanding": "Liquidated damages clauses can be voided if they are actually punitive rather than compensatory — 'penalty' language hurts enforceability"
+      }
+    },
+    {
+      "id": "gl_007",
+      "text": "Termination for Cause: The right to end a contract early specifically because the other party has seriously violated its terms — a material breach. Plain English: We can end this contract before it expires if you break the rules badly enough. Usually requires: written notice of breach, a cure period (e.g., 30 days to fix), then termination if not fixed. Different from termination for convenience which requires no reason.",
+      "metadata": {
+        "term": "Termination for Cause",
+        "plain_english": "Right to end the contract because the other party seriously broke the rules",
+        "risk_association": "MEDIUM",
+        "related_terms": ["Material Breach", "Breach and Cure", "Termination for Default"],
+        "common_misunderstanding": "Not every breach allows termination — it typically must be a 'material' breach, and most contracts require a notice and cure period"
+      }
+    },
+    {
+      "id": "gl_008",
+      "text": "Termination for Convenience: The right to end a contract early for any reason or no reason at all, simply by giving adequate notice. Plain English: We can end this contract whenever we want, even if you did nothing wrong — we just have to give you X days notice. One-sided termination for convenience (only one party has it) is a significant power imbalance and red flag.",
+      "metadata": {
+        "term": "Termination for Convenience",
+        "plain_english": "Right to end the contract for any reason, with required notice, even if the other party did nothing wrong",
+        "risk_association": "HIGH if one-sided",
+        "related_terms": ["At-Will Termination", "Convenience Termination", "Notice Period"],
+        "common_misunderstanding": "Parties receiving termination for convenience do not always have the right to fees already earned — this must be explicitly stated"
+      }
+    },
+    {
+      "id": "gl_009",
+      "text": "Work Made for Hire: A legal concept where intellectual property created by an employee or contractor in the course of their engagement automatically belongs to the employer or client, not the creator. Plain English: Whatever you build, design, write, or create for us while working on this project — we own it, not you. This includes code, designs, documentation, and inventions. Extremely important for developers and designers to review carefully.",
+      "metadata": {
+        "term": "Work Made for Hire",
+        "plain_english": "The company owns everything you create while working for them",
+        "risk_association": "HIGH",
+        "related_terms": ["IP Assignment", "Copyright Ownership", "Contractor IP"],
+        "common_misunderstanding": "Some contractors assume that because they worked from their own laptop or after hours, the IP is theirs — work-for-hire clauses usually override this"
+      }
+    },
+    {
+      "id": "gl_010",
+      "text": "Severability: A clause stating that if any part of the contract is found to be illegal or unenforceable by a court, only that specific part is removed — the rest of the contract continues in full effect. Plain English: If a judge strikes out one clause as illegal, the rest of the contract still stands — the whole agreement does not fall apart. Standard protective boilerplate found in almost all well-drafted contracts.",
+      "metadata": {
+        "term": "Severability",
+        "plain_english": "If one clause is struck down as invalid, the rest of the contract still works",
+        "risk_association": "LOW",
+        "related_terms": ["Savings Clause", "Blue-pencil Doctrine"],
+        "common_misunderstanding": "Without a severability clause, an invalid provision could theoretically void the entire contract under some legal theories"
+      }
+    },
+    {
+      "id": "gl_011",
+      "text": "Representations and Warranties: Statements of fact made by each party about themselves and the subject matter at the time of signing. Representations: factual statements about the present ('We have authority to enter this agreement'). Warranties: promises that statements will remain true ('The software will perform as described'). Breach of warranty creates liability without needing to prove fraud.",
+      "metadata": {
+        "term": "Representations and Warranties",
+        "plain_english": "Factual statements each party promises are true at signing — if they turn out to be false, the deceived party can claim damages",
+        "risk_association": "MEDIUM",
+        "related_terms": ["Reps and Warranties", "Indemnification for Breach of Reps"],
+        "common_misunderstanding": "Representations (present facts) and warranties (future promises of quality) are different legal concepts with different remedies"
+      }
+    },
+    {
+      "id": "gl_012",
+      "text": "Arbitration: A private alternative to going to court where an independent arbitrator (or panel) hears both sides and issues a binding decision. Plain English: Instead of suing each other in court, we agree to take disputes to a private arbitration service — faster, cheaper, but you give up the right to a jury trial and appeals are very limited. Binding arbitration means you must accept the decision.",
+      "metadata": {
+        "term": "Arbitration",
+        "plain_english": "Private dispute resolution where an independent referee makes a final, binding decision instead of a judge or jury",
+        "risk_association": "MEDIUM",
+        "related_terms": ["Binding Arbitration", "AAA", "ICC", "SIAC", "Arbitral Tribunal"],
+        "common_misunderstanding": "Agreeing to arbitration means giving up the right to sue in court and often waiving class action rights"
+      }
+    },
+    {
+      "id": "gl_013",
+      "text": "Entire Agreement Clause (Integration Clause): States that the written contract is the complete agreement, overriding all prior emails, conversations, presentations, or proposals. Plain English: Only what is written in this document counts — nothing we said in meetings, emails, or negotiations before signing has any legal effect unless it is written here. Protects against claims that extra promises were made verbally.",
+      "metadata": {
+        "term": "Entire Agreement",
+        "plain_english": "This document is the complete deal — prior emails, conversations, and promises do not count unless written in here",
+        "risk_association": "LOW",
+        "related_terms": ["Integration Clause", "Merger Clause", "Parol Evidence Rule"],
+        "common_misunderstanding": "Salespeople sometimes make promises during negotiation that are not in the contract — the integration clause means those promises are legally worthless"
+      }
+    },
+    {
+      "id": "gl_014",
+      "text": "Injunctive Relief: A court order requiring a party to do something or stop doing something immediately — without waiting for a full trial. Plain English: In a confidentiality breach or IP theft, the harmed party can ask a court for an emergency order stopping the breach immediately, before the case is even heard. This is specifically mentioned in most NDAs and IP clauses because money damages alone are not enough for information leaks.",
+      "metadata": {
+        "term": "Injunctive Relief",
+        "plain_english": "An emergency court order to immediately stop harmful behavior — used when money damages would not be enough",
+        "risk_association": "LOW (protective provision)",
+        "related_terms": ["Restraining Order", "Specific Performance", "Equitable Relief"],
+        "common_misunderstanding": "Injunctive relief is sought as an immediate remedy for ongoing harm — it is separate from and faster than winning money in a lawsuit"
+      }
+    },
+    {
+      "id": "gl_015",
+      "text": "Cure Period: A specified time given to a party who has breached a contract obligation to fix (cure) the breach before the other party can take legal action or terminate. Plain English: If you break the rules, we have to give you [X] days to fix the problem before we can terminate the contract or sue you. Typical cure periods range from 5 to 30 days. Protects against termination for minor or accidental breaches.",
+      "metadata": {
+        "term": "Cure Period",
+        "plain_english": "A window of time to fix a breach before the other party can terminate or sue",
+        "risk_association": "MEDIUM if absent",
+        "related_terms": ["Notice and Cure", "Right to Cure", "Breach Notice"],
+        "common_misunderstanding": "Some breaches (fraud, insolvency) are typically not curable and terminate the cure right — check what is excluded"
+      }
+    },
+    {
+      "id": "gl_016",
+      "text": "Residuals Clause: A provision in confidentiality agreements allowing a party to use general knowledge, skills, ideas, or concepts retained in the unaided memory of its personnel — even if learned from confidential information. Plain English: If your employees remembered something from our confidential documents in their heads (not written down), they can still use that general knowledge. This is a loophole that significantly weakens confidentiality protection, especially in software and tech agreements.",
+      "metadata": {
+        "term": "Residuals Clause",
+        "plain_english": "Employees can use information from your confidential documents if they just remembered it in their head — a confidentiality loophole",
+        "risk_association": "HIGH (weakens NDA protection)",
+        "related_terms": ["Residuals Exception", "Unaided Memory", "NDA Carve-out"],
+        "common_misunderstanding": "Many parties sign NDAs without noticing the residuals clause which can make the NDA nearly unenforceable against employees"
+      }
+    },
+    {
+      "id": "gl_017",
+      "text": "Change of Control: A provision specifying what happens to the contract if one party is acquired, merges with another company, or its majority ownership changes. Plain English: If Company A is bought by Company B, does this contract automatically transfer to Company B? Most contracts address this — either they survive and continue, or the other party gets the right to terminate. Especially important in vendor and SaaS agreements.",
+      "metadata": {
+        "term": "Change of Control",
+        "plain_english": "What happens to this contract if the company is sold or has new owners",
+        "risk_association": "MEDIUM",
+        "related_terms": ["Assignment", "Acquisition Clause", "M&A Trigger", "Successor"],
+        "common_misunderstanding": "Parties often assume contracts survive a merger automatically — without addressing change of control, the outcome is legally uncertain"
+      }
+    },
+    {
+      "id": "gl_018",
+      "text": "Most Favored Nation (MFN) Clause: A provision guaranteeing that the pricing or terms offered to one party will be at least as good as the best terms offered to any other customer for similar products or services. Plain English: Whatever deal you give to any other customer — we get the same deal or better. Protects against a vendor giving better prices to competitors. Common in vendor agreements, software licensing, and investment deals.",
+      "metadata": {
+        "term": "Most Favored Nation",
+        "plain_english": "You guarantee us the same or better deal than you give to any other customer",
+        "risk_association": "LOW (protective for buyer)",
+        "related_terms": ["MFN Clause", "Best Price Guarantee", "Non-discrimination Clause"],
+        "common_misunderstanding": "MFN clauses require active monitoring — vendors will not automatically alert you when they offer better terms to others"
+      }
+    },
+    {
+      "id": "gl_019",
+      "text": "Net 30 / Net 60 / Net 90: Payment terms specifying how many days after the invoice date the payment is due. Net 30 = pay within 30 days. Net 60 = pay within 60 days. Plain English: Net 30 means you have 30 days from the invoice date to pay us. The longer the net period, the longer the vendor waits for cash — creating cash flow risk for small vendors and contractors. Standard commercial practice is Net 30.",
+      "metadata": {
+        "term": "Net Payment Terms",
+        "plain_english": "Number of days after invoice the payment is due — Net 30 means pay within 30 days",
+        "risk_association": "MEDIUM if over 60 days",
+        "related_terms": ["Payment Terms", "Due Date", "Invoice Date", "Days Sales Outstanding"],
+        "common_misunderstanding": "Net 90 sounds like just 3 months but for a small vendor this can mean financial distress — especially with no interest on late payment"
+      }
+    },
+    {
+      "id": "gl_020",
+      "text": "Data Processing Agreement (DPA): A legally required contract addendum (under GDPR and similar laws) between a data controller (who owns customer data) and a data processor (who processes it on their behalf). Plain English: If you are handling our customers' personal data, we need this special agreement that spells out exactly what you can do with the data, how you protect it, and what happens if there is a breach. Required by law in EU, India (DPDP Act 2023), and many other jurisdictions.",
+      "metadata": {
+        "term": "Data Processing Agreement",
+        "plain_english": "A required legal addendum that controls exactly how a vendor can handle your customers' personal data",
+        "risk_association": "CRITICAL if absent when processing personal data",
+        "related_terms": ["DPA", "GDPR", "Data Controller", "Data Processor", "DPDP Act"],
+        "common_misunderstanding": "Many SaaS and tech contracts lack a DPA entirely — even though handling any EU or Indian personal data makes it legally mandatory"
+      }
+    }
+  ]
+}

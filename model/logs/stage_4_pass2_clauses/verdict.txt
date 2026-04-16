@@ -1,0 +1,83 @@
+Stage 4: PASS2_CLAUSES
+Verdict : PASS
+Reason  : 24 clauses | dist={'LOW': 24, 'MEDIUM': 0, 'HIGH': 0, 'CRITICAL': 0} | batch_failures=24
+Duration: 1ms
+Errors  : 0
+Warnings: 25
+
+WARNING DETAILS:
+  - Batch 1 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 2 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 3 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 4 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 5 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 6 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 7 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 8 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 9 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 10 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 11 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 12 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 13 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 14 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 15 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 16 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 17 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 18 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 19 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 20 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 21 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 22 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 23 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - Batch 24 fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  - All clauses are LOW risk
+
+LLM CALLS: 24
+  [Pass2-Batch1] parse=parse_error in=5186chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch2] parse=parse_error in=4194chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch3] parse=parse_error in=4131chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch4] parse=parse_error in=3487chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch5] parse=parse_error in=3496chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch6] parse=parse_error in=3378chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch7] parse=parse_error in=3743chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch8] parse=parse_error in=3716chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch9] parse=parse_error in=3525chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch10] parse=parse_error in=3602chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch11] parse=parse_error in=3492chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch12] parse=parse_error in=4326chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch13] parse=parse_error in=4264chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch14] parse=parse_error in=4500chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch15] parse=parse_error in=3747chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch16] parse=parse_error in=4184chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch17] parse=parse_error in=4191chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch18] parse=parse_error in=3585chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch19] parse=parse_error in=3844chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch20] parse=parse_error in=3508chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch21] parse=parse_error in=3605chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch22] parse=parse_error in=3739chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch23] parse=parse_error in=3626chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+  [Pass2-Batch24] parse=parse_error in=3719chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1

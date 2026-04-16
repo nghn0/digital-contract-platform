@@ -1,56 +1,46 @@
-require("dotenv").config();
-const express = require("express");
 const { createClient } = require("@supabase/supabase-js");
+require("dotenv").config();
 
-const app = express();
+async function testConnection() {
+  console.log("🔍 Starting connectivity test...");
+  console.log("URL:", process.env.SUPABASE_URL);
 
-/* ================= SUPABASE CLIENT ================= */
+  const supabase = createClient(
+    process.env.SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE
+  );
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE
-);
-
-/* ================= HEALTH CHECK ================= */
-
-app.get("/test-supabase", async (req, res) => {
+  console.log("⏳ Attempting to fetch a single row from 'contracts'...");
+  
+  const start = Date.now();
   try {
-    console.log("🔍 Testing Supabase connection...");
-
-    // simple query (change table if needed)
     const { data, error } = await supabase
-      .from("users")
-      .select("*")
+      .from("contracts")
+      .select("count")
       .limit(1);
 
+    const duration = Date.now() - start;
+
     if (error) {
-      console.error("❌ Supabase error:", error);
-      return res.status(500).json({
-        success: false,
-        error: error.message,
-      });
+      console.error("❌ Supabase returned an error:");
+      console.error(JSON.stringify(error, null, 2));
+    } else {
+      console.log(`✅ Connection successful! (Took ${duration}ms)`);
+      console.log("Data sample:", data);
     }
-
-    console.log("✅ Supabase connected!");
-
-    res.json({
-      success: true,
-      message: "Supabase connected successfully",
-      sample: data,
-    });
   } catch (err) {
-    console.error("❌ Server error:", err);
-    res.status(500).json({
-      success: false,
-      error: err.message,
-    });
+    const duration = Date.now() - start;
+    console.error(`💥 CRITICAL FETCH ERROR after ${duration}ms:`);
+    console.error(err);
+    
+    if (err.message.includes("fetch failed")) {
+      console.log("\n💡 DIAGNOSIS: This is a network-level timeout.");
+      console.log("Please check if:");
+      console.log("1. Your internet is working.");
+      console.log("2. You are on a VPN or network that blocks port 443 for Node.js.");
+      console.log("3. The Supabase URL in your .env is correct and reachable via browser.");
+    }
   }
-});
+}
 
-/* ================= START SERVER ================= */
-
-const PORT = 5050;
-
-app.listen(PORT, () => {
-  console.log(`🚀 Test server running on http://localhost:${PORT}`);
-});
+testConnection();

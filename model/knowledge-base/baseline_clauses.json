@@ -1,0 +1,145 @@
+{
+  "kb_name": "standard_clauses",
+  "version": "1.0.0",
+  "description": "Standard/baseline versions of common clauses. RAG uses these during Pass 2 to compare the contract's clause against the standard, helping the LLM identify deviations and explain what is unusual.",
+  "entries": [
+    {
+      "id": "sc_001",
+      "text": "Standard Mutual Limitation of Liability clause: 'IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING LOST PROFITS, LOSS OF BUSINESS, OR LOSS OF DATA, ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, WHETHER BASED ON CONTRACT, TORT, OR ANY OTHER THEORY, EVEN IF SUCH PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. EACH PARTY'S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT SHALL NOT EXCEED THE TOTAL FEES PAID OR PAYABLE BY CLIENT TO VENDOR IN THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE CLAIM.' This is considered balanced and industry-standard. Key features: mutual (applies to both parties), consequential damages excluded, cap at 12 months fees.",
+      "metadata": {
+        "clause_type": "Limitation of Liability",
+        "standard_level": "Industry Standard",
+        "is_balanced": true,
+        "risk_score_range": [10, 25],
+        "deviations_that_increase_risk": [
+          "Cap removed entirely",
+          "Only one party capped",
+          "Cap below 3 months fees",
+          "Consequential damages included for one party",
+          "Gross negligence carve-out missing"
+        ]
+      }
+    },
+    {
+      "id": "sc_002",
+      "text": "Standard Confidentiality clause with exclusions: 'Each party agrees to hold the other party's Confidential Information in strict confidence using at least the same degree of care it uses to protect its own confidential information, but not less than reasonable care. Neither party shall disclose any Confidential Information to third parties or use it for any purpose other than to fulfill its obligations under this Agreement. These obligations do not apply to information that: (i) is or becomes publicly available through no fault of the receiving party; (ii) was known to the receiving party before disclosure; (iii) is independently developed by the receiving party without use of Confidential Information; (iv) is received from a third party without restriction; or (v) is required to be disclosed by law, regulation, or court order, provided the receiving party gives reasonable prior notice. These confidentiality obligations shall survive termination of this Agreement for a period of three (3) years.' This is balanced, includes all standard exclusions, and has a defined term.",
+      "metadata": {
+        "clause_type": "Confidentiality",
+        "standard_level": "Industry Standard",
+        "is_balanced": true,
+        "risk_score_range": [10, 20],
+        "required_exclusions": ["public domain", "prior knowledge", "independent development", "third-party disclosure", "legal requirement"],
+        "deviations_that_increase_risk": [
+          "Missing exclusions",
+          "Perpetual term",
+          "Residuals clause added",
+          "One-sided obligations",
+          "No definition of Confidential Information"
+        ]
+      }
+    },
+    {
+      "id": "sc_003",
+      "text": "Standard Termination clause (mutual, both types): 'Term. This Agreement commences on the Effective Date and continues for [one (1) year] unless earlier terminated (the 'Initial Term'). Termination for Cause. Either party may terminate this Agreement upon written notice if the other party materially breaches this Agreement and fails to cure such breach within thirty (30) days after receiving written notice describing the breach in reasonable detail. Termination for Convenience. Either party may terminate this Agreement for any reason or no reason upon sixty (60) days' prior written notice to the other party. Effect of Termination. Upon termination, (i) each party shall promptly return or destroy the other party's Confidential Information, (ii) Client shall pay Vendor for all work performed through the termination date, and (iii) provisions that by their nature should survive shall survive.' This is balanced — both parties have termination rights, cure period is standard, effect of termination protects both sides.",
+      "metadata": {
+        "clause_type": "Termination",
+        "standard_level": "Industry Standard",
+        "is_balanced": true,
+        "risk_score_range": [15, 30],
+        "deviations_that_increase_risk": [
+          "Only one party has convenience termination",
+          "No cure period for breach",
+          "Immediate termination without notice",
+          "No payment protection on termination",
+          "Very short notice period (under 30 days)"
+        ]
+      }
+    },
+    {
+      "id": "sc_004",
+      "text": "Standard Intellectual Property clause for consulting/services: 'IP Ownership. Subject to full payment of all fees due under this Agreement, Vendor hereby assigns to Client all right, title, and interest in and to the Deliverables, including all intellectual property rights therein. Pre-Existing IP. Vendor retains all ownership of tools, frameworks, libraries, methodologies, and other intellectual property developed or owned by Vendor prior to or independently of this Agreement ('Pre-Existing IP'). To the extent any Pre-Existing IP is incorporated into the Deliverables, Vendor grants Client a perpetual, royalty-free, non-exclusive, worldwide license to use such Pre-Existing IP solely as incorporated in the Deliverables. License to Client Materials. Client grants Vendor a limited, non-exclusive license to use Client's materials solely to the extent necessary to perform the Services under this Agreement.' This is balanced — Deliverables go to Client, Pre-Existing IP stays with Vendor.",
+      "metadata": {
+        "clause_type": "Intellectual Property",
+        "standard_level": "Industry Standard for Consulting",
+        "is_balanced": true,
+        "risk_score_range": [15, 30],
+        "deviations_that_increase_risk": [
+          "Pre-Existing IP not carved out",
+          "Assignment happens without payment condition",
+          "Background IP included in assignment",
+          "License to Client materials is absent",
+          "IP assigned regardless of payment"
+        ]
+      }
+    },
+    {
+      "id": "sc_005",
+      "text": "Standard Force Majeure clause: 'Force Majeure. Neither party shall be liable for any failure or delay in performance under this Agreement to the extent such failure or delay is caused by circumstances beyond such party's reasonable control, including without limitation acts of God, natural disasters, pandemics, epidemics, acts of government, war, terrorism, civil unrest, labor disputes, power failures, internet or telecommunications outages, or any other event beyond reasonable control ('Force Majeure Event'). The affected party must: (i) provide written notice to the other party within 48 hours of becoming aware of the Force Majeure Event, describing the event and expected duration; and (ii) use commercially reasonable efforts to mitigate the effect of the Force Majeure Event. If a Force Majeure Event continues for more than sixty (60) consecutive days, either party may terminate this Agreement upon written notice without liability, except for payment of fees for work performed prior to the Force Majeure Event.' This is balanced and comprehensive.",
+      "metadata": {
+        "clause_type": "Force Majeure",
+        "standard_level": "Industry Standard",
+        "is_balanced": true,
+        "risk_score_range": [5, 15],
+        "required_elements": ["Notice requirement", "Mitigation duty", "Termination right after extended event"],
+        "deviations_that_increase_risk": [
+          "No notice requirement",
+          "No mitigation duty",
+          "No termination right after extended period",
+          "Only one party covered",
+          "Scope too narrow (e.g., excludes pandemics)"
+        ]
+      }
+    },
+    {
+      "id": "sc_006",
+      "text": "Standard Dispute Resolution clause (arbitration): 'Dispute Resolution. The parties shall attempt to resolve any dispute arising out of or related to this Agreement through good faith negotiation for a period of thirty (30) days. If the dispute is not resolved through negotiation, it shall be submitted to binding arbitration administered by [ICADR/SIAC] in accordance with its then-current rules. The arbitration shall be conducted by a single arbitrator mutually agreed upon by the parties, or if the parties cannot agree, appointed by [ICADR/SIAC]. The seat of arbitration shall be [City, India/Singapore]. The language of arbitration shall be English. The arbitrator's award shall be final and binding. Either party may seek interim or emergency relief from a court of competent jurisdiction without waiving its right to arbitration.' This provides clear process, neutral forum, and preserves emergency relief rights.",
+      "metadata": {
+        "clause_type": "Dispute Resolution",
+        "standard_level": "Industry Standard",
+        "is_balanced": true,
+        "risk_score_range": [10, 25],
+        "deviations_that_increase_risk": [
+          "Only litigation (no arbitration option)",
+          "Exclusive foreign court jurisdiction",
+          "No negotiation period before arbitration",
+          "No interim relief carve-out",
+          "Arbitration administered by rules of only one party"
+        ]
+      }
+    },
+    {
+      "id": "sc_007",
+      "text": "Standard Indemnification clause (mutual, fault-based): 'Indemnification. Each party ('Indemnifying Party') shall indemnify, defend, and hold harmless the other party ('Indemnified Party') and its officers, directors, employees, and agents from and against any third-party claims, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or resulting from: (i) the Indemnifying Party's breach of any representation, warranty, or obligation under this Agreement; or (ii) the Indemnifying Party's gross negligence or willful misconduct. The Indemnifying Party's obligation is conditioned upon: (a) the Indemnified Party providing prompt written notice of such claim; (b) the Indemnifying Party having sole control of the defense and settlement; and (c) the Indemnified Party providing reasonable cooperation at the Indemnifying Party's expense. Neither party shall settle any claim in a manner that imposes liability on the other party without prior written consent.' This is balanced, fault-based, with appropriate conditions.",
+      "metadata": {
+        "clause_type": "Indemnification",
+        "standard_level": "Industry Standard",
+        "is_balanced": true,
+        "risk_score_range": [15, 35],
+        "deviations_that_increase_risk": [
+          "One-sided (only one party indemnifies)",
+          "No fault requirement (strict liability indemnification)",
+          "Includes indirect and consequential damages in indemnification",
+          "No cap on indemnification",
+          "Missing notice and control conditions"
+        ]
+      }
+    },
+    {
+      "id": "sc_008",
+      "text": "Standard Payment clause with protections: 'Fees. Client shall pay Vendor the fees set forth in the applicable Statement of Work or Order Form. Invoicing. Vendor shall invoice Client monthly in arrears (or as specified in the SOW). Payment Terms. Client shall pay all undisputed amounts within thirty (30) days of receipt of invoice. Client shall notify Vendor in writing of any disputed amounts within five (5) business days of receipt of the invoice, together with reasonable detail of the basis for the dispute. Invoices not disputed within such period shall be deemed accepted. Late Payment. Amounts not paid when due shall accrue interest at the rate of one and one-half percent (1.5%) per month (18% per annum), or the maximum rate permitted by applicable law, whichever is lower, from the due date until paid in full. Expenses. Client shall reimburse Vendor for pre-approved out-of-pocket expenses within thirty (30) days of receipt of supporting documentation.' This is balanced and protects the vendor against payment delays.",
+      "metadata": {
+        "clause_type": "Payment",
+        "standard_level": "Industry Standard (vendor-friendly)",
+        "is_balanced": true,
+        "risk_score_range": [10, 20],
+        "deviations_that_increase_risk": [
+          "Net 60 or longer without interest",
+          "Subjective acceptance criteria",
+          "No late payment interest",
+          "No deemed-acceptance provision",
+          "Client can unilaterally reduce fees"
+        ]
+      }
+    }
+  ]
+}

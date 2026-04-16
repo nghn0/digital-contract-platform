@@ -1,0 +1,315 @@
+{
+  "kb_name": "clause_taxonomy",
+  "version": "1.0.0",
+  "description": "Comprehensive taxonomy of all legal clause types. Used by RAG to classify clauses during Pass 2 extraction.",
+  "entries": [
+    {
+      "id": "ct_001",
+      "text": "Confidentiality clause: A provision that restricts one or both parties from disclosing proprietary, sensitive, or trade secret information shared during the contract relationship. Also known as a non-disclosure clause. Key indicators: 'shall not disclose', 'confidential information', 'proprietary', 'trade secret', 'keep secret', 'not reveal'. Typically found in NDAs, employment contracts, vendor agreements.",
+      "metadata": {
+        "clause_type": "Confidentiality",
+        "aliases": ["Non-Disclosure", "NDA Clause", "Secrecy Clause"],
+        "category": "Obligation",
+        "common_in": ["NDA", "Employment", "MSA", "Vendor", "Consulting"],
+        "typical_risk": "MEDIUM",
+        "standard_duration": "2-5 years post-termination",
+        "key_indicators": ["shall not disclose", "confidential information", "proprietary", "trade secret", "keep secret", "not reveal", "in confidence"]
+      }
+    },
+    {
+      "id": "ct_002",
+      "text": "Termination clause: A provision defining the conditions under which one or both parties may end the contract before the stated expiration date. Types include termination for cause (breach), termination for convenience (no reason needed), and mutual termination. Key indicators: 'terminate', 'termination', 'cancel', 'right to end', 'notice of termination', 'upon breach'. High risk if one-sided or lacks notice period.",
+      "metadata": {
+        "clause_type": "Termination",
+        "aliases": ["Cancellation Clause", "Exit Clause", "Right to Terminate"],
+        "category": "Right",
+        "common_in": ["MSA", "SLA", "Employment", "Lease", "Vendor"],
+        "typical_risk": "HIGH",
+        "subtypes": ["Termination for Cause", "Termination for Convenience", "Mutual Termination", "Automatic Termination"],
+        "key_indicators": ["terminate", "termination", "cancel", "right to end", "notice period", "upon breach", "30 days notice"]
+      }
+    },
+    {
+      "id": "ct_003",
+      "text": "Liability clause: A provision that limits, caps, or allocates financial responsibility between parties in the event of loss, damage, or harm. Includes limitation of liability, exclusion of liability, and indemnification provisions. Key indicators: 'liable', 'liability', 'damages', 'in no event', 'aggregate liability', 'consequential damages', 'indirect damages'. Extremely high risk when uncapped or one-sided.",
+      "metadata": {
+        "clause_type": "Liability",
+        "aliases": ["Limitation of Liability", "LOL Clause", "Damages Cap"],
+        "category": "Condition",
+        "common_in": ["MSA", "SLA", "Vendor", "Consulting", "NDA"],
+        "typical_risk": "HIGH",
+        "subtypes": ["Limitation of Liability", "Exclusion of Consequential Damages", "Mutual Liability Cap", "Unilateral Liability Cap"],
+        "key_indicators": ["liable", "liability", "in no event shall", "aggregate liability", "consequential damages", "indirect damages", "punitive damages", "cap"]
+      }
+    },
+    {
+      "id": "ct_004",
+      "text": "Indemnification clause: A provision requiring one party to compensate the other for losses, damages, costs, or liabilities arising from specific events, actions, or third-party claims. Also called a hold harmless clause. Key indicators: 'indemnify', 'indemnification', 'hold harmless', 'defend', 'protect against claims', 'losses and liabilities'. Critical risk when broad and one-sided.",
+      "metadata": {
+        "clause_type": "Indemnification",
+        "aliases": ["Hold Harmless Clause", "Indemnity Clause"],
+        "category": "Obligation",
+        "common_in": ["MSA", "Vendor", "Consulting", "Construction", "SLA"],
+        "typical_risk": "HIGH",
+        "subtypes": ["Mutual Indemnification", "One-sided Indemnification", "Third-party Indemnification", "IP Indemnification"],
+        "key_indicators": ["indemnify", "indemnification", "hold harmless", "defend and indemnify", "protect from claims", "losses and expenses"]
+      }
+    },
+    {
+      "id": "ct_005",
+      "text": "Payment clause: A provision specifying the financial terms of the agreement including amount, schedule, method of payment, invoicing requirements, and late payment consequences. Key indicators: 'payment', 'invoice', 'due date', 'net 30', 'fee', 'compensation', 'remuneration', 'billing'. Risk includes unclear payment triggers, long due periods, and harsh late payment penalties.",
+      "metadata": {
+        "clause_type": "Payment",
+        "aliases": ["Compensation Clause", "Fee Clause", "Billing Terms"],
+        "category": "Obligation",
+        "common_in": ["MSA", "Vendor", "Consulting", "Employment", "Lease", "Loan"],
+        "typical_risk": "MEDIUM",
+        "subtypes": ["Fixed Fee", "Time and Materials", "Milestone Payment", "Subscription", "Revenue Share"],
+        "key_indicators": ["payment", "invoice", "due date", "net 30", "net 60", "fee", "compensation", "billing", "overdue", "interest on late payment"]
+      }
+    },
+    {
+      "id": "ct_006",
+      "text": "Intellectual Property (IP) clause: A provision establishing ownership, licensing, and transfer of intellectual property created during or related to the contract. Includes work-for-hire provisions, IP assignment, and license grants. Key indicators: 'intellectual property', 'IP', 'work made for hire', 'assign', 'ownership', 'license', 'copyright', 'patent'. Extremely high risk when all IP is broadly assigned.",
+      "metadata": {
+        "clause_type": "Intellectual Property",
+        "aliases": ["IP Clause", "Work for Hire", "IP Assignment", "IP Ownership"],
+        "category": "Right",
+        "common_in": ["Employment", "Consulting", "MSA", "IP Assignment"],
+        "typical_risk": "HIGH",
+        "subtypes": ["IP Assignment", "IP License", "Work for Hire", "Background IP", "Foreground IP"],
+        "key_indicators": ["intellectual property", "work made for hire", "assign all rights", "ownership vests", "license grant", "copyright", "patent", "trademark"]
+      }
+    },
+    {
+      "id": "ct_007",
+      "text": "Non-compete clause: A provision restricting a party from engaging in competing business activities during and after the contract period. Key indicators: 'non-compete', 'not compete', 'competitive activity', 'competing business', 'restricted activities', 'exclusivity', 'restraint of trade'. High risk if overbroad in scope, geography, or duration.",
+      "metadata": {
+        "clause_type": "Non-Compete",
+        "aliases": ["Restraint of Trade", "Non-Competition Clause", "Exclusivity Clause"],
+        "category": "Prohibition",
+        "common_in": ["Employment", "Partnership", "Consulting", "Acquisition"],
+        "typical_risk": "HIGH",
+        "key_indicators": ["non-compete", "not compete", "competing business", "restricted period", "exclusivity", "restraint of trade", "competitive activity"]
+      }
+    },
+    {
+      "id": "ct_008",
+      "text": "Non-solicitation clause: A provision restricting a party from recruiting employees, contractors, or customers of the other party. Key indicators: 'non-solicitation', 'not solicit', 'not recruit', 'poaching', 'hire away', 'approach employees', 'solicit customers'. Risk is lower than non-compete but still limits business activities.",
+      "metadata": {
+        "clause_type": "Non-Solicitation",
+        "aliases": ["No-Poach Clause", "Anti-Solicitation Clause"],
+        "category": "Prohibition",
+        "common_in": ["Employment", "Consulting", "Partnership", "MSA"],
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["non-solicitation", "not solicit", "not recruit", "poach", "hire away", "approach employees", "solicit clients"]
+      }
+    },
+    {
+      "id": "ct_009",
+      "text": "Governing Law clause: A provision specifying which jurisdiction's laws govern interpretation and enforcement of the contract. Key indicators: 'governed by', 'governing law', 'laws of', 'subject to the laws', 'under the laws of'. High risk if jurisdiction is unfavorable to the reviewing party (foreign court, inconvenient forum).",
+      "metadata": {
+        "clause_type": "Governing Law",
+        "aliases": ["Choice of Law Clause", "Applicable Law Clause"],
+        "category": "Condition",
+        "common_in": ["All contract types"],
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["governed by", "governing law", "laws of the state", "subject to the laws", "shall be construed"]
+      }
+    },
+    {
+      "id": "ct_010",
+      "text": "Dispute Resolution clause: A provision specifying how disputes will be resolved — through litigation, arbitration, or mediation. Key indicators: 'dispute resolution', 'arbitration', 'mediation', 'binding arbitration', 'settle disputes', 'jurisdiction of courts', 'exclusive jurisdiction'. Missing this clause is a significant red flag.",
+      "metadata": {
+        "clause_type": "Dispute Resolution",
+        "aliases": ["Arbitration Clause", "Mediation Clause", "Jurisdiction Clause"],
+        "category": "Remedy",
+        "common_in": ["All contract types"],
+        "typical_risk": "MEDIUM",
+        "subtypes": ["Binding Arbitration", "Non-Binding Mediation", "Litigation", "Expert Determination"],
+        "key_indicators": ["dispute resolution", "arbitration", "mediation", "binding arbitration", "exclusive jurisdiction", "submit to jurisdiction"]
+      }
+    },
+    {
+      "id": "ct_011",
+      "text": "Force Majeure clause: A provision excusing one or both parties from performance obligations when extraordinary events beyond their control prevent fulfillment — such as natural disasters, pandemics, war, or government actions. Key indicators: 'force majeure', 'act of God', 'beyond control', 'natural disaster', 'pandemic', 'war', 'unforeseeable event'. Absence of this clause is a high-risk flag.",
+      "metadata": {
+        "clause_type": "Force Majeure",
+        "aliases": ["Act of God Clause", "Impossibility Clause", "Frustration Clause"],
+        "category": "Condition",
+        "common_in": ["MSA", "Construction", "Supply Chain", "Vendor"],
+        "typical_risk": "LOW",
+        "key_indicators": ["force majeure", "act of God", "beyond reasonable control", "natural disaster", "pandemic", "war", "government action", "unforeseeable"]
+      }
+    },
+    {
+      "id": "ct_012",
+      "text": "Warranty clause: A provision in which a party makes representations and guarantees about the quality, fitness, or performance of goods or services. Key indicators: 'warrants', 'warranty', 'represents', 'guarantee', 'merchantability', 'fitness for purpose', 'as is', 'no warranties'. Risk includes broad disclaimers that remove all protections.",
+      "metadata": {
+        "clause_type": "Warranty",
+        "aliases": ["Representation Clause", "Guarantee Clause"],
+        "category": "Representation",
+        "common_in": ["Vendor", "MSA", "SLA", "Consulting"],
+        "typical_risk": "MEDIUM",
+        "subtypes": ["Express Warranty", "Implied Warranty", "Warranty Disclaimer", "AS-IS Clause"],
+        "key_indicators": ["warrants", "warranty", "represents and warrants", "as is", "no warranties", "merchantability", "fitness for a particular purpose"]
+      }
+    },
+    {
+      "id": "ct_013",
+      "text": "Assignment clause: A provision governing whether and how parties may transfer their rights and obligations under the contract to third parties. Key indicators: 'assign', 'assignment', 'transfer rights', 'delegate obligations', 'successor', 'change of control'. Risk if one party can freely assign but the other cannot.",
+      "metadata": {
+        "clause_type": "Assignment",
+        "aliases": ["Transfer Clause", "Change of Control Clause"],
+        "category": "Right",
+        "common_in": ["All contract types"],
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["assign", "assignment", "transfer", "delegate", "successor", "change of control", "without consent"]
+      }
+    },
+    {
+      "id": "ct_014",
+      "text": "Notice clause: A provision specifying how formal communications and legal notices must be delivered between parties. Key indicators: 'notice', 'written notice', 'notification', 'shall be sent', 'by registered mail', 'by email', 'deemed received'. Risk if notice periods are very short or delivery methods are unclear.",
+      "metadata": {
+        "clause_type": "Notice",
+        "aliases": ["Notice Provision", "Communication Clause"],
+        "category": "Obligation",
+        "common_in": ["All contract types"],
+        "typical_risk": "LOW",
+        "key_indicators": ["notice", "written notice", "shall notify", "registered mail", "deemed received", "notice period", "days notice"]
+      }
+    },
+    {
+      "id": "ct_015",
+      "text": "Severability clause: A provision stating that if any part of the contract is found invalid or unenforceable, the remaining provisions continue in full effect. Key indicators: 'severability', 'severable', 'invalid provision', 'remaining provisions', 'unenforceable', 'void provision', 'shall survive'. Standard boilerplate — absence is a minor concern.",
+      "metadata": {
+        "clause_type": "Severability",
+        "aliases": ["Savings Clause", "Divisibility Clause"],
+        "category": "Condition",
+        "common_in": ["All contract types"],
+        "typical_risk": "LOW",
+        "key_indicators": ["severability", "severable", "invalid provision", "unenforceable", "remaining provisions shall continue", "void ab initio"]
+      }
+    },
+    {
+      "id": "ct_016",
+      "text": "Entire Agreement clause: A provision stating that the written contract is the complete and final agreement, superseding all prior discussions, negotiations, and agreements. Also called an integration clause or merger clause. Key indicators: 'entire agreement', 'whole agreement', 'supersedes', 'integration clause', 'prior agreements', 'complete understanding'.",
+      "metadata": {
+        "clause_type": "Entire Agreement",
+        "aliases": ["Integration Clause", "Merger Clause"],
+        "category": "Condition",
+        "common_in": ["All contract types"],
+        "typical_risk": "LOW",
+        "key_indicators": ["entire agreement", "whole agreement", "supersedes all prior", "integration", "no prior representations", "complete understanding"]
+      }
+    },
+    {
+      "id": "ct_017",
+      "text": "Amendment clause: A provision specifying how the contract may be modified after execution. Key indicators: 'amendment', 'modification', 'changed only by', 'written agreement', 'addendum', 'no oral modification'. Risk if amendments can be made unilaterally by one party.",
+      "metadata": {
+        "clause_type": "Amendment",
+        "aliases": ["Modification Clause", "Change Order Clause"],
+        "category": "Condition",
+        "common_in": ["All contract types"],
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["amendment", "modification", "changed only by", "written agreement signed by both", "addendum", "unilateral modification"]
+      }
+    },
+    {
+      "id": "ct_018",
+      "text": "Data Protection and Privacy clause: A provision governing how personal data and sensitive information is collected, processed, stored, shared, and deleted in compliance with data protection laws. Key indicators: 'personal data', 'data protection', 'GDPR', 'privacy', 'data processing', 'data subject', 'processing agreement', 'data breach'. Critical in tech and SaaS contracts.",
+      "metadata": {
+        "clause_type": "Data Protection",
+        "aliases": ["Privacy Clause", "Data Processing Agreement", "DPA Clause"],
+        "category": "Obligation",
+        "common_in": ["MSA", "SLA", "Vendor", "Consulting", "Employment"],
+        "typical_risk": "HIGH",
+        "key_indicators": ["personal data", "data protection", "GDPR", "CCPA", "data processing", "data breach", "privacy policy", "data subject rights"]
+      }
+    },
+    {
+      "id": "ct_019",
+      "text": "Service Level Agreement (SLA) clause: A provision defining measurable performance standards the service provider must meet, including uptime guarantees, response times, and remedies for service failures. Key indicators: 'service level', 'uptime', 'availability', 'response time', 'SLA credit', 'service credit', 'downtime'. Risk if credits are the sole remedy for poor performance.",
+      "metadata": {
+        "clause_type": "Service Level",
+        "aliases": ["SLA Clause", "Performance Standards", "Uptime Guarantee"],
+        "category": "Obligation",
+        "common_in": ["SLA", "MSA", "Vendor", "Cloud Services"],
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["service level", "uptime", "availability percentage", "99.9%", "SLA credit", "service credit", "response time", "resolution time"]
+      }
+    },
+    {
+      "id": "ct_020",
+      "text": "Auto-Renewal clause: A provision that automatically extends the contract for another term unless one party gives notice to terminate before a specified deadline. Key indicators: 'automatically renew', 'auto-renewal', 'unless notice', 'successive terms', 'rollover', 'evergreen clause'. High risk if notice window is short and hidden in the contract.",
+      "metadata": {
+        "clause_type": "Auto-Renewal",
+        "aliases": ["Evergreen Clause", "Rollover Clause", "Automatic Renewal"],
+        "category": "Condition",
+        "common_in": ["SLA", "MSA", "Lease", "Subscription"],
+        "typical_risk": "HIGH",
+        "key_indicators": ["automatically renew", "auto-renewal", "unless written notice", "successive terms", "rollover", "deemed renewed", "evergreen"]
+      }
+    },
+    {
+      "id": "ct_021",
+      "text": "Audit Rights clause: A provision granting one party the right to audit the other's records, systems, or compliance with contract obligations. Key indicators: 'audit', 'right to audit', 'inspect records', 'access to books', 'compliance audit', 'financial audit'. Risk if audit rights are one-sided or overly invasive.",
+      "metadata": {
+        "clause_type": "Audit Rights",
+        "aliases": ["Inspection Rights", "Records Access Clause"],
+        "category": "Right",
+        "common_in": ["MSA", "Vendor", "Franchise", "Government Contracts"],
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["audit", "right to audit", "inspect records", "access to books", "reasonable notice", "audit costs"]
+      }
+    },
+    {
+      "id": "ct_022",
+      "text": "Survival clause: A provision specifying which contractual obligations and rights continue to be enforceable after the contract expires or is terminated. Key indicators: 'survive', 'survival', 'shall survive termination', 'continue in effect', 'post-termination obligations'. Risk if survival periods are open-ended.",
+      "metadata": {
+        "clause_type": "Survival",
+        "aliases": ["Post-Termination Obligations", "Survival Provision"],
+        "category": "Condition",
+        "common_in": ["All contract types"],
+        "typical_risk": "LOW",
+        "key_indicators": ["survive", "survival", "shall survive termination", "continue after expiry", "obligations that survive"]
+      }
+    },
+    {
+      "id": "ct_023",
+      "text": "Exclusivity clause: A provision granting one party exclusive rights to engage with the other party for certain services, products, or activities, preventing the other party from working with competitors. Key indicators: 'exclusive', 'exclusivity', 'solely', 'only vendor', 'sole supplier', 'not engage any other'. Very high risk if broad and long-term.",
+      "metadata": {
+        "clause_type": "Exclusivity",
+        "aliases": ["Exclusive Dealing Clause", "Sole Provider Clause"],
+        "category": "Prohibition",
+        "common_in": ["Vendor", "Distribution", "Partnership", "Consulting"],
+        "typical_risk": "HIGH",
+        "key_indicators": ["exclusive", "exclusivity", "sole provider", "not engage any other", "only vendor", "exclusive basis"]
+      }
+    },
+    {
+      "id": "ct_024",
+      "text": "Representations and Warranties clause: A provision in which parties make factual statements about themselves or the subject matter of the contract that are true at the time of signing. Key indicators: 'represents and warrants', 'acknowledges', 'certifies', 'confirms that', 'has the authority', 'no pending litigation'. False representations can lead to rescission.",
+      "metadata": {
+        "clause_type": "Representations and Warranties",
+        "aliases": ["Reps and Warranties", "Representations Clause"],
+        "category": "Representation",
+        "common_in": ["All contract types", "M&A", "Investment"],
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["represents and warrants", "acknowledges", "certifies", "has full authority", "no litigation pending", "duly organized"]
+      }
+    },
+    {
+      "id": "ct_025",
+      "text": "Subcontracting clause: A provision specifying whether and how a party may engage third parties or subcontractors to fulfill their obligations under the contract. Key indicators: 'subcontract', 'subcontractor', 'third party', 'delegate', 'outsource', 'sub-vendor', 'approved subcontractors'. Risk if subcontracting is unrestricted and quality standards are not maintained.",
+      "metadata": {
+        "clause_type": "Subcontracting",
+        "aliases": ["Delegation Clause", "Sub-Vendor Clause"],
+        "category": "Right",
+        "common_in": ["MSA", "Vendor", "Construction", "Consulting"],
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["subcontract", "subcontractor", "third party provider", "delegate", "outsource", "prior written consent"]
+      }
+    }
+  ]
+}

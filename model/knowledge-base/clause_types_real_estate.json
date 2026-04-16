@@ -1,0 +1,79 @@
+{
+  "kb_name": "clause_types_real_estate",
+  "version": "1.0.0",
+  "description": "Commercial real-estate and lease clause taxonomy for domain-aware retrieval.",
+  "entries": [
+    {
+      "id": "re_001",
+      "text": "Commercial lease economics clause: establishes base rent, gross rent, or triple-net (NNN) structure and rent adjustment mechanics.",
+      "metadata": {
+        "clause_type": "Lease Rent Structure",
+        "category": "Obligation",
+        "domain": "Real Estate",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["base rent", "gross lease", "triple net", "NNN", "rent escalation"],
+        "standard_language_patterns": ["tenant shall pay base rent"]
+      }
+    },
+    {
+      "id": "re_002",
+      "text": "CAM and operating expenses clause: allocates common area maintenance, taxes, insurance, and reconciliations.",
+      "metadata": {
+        "clause_type": "CAM / Operating Expenses",
+        "category": "Obligation",
+        "domain": "Real Estate",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["CAM", "operating expenses", "reconciliation", "taxes and insurance"],
+        "standard_language_patterns": ["tenant shall pay additional rent"]
+      }
+    },
+    {
+      "id": "re_003",
+      "text": "Tenant improvement allowance clause: defines landlord contribution, approval process, and disbursement conditions for improvements.",
+      "metadata": {
+        "clause_type": "Tenant Improvements",
+        "category": "Condition",
+        "domain": "Real Estate",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["tenant improvement allowance", "build-out", "landlord contribution"],
+        "standard_language_patterns": ["landlord shall provide an allowance"]
+      }
+    },
+    {
+      "id": "re_004",
+      "text": "Assignment and subletting restrictions clause: regulates transfers, consent rights, recapture options, and profit-sharing.",
+      "metadata": {
+        "clause_type": "Assignment / Subletting",
+        "category": "Condition",
+        "domain": "Real Estate",
+        "typical_risk": "HIGH",
+        "key_indicators": ["assign", "sublet", "landlord consent", "recapture"],
+        "standard_language_patterns": ["tenant shall not assign or sublet without consent"]
+      }
+    },
+    {
+      "id": "re_005",
+      "text": "Holdover clause: sets rent premium and liability when tenant remains in possession after lease expiration.",
+      "metadata": {
+        "clause_type": "Holdover",
+        "category": "Remedy",
+        "domain": "Real Estate",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["holdover", "month-to-month", "rent premium", "double rent"],
+        "standard_language_patterns": ["if tenant holds over"]
+      }
+    },
+    {
+      "id": "re_006",
+      "text": "Renewal option clause: defines extension windows, notice deadlines, rent reset formulas, and conditions to exercise options.",
+      "metadata": {
+        "clause_type": "Renewal Options",
+        "category": "Right",
+        "domain": "Real Estate",
+        "typical_risk": "MEDIUM",
+        "key_indicators": ["renewal option", "extension term", "notice period", "fair market rent"],
+        "standard_language_patterns": ["tenant may renew for an additional term"]
+      }
+    }
+  ]
+}

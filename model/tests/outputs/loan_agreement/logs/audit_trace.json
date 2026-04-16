@@ -1,0 +1,1109 @@
+{
+  "total_events": 76,
+  "events_by_type": {
+    "validation": 4,
+    "extraction": 8,
+    "llm_call": 32,
+    "error": 24,
+    "llm_response": 8
+  },
+  "events_by_stage": {
+    "Stage 0": 1,
+    "Stage 1": 2,
+    "Stage 2": 2,
+    "Stage 3": 4,
+    "Pass 1": 48,
+    "Extraction": 1,
+    "Pass 2": 16,
+    "Stage 4": 2
+  },
+  "timeline": [
+    {
+      "timestamp": "2026-04-10T12:00:32.273041",
+      "stage": "Stage 0",
+      "event_type": "validation",
+      "description": "Input validation",
+      "details": {
+        "file": "sample_contract.txt",
+        "provider": "openrouter",
+        "model": "meta-llama/llama-3.3-70b-instruct"
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:32.273041",
+      "stage": "Stage 1",
+      "event_type": "extraction",
+      "description": "Extracting raw document text",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-10T12:00:32.274037",
+      "stage": "Stage 1",
+      "event_type": "extraction",
+      "description": "Text extracted: 1835 characters",
+      "details": {
+        "character_count": 1835,
+        "preview": "SAMPLE SERVICE AGREEMENT\n\nThis Service Agreement (\"Agreement\") is entered into as of January 1, 2024, between ABC Corporation, a Delaware corporation (\"Client\"), and XYZ Services Inc., a California co"
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:32.274037",
+      "stage": "Stage 2",
+      "event_type": "extraction",
+      "description": "Splitting document into clauses",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-10T12:00:32.274037",
+      "stage": "Stage 2",
+      "event_type": "extraction",
+      "description": "Clauses segmented: 8 sections found",
+      "details": {
+        "clause_count": 8,
+        "sample_clauses": [
+          {
+            "heading": "SAMPLE SERVICE AGREEMENT",
+            "length": 195
+          },
+          {
+            "heading": "1. SERVICES",
+            "length": 151
+          },
+          {
+            "heading": "2. PAYMENT TERMS",
+            "length": 156
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:32.275045",
+      "stage": "Stage 3",
+      "event_type": "extraction",
+      "description": "Running grounded two-pass extraction",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-10T12:00:32.283043",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 1\nSECTION HEADING: SAMPLE SERVICE AGREEMENT\nCLAUSE TEXT:\nThis Service Agreement (\"Agreement\") is entered into as of January 1, 2024, between ABC Corporation, a Delaware corporation (\"Client\"), and XYZ Services Inc., a California corporation (",
+        "total_message_length": 707
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:32.988942",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:33.990893",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 1\nSECTION HEADING: SAMPLE SERVICE AGREEMENT\nCLAUSE TEXT:\nThis Service Agreement (\"Agreement\") is entered into as of January 1, 2024, between ABC Corporation, a Delaware corporation (\"Client\"), and XYZ Services Inc., a California corporation (",
+        "total_message_length": 707
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:34.250990",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 2
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:36.254310",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 1\nSECTION HEADING: SAMPLE SERVICE AGREEMENT\nCLAUSE TEXT:\nThis Service Agreement (\"Agreement\") is entered into as of January 1, 2024, between ABC Corporation, a Delaware corporation (\"Client\"), and XYZ Services Inc., a California corporation (",
+        "total_message_length": 707
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:36.539068",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 3
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:36.547070",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 2\nSECTION HEADING: 1. SERVICES\nCLAUSE TEXT:\nVendor shall provide software development services as requested by Client. Services include development, testing, and deployment of software solutions.\n\nReturn ONLY this JSON object:\n{\n  \"parties\": ",
+        "total_message_length": 650
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:36.851552",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:37.852696",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 2\nSECTION HEADING: 1. SERVICES\nCLAUSE TEXT:\nVendor shall provide software development services as requested by Client. Services include development, testing, and deployment of software solutions.\n\nReturn ONLY this JSON object:\n{\n  \"parties\": ",
+        "total_message_length": 650
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:38.239505",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 2
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:40.240932",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 2\nSECTION HEADING: 1. SERVICES\nCLAUSE TEXT:\nVendor shall provide software development services as requested by Client. Services include development, testing, and deployment of software solutions.\n\nReturn ONLY this JSON object:\n{\n  \"parties\": ",
+        "total_message_length": 650
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:40.582425",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 3
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:40.589348",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 3\nSECTION HEADING: 2. PAYMENT TERMS\nCLAUSE TEXT:\nClient shall pay Vendor $50,000 per month for the services. Payment is due within 30 days of invoice. Late payments shall accrue interest at 1.5% per month.\n\nReturn ONLY this JSON object:\n{\n  \"",
+        "total_message_length": 660
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:40.924185",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:41.926388",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 3\nSECTION HEADING: 2. PAYMENT TERMS\nCLAUSE TEXT:\nClient shall pay Vendor $50,000 per month for the services. Payment is due within 30 days of invoice. Late payments shall accrue interest at 1.5% per month.\n\nReturn ONLY this JSON object:\n{\n  \"",
+        "total_message_length": 660
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:42.614036",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 2
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:44.616558",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 3\nSECTION HEADING: 2. PAYMENT TERMS\nCLAUSE TEXT:\nClient shall pay Vendor $50,000 per month for the services. Payment is due within 30 days of invoice. Late payments shall accrue interest at 1.5% per month.\n\nReturn ONLY this JSON object:\n{\n  \"",
+        "total_message_length": 660
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:44.866906",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 3
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:44.879827",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 4\nSECTION HEADING: 3. CONFIDENTIALITY\nCLAUSE TEXT:\nBoth parties agree to maintain the confidentiality of any proprietary information shared during the term of this Agreement. This obligation shall survive termination for a period of 2 years.\n",
+        "total_message_length": 696
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:45.182935",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:46.184999",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 4\nSECTION HEADING: 3. CONFIDENTIALITY\nCLAUSE TEXT:\nBoth parties agree to maintain the confidentiality of any proprietary information shared during the term of this Agreement. This obligation shall survive termination for a period of 2 years.\n",
+        "total_message_length": 696
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:46.534726",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 2
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:48.537227",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 4\nSECTION HEADING: 3. CONFIDENTIALITY\nCLAUSE TEXT:\nBoth parties agree to maintain the confidentiality of any proprietary information shared during the term of this Agreement. This obligation shall survive termination for a period of 2 years.\n",
+        "total_message_length": 696
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:48.810383",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 3
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:48.821309",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 5\nSECTION HEADING: 4. TERM AND TERMINATION\nCLAUSE TEXT:\nThis Agreement shall commence on the date hereof and continue for one (1) year. Either party may terminate this Agreement with 30 days written notice.\n\nReturn ONLY this JSON object:\n{\n  ",
+        "total_message_length": 661
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:49.148384",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:50.151079",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 5\nSECTION HEADING: 4. TERM AND TERMINATION\nCLAUSE TEXT:\nThis Agreement shall commence on the date hereof and continue for one (1) year. Either party may terminate this Agreement with 30 days written notice.\n\nReturn ONLY this JSON object:\n{\n  ",
+        "total_message_length": 661
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:50.387927",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 2
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:52.389820",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 5\nSECTION HEADING: 4. TERM AND TERMINATION\nCLAUSE TEXT:\nThis Agreement shall commence on the date hereof and continue for one (1) year. Either party may terminate this Agreement with 30 days written notice.\n\nReturn ONLY this JSON object:\n{\n  ",
+        "total_message_length": 661
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:52.800095",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 3
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:52.808103",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 6\nSECTION HEADING: 5. LIABILITY LIMITATION\nCLAUSE TEXT:\nNeither party shall be liable for indirect, incidental, or consequential damages arising out of this Agreement. Each party's total liability shall not exceed the fees paid in the precedi",
+        "total_message_length": 710
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:53.091159",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:54.093372",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 6\nSECTION HEADING: 5. LIABILITY LIMITATION\nCLAUSE TEXT:\nNeither party shall be liable for indirect, incidental, or consequential damages arising out of this Agreement. Each party's total liability shall not exceed the fees paid in the precedi",
+        "total_message_length": 710
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:54.416650",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 2
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:56.417577",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 6\nSECTION HEADING: 5. LIABILITY LIMITATION\nCLAUSE TEXT:\nNeither party shall be liable for indirect, incidental, or consequential damages arising out of this Agreement. Each party's total liability shall not exceed the fees paid in the precedi",
+        "total_message_length": 710
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:56.685312",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 3
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:56.697320",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 7\nSECTION HEADING: 6. GOVERNING LAW\nCLAUSE TEXT:\nThis Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles.\n\nReturn ONLY this JSON object:\n{\n  \"parti",
+        "total_message_length": 655
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:56.945756",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:57.948223",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 7\nSECTION HEADING: 6. GOVERNING LAW\nCLAUSE TEXT:\nThis Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles.\n\nReturn ONLY this JSON object:\n{\n  \"parti",
+        "total_message_length": 655
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:00:58.222727",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 2
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:00.224277",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 7\nSECTION HEADING: 6. GOVERNING LAW\nCLAUSE TEXT:\nThis Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles.\n\nReturn ONLY this JSON object:\n{\n  \"parti",
+        "total_message_length": 655
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:00.512922",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 3
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:00.582920",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 8\nSECTION HEADING: 7. ENTIRE AGREEMENT\nCLAUSE TEXT:\nThis Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements.\n\nIN WITNESS WHEREOF, the parties have executed thi",
+        "total_message_length": 976
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:00.849301",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:01.852640",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 8\nSECTION HEADING: 7. ENTIRE AGREEMENT\nCLAUSE TEXT:\nThis Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements.\n\nIN WITNESS WHEREOF, the parties have executed thi",
+        "total_message_length": 976
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:02.130084",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 2
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:04.133532",
+      "stage": "Pass 1",
+      "event_type": "llm_call",
+      "description": "Calling LLM: google/gemma-4-31b",
+      "details": {
+        "model": "google/gemma-4-31b",
+        "temperature": 0.1,
+        "max_tokens": 900,
+        "system_prompt_preview": "You are a legal fact extractor.\nExtract only explicit facts from clause text.\nDo not classify clauses.\nDo not infer risk.\nReturn only JSON.",
+        "user_message_preview": "\nExtract facts from this single legal clause.\n\nCLAUSE ID: 8\nSECTION HEADING: 7. ENTIRE AGREEMENT\nCLAUSE TEXT:\nThis Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements.\n\nIN WITNESS WHEREOF, the parties have executed thi",
+        "total_message_length": 976
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:04.421875",
+      "stage": "Pass 1",
+      "event_type": "error",
+      "description": "ERROR in LLMCallError",
+      "details": {
+        "error_type": "LLMCallError",
+        "error_message": "LLM API call failed (400): {\"error\":{\"message\":\"google/gemma-4-31b is not a valid model ID\",\"code\":400},\"user_id\":\"user_39SouC1TizfU4TtwWhuDWjmaVDQ\"}",
+        "context": {
+          "attempt": 3
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:04.424863",
+      "stage": "Extraction",
+      "event_type": "validation",
+      "description": "Pass 1 extraction status",
+      "details": {
+        "failed_clauses": 8,
+        "total_clauses": 8
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:04.424863",
+      "stage": "Pass 2",
+      "event_type": "llm_call",
+      "description": "Calling LLM: meta-llama/llama-3.3-70b-instruct",
+      "details": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "temperature": 0.1,
+        "max_tokens": 1100,
+        "system_prompt_preview": "You are a legal reasoning assistant.\nUse only provided clause text and extracted facts.\nIf unsupported, return UNKNOWN or empty lists.\nReturn only JSON.",
+        "user_message_preview": "\nReason over one clause using grounded facts only.\n\nCLAUSE ID: 1\nSECTION HEADING: SAMPLE SERVICE AGREEMENT\nCLAUSE TEXT:\nThis Service Agreement (\"Agreement\") is entered into as of January 1, 2024, between ABC Corporation, a Delaware corporation (\"Client\"), and XYZ Services Inc., a California corporat",
+        "total_message_length": 1141
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:06.873021",
+      "stage": "Pass 2",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 286,
+        "response_preview": "{\n  \"clause_type\": \"definition\",\n  \"category\": \"definition\",\n  \"obligations\": [],\n  \"rights\": [],\n  \"risk_level\": \"LOW\",\n  \"risk_type\": \"UNKNOWN\",\n  \"risk_justification\": \"The clause is a basic agreement definition without any explicit risks or obligations.\",\n  \"affected_party\": null\n}",
+        "parsed_json_keys": [
+          "clause_type",
+          "category",
+          "obligations",
+          "rights",
+          "risk_level",
+          "risk_type",
+          "risk_justification",
+          "affected_party"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:06.874079",
+      "stage": "Pass 2",
+      "event_type": "llm_call",
+      "description": "Calling LLM: meta-llama/llama-3.3-70b-instruct",
+      "details": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "temperature": 0.1,
+        "max_tokens": 1100,
+        "system_prompt_preview": "You are a legal reasoning assistant.\nUse only provided clause text and extracted facts.\nIf unsupported, return UNKNOWN or empty lists.\nReturn only JSON.",
+        "user_message_preview": "\nReason over one clause using grounded facts only.\n\nCLAUSE ID: 2\nSECTION HEADING: 1. SERVICES\nCLAUSE TEXT:\nVendor shall provide software development services as requested by Client. Services include development, testing, and deployment of software solutions.\n\nEXTRACTED FACTS:\n{\"parties\": [], \"moneta",
+        "total_message_length": 1097
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:10.728638",
+      "stage": "Pass 2",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 384,
+        "response_preview": "```json\n{\n  \"clause_type\": \"Obligation Clause\",\n  \"category\": \"obligation\",\n  \"obligations\": [\"provide software development services as requested by Client\"],\n  \"rights\": [],\n  \"risk_level\": \"MEDIUM\",\n  \"risk_type\": \"Non-performance\",\n  \"risk_justification\": \"Vendor's failure to provide software dev",
+        "parsed_json_keys": [
+          "clause_type",
+          "category",
+          "obligations",
+          "rights",
+          "risk_level",
+          "risk_type",
+          "risk_justification",
+          "affected_party"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:10.729651",
+      "stage": "Pass 2",
+      "event_type": "llm_call",
+      "description": "Calling LLM: meta-llama/llama-3.3-70b-instruct",
+      "details": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "temperature": 0.1,
+        "max_tokens": 1100,
+        "system_prompt_preview": "You are a legal reasoning assistant.\nUse only provided clause text and extracted facts.\nIf unsupported, return UNKNOWN or empty lists.\nReturn only JSON.",
+        "user_message_preview": "\nReason over one clause using grounded facts only.\n\nCLAUSE ID: 3\nSECTION HEADING: 2. PAYMENT TERMS\nCLAUSE TEXT:\nClient shall pay Vendor $50,000 per month for the services. Payment is due within 30 days of invoice. Late payments shall accrue interest at 1.5% per month.\n\nEXTRACTED FACTS:\n{\"parties\": [",
+        "total_message_length": 1101
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:12.456499",
+      "stage": "Pass 2",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 334,
+        "response_preview": "```json\n{\n  \"clause_type\": \"Payment Term\",\n  \"category\": \"obligation\",\n  \"obligations\": [\"Client shall pay Vendor $50,000 per month for the services\"],\n  \"rights\": [],\n  \"risk_level\": \"MEDIUM\",\n  \"risk_type\": \"Financial\",\n  \"risk_justification\": \"Late payments shall accrue interest at 1.5% per month",
+        "parsed_json_keys": [
+          "clause_type",
+          "category",
+          "obligations",
+          "rights",
+          "risk_level",
+          "risk_type",
+          "risk_justification",
+          "affected_party"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:12.460498",
+      "stage": "Pass 2",
+      "event_type": "llm_call",
+      "description": "Calling LLM: meta-llama/llama-3.3-70b-instruct",
+      "details": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "temperature": 0.1,
+        "max_tokens": 1100,
+        "system_prompt_preview": "You are a legal reasoning assistant.\nUse only provided clause text and extracted facts.\nIf unsupported, return UNKNOWN or empty lists.\nReturn only JSON.",
+        "user_message_preview": "\nReason over one clause using grounded facts only.\n\nCLAUSE ID: 4\nSECTION HEADING: 3. CONFIDENTIALITY\nCLAUSE TEXT:\nBoth parties agree to maintain the confidentiality of any proprietary information shared during the term of this Agreement. This obligation shall survive termination for a period of 2 ye",
+        "total_message_length": 1075
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:16.612124",
+      "stage": "Pass 2",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 448,
+        "response_preview": "{\n  \"clause_type\": \"Confidentiality\",\n  \"category\": \"obligation\",\n  \"obligations\": [\"maintain the confidentiality of any proprietary information shared during the term of this Agreement\"],\n  \"rights\": [],\n  \"risk_level\": \"MEDIUM\",\n  \"risk_type\": \"Breach of Confidentiality\",\n  \"risk_justification\": \"",
+        "parsed_json_keys": [
+          "clause_type",
+          "category",
+          "obligations",
+          "rights",
+          "risk_level",
+          "risk_type",
+          "risk_justification",
+          "affected_party"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:16.616042",
+      "stage": "Pass 2",
+      "event_type": "llm_call",
+      "description": "Calling LLM: meta-llama/llama-3.3-70b-instruct",
+      "details": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "temperature": 0.1,
+        "max_tokens": 1100,
+        "system_prompt_preview": "You are a legal reasoning assistant.\nUse only provided clause text and extracted facts.\nIf unsupported, return UNKNOWN or empty lists.\nReturn only JSON.",
+        "user_message_preview": "\nReason over one clause using grounded facts only.\n\nCLAUSE ID: 5\nSECTION HEADING: 4. TERM AND TERMINATION\nCLAUSE TEXT:\nThis Agreement shall commence on the date hereof and continue for one (1) year. Either party may terminate this Agreement with 30 days written notice.\n\nEXTRACTED FACTS:\n{\"parties\": ",
+        "total_message_length": 1040
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:19.963519",
+      "stage": "Pass 2",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 404,
+        "response_preview": "```json\n{\n  \"clause_type\": \"Termination\",\n  \"category\": \"right\",\n  \"obligations\": [],\n  \"rights\": [\"terminate this Agreement with 30 days written notice\"],\n  \"risk_level\": \"MEDIUM\",\n  \"risk_type\": \"Contractual\",\n  \"risk_justification\": \"The agreement can be terminated by either party with 30 days wr",
+        "parsed_json_keys": [
+          "clause_type",
+          "category",
+          "obligations",
+          "rights",
+          "risk_level",
+          "risk_type",
+          "risk_justification",
+          "affected_party"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:19.963519",
+      "stage": "Pass 2",
+      "event_type": "llm_call",
+      "description": "Calling LLM: meta-llama/llama-3.3-70b-instruct",
+      "details": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "temperature": 0.1,
+        "max_tokens": 1100,
+        "system_prompt_preview": "You are a legal reasoning assistant.\nUse only provided clause text and extracted facts.\nIf unsupported, return UNKNOWN or empty lists.\nReturn only JSON.",
+        "user_message_preview": "\nReason over one clause using grounded facts only.\n\nCLAUSE ID: 6\nSECTION HEADING: 5. LIABILITY LIMITATION\nCLAUSE TEXT:\nNeither party shall be liable for indirect, incidental, or consequential damages arising out of this Agreement. Each party's total liability shall not exceed the fees paid in the pr",
+        "total_message_length": 1089
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:23.026783",
+      "stage": "Pass 2",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 326,
+        "response_preview": "```json\n{\n  \"clause_type\": \"liability limitation\",\n  \"category\": \"prohibition\",\n  \"obligations\": [],\n  \"rights\": [],\n  \"risk_level\": \"LOW\",\n  \"risk_type\": \"contractual\",\n  \"risk_justification\": \"The clause limits the total liability of each party to the fees paid in the preceding 12 months.\",\n  \"aff",
+        "parsed_json_keys": [
+          "clause_type",
+          "category",
+          "obligations",
+          "rights",
+          "risk_level",
+          "risk_type",
+          "risk_justification",
+          "affected_party"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:23.026783",
+      "stage": "Pass 2",
+      "event_type": "llm_call",
+      "description": "Calling LLM: meta-llama/llama-3.3-70b-instruct",
+      "details": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "temperature": 0.1,
+        "max_tokens": 1100,
+        "system_prompt_preview": "You are a legal reasoning assistant.\nUse only provided clause text and extracted facts.\nIf unsupported, return UNKNOWN or empty lists.\nReturn only JSON.",
+        "user_message_preview": "\nReason over one clause using grounded facts only.\n\nCLAUSE ID: 7\nSECTION HEADING: 6. GOVERNING LAW\nCLAUSE TEXT:\nThis Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles.\n\nEXTRACTED FACTS:\n{\"parties\": [], \"m",
+        "total_message_length": 1034
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:25.438109",
+      "stage": "Pass 2",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 296,
+        "response_preview": "```json\n{\n  \"clause_type\": \"governing law\",\n  \"category\": \"definition\",\n  \"obligations\": [],\n  \"rights\": [],\n  \"risk_level\": \"LOW\",\n  \"risk_type\": \"regulatory\",\n  \"risk_justification\": \"The agreement is governed by California law, which may pose regulatory risks.\",\n  \"affected_party\": null\n}\n```",
+        "parsed_json_keys": [
+          "clause_type",
+          "category",
+          "obligations",
+          "rights",
+          "risk_level",
+          "risk_type",
+          "risk_justification",
+          "affected_party"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:25.439118",
+      "stage": "Pass 2",
+      "event_type": "llm_call",
+      "description": "Calling LLM: meta-llama/llama-3.3-70b-instruct",
+      "details": {
+        "model": "meta-llama/llama-3.3-70b-instruct",
+        "temperature": 0.1,
+        "max_tokens": 1100,
+        "system_prompt_preview": "You are a legal reasoning assistant.\nUse only provided clause text and extracted facts.\nIf unsupported, return UNKNOWN or empty lists.\nReturn only JSON.",
+        "user_message_preview": "\nReason over one clause using grounded facts only.\n\nCLAUSE ID: 8\nSECTION HEADING: 7. ENTIRE AGREEMENT\nCLAUSE TEXT:\nThis Agreement constitutes the entire agreement between the parties and supersedes all prior negotiations, representations, and agreements.\n\nIN WITNESS WHEREOF, the parties have execute",
+        "total_message_length": 1393
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:48.480392",
+      "stage": "Pass 2",
+      "event_type": "llm_response",
+      "description": "LLM response received",
+      "details": {
+        "response_length": 390,
+        "response_preview": "```json\n{\n  \"clause_type\": \"Entire Agreement\",\n  \"category\": \"representation\",\n  \"obligations\": [],\n  \"rights\": [],\n  \"risk_level\": \"LOW\",\n  \"risk_type\": \"UNKNOWN\",\n  \"risk_justification\": \"The agreement supersedes all prior negotiations, representations, and agreements, which may reduce potential r",
+        "parsed_json_keys": [
+          "clause_type",
+          "category",
+          "obligations",
+          "rights",
+          "risk_level",
+          "risk_type",
+          "risk_justification",
+          "affected_party"
+        ],
+        "parse_success": true
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:48.481621",
+      "stage": "Stage 3",
+      "event_type": "extraction",
+      "description": "Extracted clauses: 8 items",
+      "details": {
+        "entity_type": "clauses",
+        "count": 8,
+        "sample": null
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:48.481621",
+      "stage": "Stage 3",
+      "event_type": "extraction",
+      "description": "Extracted risks: 0 items",
+      "details": {
+        "entity_type": "risks",
+        "count": 0,
+        "sample": null
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:48.481621",
+      "stage": "Stage 3",
+      "event_type": "extraction",
+      "description": "Extracted obligations: 3 items",
+      "details": {
+        "entity_type": "obligations",
+        "count": 3,
+        "sample": null
+      }
+    },
+    {
+      "timestamp": "2026-04-10T12:01:48.482624",
+      "stage": "Stage 4",
+      "event_type": "validation",
+      "description": "Strict validation and schema normalization",
+      "details": {}
+    },
+    {
+      "timestamp": "2026-04-10T12:01:48.482624",
+      "stage": "Stage 4",
+      "event_type": "validation",
+      "description": "Validation complete",
+      "details": {
+        "enriched_keys": [
+          "document_id",
+          "filename",
+          "analyzed_at",
+          "metadata",
+          "parties",
+          "financial_terms",
+          "clauses",
+          "risks",
+          "obligations",
+          "rights",
+          "timelines",
+          "clause_dependencies",
+          "missing_clauses",
+          "negotiation_points",
+          "compliance_flags",
+          "summary"
+        ],
+        "validated_keys": [
+          "document_id",
+          "filename",
+          "analyzed_at",
+          "metadata",
+          "parties",
+          "financial_terms",
+          "clauses",
+          "risks",
+          "obligations",
+          "rights",
+          "timelines",
+          "clause_dependencies",
+          "missing_clauses",
+          "negotiation_points",
+          "compliance_flags",
+          "summary"
+        ]
+      }
+    }
+  ]
+}

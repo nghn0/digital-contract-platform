@@ -1,0 +1,13 @@
+Stage 5: PASS3_OBLIGATIONS
+Verdict : PASS
+Reason  : Pass3 fallback used | obligations=13 rights=2 timelines=1
+Duration: 1ms
+Errors  : 0
+Warnings: 1
+
+WARNING DETAILS:
+  - Pass3 failed, using deterministic fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+
+LLM CALLS: 1
+  [Pass3] parse=fallback in=17248chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1

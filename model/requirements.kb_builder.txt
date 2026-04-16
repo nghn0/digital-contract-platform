@@ -1,0 +1,16 @@
+# KB Builder-only requirements
+# Install: pip install -r requirements.kb_builder.txt
+# Run: python kb_builder.py
+
+# Script imports
+datasets==2.19.2
+sentence-transformers==3.0.1
+chromadb==0.5.3
+
+# Runtime dependencies used by sentence-transformers/chromadb
+transformers==4.41.2
+torch==2.3.0
+
+# Stability pins for Windows compatibility
+numpy==1.26.4
+onnxruntime==1.18.1

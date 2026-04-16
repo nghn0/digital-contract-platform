@@ -1,0 +1,201 @@
+{
+  "kb_name": "risk_rules",
+  "version": "1.0.0",
+  "description": "Deterministic risk scoring rules. When RAG retrieves these during Pass 2/5, the LLM uses them to assign consistent risk scores instead of guessing.",
+  "entries": [
+    {
+      "id": "rr_001",
+      "text": "CRITICAL risk (score 86-100): Unlimited liability with no cap. When a contract contains language like 'liable for all damages', 'no limitation on liability', 'fully responsible for all losses', or when a limitation of liability clause is completely absent, the risk is CRITICAL. The affected party faces potentially unlimited financial exposure. Immediate red flag requiring negotiation of a liability cap before signing.",
+      "metadata": {
+        "risk_type": "Unlimited Liability",
+        "risk_level": "CRITICAL",
+        "score_range": [86, 100],
+        "trigger_phrases": ["liable for all damages", "no limitation on liability", "fully responsible for all losses", "unlimited liability", "no cap on damages"],
+        "affected_party": "typically Vendor or Service Provider",
+        "suggested_fix": "Negotiate liability cap = contract value or 12 months of fees",
+        "clause_types": ["Liability", "Indemnification"]
+      }
+    },
+    {
+      "id": "rr_002",
+      "text": "CRITICAL risk (score 86-100): Broad IP assignment of all intellectual property including pre-existing work. When a clause assigns all intellectual property including work created before the contract, background IP, tools, frameworks, or general knowledge, this is CRITICAL. Phrases to watch: 'all intellectual property created in any way related to', 'assign all right title and interest', 'including pre-existing IP', 'including tools and methodologies'. The contractor could lose ownership of their entire portfolio.",
+      "metadata": {
+        "risk_type": "Broad IP Assignment",
+        "risk_level": "CRITICAL",
+        "score_range": [86, 100],
+        "trigger_phrases": ["all intellectual property", "assign all right title and interest", "including pre-existing", "any and all IP", "work made for hire"],
+        "affected_party": "Consultant, Developer, Freelancer, Employee",
+        "suggested_fix": "Limit assignment to deliverables specifically created for this contract. Carve out pre-existing IP and general tools.",
+        "clause_types": ["Intellectual Property", "Work for Hire"]
+      }
+    },
+    {
+      "id": "rr_003",
+      "text": "CRITICAL risk (score 86-100): Unilateral contract modification right. When one party can change the contract terms, pricing, scope, or policies without the other party's consent, this is CRITICAL. Phrases to watch: 'reserves the right to modify', 'may update these terms at any time', 'changes effective upon notice', 'sole discretion to amend'. Violates the fundamental principle of mutual consent in contracts.",
+      "metadata": {
+        "risk_type": "Unilateral Modification",
+        "risk_level": "CRITICAL",
+        "score_range": [88, 100],
+        "trigger_phrases": ["reserves the right to modify", "may update at any time", "sole discretion", "changes effective upon posting", "without prior consent"],
+        "affected_party": "The party subject to modification",
+        "suggested_fix": "Require mutual written consent for all material changes. Add 30-day notice requirement.",
+        "clause_types": ["Amendment", "General Conditions"]
+      }
+    },
+    {
+      "id": "rr_004",
+      "text": "HIGH risk (score 61-85): One-sided termination for convenience with immediate effect. When only one party can terminate the contract without cause and without a reasonable notice period, this is HIGH risk. Phrases: 'may terminate at any time', 'immediate termination', 'without notice', 'at our sole discretion'. The party that cannot terminate is trapped while the other party can exit freely.",
+      "metadata": {
+        "risk_type": "One-sided Termination",
+        "risk_level": "HIGH",
+        "score_range": [70, 85],
+        "trigger_phrases": ["may terminate at any time", "without cause", "immediate effect", "without notice", "sole discretion to terminate"],
+        "affected_party": "Party that cannot terminate",
+        "suggested_fix": "Add mutual termination for convenience with 30-60 day notice period. Add termination fees for early exit.",
+        "clause_types": ["Termination"]
+      }
+    },
+    {
+      "id": "rr_005",
+      "text": "HIGH risk (score 61-85): Broad indemnification covering third-party claims without limitation. When a party must indemnify against any and all third-party claims including those unrelated to their actions, this is HIGH risk. Phrases: 'indemnify for any claims', 'including third party claims', 'regardless of cause', 'arising in any way from'. Risk multiplies without a corresponding indemnification cap.",
+      "metadata": {
+        "risk_type": "Broad Indemnification",
+        "risk_level": "HIGH",
+        "score_range": [65, 85],
+        "trigger_phrases": ["indemnify for any and all claims", "including third-party claims", "regardless of cause", "arising in any way", "defend and hold harmless from any claim"],
+        "affected_party": "Indemnifying party (typically Vendor or Contractor)",
+        "suggested_fix": "Limit indemnification to claims arising from party's own negligence or breach. Cap at contract value.",
+        "clause_types": ["Indemnification"]
+      }
+    },
+    {
+      "id": "rr_006",
+      "text": "HIGH risk (score 61-85): Auto-renewal clause with short notice window (under 30 days). When a contract automatically renews and the opt-out notice window is 30 days or less — especially when the notice deadline is far in advance of renewal — this is HIGH risk. Phrases: 'unless written notice provided 30 days before', 'automatically renews for successive one-year terms', 'deemed renewed if no notice'. Traps parties into unwanted renewals.",
+      "metadata": {
+        "risk_type": "Auto Renewal Trap",
+        "risk_level": "HIGH",
+        "score_range": [61, 75],
+        "trigger_phrases": ["automatically renew", "unless prior written notice", "successive terms", "deemed renewed", "rollover", "evergreen"],
+        "affected_party": "Party that may want to exit",
+        "suggested_fix": "Increase notice window to 60-90 days. Add calendar reminder obligations. Or convert to opt-in renewal.",
+        "clause_types": ["Auto-Renewal", "Termination"]
+      }
+    },
+    {
+      "id": "rr_007",
+      "text": "HIGH risk (score 61-85): Overbroad non-compete clause. A non-compete is HIGH risk when it restricts the party from working in an entire industry, covers a geographic area larger than the business operates in, or extends for more than 2 years post-termination. Phrases: 'shall not engage in any competitive business', 'worldwide restriction', 'for a period of 5 years', 'in any capacity'. Courts often invalidate overbroad non-competes but enforcement is uncertain.",
+      "metadata": {
+        "risk_type": "Overbroad Non-Compete",
+        "risk_level": "HIGH",
+        "score_range": [65, 85],
+        "trigger_phrases": ["shall not engage in any competitive business", "worldwide", "for a period of [3-10] years", "in any capacity", "directly or indirectly compete"],
+        "affected_party": "Employee, Contractor, or Selling Party",
+        "suggested_fix": "Limit to specific competing products/services, specific geography, maximum 1-2 years. Consider buyout provision.",
+        "clause_types": ["Non-Compete"]
+      }
+    },
+    {
+      "id": "rr_008",
+      "text": "HIGH risk (score 61-85): Data processing without GDPR/data protection compliance. When a contract involves personal data but lacks a Data Processing Agreement (DPA), data breach notification obligations, security standards, or data subject rights provisions, this is HIGH risk — especially in contracts with EU entities or involving Indian personal data under DPDP Act 2023. Regulatory fines can far exceed contract value.",
+      "metadata": {
+        "risk_type": "Data Privacy Risk",
+        "risk_level": "HIGH",
+        "score_range": [70, 90],
+        "trigger_phrases": ["personal data", "user data", "customer information", "process data on behalf", "data transfer"],
+        "absence_flags": ["missing DPA", "no breach notification", "no security standards", "no data subject rights"],
+        "affected_party": "Data Controller, both parties",
+        "suggested_fix": "Add DPA addendum. Specify 72-hour breach notification. Reference ISO 27001 or equivalent security standard.",
+        "clause_types": ["Data Protection", "Privacy"]
+      }
+    },
+    {
+      "id": "rr_009",
+      "text": "MEDIUM risk (score 31-60): Unfavorable jurisdiction or governing law. When the contract specifies a jurisdiction that is distant, expensive, or legally disadvantageous for one party — particularly foreign jurisdictions for Indian parties — this is MEDIUM to HIGH risk. Phrases: 'exclusive jurisdiction of courts of Delaware', 'governed by laws of England', 'arbitration in Singapore'. Enforcement and litigation costs can be prohibitive.",
+      "metadata": {
+        "risk_type": "Jurisdiction Risk",
+        "risk_level": "MEDIUM",
+        "score_range": [35, 65],
+        "trigger_phrases": ["exclusive jurisdiction", "courts of", "governed by laws of", "arbitration in", "submit to jurisdiction of"],
+        "affected_party": "Party for whom jurisdiction is inconvenient",
+        "suggested_fix": "Negotiate neutral jurisdiction or jurisdiction of responding party. Consider arbitration in India for Indian parties.",
+        "clause_types": ["Governing Law", "Dispute Resolution"]
+      }
+    },
+    {
+      "id": "rr_010",
+      "text": "MEDIUM risk (score 31-60): Vague or undefined key terms creating ambiguity. When key contract terms are undefined or use phrases like 'reasonable efforts', 'best efforts', 'material breach', 'substantial compliance', 'promptly', or 'as appropriate' without specific definitions, this creates MEDIUM risk because interpretation disputes arise. Phrases that signal ambiguity: 'reasonable', 'commercially reasonable', 'best efforts', 'promptly', 'material', 'substantial'.",
+      "metadata": {
+        "risk_type": "Ambiguous Language",
+        "risk_level": "MEDIUM",
+        "score_range": [30, 55],
+        "trigger_phrases": ["reasonable efforts", "best efforts", "commercially reasonable", "material breach", "promptly", "as appropriate", "substantially", "reasonable time"],
+        "affected_party": "Both parties (interpretation disputes)",
+        "suggested_fix": "Define all key terms in Definitions section. Replace 'reasonable efforts' with specific metrics or actions.",
+        "clause_types": ["Any clause with vague language"]
+      }
+    },
+    {
+      "id": "rr_011",
+      "text": "MEDIUM risk (score 31-60): Payment terms exceeding 60 days net. When payment is due more than 60 days after invoice (Net 90, Net 120), or when payment triggers are unclear or tied to milestones with vague acceptance criteria, this is MEDIUM risk for cash flow and business viability. Phrases: 'net 90', 'net 120', 'upon acceptance', 'when client deems satisfactory'. Especially harmful for SMEs and contractors.",
+      "metadata": {
+        "risk_type": "Payment Risk",
+        "risk_level": "MEDIUM",
+        "score_range": [35, 60],
+        "trigger_phrases": ["net 90", "net 120", "upon final acceptance", "when client deems satisfactory", "at company's discretion", "subject to approval"],
+        "affected_party": "Service Provider, Vendor, Contractor",
+        "suggested_fix": "Negotiate Net 30 maximum. Define acceptance criteria objectively. Add deemed-acceptance after 5 business days.",
+        "clause_types": ["Payment"]
+      }
+    },
+    {
+      "id": "rr_012",
+      "text": "MEDIUM risk (score 31-60): Confidentiality clause with no expiration. When a confidentiality obligation has no time limit ('perpetually', 'at all times', 'forever', 'indefinitely'), this is MEDIUM risk — the obligation never ends even after the information is publicly known. Standard practice is 2-5 years post-termination. Perpetual obligations also raise enforceability questions.",
+      "metadata": {
+        "risk_type": "Perpetual Confidentiality",
+        "risk_level": "MEDIUM",
+        "score_range": [35, 55],
+        "trigger_phrases": ["perpetually", "at all times", "forever", "indefinitely", "in perpetuity", "without limitation of time", "for so long as"],
+        "affected_party": "Party bound by confidentiality",
+        "suggested_fix": "Limit confidentiality obligation to 3-5 years post-termination for most information. Trade secrets can remain perpetual.",
+        "clause_types": ["Confidentiality"]
+      }
+    },
+    {
+      "id": "rr_013",
+      "text": "LOW risk (score 0-30): Standard boilerplate with balanced obligations. When clauses reflect industry-standard language, impose mutual obligations on both parties, use defined terms, include appropriate carve-outs (public domain, prior knowledge, independent development), and have reasonable time limits, this is LOW risk. Examples: standard severability clause, standard notice provision, mutual non-disclosure with 2-year term.",
+      "metadata": {
+        "risk_type": "Standard Boilerplate",
+        "risk_level": "LOW",
+        "score_range": [0, 30],
+        "positive_indicators": ["mutual obligations", "industry standard", "defined terms", "carve-outs included", "reasonable time limits", "both parties", "consent of both"],
+        "clause_types": ["Severability", "Notice", "Entire Agreement", "Mutual Confidentiality"]
+      }
+    },
+    {
+      "id": "rr_014",
+      "text": "HIGH risk (score 61-85): Penalty clause with excessive liquidated damages. When liquidated damages or penalties are disproportionate to actual anticipated losses — more than 100% of contract value, or penalty rates above 2% per month — this is HIGH risk. Phrases: 'penalty of $X per day', 'liquidated damages of 150% of contract value', '5% per month interest'. Courts may void unconscionable penalties but enforcement is uncertain.",
+      "metadata": {
+        "risk_type": "Excessive Penalty",
+        "risk_level": "HIGH",
+        "score_range": [65, 85],
+        "trigger_phrases": ["penalty of", "liquidated damages", "per day delay", "5% per month", "150% of contract value", "punitive damages"],
+        "affected_party": "Party subject to penalties",
+        "suggested_fix": "Cap penalties at 10-15% of contract value. Ensure damages are proportionate to actual anticipated harm.",
+        "clause_types": ["Payment", "Liability", "Performance"]
+      }
+    },
+    {
+      "id": "rr_015",
+      "text": "HIGH risk (score 61-85): Unilateral right to change pricing or fees. When a service provider or platform can change pricing without consent, with short notice, or with a continue-or-cancel choice that effectively locks in the customer, this is HIGH risk. Phrases: 'reserves the right to adjust pricing', 'pricing subject to change', '30 days notice of price change', 'continued use constitutes acceptance'. Budget planning becomes impossible.",
+      "metadata": {
+        "risk_type": "Unilateral Price Change",
+        "risk_level": "HIGH",
+        "score_range": [65, 82],
+        "trigger_phrases": ["reserves the right to adjust pricing", "pricing subject to change", "notice of price increase", "continued use constitutes acceptance", "new pricing effective"],
+        "affected_party": "Customer or Client",
+        "suggested_fix": "Fix pricing for contract term. Allow price changes only with 90-day notice and mutual consent or right to terminate.",
+        "clause_types": ["Payment", "Amendment"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "kb_name": "red_flag_patterns",
+  "version": "1.0.0",
+  "description": "Specific language patterns and phrases that signal risk. The RAG system retrieves these during Pass 2 and Pass 5 to help the LLM identify risky sentences precisely rather than relying on general understanding.",
+  "entries": [
+    {
+      "id": "rf_001",
+      "text": "CRITICAL red flag language — Unlimited liability indicators: The following phrases in a contract signal that one party faces unlimited financial exposure: 'liable for all damages', 'without limitation', 'fully responsible for any and all losses', 'including but not limited to any direct, indirect, consequential, punitive', 'all costs including attorney fees', 'bear all risk of loss'. When these appear WITHOUT a separate liability cap clause, the risk is CRITICAL.",
+      "metadata": {
+        "flag_type": "Unlimited Liability",
+        "severity": "CRITICAL",
+        "exact_phrases": [
+          "liable for all damages",
+          "without limitation",
+          "fully responsible for any and all",
+          "bear all risk of loss",
+          "including all costs",
+          "any and all losses, damages, costs and expenses"
+        ],
+        "mitigation": "Must add a liability cap clause: 'In no event shall either party's total liability exceed [amount]'"
+      }
+    },
+    {
+      "id": "rf_002",
+      "text": "CRITICAL red flag language — Unilateral right to change terms: These phrases give one party absolute power to change the contract without consent: 'reserves the right to modify these terms at any time', 'may update this agreement by posting', 'changes effective upon notice', 'your continued use constitutes acceptance', 'at our sole and absolute discretion', 'without prior notice'. Any of these in an agreement means the other party has no actual contractual stability.",
+      "metadata": {
+        "flag_type": "Unilateral Modification",
+        "severity": "CRITICAL",
+        "exact_phrases": [
+          "reserves the right to modify",
+          "may update at any time",
+          "changes effective upon notice",
+          "continued use constitutes acceptance",
+          "sole and absolute discretion",
+          "without prior notice or consent"
+        ],
+        "mitigation": "Replace with: 'This Agreement may only be amended by a written instrument signed by authorized representatives of both parties'"
+      }
+    },
+    {
+      "id": "rf_003",
+      "text": "HIGH red flag language — One-sided termination without notice: These phrases indicate that only one party can exit freely: 'may terminate this agreement at any time without cause', 'upon [Party A's] election', 'immediately upon notice from [Company]', 'at [Company]'s sole discretion', 'without obligation to pay any fees'. One-sided without a corresponding right for the other party is a significant power imbalance.",
+      "metadata": {
+        "flag_type": "One-sided Termination",
+        "severity": "HIGH",
+        "exact_phrases": [
+          "may terminate at any time without cause",
+          "immediately upon notice",
+          "at sole discretion",
+          "without any obligation to pay",
+          "upon election terminate",
+          "without cause or notice"
+        ],
+        "mitigation": "Add mutual termination for convenience: 'Either party may terminate this Agreement for any reason upon 30 days written notice'"
+      }
+    },
+    {
+      "id": "rf_004",
+      "text": "HIGH red flag language — Broad IP assignment including pre-existing work: These phrases indicate all IP transfers including what the party already owned: 'all intellectual property in any way arising from', 'including any pre-existing intellectual property', 'all works whether created before or during', 'hereby assigns all right title and interest in any intellectual property', 'all inventions, discoveries, developments'. The creator could lose ownership of tools and frameworks used on every project.",
+      "metadata": {
+        "flag_type": "Broad IP Assignment",
+        "severity": "HIGH",
+        "exact_phrases": [
+          "all intellectual property arising from",
+          "including pre-existing intellectual property",
+          "all inventions, discoveries and developments",
+          "assigns all right title and interest",
+          "whether created before or during",
+          "any and all works"
+        ],
+        "mitigation": "Narrow to: 'Contractor assigns IP rights only in deliverables specifically developed and delivered under this Agreement, excluding Contractor's Pre-existing IP'"
+      }
+    },
+    {
+      "id": "rf_005",
+      "text": "HIGH red flag language — Auto-renewal trap with short notice window: These phrases indicate dangerous auto-renewal terms: 'shall automatically renew for successive one-year terms', 'unless written notice is provided at least 30 days prior', 'deemed to have renewed', 'rollover provisions', 'successive terms of the same duration'. The risk multiplies when the notice window is 30 days or less and the renewal adds a full year.",
+      "metadata": {
+        "flag_type": "Auto Renewal Trap",
+        "severity": "HIGH",
+        "exact_phrases": [
+          "automatically renew for successive",
+          "unless notice is provided 30 days prior",
+          "deemed to have renewed",
+          "rollover for the same term",
+          "successive annual terms",
+          "automatic successive terms"
+        ],
+        "mitigation": "Change to: 'This Agreement expires on [date] and will not renew unless both parties execute a written renewal agreement'"
+      }
+    },
+    {
+      "id": "rf_006",
+      "text": "HIGH red flag language — Overbroad non-compete: These phrases indicate a non-compete that is likely too broad to be fair or enforceable: 'engage in any business that competes in any way', 'worldwide', 'for a period of [3-5] years', 'in any capacity direct or indirect', 'including providing services to any competitor', 'including owning shares in any competitor'. Courts frequently invalidate overbroad non-competes.",
+      "metadata": {
+        "flag_type": "Overbroad Non-Compete",
+        "severity": "HIGH",
+        "exact_phrases": [
+          "compete in any way",
+          "worldwide restriction",
+          "for a period of 5 years",
+          "any capacity direct or indirect",
+          "including owning any shares",
+          "any business competitive with"
+        ],
+        "mitigation": "Limit to: specific competing products within a defined geographic area, maximum 12-18 months, compensation for the restriction period"
+      }
+    },
+    {
+      "id": "rf_007",
+      "text": "MEDIUM red flag language — Vague obligations and ambiguous standards: These phrases create unmeasurable obligations that courts must interpret: 'shall use reasonable efforts', 'commercially reasonable efforts', 'best efforts', 'as soon as reasonably practicable', 'to the extent possible', 'in a timely manner', 'adequate notice', 'substantially comply'. These open the door to disputes about what was actually required.",
+      "metadata": {
+        "flag_type": "Ambiguous Standards",
+        "severity": "MEDIUM",
+        "exact_phrases": [
+          "reasonable efforts",
+          "commercially reasonable",
+          "best efforts",
+          "as soon as reasonably practicable",
+          "timely manner",
+          "reasonable notice",
+          "substantially comply",
+          "materially comply",
+          "adequate"
+        ],
+        "mitigation": "Replace with specific, measurable terms: '5 business days', '99.9% uptime', 'written notice to address at top of agreement'"
+      }
+    },
+    {
+      "id": "rf_008",
+      "text": "MEDIUM red flag language — Perpetual or indefinite obligations: These phrases create obligations that never end: 'in perpetuity', 'perpetually', 'indefinitely', 'for all time', 'forever', 'without limitation of time', 'for so long as the information remains confidential', 'permanent obligation'. Perpetual obligations are often unenforceable and problematic for business planning.",
+      "metadata": {
+        "flag_type": "Perpetual Obligation",
+        "severity": "MEDIUM",
+        "exact_phrases": [
+          "in perpetuity",
+          "perpetually",
+          "indefinitely",
+          "for all time",
+          "forever",
+          "without limitation of time",
+          "permanent license",
+          "irrevocable and perpetual"
+        ],
+        "mitigation": "Add specific time limits: '3 years from date of disclosure' or 'for the duration of this Agreement plus 2 years'"
+      }
+    },
+    {
+      "id": "rf_009",
+      "text": "HIGH red flag language — Unrestricted right to audit or inspect: These phrases give one party excessive inspection rights that could disrupt business: 'right to audit at any time', 'without notice', 'access to all systems and records', 'inspect all business operations', 'unlimited access', 'at any reasonable time without restriction'. These can be used as harassment tools or to extract competitive information.",
+      "metadata": {
+        "flag_type": "Excessive Audit Rights",
+        "severity": "MEDIUM",
+        "exact_phrases": [
+          "audit at any time",
+          "without prior notice",
+          "access to all records",
+          "inspect all operations",
+          "unlimited access",
+          "any time without restriction"
+        ],
+        "mitigation": "Add: 'with 10 business days advance notice, during normal business hours, not more than once per year, at auditing party's expense'"
+      }
+    },
+    {
+      "id": "rf_010",
+      "text": "HIGH red flag language — Waiver of important legal rights: These phrases indicate a party is giving up fundamental legal protections: 'hereby waives any right to', 'irrevocably waives', 'waives all claims', 'waives right to jury trial', 'waives class action rights', 'waives all defenses', 'forever releases and waives'. Waivers of class action rights and jury trials are especially significant.",
+      "metadata": {
+        "flag_type": "Rights Waiver",
+        "severity": "HIGH",
+        "exact_phrases": [
+          "hereby waives any right to",
+          "irrevocably waives",
+          "waives all claims",
+          "waives right to jury trial",
+          "waiver of class action",
+          "forever releases and waives"
+        ],
+        "mitigation": "Review each waiver individually. Waiver of jury trial and class action rights requires especially careful consideration — consider refusing."
+      }
+    },
+    {
+      "id": "rf_011",
+      "text": "MEDIUM red flag language — Unfavorable payment triggers: These phrases make payment uncertain or dependent on subjective approval: 'upon acceptance by Client', 'when Client is satisfied', 'at Client's sole discretion', 'subject to Client approval', 'deemed accepted when Client so determines', 'at Company's absolute discretion'. Without objective acceptance criteria, payment can be indefinitely delayed.",
+      "metadata": {
+        "flag_type": "Unfavorable Payment Trigger",
+        "severity": "MEDIUM",
+        "exact_phrases": [
+          "upon acceptance",
+          "when client is satisfied",
+          "at client's sole discretion",
+          "subject to approval",
+          "deemed accepted when",
+          "at company's absolute discretion"
+        ],
+        "mitigation": "Add deemed-acceptance: 'Deliverables shall be deemed accepted if Client does not provide written objections within 5 business days of delivery'"
+      }
+    },
+    {
+      "id": "rf_012",
+      "text": "MEDIUM red flag language — Assignment without consent: These phrases allow transfer of contract obligations without permission: 'may assign this Agreement without consent', 'freely assignable', 'may delegate obligations', 'may transfer rights to any affiliate', 'assignment not subject to approval'. This can result in the other party being bound to an unknown third party.",
+      "metadata": {
+        "flag_type": "Unrestricted Assignment",
+        "severity": "MEDIUM",
+        "exact_phrases": [
+          "may assign without consent",
+          "freely assignable",
+          "assignment not restricted",
+          "may transfer to any affiliate",
+          "without prior written consent of the other party"
+        ],
+        "mitigation": "Add: 'Neither party may assign this Agreement without the prior written consent of the other party, not to be unreasonably withheld'"
+      }
+    },
+    {
+      "id": "rf_013",
+      "text": "CRITICAL red flag — Personal data processing with no DPA or security standards: When a contract involves any of these but lacks data protection provisions: 'personal information', 'user data', 'customer records', 'processing on behalf of', 'data hosting', 'cloud storage of data'. Under GDPR (EU), DPDP Act 2023 (India), CCPA (California), a Data Processing Agreement is legally mandatory. Absence creates regulatory exposure far exceeding contract value.",
+      "metadata": {
+        "flag_type": "Missing Data Protection",
+        "severity": "CRITICAL",
+        "trigger_context": ["personal information", "user data", "customer records", "data processing", "data hosting"],
+        "required_elements": [
+          "Data Processing Agreement",
+          "Security Standards",
+          "Breach Notification (72 hours)",
+          "Data Subject Rights",
+          "Data Deletion Obligations"
+        ],
+        "mitigation": "Add DPA addendum before signing. Specify: ISO 27001 or SOC 2, 72-hour breach notification, data deletion within 30 days of termination"
+      }
+    },
+    {
+      "id": "rf_014",
+      "text": "HIGH red flag language — Confession of judgment or advance consent to adverse orders: These phrases allow one party to obtain a court judgment against the other without prior notice or hearing: 'hereby confesses judgment', 'authorizes any attorney to appear', 'waives notice of any legal proceeding', 'consents to entry of judgment without notice', 'cognovit note'. These are extremely one-sided and often illegal in many jurisdictions.",
+      "metadata": {
+        "flag_type": "Confession of Judgment",
+        "severity": "CRITICAL",
+        "exact_phrases": [
+          "confesses judgment",
+          "authorizes any attorney to appear",
+          "waives notice of legal proceeding",
+          "consents to entry of judgment",
+          "cognovit"
+        ],
+        "mitigation": "Refuse this clause entirely. It is illegal in most jurisdictions and means you can be sued and lose without even knowing about it."
+      }
+    }
+  ]
+}

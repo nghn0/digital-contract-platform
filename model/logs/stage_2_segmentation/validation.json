@@ -1,0 +1,11 @@
+{
+  "stage": "stage2_segmentation",
+  "duration_ms": 1,
+  "validation_errors": [],
+  "validation_passed": true,
+  "result_summary": {
+    "record_count": 35,
+    "has_fallbacks": false
+  },
+  "timestamp": "2026-04-11T16:13:30.243477"
+}

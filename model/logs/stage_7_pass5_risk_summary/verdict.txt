@@ -1,0 +1,13 @@
+Stage 7: PASS5_RISK_SUMMARY
+Verdict : PASS
+Reason  : Pass5 fallback used | score=0
+Duration: 0ms
+Errors  : 0
+Warnings: 1
+
+WARNING DETAILS:
+  - Pass5 failed, using deterministic fallback: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
+
+LLM CALLS: 1
+  [Pass5] parse=fallback in=21556chars out=0chars time=0ms
+    PARSE ERROR: LLM disabled by DEBUG_RUNNER_DISABLE_LLM=1
