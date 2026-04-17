@@ -188,11 +188,11 @@ export default function Dashboard() {
               onClick={() => router.push("/intelligence")}
               className={`group cursor-pointer p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-1 shadow-lg flex flex-col h-full min-h-[220px] backdrop-blur-md ${
                 darkMode 
-                  ? 'bg-[#1A110D] border-[#D4AF37]/30 hover:bg-[#D4AF37]/10' 
-                  : 'bg-white border-[#D4AF37]/40 hover:bg-[#D4AF37]/10 shadow-sm'
+                  ? 'bg-[#F5F5DC]/10 border-[#F5F5DC]/20 hover:bg-yellow-950/40' 
+                  : 'bg-[#F5F5DC]/40 border-[#2C1810]/10 hover:bg-[#D4AF37]/40 shadow-sm'
               }`}
             >
-              <Brain className={`mb-6 transition-colors ${darkMode ? 'text-[#D4AF37]' : 'text-[#D4AF37]'}`} size={32} />
+              <Brain className={`mb-6 transition-colors ${darkMode ? 'text-[#F5F5DC] opacity-80 group-hover:text-[#D4AF37]' : 'text-[#2C1810]'}`} size={32} />
               <h2 className={`text-2xl font-serif font-bold mb-2 transition-colors ${darkMode ? 'text-[#F5E6D8]' : 'text-[#2C1810]'}`}>
                 LegalT Intelligence
               </h2>
@@ -209,18 +209,18 @@ export default function Dashboard() {
               onClick={() => router.push("/verifier")}
               className={`group cursor-pointer p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-1 shadow-lg flex flex-col h-full min-h-[220px] backdrop-blur-md ${
                 darkMode 
-                  ? 'bg-[#150D0A]/80 border-[#F5F5DC]/20 hover:bg-[#F5F5DC]/10' 
-                  : 'bg-stone-50 border-stone-200 hover:bg-stone-100 shadow-sm'
+                  ? 'bg-[#F5F5DC]/10 border-[#F5F5DC]/20 hover:bg-yellow-950/40' 
+                  : 'bg-[#F5F5DC]/40 border-[#2C1810]/10 hover:bg-[#D4AF37]/40 shadow-sm'
               }`}
             >
-              <ShieldCheck className={`mb-6 transition-colors ${darkMode ? 'text-[#A39284] group-hover:text-[#F5F5DC]' : 'text-[#6B5A4E]'}`} size={32} />
+              <ShieldCheck className={`mb-6 transition-colors ${darkMode ? 'text-[#F5F5DC] opacity-80 group-hover:text-[#D4AF37]' : 'text-[#2C1810]'}`} size={32} />
               <h2 className={`text-2xl font-serif font-bold mb-2 transition-colors ${darkMode ? 'text-[#F5E6D8]' : 'text-[#2C1810]'}`}>
                 Legal Verifier
               </h2>
               <p className={`leading-relaxed font-medium transition-opacity ${darkMode ? 'text-[#F5E6D8]/60 group-hover:opacity-100' : 'text-[#2C1810]/70'}`}>
                 Cross-reference local documents against decentralized blockchain ledger to detect tampering immediately.
               </p>
-              <div className="mt-auto pt-6 flex items-center text-[#A39284] group-hover:text-[#F5F5DC] font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
+              <div className="mt-auto pt-6 flex items-center text-[#D4AF37] font-bold text-sm uppercase tracking-wider group-hover:gap-2 transition-all">
                 Verify Authenticity <ChevronRight size={16} />
               </div>
             </div>

@@ -16,9 +16,17 @@ export default function VerifierPage() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme !== null) {
+      setDarkMode(savedTheme === "true");
+    }
+  }, []);
 
   const handleFileUpload = (e) => {
-    const selectedFile = e.target.files ? e.target.files[0] : e;
+    const selectedFile = e.target && e.target.files ? e.target.files[0] : e;
     if (!selectedFile) return;
     setFile(selectedFile);
     setResult(null);
@@ -87,25 +95,35 @@ export default function VerifierPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#150D0A] to-[#0D0D0D] text-[#F5E6D8] flex flex-col items-center py-20 px-6">
+    <div className={`min-h-screen flex flex-col items-center py-20 px-6 ${
+      darkMode 
+        ? "bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#150D0A] to-[#0D0D0D] text-[#F5E6D8]" 
+        : "bg-[#FDFCF9] text-[#2C1810]"
+    }`}>
       <button 
         onClick={() => router.push('/dashboard')}
-        className="absolute top-8 left-8 flex items-center gap-2 text-stone-400 hover:text-[#D4AF37] transition-colors"
+        className={`absolute top-8 left-8 flex items-center gap-2 transition-colors ${
+          darkMode ? "text-stone-400 hover:text-[#D4AF37]" : "text-stone-500 hover:text-[#D4AF37]"
+        }`}
       >
         <ArrowLeft size={16} /> <span className="text-sm font-semibold tracking-widest uppercase">Dashboard</span>
       </button>
 
-      <div className="w-full max-w-2xl bg-[#1A110D] border border-[#2B1D16] rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+      <div className={`w-full max-w-2xl border rounded-3xl p-8 shadow-2xl relative overflow-hidden ${
+        darkMode ? "bg-[#1A110D] border-[#2B1D16]" : "bg-white border-[#2C1810]/10"
+      }`}>
         
         {/* Background glow */}
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-[#D4AF37]/10 blur-3xl rounded-full"></div>
 
         <div className="flex flex-col items-center mb-10 relative z-10">
-          <div className="w-20 h-20 mb-6 rounded-2xl bg-gradient-to-br from-[#1A110D] to-[#2C1810] border border-[#2B1D16] flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.05)]">
-            <ShieldCheck size={40} className="text-[#A39284]" />
+          <div className={`w-20 h-20 mb-6 rounded-2xl border flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.05)] ${
+            darkMode ? "bg-gradient-to-br from-[#1A110D] to-[#2C1810] border-[#2B1D16]" : "bg-gradient-to-br from-[#F5F5DC]/40 to-white border-[#2C1810]/10"
+          }`}>
+            <ShieldCheck size={40} className={darkMode ? "text-[#A39284]" : "text-[#D4AF37]"} />
           </div>
           <h1 className="text-3xl font-serif text-center mb-3">Cryptographic Verifier</h1>
-          <p className="text-[#A39284] text-center max-w-md">
+          <p className={`text-center max-w-md ${darkMode ? "text-[#A39284]" : "text-[#6B5A4E]"}`}>
             Upload an offline document and its associated blockchain transaction hash to mathematically prove it has not been forged or altered.
           </p>
         </div>
@@ -124,7 +142,9 @@ export default function VerifierPage() {
                 setResult(null);
               }}
               placeholder="0x..."
-              className="w-full bg-black/40 border border-[#2B1D16] focus:border-[#D4AF37]/50 rounded-xl px-5 py-4 text-stone-300 font-mono text-sm outline-none transition-colors"
+              className={`w-full border focus:border-[#D4AF37]/50 rounded-xl px-5 py-4 font-mono text-sm outline-none transition-colors ${
+                darkMode ? "bg-black/40 border-[#2B1D16] text-stone-300" : "bg-stone-50 border-[#2C1810]/10 text-stone-700"
+              }`}
             />
           </div>
 
@@ -140,11 +160,13 @@ export default function VerifierPage() {
               className={`cursor-pointer group flex flex-col items-center justify-center w-full h-32 border-2 border-dashed transition-all rounded-xl ${
                 file || isDragging 
                   ? 'border-[#D4AF37] bg-[#D4AF37]/10' 
-                  : 'border-[#2B1D16] bg-black/40 hover:border-[#D4AF37]/50'
+                  : darkMode 
+                    ? 'border-[#2B1D16] bg-black/40 hover:border-[#D4AF37]/50'
+                    : 'border-[#2C1810]/20 bg-[#F5F5DC]/20 hover:border-[#D4AF37]/50'
               }`}
             >
-              <UploadCloud size={32} className={`${file || isDragging ? 'text-[#D4AF37]' : 'text-[#A39284] group-hover:text-[#D4AF37]'} mb-2 transition-colors`} />
-              <span className={`text-sm ${file || isDragging ? 'text-[#D4AF37] font-semibold' : 'text-[#A39284]'}`}>
+              <UploadCloud size={32} className={`${file || isDragging ? 'text-[#D4AF37]' : (darkMode ? 'text-[#A39284]' : 'text-[#6B5A4E]') + ' group-hover:text-[#D4AF37]'} mb-2 transition-colors`} />
+              <span className={`text-sm ${file || isDragging ? 'text-[#D4AF37] font-semibold' : (darkMode ? 'text-[#A39284]' : 'text-[#6B5A4E]')}`}>
                 {isDragging ? "Drop document here" : file ? file.name : "Click to select or drag and drop"}
               </span>
               <input 
@@ -184,8 +206,8 @@ export default function VerifierPage() {
           {result && (
             <div className={`p-6 rounded-xl border flex gap-4 ${
               result.success 
-                ? 'bg-green-950/20 border-green-900/40' 
-                : 'bg-red-950/20 border-red-900/40'
+                ? (darkMode ? 'bg-green-950/20 border-green-900/40' : 'bg-green-50 border-green-200')
+                : (darkMode ? 'bg-red-950/20 border-red-900/40' : 'bg-red-50 border-red-200')
             }`}>
               {result.success ? (
                 <CheckCircle2 className="text-green-500 shrink-0" size={28} />
@@ -194,14 +216,16 @@ export default function VerifierPage() {
               )}
               
               <div>
-                <h3 className={`text-lg font-serif font-bold mb-1 ${result.success ? 'text-green-400' : 'text-red-400'}`}>
+                <h3 className={`text-lg font-serif font-bold mb-1 ${result.success ? (darkMode ? 'text-green-400' : 'text-green-700') : (darkMode ? 'text-red-400' : 'text-red-700')}`}>
                   {result.success ? "Verification Successful" : "Verification Failed"}
                 </h3>
-                <p className={`text-sm ${result.success ? 'text-green-200/80' : 'text-red-200/80'}`}>
+                <p className={`text-sm ${result.success ? (darkMode ? 'text-green-200/80' : 'text-green-800/80') : (darkMode ? 'text-red-200/80' : 'text-red-800/80')}`}>
                   {result.message}
                 </p>
                 {!result.success && result.isTampered && (
-                  <div className="mt-3 text-xs bg-red-950/60 p-3 rounded font-mono text-red-300 border border-red-900/50">
+                  <div className={`mt-3 text-xs p-3 rounded font-mono border ${
+                    darkMode ? 'bg-red-950/60 text-red-300 border-red-900/50' : 'bg-red-100/50 text-red-800 border-red-200'
+                  }`}>
                     The cryptographic hash of the provided file does not match the ledger. The document has been edited since it was signed.
                   </div>
                 )}
