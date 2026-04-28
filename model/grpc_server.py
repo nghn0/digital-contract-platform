@@ -183,11 +183,12 @@ class AnalyzerService(contract_pb2_grpc.ContractAnalyzerServicer):
                 except: pass
 
 def serve():
+    port = os.getenv("PORT", "50051")
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     contract_pb2_grpc.add_ContractAnalyzerServicer_to_server(AnalyzerService(), server)
-    server.add_insecure_port('[::]:50051')
+    server.add_insecure_port(f'[::]:{port}')
     server.start()
-    safe_log_info("🚀 gRPC Analysis Server running on [::]:50051 ...")
+    safe_log_info(f"🚀 gRPC Analysis Server running on [::]:{port} ...")
     server.wait_for_termination()
 
 if __name__ == '__main__':
