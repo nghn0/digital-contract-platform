@@ -73,10 +73,16 @@ function UploadContent() {
         body: formData,
       });
 
-      const text = await res.text();
-
       if (!res.ok) {
-        throw new Error(text || "Upload failed");
+        const text = await res.text();
+        let errorMessage = "Upload failed";
+        try {
+          const errorData = JSON.parse(text);
+          errorMessage = errorData.error || errorMessage;
+        } catch (e) {
+          errorMessage = text || errorMessage;
+        }
+        throw new Error(errorMessage);
       }
 
       setMessage("✅ Contract sent successfully!");

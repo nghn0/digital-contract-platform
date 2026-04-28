@@ -6273,5 +6273,100 @@
     "timestamp": "2026-04-16T16:28:44Z",
     "requests_used": 38,
     "estimated_tokens": 6181
+  },
+  {
+    "timestamp": "2026-04-28T18:34:43Z",
+    "requests_used": 1,
+    "estimated_tokens": 3432
+  },
+  {
+    "timestamp": "2026-04-28T18:35:03Z",
+    "requests_used": 2,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-28T18:35:05Z",
+    "requests_used": 3,
+    "estimated_tokens": 8574
+  },
+  {
+    "timestamp": "2026-04-28T18:35:07Z",
+    "requests_used": 4,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-28T18:35:10Z",
+    "requests_used": 5,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-28T18:35:12Z",
+    "requests_used": 6,
+    "estimated_tokens": 8871
+  },
+  {
+    "timestamp": "2026-04-28T18:35:15Z",
+    "requests_used": 7,
+    "estimated_tokens": 8684
+  },
+  {
+    "timestamp": "2026-04-28T18:35:24Z",
+    "requests_used": 8,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-28T18:35:27Z",
+    "requests_used": 9,
+    "estimated_tokens": 6634
+  },
+  {
+    "timestamp": "2026-04-28T18:35:42Z",
+    "requests_used": 10,
+    "estimated_tokens": 5672
+  },
+  {
+    "timestamp": "2026-04-28T18:35:52Z",
+    "requests_used": 11,
+    "estimated_tokens": 3878
+  },
+  {
+    "timestamp": "2026-04-28T18:36:05Z",
+    "requests_used": 12,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-28T18:36:07Z",
+    "requests_used": 13,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-28T18:36:10Z",
+    "requests_used": 14,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-28T18:36:12Z",
+    "requests_used": 15,
+    "estimated_tokens": 4997
+  },
+  {
+    "timestamp": "2026-04-28T18:36:15Z",
+    "requests_used": 16,
+    "estimated_tokens": 1000
+  },
+  {
+    "timestamp": "2026-04-28T18:36:17Z",
+    "requests_used": 17,
+    "estimated_tokens": 4998
+  },
+  {
+    "timestamp": "2026-04-28T18:36:19Z",
+    "requests_used": 18,
+    "estimated_tokens": 4997
+  },
+  {
+    "timestamp": "2026-04-28T18:36:22Z",
+    "requests_used": 19,
+    "estimated_tokens": 6311
   }
 ]

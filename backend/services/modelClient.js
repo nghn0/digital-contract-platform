@@ -15,7 +15,8 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 const legalProto = grpc.loadPackageDefinition(packageDefinition).legal_tech;
 
 // Note: Ensure the Python server runs on this address
-const client = new legalProto.ContractAnalyzer('127.0.0.1:50051', grpc.credentials.createInsecure());
+const grpcUrl = process.env.MODEL_GRPC_URL || '127.0.0.1:50051';
+const client = new legalProto.ContractAnalyzer(grpcUrl, grpc.credentials.createInsecure());
 
 function analyzeDocument(fileBuffer, fileExtension) {
   return new Promise((resolve, reject) => {

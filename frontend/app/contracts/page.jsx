@@ -70,32 +70,68 @@ export default function ContractsPage() {
   const handleAccept = async (contractId) => {
     try {
       setLoadingId(contractId);
-      await fetch(`${API_BASE_URL}/contracts/${contractId}/status`, {
+      const res = await fetch(`${API_BASE_URL}/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: "AWAITING_RECEIVER_SIGNATURE" }),
       });
+
+      if (!res.ok) {
+        const text = await res.text();
+        let errorMessage = "Failed to accept contract";
+        try {
+          const d = JSON.parse(text);
+          errorMessage = d.error || errorMessage;
+        } catch (e) {
+          errorMessage = text || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
       fetchContracts(user.id);
-    } catch (err) { console.error(err); } finally { setLoadingId(null); }
+    } catch (err) { 
+      console.error(err); 
+      alert("❌ " + err.message);
+    } finally { 
+      setLoadingId(null); 
+    }
   };
 
   const handleReject = async (contractId) => {
     try {
       setLoadingId(contractId);
-      await fetch(`${API_BASE_URL}/contracts/${contractId}/status`, {
+      const res = await fetch(`${API_BASE_URL}/contracts/${contractId}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: "REJECTED" }),
       });
+
+      if (!res.ok) {
+        const text = await res.text();
+        let errorMessage = "Failed to reject contract";
+        try {
+          const d = JSON.parse(text);
+          errorMessage = d.error || errorMessage;
+        } catch (e) {
+          errorMessage = text || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
       fetchContracts(user.id);
-    } catch (err) { console.error(err); } finally { setLoadingId(null); }
+    } catch (err) { 
+      console.error(err); 
+      alert("❌ " + err.message);
+    } finally { 
+      setLoadingId(null); 
+    }
   };
 
   const handleReceiverSign = async (contract) => {
     try {
       setLoadingId(contract.contract_id);
       const { signature, wallet } = await signWithMetaMask(contract.file_url);
-      await fetch(`${API_BASE_URL}/store-signature`, {
+      const res = await fetch(`${API_BASE_URL}/store-signature`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -106,15 +142,33 @@ export default function ContractsPage() {
           role: "B",
         }),
       });
+
+      if (!res.ok) {
+        const text = await res.text();
+        let errorMessage = "Failed to store signature";
+        try {
+          const d = JSON.parse(text);
+          errorMessage = d.error || errorMessage;
+        } catch (e) {
+          errorMessage = text || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
       fetchContracts(user.id);
-    } catch (err) { console.error(err); } finally { setLoadingId(null); }
+    } catch (err) { 
+      console.error(err); 
+      alert("❌ " + err.message);
+    } finally { 
+      setLoadingId(null); 
+    }
   };
 
   const handleSenderSign = async (contract) => {
     try {
       setLoadingId(contract.contract_id);
       const { signature, wallet } = await signWithMetaMask(contract.file_url);
-      await fetch(`${API_BASE_URL}/store-signature`, {
+      const res1 = await fetch(`${API_BASE_URL}/store-signature`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -125,9 +179,39 @@ export default function ContractsPage() {
           role: "A",
         }),
       });
-      await fetch(`${API_BASE_URL}/contracts/${contract.contract_id}/finalize`, { method: "POST" });
+
+      if (!res1.ok) {
+        const text = await res1.text();
+        let errorMessage = "Failed to store signature";
+        try {
+          const d = JSON.parse(text);
+          errorMessage = d.error || errorMessage;
+        } catch (e) {
+          errorMessage = text || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
+      const res2 = await fetch(`${API_BASE_URL}/contracts/${contract.contract_id}/finalize`, { method: "POST" });
+      if (!res2.ok) {
+        const text = await res2.text();
+        let errorMessage = "Failed to finalize contract";
+        try {
+          const d = JSON.parse(text);
+          errorMessage = d.error || errorMessage;
+        } catch (e) {
+          errorMessage = text || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
       fetchContracts(user.id);
-    } catch (err) { console.error(err); } finally { setLoadingId(null); }
+    } catch (err) { 
+      console.error(err); 
+      alert("❌ " + err.message);
+    } finally { 
+      setLoadingId(null); 
+    }
   };
 
   const [copiedId, setCopiedId] = useState(null);
