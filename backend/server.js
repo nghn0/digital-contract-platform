@@ -270,20 +270,26 @@ app.post(
             contract_id: contract.contract_id,
           });
 
-          await transporter.sendMail({
-            from: `"Contract Platform" <${process.env.EMAIL_USER}>`,
-            to: receiver_email,
-            subject: "📄 Contract Shared With You",
-            html: `
-        <h2>You have received a contract</h2>
-        <p>Someone has shared a contract with you.</p>
-        <p>Please sign up to review and sign it.</p>
-        <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}/signup"
-           style="padding:10px 16px;background:#8B5DFF;color:white;text-decoration:none;border-radius:8px;">
-           Sign Up
-        </a>
-      `,
-          });
+          try {
+            await transporter.sendMail({
+              from: `"Contract Platform" <${process.env.EMAIL_USER}>`,
+              to: receiver_email,
+              subject: "📄 Contract Shared With You",
+              html: `
+          <h2>You have received a contract</h2>
+          <p>Someone has shared a contract with you.</p>
+          <p>Please sign up to review and sign it.</p>
+          <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}/signup"
+             style="padding:10px 16px;background:#8B5DFF;color:white;text-decoration:none;border-radius:8px;">
+             Sign Up
+          </a>
+        `,
+            });
+            console.log("✅ Invitation email sent");
+          } catch (emailErr) {
+            console.error("⚠️ Failed to send email (Render Free Tier blocks SMTP):", emailErr.message);
+            // We do not throw the error here, so the contract upload still succeeds!
+          }
         }
       }
 
