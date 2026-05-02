@@ -30,7 +30,7 @@ export default function Dashboard() {
     init();
     const interval = setInterval(() => {
       if (user?.id) fetchRecent(user.id);
-    }, 8000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [user?.id]);
 

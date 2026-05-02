@@ -48,7 +48,7 @@ export default function ContractsPage() {
     if (!user?.id) return;
     const interval = setInterval(() => {
       fetchContracts(user.id);
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [user?.id]);
 
