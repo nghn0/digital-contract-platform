@@ -767,8 +767,8 @@ app.post("/link-receiver", authenticateUser, async (req, res) => {
 
 /* ================= START SERVER ================= */
 
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`🚀 Server running on http://127.0.0.1:${PORT}`);
+  console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
 });
