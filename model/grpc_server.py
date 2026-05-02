@@ -1,14 +1,17 @@
+import os
+import sys
+
+# 🔥 CRITICAL: Disable telemetry BEFORE any other imports to fix PostHog/Chroma error
+os.environ['ANONYMIZED_TELEMETRY'] = 'False'
+os.environ['CHROMA_TELEMETRY_ENABLED'] = 'FALSE'
+
 import grpc
 from concurrent import futures
 import tempfile
-import os
 import uuid
-import sys
 import logging
 from logging.handlers import RotatingFileHandler
 from dotenv import load_dotenv
-import http.server
-import threading
 
 # Try to load either .env or the 'env' file the user has open
 load_dotenv(".env")
@@ -184,39 +187,13 @@ class AnalyzerService(contract_pb2_grpc.ContractAnalyzerServicer):
                 try: os.remove(temp_path)
                 except: pass
 
-def start_health_check_server(port):
-    """Starts a tiny HTTP server to satisfy Render's health check probes."""
-    class HealthCheckHandler(http.server.BaseHTTPRequestHandler):
-        def do_GET(self):
-            self.send_response(200)
-            self.send_header("Content-type", "text/plain")
-            self.end_headers()
-            self.wfile.write(b"OK")
-        def log_message(self, format, *args):
-            return # Silent logs for health checks
-
-    try:
-        httpd = http.server.HTTPServer(("0.0.0.0", int(port)), HealthCheckHandler)
-        safe_log_info(f"🩺 Health check server (HTTP) started on port {port}")
-        httpd.serve_forever()
-    except Exception as e:
-        safe_log_error(f"❌ Could not start health check server: {e}")
-
 def serve():
-    # gRPC port (internal communication)
-    grpc_port = os.getenv("GRPC_PORT", "50051")
+    # Priority 1: Use GRPC_PORT if explicitly set
+    # Priority 2: Use Render's PORT if provided
+    # Priority 3: Default to 50051
+    port = os.getenv("GRPC_PORT") or os.getenv("PORT") or "50051"
     
-    # Render's web port (for health checks)
-    render_port = os.getenv("PORT")
-    
-    if render_port:
-        # Start health check server in background to satisfy Render
-        threading.Thread(target=start_health_check_server, args=(render_port,), daemon=True).start()
-        # If gRPC was accidentally trying to use the same port, move it
-        if grpc_port == render_port:
-            grpc_port = "50051"
-
-    listen_addr = f'0.0.0.0:{grpc_port}'
+    listen_addr = f'0.0.0.0:{port}'
     
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     contract_pb2_grpc.add_ContractAnalyzerServicer_to_server(AnalyzerService(), server)
