@@ -278,7 +278,7 @@ app.post(
         <h2>You have received a contract</h2>
         <p>Someone has shared a contract with you.</p>
         <p>Please sign up to review and sign it.</p>
-        <a href="http://localhost:3000/signup"
+        <a href="${process.env.FRONTEND_URL || 'http://localhost:3000'}/signup"
            style="padding:10px 16px;background:#8B5DFF;color:white;text-decoration:none;border-radius:8px;">
            Sign Up
         </a>
