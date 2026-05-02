@@ -2,6 +2,10 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
+# Disable telemetry explicitly to fix Posthog/Chroma errors
+ENV ANONYMIZED_TELEMETRY=False
+ENV CHROMA_TELEMETRY_ENABLED=FALSE
+
 # Install system dependencies (required for some python packages like building C extensions or grpc)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
