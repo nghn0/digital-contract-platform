@@ -4,7 +4,22 @@ A comprehensive digital contract platform with AI-powered negotiation and risk a
 
 ---
 
-## 🏃‍♂️ How to Run the Project
+## ⚡ Quick Start (Windows)
+
+Simply double-click or run:
+```bat
+start_dev.bat
+```
+This automatically frees up ports (3000, 5001, 50051) if any previous instances are running, launches all three services in separate terminals, and opens `http://localhost:3000` with hot-reloading active.
+
+To stop all running services at any time, run:
+```bat
+stop_dev.bat
+```
+
+---
+
+## 🏃‍♂️ Manual Setup / Step-by-Step
 
 ### 1️⃣ Run the Model Server (AI Backend)
 
