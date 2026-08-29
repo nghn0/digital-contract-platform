@@ -10,6 +10,16 @@
   --border-color: rgba(255, 255, 255, 0.08);
 }
 
+:root[data-theme="light"] {
+  --background: #FDFCF9;
+  --surface: #F5E6D8;
+  --primary-gold: #D4AF37;
+  --bright-gold: #C59F2D;
+  --primary-text: #2C1810;
+  --muted-text: #6B5A4E;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);

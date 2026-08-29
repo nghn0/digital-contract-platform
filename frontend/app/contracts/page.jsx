@@ -16,6 +16,7 @@ import {
   RefreshCw,
   Clock
 } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
@@ -25,14 +26,9 @@ export default function ContractsPage() {
   const [user, setUser] = useState(null);
   const [loadingId, setLoadingId] = useState(null);
   
-  /* ================= THEME SYNC ================= */
-  const [darkMode, setDarkMode] = useState(true);
+  const { darkMode } = useTheme();
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme !== null) {
-      setDarkMode(savedTheme === "true");
-    }
     init();
   }, []);
 

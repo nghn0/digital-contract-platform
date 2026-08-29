@@ -6,6 +6,7 @@ import { signWithMetaMask } from "@/utils/signContract";
 import { useRouter } from "next/navigation";
 import { FileText, LogOut, PlusCircle, Files, Clock, ChevronRight, Moon, Sun, Brain, ShieldCheck } from "lucide-react";
 import Link from "next/link";
+import { useTheme } from "@/components/ThemeProvider";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
@@ -15,17 +16,7 @@ export default function Dashboard() {
   const [recentContracts, setRecentContracts] = useState([]);
   const [signingId, setSigningId] = useState(null);
   
-  /* ================= TOGGLE CHANGE START ================= */
-  const [darkMode, setDarkMode] = useState(true);
-
-  // Sync theme with localStorage on mount
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme !== null) {
-      setDarkMode(savedTheme === "true");
-    }
-  }, []);
-  /* ================= TOGGLE CHANGE END ================== */
+  const { darkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
     init();
@@ -112,12 +103,8 @@ export default function Dashboard() {
           <div className="flex items-center gap-3">
             {/* TOGGLE BUTTON UPDATED WITH LOCAL STORAGE */}
             <button
-              onClick={() => {
-                const newMode = !darkMode;
-                setDarkMode(newMode);
-                localStorage.setItem("theme", newMode);
-              }}
-              className={`p-2.5 rounded-full border transition-all ${
+              onClick={toggleTheme}
+              className={`p-2.5 rounded-full border transition-all cursor-pointer ${
                 darkMode 
                   ? 'bg-white/5 border-white/10 text-[#D4AF37] hover:bg-white/10' 
                   : 'bg-black/5 border-black/10 text-[#2C1810] hover:bg-black/10'

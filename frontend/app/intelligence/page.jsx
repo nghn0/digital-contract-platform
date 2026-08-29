@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Brain, ShieldAlert, FileWarning, Search, Activity, Handshake, Shield, UploadCloud } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
+import { useTheme } from "@/components/ThemeProvider";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:5001";
 
@@ -16,14 +17,7 @@ export default function IntelligencePage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [error, setError] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme !== null) {
-      setDarkMode(savedTheme === "true");
-    }
-  }, []);
+  const { darkMode } = useTheme();
 
   const handleFileUpload = (e) => {
     const selectedFile = e.target && e.target.files ? e.target.files[0] : e;

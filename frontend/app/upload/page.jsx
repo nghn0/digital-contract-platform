@@ -6,6 +6,7 @@ import { Suspense, useState, useEffect } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { useSearchParams, useRouter } from "next/navigation";
 import { FileUp, Mail, ArrowLeft, ShieldCheck, FileText, X } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
@@ -23,16 +24,7 @@ function UploadContent() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  /* ================= THEME SYNC START ================= */
-  const [darkMode, setDarkMode] = useState(true);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme !== null) {
-      setDarkMode(savedTheme === "true");
-    }
-  }, []);
-  /* ================= THEME SYNC END ================== */
+  const { darkMode } = useTheme();
 
   useEffect(() => {
     if (emailFromQuery) {
