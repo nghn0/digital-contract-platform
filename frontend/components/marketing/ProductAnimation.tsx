@@ -42,7 +42,7 @@ export default function ProductAnimation() {
           <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50" />
         </div>
         <div className="ml-auto flex items-center gap-2">
-          <Image src="/logo_wn.png" alt="LegalVault" width={16} height={16} className="opacity-50" />
+          <Image src="/logo.png" alt="LegalVault" width={16} height={16} className="opacity-50" />
           <span className="text-xs text-[var(--color-muted-text)] font-mono">legalvault_engine</span>
         </div>
       </div>
