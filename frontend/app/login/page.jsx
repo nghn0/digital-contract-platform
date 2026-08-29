@@ -27,8 +27,14 @@ function LoginForm() {
 
       await signInUser(email, password);
 
-      // Auto-link contracts
-      await linkContractsAfterLogin();
+      // Execute background tasks WITHOUT blocking the critical navigation path
+      // This prevents backend latency from stalling the UI on "Verifying..."
+      linkContractsAfterLogin().catch((err) => {
+        console.error("Background contract link failed:", err);
+      });
+
+      // Clear the Next.js client-side router cache to ensure the new session is used
+      router.refresh();
 
       if (nextPath && nextPath.startsWith('/') && !nextPath.startsWith('//') && !nextPath.startsWith('/\\')) {
         router.replace(nextPath);
