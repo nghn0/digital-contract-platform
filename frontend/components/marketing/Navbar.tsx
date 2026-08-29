@@ -3,12 +3,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { useTheme } from "@/components/ThemeProvider";
 import { supabase } from "@/lib/supabaseClient";
 import { signOutUser } from "@/lib/auth";
 import { Sun, Moon, LogOut } from "lucide-react";
 
 export default function Navbar() {
+  const router = useRouter();
   const { darkMode, toggleTheme } = useTheme();
   const [user, setUser] = useState<any>(null);
 
@@ -28,6 +30,7 @@ export default function Navbar() {
 
   const handleSignOut = async () => {
     await signOutUser();
+    router.refresh();
   };
 
   return (

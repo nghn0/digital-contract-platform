@@ -50,7 +50,8 @@ export default function Dashboard() {
 
   const handleLogout = async () => {
     await signOutUser();
-    router.push("/login");
+    router.refresh();
+    router.push("/");
   };
 
   const handleSenderSign = async (contract) => {
