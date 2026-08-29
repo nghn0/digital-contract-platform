@@ -14,7 +14,7 @@ export default function HeroContent() {
 
       <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
         <Link 
-          href="/upload" 
+          href="/intelligence" 
           className="group flex h-14 items-center justify-center gap-3 rounded-xl bg-[var(--color-primary-gold)] px-8 text-lg font-bold text-[var(--color-surface)] transition-all hover:bg-[var(--color-bright-gold)] shadow-xl shadow-[var(--color-primary-gold)]/10"
         >
           Analyze a Contract

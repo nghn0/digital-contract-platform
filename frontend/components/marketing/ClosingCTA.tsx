@@ -30,7 +30,7 @@ export default function ClosingCTA() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         >
           <Link 
-            href="/upload"
+            href="/intelligence"
             className="group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-[var(--color-primary-gold)] px-10 text-lg font-bold text-[var(--color-surface)] transition-all hover:bg-[var(--color-bright-gold)] shadow-xl shadow-[var(--color-primary-gold)]/10"
           >
             Analyze a Contract

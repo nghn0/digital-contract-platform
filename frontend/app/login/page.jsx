@@ -31,9 +31,9 @@ function LoginForm() {
       await linkContractsAfterLogin();
 
       if (nextPath && nextPath.startsWith('/') && !nextPath.startsWith('//') && !nextPath.startsWith('/\\')) {
-        router.push(nextPath);
+        router.replace(nextPath);
       } else {
-        router.push("/dashboard");
+        router.replace("/dashboard");
       }
     } catch (err) {
       setMsg("❌ " + err.message);
@@ -57,9 +57,9 @@ function LoginForm() {
       await linkContractsAfterLogin();
 
       if (nextPath && nextPath.startsWith('/') && !nextPath.startsWith('//') && !nextPath.startsWith('/\\')) {
-        router.push(nextPath);
+        router.replace(nextPath);
       } else {
-        router.push("/dashboard");
+        router.replace("/dashboard");
       }
     } catch (err) {
       setMsg("❌ " + err.message);

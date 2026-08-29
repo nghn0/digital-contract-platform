@@ -5,6 +5,7 @@ import { getCurrentUser, signOutUser } from "@/lib/auth";
 import { signWithMetaMask } from "@/utils/signContract";
 import { useRouter } from "next/navigation";
 import { FileText, LogOut, PlusCircle, Files, Clock, ChevronRight, Moon, Sun, Brain, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
@@ -98,9 +99,11 @@ export default function Dashboard() {
         {/* HEADER */}
         <header className="flex justify-between items-center mb-16">
           <div className="space-y-1">
-            <h1 className={`text-3xl md:text-5xl font-serif font-light tracking-tight transition-colors ${darkMode ? 'text-[#F5E6D8]' : 'text-[#2C1810]'}`}>
-              Legal<span className="font-bold text-[#D4AF37]">Vault</span>
-            </h1>
+            <Link href="/">
+              <h1 className={`text-3xl md:text-5xl font-serif font-light tracking-tight transition-colors hover:opacity-80 ${darkMode ? 'text-[#F5E6D8]' : 'text-[#2C1810]'}`}>
+                Legal<span className="font-bold text-[#D4AF37]">Vault</span>
+              </h1>
+            </Link>
             <p className={`${darkMode ? 'text-[#A39284]' : 'text-[#6B5A4E]'} text-sm uppercase tracking-[0.2em] font-medium transition-colors`}>
               Digital Signature Terminal
             </p>
