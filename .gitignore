@@ -6,6 +6,18 @@ node_modules
 .env.local
 .env.development
 .env.production
+frontend/.env
+frontend/.env.local
+backend/.env
+blockchain/.env
+
+# Security Audit
+security audit/
+security-audit/
+security_audit/
+*.audit
+
+security_audit.md
 
 # next build
 .next

@@ -57,15 +57,15 @@ const authenticateUser = async (req, res, next) => {
       return res.status(401).json({ error: "Unauthorized" });
     }
 
-    const decoded = jwt.decode(token);
+    const { data: { user }, error } = await supabase.auth.getUser(token);
 
-    if (!decoded?.sub) {
+    if (error || !user) {
       return res.status(401).json({ error: "Invalid token" });
     }
 
     req.user = {
-      id: decoded.sub,
-      email: decoded.email,
+      id: user.id,
+      email: user.email,
     };
 
     next();
@@ -303,7 +303,7 @@ app.post(
 
 /* ================= STORE SIGNATURE ================= */
 
-app.post("/store-signature", async (req, res) => {
+app.post("/store-signature", authenticateUser, async (req, res) => {
   try {
     const {
       contract_id,
@@ -312,6 +312,10 @@ app.post("/store-signature", async (req, res) => {
       signature,
       role, // "A" or "B"
     } = req.body;
+
+    if (user_id !== req.user.id) {
+      return res.status(403).json({ error: "Forbidden: user_id mismatch" });
+    }
 
     // 🔍 check if row exists
     const { data: existing } = await supabase
@@ -387,7 +391,7 @@ app.post("/store-signature", async (req, res) => {
 
 /* ================= BLOCKCHAIN STORE ================= */
 
-app.post("/store-onchain", async (req, res) => {
+app.post("/store-onchain", authenticateUser, async (req, res) => {
   try {
     const { contractHash, sigA, sigB, walletA, walletB } = req.body;
 
@@ -421,9 +425,13 @@ app.post("/store-onchain", async (req, res) => {
 
 /* ================= GET RECEIVED CONTRACTS ================= */
 
-app.get("/contracts/received/:userId", async (req, res) => {
+app.get("/contracts/received/:userId", authenticateUser, async (req, res) => {
   try {
     const { userId } = req.params;
+
+    if (userId !== req.user.id) {
+      return res.status(403).json({ error: "Forbidden" });
+    }
 
     const { data, error } = await supabase
       .from("contracts")
@@ -442,10 +450,16 @@ app.get("/contracts/received/:userId", async (req, res) => {
 
 /* ================= UPDATE CONTRACT STATUS ================= */
 
-app.patch("/contracts/:id/status", async (req, res) => {
+app.patch("/contracts/:id/status", authenticateUser, async (req, res) => {
   try {
     const { id } = req.params;
     const { status } = req.body;
+
+    // Verify ownership
+    const { data: existingContract } = await supabase.from("contracts").select("sender_id, receiver_id").eq("contract_id", id).single();
+    if (!existingContract || (existingContract.sender_id !== req.user.id && existingContract.receiver_id !== req.user.id)) {
+      return res.status(403).json({ error: "Forbidden: Not part of contract" });
+    }
 
     // 🔥 decide update payload
     let updatePayload = { status };
@@ -473,7 +487,7 @@ app.patch("/contracts/:id/status", async (req, res) => {
 
 /* ================= FINALIZE CONTRACT ================= */
 
-app.post("/contracts/:id/finalize", async (req, res) => {
+app.post("/contracts/:id/finalize", authenticateUser, async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -483,6 +497,10 @@ app.post("/contracts/:id/finalize", async (req, res) => {
       .select("*")
       .eq("contract_id", id)
       .single();
+
+    if (!contract || (contract.sender_id !== req.user.id && contract.receiver_id !== req.user.id)) {
+      return res.status(403).json({ error: "Forbidden: Not part of contract" });
+    }
 
     // 2️⃣ get signatures
     const { data: sig } = await supabase
@@ -565,9 +583,13 @@ app.post("/contracts/:id/finalize", async (req, res) => {
 
 /* ================= GET SENT CONTRACTS ================= */
 
-app.get("/contracts/sent/:userId", async (req, res) => {
+app.get("/contracts/sent/:userId", authenticateUser, async (req, res) => {
   try {
     const { userId } = req.params;
+
+    if (userId !== req.user.id) {
+      return res.status(403).json({ error: "Forbidden" });
+    }
 
     const { data, error } = await retryRequest(() => 
       supabase
@@ -588,9 +610,13 @@ app.get("/contracts/sent/:userId", async (req, res) => {
 
 /* ================= GET ALL USER CONTRACTS ================= */
 
-app.get("/contracts/all/:userId", async (req, res) => {
+app.get("/contracts/all/:userId", authenticateUser, async (req, res) => {
   try {
     const { userId } = req.params;
+
+    if (userId !== req.user.id) {
+      return res.status(403).json({ error: "Forbidden" });
+    }
 
     const { data, error } = await retryRequest(() => 
       supabase
@@ -611,7 +637,7 @@ app.get("/contracts/all/:userId", async (req, res) => {
 
 /* ================= GET SINGLE CONTRACT ================= */
 
-app.get("/contract/:id", async (req, res) => {
+app.get("/contract/:id", authenticateUser, async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -624,6 +650,11 @@ app.get("/contract/:id", async (req, res) => {
     );
 
     if (error) throw error;
+    
+    if (contract && contract.sender_id !== req.user.id && contract.receiver_id !== req.user.id) {
+      return res.status(403).json({ error: "Forbidden" });
+    }
+    
     res.json(contract);
   } catch (err) {
     console.error("❌ Fetch contract error:", err);
@@ -633,7 +664,7 @@ app.get("/contract/:id", async (req, res) => {
 
 /* ================= ANALYZE CONTRACT ================= */
 
-app.post("/contract/:id/analyze", async (req, res) => {
+app.post("/contract/:id/analyze", authenticateUser, async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -641,13 +672,17 @@ app.post("/contract/:id/analyze", async (req, res) => {
     const { data: contract, error } = await retryRequest(() => 
       supabase
         .from("contracts")
-        .select("file_url")
+        .select("file_url, sender_id, receiver_id")
         .eq("contract_id", id)
         .single()
     );
 
     if (error || !contract || !contract.file_url) {
       throw new Error("Contract not found or no file attached");
+    }
+
+    if (contract.sender_id !== req.user.id && contract.receiver_id !== req.user.id) {
+      return res.status(403).json({ error: "Forbidden" });
     }
 
     // 2. Download file to buffer

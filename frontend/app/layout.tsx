@@ -13,22 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Digital Contract Platform",
-  description: "A secure digital contract platform",
+  title: "LegalVault",
+  description: "Securely upload, analyze, execute, and verify legal contracts with cryptographic precision.",
   icons: {
-    icon: [
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' }
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
-    ],
-    other: [
-      {
-        rel: 'manifest',
-        url: '/site.webmanifest'
-      }
-    ]
+    icon: '/logo.png',
   }
 };
 
