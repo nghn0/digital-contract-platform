@@ -1,0 +1,2 @@
+Requirement already satisfied: grpcio in e:\semester 6\mini project\digital-contract-platform\model\.venv\lib\site-packages (1.83.1)
+Requirement already satisfied: typing-extensions~=4.12 in e:\semester 6\mini project\digital-contract-platform\model\.venv\lib\site-packages (from grpcio) (4.16.0)
