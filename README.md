@@ -49,13 +49,13 @@ Every finalized contract is hashed using SHA-256 and securely logged on the bloc
 
 The AI reasoning engine analyzes each contract across multiple dimensions to provide structured, actionable intelligence. The analysis identifies the contract's leverage position, evaluates key intelligence signals, highlights potential risks, and detects important missing clauses.
 
-### AI Leverage Analysis
-
-![AI Leverage Analysis](docs/images/AI_leverage.png)
-
 ### AI Intelligence Analysis
 
 ![AI Intelligence Analysis](docs/images/AI_intelligence.png)
+
+### AI Leverage Analysis
+
+![AI Leverage Analysis](docs/images/AI_leverage.png)
 
 ### AI Risk Analysis
 
